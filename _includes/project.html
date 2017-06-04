@@ -1,0 +1,30 @@
+<article class="project project--{{ project.title|slugify }}">
+
+  <a class="project__thumb" href="{{ project.url }}">
+    <picture>
+      <!--[if IE 9]><audio><![endif]-->
+      <source
+        srcset="http://placehold.it/600x400/11e87f/fff"
+        media="(max-width: 600px)" />
+      <source
+        srcset="http://placehold.it/900x600"
+        media="(max-width: 900px)" />
+      <source
+        srcset="http://placehold.it/1200x800/e8117f/fff"
+        media="(max-width: 1200px)" />
+      <!--[if IE 9]></audio><![endif]-->
+      <img
+        src="http://placehold.it/600x400/117fe8/fff"
+        srcset="http://placehold.it/1200x800/e8117f/fff"
+        alt="screencapture of project" />
+    </picture>
+  </a>
+
+  <div class="project__excerpt">
+    <!--<p class="project__time">2016</p>-->
+    <h2 class="project__title"><a class="project__link" href="{{ project.url }}">{{ project.title }}{% if project.sub-title %}, {{ project.sub-title }}{% endif %}</a></h2>
+    <p class="project__summary">{{ project.excerpt | remove: '<p class="lead">' | remove: '</p>' }}</p>
+    <a class="project__button" href="{{ project.url }}">View Project</a>
+  </div>
+
+</article>
