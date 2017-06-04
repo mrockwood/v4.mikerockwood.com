@@ -49,6 +49,7 @@ url: https://mrockwood.github.io
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
+# Content types
 collections:
   work:
     permalink: /work/:title/
@@ -89,3 +90,7 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+  - node_modules
+  - gulpfile.js
+  - package.json
+  - webpack.config.js
