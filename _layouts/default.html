@@ -13,13 +13,7 @@
 		<!-- Page Metadata -->
 		<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 		<meta name="author" content="{{ site.name }}" />
-		{% if page.excerpt %}
-		<meta name="description" content="{{ page.excerpt| strip_html }}" />
-		<meta property="og:description" content="{{ page.excerpt| strip_html }}" />
-		{% else %}
-		<meta name="description" content="{{ site.description }}">
-		<meta property="og:description" content="{{ site.description }}" />
-		{% endif %}
+		{% if page.excerpt %}<meta name="description" content="{{ page.excerpt| strip_html }}" />{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
 
 		<!-- Stylesheets -->
 		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
@@ -28,11 +22,13 @@
 		<meta name="robots" content="index,follow">
 		<meta name="revisit-after" content="1 days">
 
-		{% if page.title %}
-		<!-- Social Media -->
-		<meta property="og:title" content="{{ page.title }}" />
-		<meta property="twitter:title" content="{{ page.title }}" />
-		{% endif %}
+		<!-- Open Graph -->
+		{% if page.title %}<meta property="og:title" content="{{ page.title }}" />{% endif %}
+		{% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt| strip_html }}" />{% else %}<meta property="og:description" content="{{ site.description }}" />{% endif %}
+
+		<!-- Twitter Card -->
+		{% if page.title %}<meta property="twitter:title" content="{{ page.title }}" />{% endif %}
+		{% if page.excerpt %}<meta property="twitter:description" content="{{ page.excerpt| strip_html }}" />{% else %}<meta property="twitter:description" content="{{ site.description }}" />{% endif %}
 
 		<!-- Feeds -->
 		<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
