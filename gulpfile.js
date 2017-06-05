@@ -22,7 +22,6 @@ const reload = browserSync.reload;
 const runSequence = require('run-sequence');
 const svgSprite = require('gulp-svg-sprite');
 const sass = require('gulp-sass');
-const webpack = require('webpack');
 const uglify = require('gulp-uglify');
 const cp = require('child_process');
 
@@ -171,12 +170,12 @@ gulp.task('icons', () => {
 		.pipe(svgSprite({
 			shape: {
 				dimension: {
-					maxWidth: 50,
-					maxHeight: 50
+					maxWidth: 24,
+					maxHeight: 24
 				},
-				spacing: {
+				/*spacing: {
 					padding: 4
-				}
+				}*/
 			},
 			mode: {
 				symbol: true,
@@ -207,9 +206,6 @@ gulp.task('serve', () => {
 		notify: false,
 	});
 
-	gulp.task('jekyll:watch', ['jekyll'], browserSync.reload);
-	gulp.watch(config.jekyll.watch, ['jekyll:watch']);
-
 	gulp.task('styles:watch', ['styles']);
 	gulp.watch(config.styles.watch, ['styles:watch']);
 
@@ -224,6 +220,9 @@ gulp.task('serve', () => {
 
 	gulp.task('fonts:watch', ['fonts'], browserSync.reload);
 	gulp.watch(config.fonts.watch, ['fonts:watch']);
+
+	gulp.task('jekyll:watch', ['jekyll'], browserSync.reload);
+	gulp.watch(config.jekyll.watch, ['jekyll:watch']);
 
 });
 
