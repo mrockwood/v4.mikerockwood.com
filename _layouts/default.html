@@ -7,8 +7,8 @@
 		<!-- Global Metadata-->
 		<meta charset="utf-8">
 		<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+		<!--[if IE]><meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1"><![endif]-->
 
 		<!-- Page Metadata -->
 		<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
@@ -16,7 +16,11 @@
 		{% if page.excerpt %}<meta name="description" content="{{ page.excerpt| strip_html }}" />{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
 
 		<!-- Stylesheets -->
-		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/styles/style.css" />
+
+		<!-- Fonts -->
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,600">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,400">
 
 		<!-- Robots & Indexing -->
 		<meta name="robots" content="index,follow">
