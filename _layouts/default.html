@@ -4,6 +4,9 @@
 
 	<head>
 
+		<!-- Title -->
+		<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
 		<!-- Global Metadata-->
 		<meta charset="utf-8">
 		<meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -11,7 +14,6 @@
 		<!--[if IE]><meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1"><![endif]-->
 
 		<!-- Page Metadata -->
-		<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 		<meta name="author" content="{{ site.name }}" />
 		{% if page.excerpt %}<meta name="description" content="{{ page.excerpt| strip_html }}" />{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
 
@@ -72,7 +74,7 @@
 		<div class="wrapper-footer">
 			<div class="container">
 				<footer class="footer">
-					{% include svg-icons.html %}
+					{% include social.html %}
 				</footer>
 			</div>
 		</div>
