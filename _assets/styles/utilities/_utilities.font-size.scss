@@ -1,0 +1,67 @@
+/* ==========================================================================
+   #FONT-SIZE
+   ========================================================================== */
+
+
+
+
+//
+// Options
+//
+
+$font-size-namespace: $global-namespace-utilities + '' !default;
+$font-size-modifier: '' !default;
+
+$font-size-map: $global-font-sizes !default;
+
+$font-size-responsive: false !default;
+$font-size-breakpoints: $global-breakpoints !default;
+
+
+
+
+//
+// Mixins
+//
+
+@mixin font-size-classes($breakpoint-alias: null) {
+
+	@each $name, $value in $font-size-map {
+
+		.#{$font-size-namespace}#{$font-size-modifier}#{$name}#{$breakpoint-alias} {
+			font-size: $value !important;
+		}
+
+	}
+
+}
+
+
+
+
+//
+// Classes
+//
+
+@include font-size-classes;
+
+
+
+
+//
+// Responsive Classes
+//
+
+@if ($font-size-responsive == true) {
+
+	@each $size, $width in $font-size-breakpoints {
+
+		@include media('>#{$size}') {
+
+			@include font-size-classes(#{$global-separator-breakpoint + $size});
+
+		}
+
+	}
+
+}
