@@ -1,0 +1,90 @@
+.c-icon {
+	display: inline-block;
+	//fill: none;
+	margin: .2em;
+	font-size: 1em;
+	height: 24px;
+	width: 24px;
+	//stroke: currentColor;
+	stroke-width: inherit;
+	stroke-linecap: inherit;
+	stroke-linejoin: inherit;
+	overflow: visible;
+	vertical-align: middle;
+}
+
+// sizes
+.c-icon--xsmall {
+	height: .25em;
+	width: .25em;
+}
+
+.c-icon--small {
+	height: .5em;
+	width: .5em;
+}
+
+.c-icon--medium {
+	height: 1em;
+	width: 1em;
+}
+
+.c-icon--large {
+	height: 1.5em;
+	width: 1.5em;
+}
+
+.c-icon--xlarge {
+	height: 2em;
+	width: 2em;
+}
+
+.c-icon--super {
+	height: 3em;
+	width: 3em;
+}
+
+// weights
+.c-icon--ultrathin {
+	stroke-width: 1.5625%;
+}
+
+.c-icon--thin {
+	stroke-width: 3.125%;
+}
+
+.c-icon--light {
+	stroke-width: 4.6875%;
+}
+
+.c-icon--regular {
+  stroke-width: 6.25%;
+}
+
+.c-icon--semibold {
+	stroke-width: 7.8125%;
+}
+
+.c-icon--bold {
+	stroke-width: 9.375%;
+}
+
+.c-icon--heavy {
+	stroke-width: 10.9375%;
+}
+
+// joints
+.c-icon--bevel {
+	stroke-linecap: butt;
+	stroke-linejoin: bevel;
+}
+
+.c-icon--miter {
+	stroke-linecap: butt;
+	stroke-linejoin: miter;
+}
+
+.c-icon--round {
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}

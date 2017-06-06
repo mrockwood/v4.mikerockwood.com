@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html class="" lang="en">
+<html class="c-sticky-footer" lang="en">
 
 	<head>
 
@@ -45,7 +45,7 @@
 
 	</head>
 
-	<body>
+	<body class="c-sticky-footer__body">
 
 		<div class="wrapper-masthead">
 			<div class="container">
@@ -67,21 +67,22 @@
 			</div>
 		</div>
 
-		<div id="main" role="main" class="container">
+		<main class="l-container  l-container--large  c-sticky-footer__main" id="main" role="main">
 			{{ content }}
-		</div>
+		</main>
 
-		<div class="wrapper-footer">
-			<div class="container">
-				<footer class="footer">
+		<footer class="c-sticky-footer__footer  u-background--grey-lighter  u-padding-vertical--medium">
+			<div class="l-container  l-container--large">
+				<div class="u-center">
 					{% include social.html %}
-				</footer>
+				</div>
 			</div>
-		</div>
+		</footer>
 
 		<!-- Scripts -->
-		<script src="{{ site.baseurl }}/assets/scripts/main.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.8/svg4everybody.min.js"></script>
+		<script src="{{ site.baseurl }}/assets/scripts/main.min.js"></script>
 
 		{% include analytics.html %}
 

@@ -172,10 +172,7 @@ gulp.task('icons', () => {
 				dimension: {
 					maxWidth: 24,
 					maxHeight: 24
-				},
-				/*spacing: {
-					padding: 4
-				}*/
+				}
 			},
 			mode: {
 				symbol: true,

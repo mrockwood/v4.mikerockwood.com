@@ -1,0 +1,82 @@
+/* ==========================================================================
+   #ALIGNMENT
+   ========================================================================== */
+
+
+
+
+//
+// Options
+//
+
+$alignment-namespace: $global-namespace-layouts + 'center-block' !default;
+$alignment-element: $global-separator-element !default;
+$alignment-modifier: $global-separator-modifier !default;
+$alignment-content-name: 'content' !default;
+$alignment-vertical-name: 'vertical' !default;
+$alignment-horizontal-name: 'horizontal' !default;
+
+$alignment-responsive: false !default;
+$alignment-breakpoints: $global-breakpoints !default;
+
+
+
+
+//
+// Mixins
+//
+
+@mixin alignment-classes($breakpoint-alias: null) {
+
+	.#{$alignment-namespace}#{$breakpoint-alias} {
+		position: relative;
+	}
+
+	.#{$alignment-namespace}#{$alignment-element}#{$alignment-content-name}#{$breakpoint-alias} {
+		left: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.#{$alignment-namespace}#{$alignment-element}#{$alignment-content-name}#{$alignment-modifier}#{$alignment-vertical-name}#{$breakpoint-alias} {
+		left: auto;
+		transform: translateY(-50%);
+	}
+
+	.#{$alignment-namespace}#{$alignment-element}#{$alignment-content-name}#{$alignment-modifier}#{$alignment-horizontal-name}#{$breakpoint-alias} {
+		top: auto;
+		transform: translateX(-50%);
+	}
+
+}
+
+
+
+
+//
+// Classes
+//
+
+@include alignment-classes;
+
+
+
+
+//
+// Responsive Classes
+//
+
+@if ($alignment-responsive == true) {
+
+	@each $size, $width in $alignment-breakpoints {
+
+		@include media('>#{$size}') {
+
+			@include alignment-classes(#{$global-separator-breakpoint + $size});
+
+		}
+
+	}
+
+}
