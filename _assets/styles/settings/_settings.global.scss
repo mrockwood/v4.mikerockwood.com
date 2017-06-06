@@ -59,120 +59,103 @@ $global-sizing: (
 //
 // Colors
 //
-$color-tint: 9 !default;
-$color-tint-dark: $color-tint !default;
-$color-tint-darker: $color-tint * 2 !default;
-$color-tint-light: $color-tint !default;
-$color-tint-lighter: $color-tint * 2 !default;
-
-$color-black: #111 !default;
-$color-grey: #B0BEC5 !default;
-$color-white: #FFF !default;
-$color-beige: #F2F2EA !default;
-$color-red: #F44336 !default;
-$color-pink: #E91E63 !default;
-$color-purple: #9C27B0 !default;
-$color-blue: #2196F3 !default;
-$color-green: #4CAF50 !default;
-$color-cyan: #00BCD4 !default;
-$color-yellow: #FFEB3B !default;
-$color-orange: #FF9800 !default;
-$color-brown: #795548 !default;
-
-$color-brand: #2C3E50 !default;
-$color-info: $color-blue !default;
-$color-warning: $color-orange !default;
-$color-success: $color-green !default;
-$color-error: $color-red !default;
-
-$color-default: darken($color-grey, $color-tint-dark) !default;
-$color-disabled: darken($color-grey, $color-tint-dark) !default;
-$color-quiet: darken($color-grey, $color-tint-dark) !default;
-
 $colors: (
 	transparent: transparent,
 	current: currentColor,
-	black: $color-black,
-	grey: $color-grey,
-	white: $color-white,
-	beige: $color-beige,
-	red: $color-red,
-	pink: $color-pink,
-	purple: $color-purple,
-	blue: $color-blue,
-	green: $color-green,
-	cyan: $color-cyan,
-	yellow: $color-yellow,
-	orange: $color-orange,
-	brown: $color-brown,
-	brand: $color-brand,
-	info: $color-info,
-	warning: $color-warning,
-	success: $color-success,
-	error: $color-error,
-	default: $color-default,
-	disabled: $color-disabled,
-	quiet: $color-quiet,
-	grey-dark: darken($color-grey, $color-tint-dark),
-	red-dark: darken($color-red, $color-tint-dark),
-	pink-dark: darken($color-pink, $color-tint-dark),
-	purple-dark: darken($color-purple, $color-tint-dark),
-	blue-dark: darken($color-blue, $color-tint-dark),
-	green-dark: darken($color-green, $color-tint-dark),
-	cyan-dark: darken($color-cyan, $color-tint-dark),
-	yellow-dark: darken($color-yellow, $color-tint-dark),
-	orange-dark: darken($color-orange, $color-tint-dark),
-	brown-dark: darken($color-brown, $color-tint-dark),
-	grey-darker: darken($color-grey, $color-tint-darker),
-	red-darker: darken($color-red, $color-tint-darker),
-	grey-light: lighten($color-grey, $color-tint-light),
-	red-light: lighten($color-red, $color-tint-light),
-	pink-light: lighten($color-pink, $color-tint-light),
-	purple-light: lighten($color-purple, $color-tint-light),
-	blue-light: lighten($color-blue, $color-tint-light),
-	green-light: lighten($color-green, $color-tint-light),
-	cyan-light: lighten($color-cyan, $color-tint-light),
-	yellow-light: lighten($color-yellow, $color-tint-light),
-	orange-light: lighten($color-orange, $color-tint-light),
-	brown-light: lighten($color-brown, $color-tint-light),
-	grey-lighter: lighten($color-grey, $color-tint-lighter),
-	red-lighter: lighten($color-red, $color-tint-lighter),
-	pink-lighter: lighten($color-pink, $color-tint-lighter),
-	purple-lighter: lighten($color-purple, $color-tint-lighter),
-	blue-lighter: lighten($color-blue, $color-tint-lighter),
-	green-lighter: lighten($color-green, $color-tint-lighter),
-	cyan-lighter: lighten($color-cyan, $color-tint-lighter),
-	yellow-lighter: lighten($color-yellow, $color-tint-lighter),
-	orange-lighter: lighten($color-orange, $color-tint-lighter),
-	brown-lighter: lighten($color-brown, $color-tint-lighter),
-	pink-darker: darken($color-pink, $color-tint-darker),
-	purple-darker: darken($color-purple, $color-tint-darker),
-	blue-darker: darken($color-blue, $color-tint-darker),
-	green-darker: darken($color-green, $color-tint-darker),
-	cyan-darker: darken($color-cyan, $color-tint-darker),
-	yellow-darker: darken($color-yellow, $color-tint-darker),
-	orange-darker: darken($color-orange, $color-tint-darker),
-	brown-darker: darken($color-brown, $color-tint-darker),
-	brand-dark: darken($color-brand, $color-tint-dark),
-	brand-darker: darken($color-brand, $color-tint-darker),
-	brand-light: lighten($color-brand, $color-tint-light),
-	brand-lighter: lighten($color-brand, $color-tint-lighter),
-	info-dark: darken($color-info, $color-tint-dark),
-	info-darker: darken($color-info, $color-tint-darker),
-	info-light: lighten($color-info, $color-tint-light),
-	info-lighter: lighten($color-info, $color-tint-lighter),
-	warning-dark: darken($color-warning, $color-tint-dark),
-	warning-darker: darken($color-warning, $color-tint-darker),
-	warning-light: lighten($color-warning, $color-tint-light),
-	warning-lighter: lighten($color-warning, $color-tint-lighter),
-	success-dark: darken($color-success, $color-tint-dark),
-	success-darker: darken($color-success, $color-tint-darker),
-	success-light: lighten($color-success, $color-tint-light),
-	success-lighter: lighten($color-success, $color-tint-lighter),
-	error-dark: darken($color-error, $color-tint-dark),
-	error-darker: darken($color-error, $color-tint-darker),
-	error-light: lighten($color-error, $color-tint-light),
-	error-lighter: lighten($color-error, $color-tint-lighter)
+
+	black: #111,
+	white: #FFF,
+
+	// grey
+	grey-lighter: #f1f3f5,
+	grey-light: #dee2e6,
+	grey: #adb5bd,
+	grey-dark: #495057,
+	grey-darker: #212529,
+
+	// red
+	red-lighter: #ff6b6b,
+	red-light: #fa5252,
+	red: #f03e3e,
+	red-dark: #e03131,
+	red-darker: #c92a2a,
+
+	// pink
+	pink-lighter: #f06595,
+	pink-light: #e64980,
+	pink: #d6336c,
+	pink-dark: #c2255c,
+	pink-darker: #a61e4d,
+
+	// grape
+	grape-lighter: #cc5de8,
+	grape-light: #be4bdb,
+	grape: #ae3ec9,
+	grape-dark: #9c36b5,
+	grape-darker: #862e9c,
+
+	// violet
+	violet-lighter: #845ef7,
+	violet-light: #7950f2,
+	violet: #7048e8,
+	violet-dark: #6741d9,
+	violet-darker: #5f3dc4,
+
+	// indigo
+	indigo-lighter: #5c7cfa,
+	indigo-light: #4c6ef5,
+	indigo: #4263eb,
+	indigo-dark: #3b5bdb,
+	indigo-darker: #364fc7,
+
+	// blue
+	blue-lighter: #329af0,
+	blue-light: #228ae6,
+	blue: #1c7cd6,
+	blue-dark: #1b6ec2,
+	blue-darker: #1862ab,
+
+	// cyan
+	cyan-lighter: #22b8cf,
+	cyan-light: #15aabf,
+	cyan: #1098ad,
+	cyan-dark: #0c8599,
+	cyan-darker: #0b7285,
+
+	// teal
+	teal-lighter: #20c997,
+	teal-light: #12b886,
+	teal: #0ca678,
+	teal-dark: #099268,
+	teal-darker: #087f5b,
+
+	// green
+	green-lighter: #51cf66,
+	green-light: #40c057,
+	green: #37b24d,
+	green-dark: #2f9e44,
+	green-darker: #2b8a3e,
+
+	// lime
+	lime-lighter: #94d82d,
+	lime-light: #82c91e,
+	lime: #74b816,
+	lime-dark: #66a80f,
+	lime-darker: #5c940d,
+
+	// yellow
+	yellow-lighter: #fcc419,
+	yellow-light: #fab005,
+	yellow: #f59f00,
+	yellow-dark: #f08c00,
+	yellow-darker: #e67700,
+
+	// orange
+	orange-lighter: #ff922b,
+	orange-light: #fd7e14,
+	orange: #f76707,
+	orange-dark: #e8590c,
+	orange-darker: #d9480f,
 );
 
 //
@@ -382,11 +365,11 @@ $global-z-indexes: (
 //
 $global-border-width: 1px !default;
 $global-border-style: solid !default;
-$global-border-color: map-get($colors, default) !default;
+$global-border-color: map-get($colors, grey-light) !default;
 $global-border-radius: map-get($global-radii, radius) !default;
 
 //
 // Focus styles
 //
 $border-color-focus: map-get($colors, blue) !default;
-$box-shadow-focus: inset 0 0 0 2px lighten($border-color-focus, $color-tint) !default;
+$box-shadow-focus: inset 0 0 0 2px $border-color-focus !default;
