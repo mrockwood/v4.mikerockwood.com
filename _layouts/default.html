@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html class="" lang="en">
+<html class="c-sticky-footer" lang="en">
 
 	<head>
 
@@ -45,7 +45,7 @@
 
 	</head>
 
-	<body>
+	<body class="c-sticky-footer__body">
 
 		<div class="wrapper-masthead">
 			<div class="container">
@@ -67,17 +67,17 @@
 			</div>
 		</div>
 
-		<div id="main" role="main" class="l-container  l-container--large">
+		<main class="l-container  l-container--large  c-sticky-footer__main" id="main" role="main">
 			{{ content }}
-		</div>
+		</main>
 
-		<div class="u-background--grey-lighter  u-padding-vertical--medium">
+		<footer class="c-sticky-footer__footer  u-background--grey-lighter  u-padding-vertical--medium">
 			<div class="l-container  l-container--large">
-				<footer class="u-center">
+				<div class="u-center">
 					{% include social.html %}
-				</footer>
+				</div>
 			</div>
-		</div>
+		</footer>
 
 		<!-- Scripts -->
 		<script src="{{ site.baseurl }}/assets/scripts/main.min.js"></script>
