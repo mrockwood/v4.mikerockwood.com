@@ -3,30 +3,28 @@
    ========================================================================== */
 
 .c-navbar {
-    align-items: center;
-	display: flex;
-	flex-wrap: wrap;
+	text-transform: uppercase;
 }
 
 .c-navbar__list {
 	align-items: center;
 	display: flex;
 	flex: 1;
-	justify-content: center;
+	justify-content: space-around;
 	list-style: none;
 	margin: 0;
 }
 
-.c-navbar__list--left,
-.c-navbar__list--right {
-	justify-content: space-around;
-}
+.c-navbar__link {
+	color: map-get($colors, grey-dark);
+	font-family: map-get($global-font-families, sans-serif);
+	font-size: map-get($global-font-sizes, small);
+	font-weight: map-get($global-font-weights, light);
+	letter-spacing: map-get($global-letter-spacing, medium);
+	text-decoration: none;
 
-@include media('>medium') {
-	.c-navbar__list--left {
-		order: -1;
-	}
-	.c-navbar__list--right {
-		order: 1;
+	@include media('>medium') {
+		font-size: map-get($global-font-sizes, medium);
+		letter-spacing: map-get($global-letter-spacing, large);
 	}
 }
