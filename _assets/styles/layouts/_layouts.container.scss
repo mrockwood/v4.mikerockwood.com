@@ -31,11 +31,12 @@ $container-breakpoints: $global-breakpoints !default;
 	 * 2. Center
 	 */
 	.#{$container-namespace}#{$breakpoint-alias} {
-		box-sizing: content-box; /* [1] */
+		//box-sizing: content-box; /* [1] */
 		margin-left: auto; /* [2] */
 		margin-right: auto; /* [2] */
 		padding-left: $global-spacing-default;
 		padding-right: $global-spacing-default;
+		width: 100%;
 	}
 
 	@supports (display: flex) {

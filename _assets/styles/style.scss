@@ -14,7 +14,9 @@
 
 @import "tools/tools.create-class-name";
 @import "tools/tools.escape-numerator";
+@import "tools/tools.fluid-type";
 @import "tools/tools.media-queries";
+@import "tools/tools.strip-unit";
 
 
 
@@ -42,8 +44,8 @@
 @import "layouts/layouts.grid";
 @import "layouts/layouts.height";
 @import "layouts/layouts.order";
-@import "layouts/layouts.pull";
-@import "layouts/layouts.push";
+//@import "layouts/layouts.pull";
+//@import "layouts/layouts.push";
 @import "layouts/layouts.ratio";
 @import "layouts/layouts.rotate";
 @import "layouts/layouts.width";
@@ -58,7 +60,7 @@
 @import "components/components.icons";
 @import "components/components.logo";
 @import "components/components.navbar";
-//@import "components/components.sticky-footers";
+@import "components/components.sticky-footers";
 
 
 
@@ -80,7 +82,6 @@
 @import "utilities/utilities.color";
 @import "utilities/utilities.coordinates";
 @import "utilities/utilities.display";
-//@import "utilities/utilities.fill";
 @import "utilities/utilities.float";
 @import "utilities/utilities.font-family";
 @import "utilities/utilities.font-size";

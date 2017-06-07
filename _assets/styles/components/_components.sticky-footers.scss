@@ -3,15 +3,6 @@
    ========================================================================== */
 
 /**
- * Target IE 10 and IE 11
- */
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-	.c-sticky-footer {
-		height: 100%;
-	}
-}
-
-/**
  * 1. Making the <body> element behave like a flexbox container.
  * 2. Making flex children line up vertically (horizontal is default)
  * 3. Setting the min-height to 100% of the viewport height.

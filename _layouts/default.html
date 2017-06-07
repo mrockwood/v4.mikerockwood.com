@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html class="c-sticky-footer" lang="en">
+<html class="" lang="en">
 
 	<head>
 
@@ -48,25 +48,25 @@
 	<body class="c-sticky-footer__body">
 
 		<!-- Navigation -->
-		<div class="l-container  l-container--large">
-			<nav class="c-navbar  u-padding-vertical--medium" role="navigation">
-				<div class="c-logo">
-					<a href="/">
+		<nav class="l-container  l-container--large  u-padding-vertical--medium  u-padding-vertical--large@medium" id="navigation" role="navigation">
+			<div class="l-grid  l-grid--middle">
+				<div class="c-logo  u-padding-vertical--small">
+					<a href="{{ site.baseurl }}/">
 						<!--<span class="c-logo__icon"><svg><use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#code"></use></svg></span>-->
 						<span class="c-logo__name">{{ site.name }}</span>
 						<!--<span class="c-logo__title">{{ site.description }}</span>-->
 					</a>
 				</div>
-				<ul class="c-navbar__list  c-navbar__list--left">
+				<ul class="c-navbar__list  c-navbar__list--left  u-padding-vertical--small">
 					<li class="c-navbar__list-item"><a href="{{ site.baseurl }}/work/">Work</a></li>
 					<li class="c-navbar__list-item"><a href="{{ site.baseurl }}/about/">About</a></li>
 				</ul>
-				<ul class="c-navbar__list  c-navbar__list--right">
+				<ul class="c-navbar__list  c-navbar__list--right  u-padding-vertical--small">
 					<li class="c-navbar__list-item"><a href="{{ site.baseurl }}/">Blog</a></li>
 					<li class="c-navbar__list-item"><a href="{{ site.baseurl }}/contact/">Contact</a></li>
 				</ul>
-			</nav>
-		</div>
+			</div>
+		</nav>
 
 		<!-- Main -->
 		<main class="l-container  l-container--large  c-sticky-footer__main" id="main" role="main">
@@ -74,7 +74,7 @@
 		</main>
 
 		<!-- Footer -->
-		<footer class="c-sticky-footer__footer  u-background--grey-lighter  u-padding-vertical--medium">
+		<footer class="c-sticky-footer__footer  u-background--grey-lighter  u-padding-vertical--medium" id="footer" role="contentinfo">
 			<div class="l-container  l-container--large">
 				<div class="u-center">
 					{% include social.html %}
