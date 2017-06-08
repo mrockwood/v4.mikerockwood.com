@@ -1,0 +1,12 @@
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+
+.c-footer {
+	font-family: map-get($global-font-families, sans-serif);
+	text-align: center;
+}
+
+.c-footer__social {
+	margin: 0 0 map-get($global-spacing, large);
+}

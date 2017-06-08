@@ -3,8 +3,8 @@
 	//fill: none;
 	margin: .2em;
 	font-size: 1em;
-	height: 24px;
-	width: 24px;
+	height: 1.5em;
+	width: 1.5em;
 	//stroke: currentColor;
 	stroke-width: inherit;
 	stroke-linecap: inherit;
@@ -15,33 +15,33 @@
 
 // sizes
 .c-icon--xsmall {
-	height: .25em;
-	width: .25em;
-}
-
-.c-icon--small {
 	height: .5em;
 	width: .5em;
 }
 
-.c-icon--medium {
+.c-icon--small {
 	height: 1em;
 	width: 1em;
 }
 
-.c-icon--large {
+.c-icon--medium {
 	height: 1.5em;
 	width: 1.5em;
 }
 
+.c-icon--large {
+	height: 2.25em;
+	width: 2.25em;
+}
+
 .c-icon--xlarge {
-	height: 2em;
-	width: 2em;
+	height: 3em;
+	width: 3em;
 }
 
 .c-icon--super {
-	height: 3em;
-	width: 3em;
+	height: 5em;
+	width: 5em;
 }
 
 // weights
