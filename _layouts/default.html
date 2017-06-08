@@ -72,6 +72,13 @@ layout: compress
 			loadCSS('https://fonts.googleapis.com/css?family=Merriweather:300,400');
 		</script>
 
+		<!-- loadCSS fallback in case JavaScript is broken -->
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/styles/style.css" />
+			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,600">
+			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,400">
+		</noscript>
+
 		<!-- Robots & Indexing -->
 		<meta name="robots" content="index,follow">
 		<meta name="revisit-after" content="1 days">
@@ -130,13 +137,6 @@ layout: compress
 				<p class="c-footer__copyright  u-small  u-margin--none"><strong>©&nbsp;2008-{{ site.time | date: '%Y' }}.</strong> Powered by <a class="c-footer__copyright-link" href="http://jekyllrb.com/">Jekyll</a> and <a class="c-footer__copyright-link" href="https://pages.github.com/">Github Pages</a>. <a class="c-footer__copyright-link" href="https://github.com/mrockwood/mrockwood.github.io">Check out the source</a>.</p>
 			</div>
 		</footer>
-
-		<!-- loadCSS fallback in case JavaScript is broken -->
-		<noscript>
-			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/styles/style.css" />
-			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,600">
-			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,400">
-		</noscript>
 
 		<!-- Scripts -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" async></script>

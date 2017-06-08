@@ -22,6 +22,7 @@ const reload = browserSync.reload;
 const runSequence = require('run-sequence');
 const svgSprite = require('gulp-svg-sprite');
 const sass = require('gulp-sass');
+const uncss = require('gulp-uncss');
 const uglify = require('gulp-uglify');
 const cp = require('child_process');
 
@@ -94,6 +95,10 @@ gulp.task('styles', () => {
 			includePaths: './node_modules',
 		}).on('error', sass.logError))
 		.pipe(prefix(config.styles.browsers))
+		.pipe(uncss({
+			html: ['_site/**/*.html'],
+			ignore: []
+		}))
 		.pipe(csso())
 		.pipe(gulp.dest(config.styles.dest))
 		.pipe(gulp.dest(config.styles.site))
