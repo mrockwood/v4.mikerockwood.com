@@ -16,15 +16,12 @@
 }
 
 .c-navbar__link {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), .75em, .875em);
+
 	color: map-get($colors, grey-dark);
 	font-family: map-get($global-font-families, sans-serif);
 	font-size: map-get($global-font-sizes, small);
 	font-weight: map-get($global-font-weights, light);
-	letter-spacing: map-get($global-letter-spacing, medium);
+	letter-spacing: map-get($global-letter-spacing, xlarge);
 	text-decoration: none;
-
-	@include media('>medium') {
-		font-size: map-get($global-font-sizes, medium);
-		letter-spacing: map-get($global-letter-spacing, large);
-	}
 }

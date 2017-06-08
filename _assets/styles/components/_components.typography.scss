@@ -1,0 +1,9 @@
+/* ==========================================================================
+   #TYPOGRAPHY
+   ========================================================================== */
+
+.c-paragraph--lead {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.5em);
+
+	font-weight: map-get($global-font-weights, light);
+}

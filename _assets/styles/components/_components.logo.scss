@@ -19,9 +19,10 @@
 }
 
 .c-logo {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 2.625em);
+
 	display: block;
 	font-family: 'norwesterregular', impact, sans-serif;
-	font-size: 1.75rem;
 	letter-spacing: 1px;
 	padding-left: 2rem;
 	padding-right: 2rem;
@@ -29,13 +30,7 @@
 	width: 100%;
 
 	@include media('>medium') {
-		font-size: 2.5rem;
-		font-size: #{"calc( 2.5rem + (3 - 2.5) * ( (100vw - 56.25rem) / ( 75 - 56.25) ))"};
 		width: auto;
-	}
-
-	@include media('>large') {
-		font-size: 2.75rem;
 	}
 
 }
