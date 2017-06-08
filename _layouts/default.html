@@ -17,12 +17,70 @@
 		<meta name="author" content="{{ site.name }}" />
 		{% if page.excerpt %}<meta name="description" content="{{ page.excerpt| strip_html }}" />{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
 
-		<!-- Stylesheets -->
-		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/styles/style.css" />
+		<script>
+			/*!
+			loadCSS: load a CSS file asynchronously.
+			[c]2014 @scottjehl, Filament Group, Inc.
+			Licensed MIT
+			*/
+			/* exported loadCSS */
+			function loadCSS( href, before, media, callback ){
+				"use strict";
+				// Arguments explained:
+				// `href` is the URL for your CSS file.
+				// `before` optionally defines the element we'll use as a reference for injecting our <link>
+				// By default, `before` uses the first <script> element in the page.
+				// However, since the order in which stylesheets are referenced matters, you might need a more specific location in your document.
+				// If so, pass a different reference element to the `before` argument and it'll insert before that instead
+				// note: `insertBefore` is used instead of `appendChild`, for safety re: http://www.paulirish.com/2011/surefire-dom-element-insertion/
+				var ss = window.document.createElement( "link" );
+				var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
+				var sheets = window.document.styleSheets;
+				ss.rel = "stylesheet";
+				ss.href = href;
+				// temporarily, set media to something non-matching to ensure it'll fetch without blocking render
+				ss.media = "only x";
+				// DEPRECATED
+				if( callback ) {
+					ss.onload = callback;
+				}
+				// inject link
+				ref.parentNode.insertBefore( ss, ref );
+				// This function sets the link's media back to `all` so that the stylesheet applies once it loads
+				// It is designed to poll until document.styleSheets includes the new sheet.
+				ss.onloadcssdefined = function( cb ){
+					var defined;
+					for( var i = 0; i < sheets.length; i++ ){
+						if( sheets[ i ].href && sheets[ i ].href === ss.href ){
+							defined = true;
+						}
+					}
+					if( defined ){
+						cb();
+					} else {
+						setTimeout(function() {
+							ss.onloadcssdefined( cb );
+						});
+					}
+				};
+				ss.onloadcssdefined(function() {
+					ss.media = media || "all";
+				});
+				return ss;
+			}
 
-		<!-- Fonts -->
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,600">
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,400">
+			// use loadCSS to load CSS
+			loadCSS('{{ site.baseurl }}/assets/styles/style.css');
+			loadCSS('//fonts.googleapis.com/css?family=Merriweather+Sans:300,400,600');
+			loadCSS('//fonts.googleapis.com/css?family=Merriweather:300,400');
+		</script>
+
+		<!-- Provide loadCSS fallback in case JavaScript is broken -->
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/styles/style.css" />
+			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,600">
+			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,400">
+		</noscript>
 
 		<!-- Robots & Indexing -->
 		<meta name="robots" content="index,follow">
@@ -76,17 +134,17 @@
 		<!-- Footer -->
 		<footer class="c-footer  c-sticky-footer__footer  u-background--grey-lighter  u-padding-vertical--large" id="footer" role="contentinfo">
 			<div class="l-container  l-container--large">
-				<div class="c-footer__social">
+				<ul class="c-list  c-list--unstyled  c-list--inline  c-footer__social">
 					{% include social.html %}
-				</div>
+				</ul>
 				<p class="c-footer__copyright  u-small  u-margin--none"><strong>©&nbsp;2008-{{ site.time | date: '%Y' }}.</strong> Powered by <a class="c-footer__copyright-link" href="http://jekyllrb.com/">Jekyll</a> and <a class="c-footer__copyright-link" href="https://pages.github.com/">Github Pages</a>. <a class="c-footer__copyright-link" href="https://github.com/mrockwood/mrockwood.github.io">Check out the source</a>.</p>
 			</div>
 		</footer>
 
 		<!-- Scripts -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.8/svg4everybody.min.js"></script>
-		<script src="{{ site.baseurl }}/assets/scripts/main.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" async></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.8/svg4everybody.min.js" async></script>
+		<script src="{{ site.baseurl }}/assets/scripts/main.min.js" async></script>
 
 		{% include analytics.html %}
 

@@ -1,10 +1,19 @@
 
 /**
+ * Load svg4everybody
+ */
+
+svg4everybody();
+
+
+
+
+/**
  * Zoom image on click
  */
 
 $(document).ready(function() {
-	$('.zoom').click(function() {
-		$(this).toggleClass('zoom--full-size');
+	$('.js-zoom').click(function() {
+		$(this).toggleClass('c-zoom?full-size');
 	});
 });

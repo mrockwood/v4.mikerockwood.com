@@ -389,3 +389,19 @@ $global-border-radius: map-get($global-radii, radius) !default;
 //
 $border-color-focus: map-get($colors, blue) !default;
 $box-shadow-focus: inset 0 0 0 2px $border-color-focus !default;
+
+//
+// Lists
+//
+$list-margin: 0 !default;
+$list-padding: 0 0 0 map-get($global-spacing, medium) !default;
+$list-unstyled-padding: 0 !default;
+$list-unstyled-list-style: none !default;
+$list-nested-padding: $list-padding !default;
+$list-item-padding: 0 !default;
+$list-item-unstyled-list-style: none !default;
+$list-ordered-item-padding: 0 map-get($global-spacing, small) 0 0 !default;
+$list-inline-padding: 0 !default;
+$list-inline-item-padding-right: map-get($global-spacing, medium) !default;
+$list-inline-item-bullet-content: "\2022" !default;
+$list-inline-item-bullet-padding: 0 map-get($global-spacing, small) 0 0 !default;

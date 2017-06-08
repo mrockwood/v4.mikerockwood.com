@@ -1,0 +1,119 @@
+/* ==========================================================================
+   #LISTS
+   ========================================================================== */
+
+
+
+
+//
+// Options
+//
+
+$list-namespace: $global-namespace-components + 'list' !default;
+$list-element: $global-separator-element !default;
+$list-modifier: $global-separator-modifier !default;
+$list-item-name: 'item' !default;
+$list-unstyled-name: 'unstyled' !default;
+$list-inline-name: 'inline' !default;
+$list-ordered-name: 'ordered' !default;
+
+$list-responsive: false !default;
+$list-breakpoints: $global-breakpoints !default;
+
+
+
+
+//
+// Mixins
+//
+
+@mixin list-classes($breakpoint-alias: null) {
+
+	.#{$list-namespace}#{$breakpoint-alias} {
+		display: block;
+		margin: $list-margin;
+		padding: $list-padding;
+		list-style-position: outside;
+	}
+
+	.#{$list-namespace}#{$breakpoint-alias} .#{$list-namespace}#{$breakpoint-alias} {
+		padding: $list-nested-padding;
+	}
+
+	.#{$list-namespace}#{$list-element}#{$list-item-name}#{$breakpoint-alias} {
+		padding: $list-item-padding;
+	}
+
+	.#{$list-namespace}#{$list-modifier}#{$list-unstyled-name}#{$breakpoint-alias} {
+		list-style: $list-item-unstyled-list-style;
+	}
+
+	.#{$list-namespace}#{$list-modifier}#{$list-unstyled-name}#{$breakpoint-alias} {
+		padding: $list-unstyled-padding;
+		list-style: $list-unstyled-list-style;
+	}
+
+	.#{$list-namespace}#{$list-modifier}#{$list-ordered-name}#{$breakpoint-alias} {
+		padding: $list-unstyled-padding;
+		list-style: $list-unstyled-list-style;
+		counter-reset: ordered;
+
+		.#{$list-namespace}#{$list-element}#{$list-item-name}#{$breakpoint-alias}:before {
+			padding: $list-ordered-item-padding;
+			content: counters(ordered, ".") " ";
+			counter-increment: ordered;
+		}
+	}
+
+	.#{$list-namespace}#{$list-modifier}#{$list-inline-name}#{$breakpoint-alias} {
+		padding: $list-inline-padding;
+
+		.#{$list-namespace}#{$list-modifier}#{$list-inline-name}#{$breakpoint-alias} {
+			padding: $list-inline-padding;
+		}
+
+		.#{$list-namespace}#{$list-element}#{$list-item-name}#{$breakpoint-alias} {
+			display: inline-block;
+			width: auto;
+			padding-right: $list-inline-item-padding-right;
+		}
+
+		&:not(.#{$list-namespace}#{$list-modifier}#{$list-unstyled-name}#{$breakpoint-alias}) {
+			.#{$list-namespace}#{$list-element}#{$list-item-name}#{$breakpoint-alias}:before {
+				padding: $list-inline-item-bullet-padding;
+				content: $list-inline-item-bullet-content;
+			}
+		}
+	}
+
+}
+
+
+
+
+//
+// Classes
+//
+
+@include list-classes;
+
+
+
+
+//
+// Responsive Classes
+//
+
+@if ($list-responsive == true) {
+
+	@each $size, $width in $list-breakpoints {
+
+		@include media('>#{$size}') {
+
+			@include list-classes(#{$global-separator-breakpoint + $size});
+
+		}
+
+	}
+
+}
