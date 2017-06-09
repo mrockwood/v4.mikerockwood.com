@@ -1,90 +1,141 @@
-.c-icon {
-	display: inline-block;
-	//fill: none;
-	margin: .2em;
-	font-size: 1em;
-	height: 1.5em;
-	width: 1.5em;
-	//stroke: currentColor;
-	stroke-width: inherit;
-	stroke-linecap: inherit;
-	stroke-linejoin: inherit;
-	overflow: visible;
-	vertical-align: middle;
+/* ==========================================================================
+   #ICONS
+   ========================================================================== */
+
+
+
+
+//
+// Options
+//
+
+$icon-namespace: $global-namespace-components + 'icon' !default;
+$icon-modifier: $global-separator-modifier !default;
+
+$icon-size-map: (
+	xsmall: .5em,
+	small: 1em,
+	medium: 1.5em,
+	large: 2.25em,
+	xlarge: 3em,
+	super: 5em,
+) !default;
+
+$icon-weight-map: (
+	ultrathin: 1.5625%,
+	thin: 3.125%,
+	light: 4.6875%,
+	regular: 6.25%,
+	semibold: 7.8125%,
+	bold: 9.375%,
+	heavy: 10.9375%,
+) !default;
+
+$icon-weight-map: (
+	'bevel': (
+		stroke-linecap: butt,
+		stroke-linejoin: bevel,
+	),
+	'miter': (
+		stroke-linecap: butt,
+		stroke-linejoin: miter,
+	),
+	'round': (
+		stroke-linecap: round,
+		stroke-linejoin: round,
+	),
+) !default;
+
+$icon-responsive: false !default;
+$icon-breakpoints: $global-breakpoints !default;
+
+
+
+
+//
+// Mixins
+//
+
+@mixin icon-classes($breakpoint-alias: null) {
+
+	.#{$icon-namespace}#{$breakpoint-alias} {
+		display: inline-block;
+		//fill: none;
+		margin: .2em;
+		font-size: 1em;
+		height: 1.5em;
+		width: 1.5em;
+		//stroke: currentColor;
+		stroke-width: inherit;
+		stroke-linecap: inherit;
+		stroke-linejoin: inherit;
+		overflow: visible;
+		vertical-align: middle;
+	}
+
+	// sizes
+	@each $name, $value in $icon-size-map {
+
+		.#{$icon-namespace}#{$icon-modifier}#{$name}#{$breakpoint-alias} {
+			height: $value;
+			width: $value;
+		}
+
+	}
+
+	// weights
+	@each $name, $value in $icon-weight-map {
+
+		.#{$icon-namespace}#{$icon-modifier}#{$name}#{$breakpoint-alias} {
+			stroke-width: $value;
+		}
+
+	}
+
+	// joints
+	.c-icon--bevel#{$breakpoint-alias} {
+		stroke-linecap: butt;
+		stroke-linejoin: bevel;
+	}
+
+	.c-icon--miter#{$breakpoint-alias} {
+		stroke-linecap: butt;
+		stroke-linejoin: miter;
+	}
+
+	.c-icon--round#{$breakpoint-alias} {
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
 }
 
-// sizes
-.c-icon--xsmall {
-	height: .5em;
-	width: .5em;
-}
 
-.c-icon--small {
-	height: 1em;
-	width: 1em;
-}
 
-.c-icon--medium {
-	height: 1.5em;
-	width: 1.5em;
-}
 
-.c-icon--large {
-	height: 2.25em;
-	width: 2.25em;
-}
+//
+// Classes
+//
 
-.c-icon--xlarge {
-	height: 3em;
-	width: 3em;
-}
+@include icon-classes;
 
-.c-icon--super {
-	height: 5em;
-	width: 5em;
-}
 
-// weights
-.c-icon--ultrathin {
-	stroke-width: 1.5625%;
-}
 
-.c-icon--thin {
-	stroke-width: 3.125%;
-}
 
-.c-icon--light {
-	stroke-width: 4.6875%;
-}
+//
+// Responsive Classes
+//
 
-.c-icon--regular {
-  stroke-width: 6.25%;
-}
+@if ($icon-responsive == true) {
 
-.c-icon--semibold {
-	stroke-width: 7.8125%;
-}
+	@each $size, $width in $icon-breakpoints {
 
-.c-icon--bold {
-	stroke-width: 9.375%;
-}
+		@include media('>#{$size}') {
 
-.c-icon--heavy {
-	stroke-width: 10.9375%;
-}
+			@include icon-classes(#{$global-separator-breakpoint + $size});
 
-// joints
-.c-icon--bevel {
-	stroke-linecap: butt;
-	stroke-linejoin: bevel;
-}
+		}
 
-.c-icon--miter {
-	stroke-linecap: butt;
-	stroke-linejoin: miter;
-}
+	}
 
-.c-icon--round {
-	stroke-linecap: round;
-	stroke-linejoin: round;
 }
