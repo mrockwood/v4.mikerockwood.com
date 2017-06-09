@@ -1,0 +1,22 @@
+<!-- Header -->
+<header class="c-header {% if page.hero %}c-header--with-image  l-center-block@medium{% endif %}  l-container  l-container--large" role="banner">
+
+	<div class="{% if page.hero %}l-center-block__content@medium  u-color--white@medium{% endif %}  u-center">
+
+		{% if page.title %}
+			<h1 class="c-header__title  u-margin--none">{{ page.title }}</h1>
+		{% endif %}
+
+		{% if page.sub-title %}
+			<h2 class="c-header__subtitle">{{ page.sub-title }}</h2>
+		{% endif %}
+
+	</div>
+
+	{% if page.hero %}
+	<div class="c-header__image-wrapper">
+		<img src="{{ site.baseurl }}{{ page.hero }}" alt="" class="c-header__image" />
+	</div>
+	{% endif %}
+
+</header>

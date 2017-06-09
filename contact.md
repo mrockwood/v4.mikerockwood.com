@@ -2,7 +2,11 @@
 layout: page
 title: Contact
 permalink: /contact/
+hero: /assets/images/hero-phone2.jpg
+classes: contact
 ---
+
+<p class="c-paragraph--lead">I'm currently employed full-time, but am available for freelance work if the right project comes along.</p>
 
 <form action="https://formspree.io/rockwood@gmail.com" method="POST">
 	<input type="text" name="name">

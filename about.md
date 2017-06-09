@@ -2,7 +2,11 @@
 layout: page
 title: About
 permalink: /about/
+hero: /assets/images/hero-about.png
+classes: about
 ---
+
+<p class="c-paragraph--lead">I&rsquo;m a front-end developer and designer living in Salt Lake City, Utah.</p>
 
 Some information about you!
 

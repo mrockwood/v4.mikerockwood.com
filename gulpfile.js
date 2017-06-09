@@ -95,11 +95,11 @@ gulp.task('styles', () => {
 			includePaths: './node_modules',
 		}).on('error', sass.logError))
 		.pipe(prefix(config.styles.browsers))
-		.pipe(uncss({
+		.pipe(gulpif(!config.dev, uncss({
 			html: ['_site/**/*.html'],
 			ignore: []
-		}))
-		.pipe(csso())
+		})))
+		.pipe(gulpif(!config.dev, csso()))
 		.pipe(gulp.dest(config.styles.dest))
 		.pipe(gulp.dest(config.styles.site))
 		.pipe(browserSync.reload({stream:true}))
