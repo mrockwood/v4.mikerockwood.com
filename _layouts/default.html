@@ -105,18 +105,16 @@ layout: compress
 		<!-- Navigation -->
 		<nav class="c-navbar  l-container  l-container--large  u-padding-vertical--small  u-padding-vertical--medium@medium" id="navigation" role="navigation">
 			<div class="l-grid  l-grid--middle">
-				<div class="c-logo  u-padding-vertical--xsmall">
-					<a class="c-logo__link" href="{{ site.baseurl }}/">
-						<!--<span class="c-logo__icon"><svg><use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#code"></use></svg></span>-->
-						<span class="c-logo__name">{{ site.name }}</span>
-						<!--<span class="c-logo__title">{{ site.description }}</span>-->
-					</a>
-				</div>
+				<a class="c-navbar__logo  u-padding-vertical--xsmall" href="{{ site.baseurl }}/">
+					<!--<span class="c-logo__icon"><svg><use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#code"></use></svg></span>-->
+					<span class="c-logo__name">{{ site.name }}</span>
+					<!--<span class="c-logo__title">{{ site.description }}</span>-->
+				</a>
 				<ul class="c-navbar__list  l-order--first@medium">
 					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/work/">Work</a></li>
 					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/about/">About</a></li>
 				</ul>
-				<ul class="c-navbar__list  l-order--last@medium">
+				<ul class="c-navbar__list">
 					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/">Blog</a></li>
 					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/contact/">Contact</a></li>
 				</ul>
@@ -133,7 +131,7 @@ layout: compress
 		<!-- Footer -->
 		<footer class="c-footer  c-sticky-footer__footer  u-background--grey-lighter  u-padding-vertical--large" id="footer" role="contentinfo">
 			<div class="l-container  l-container--large">
-				<ul class="c-list  c-list--unstyled  c-list--inline  c-footer__social">
+				<ul class="c-list  c-list--unstyled  c-list--inline  u-margin-bottom--medium">
 					{% include social.html %}
 				</ul>
 				<p class="c-footer__copyright  u-small  u-margin--none"><strong>©&nbsp;2008-{{ site.time | date: '%Y' }}.</strong> Powered by <a class="c-footer__copyright-link" href="http://jekyllrb.com/">Jekyll</a> and <a class="c-footer__copyright-link" href="https://pages.github.com/">Github Pages</a>. <a class="c-footer__copyright-link" href="https://github.com/mrockwood/mrockwood.github.io">Check out the source</a>.</p>

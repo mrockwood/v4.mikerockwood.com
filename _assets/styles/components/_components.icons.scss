@@ -31,18 +31,18 @@ $icon-weight-map: (
 	heavy: 10.9375%,
 ) !default;
 
-$icon-weight-map: (
+$icon-joint-map: (
 	'bevel': (
-		stroke-linecap: butt,
-		stroke-linejoin: bevel,
+		linecap: butt,
+		linejoin: bevel,
 	),
 	'miter': (
-		stroke-linecap: butt,
-		stroke-linejoin: miter,
+		linecap: butt,
+		linejoin: miter,
 	),
 	'round': (
-		stroke-linecap: round,
-		stroke-linejoin: round,
+		linecap: round,
+		linejoin: round,
 	),
 ) !default;
 
@@ -93,19 +93,13 @@ $icon-breakpoints: $global-breakpoints !default;
 	}
 
 	// joints
-	.c-icon--bevel#{$breakpoint-alias} {
-		stroke-linecap: butt;
-		stroke-linejoin: bevel;
-	}
+	@each $name, $value in $icon-joint-map {
 
-	.c-icon--miter#{$breakpoint-alias} {
-		stroke-linecap: butt;
-		stroke-linejoin: miter;
-	}
+		.#{$icon-namespace}#{$icon-modifier}#{$name}#{$breakpoint-alias} {
+			stroke-linecap: map-get($value, linecap);
+			stroke-linejoin: map-get($value, linejoin);
+		}
 
-	.c-icon--round#{$breakpoint-alias} {
-		stroke-linecap: round;
-		stroke-linejoin: round;
 	}
 
 }
