@@ -6,7 +6,7 @@ hero: /assets/images/hero-about.png
 classes: about
 ---
 
-<p class="c-paragraph--lead">I&rsquo;m a front-end developer and designer living in Salt Lake City, Utah.</p>
+{% include lead.html content="I&rsquo;m a front-end developer and designer living in Salt Lake City, Utah." %}
 
 Some information about you!
 

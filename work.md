@@ -5,7 +5,7 @@ hero: /assets/images/hero-macbook-air2.jpg
 classes: work
 ---
 
-<p class="c-paragraph--lead">I&rsquo;ve been building websites professionally for eight years. Here are some of my favorite projects.</p>
+{% include lead.html content="I&rsquo;ve been building websites professionally for eight years. Here are some of my favorite projects." %}
 
 <div class="project-list project-list--work">
 {% assign sorted = (site.work | sort: 'date') | reverse %}
