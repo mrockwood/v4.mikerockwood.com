@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #HEADER
+   ========================================================================== */
+
+.c-header {}
+
+.c-header__title {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 4.5em);
+
+	font-weight: map-get($global-font-weights, light);
+	line-height: map-get($global-line-heights, xsmall);
+	margin: map-get($global-spacing, small) 0;
+
+	@include media('>medium') {
+		text-shadow: 0 0 15px rgba(0,0,0,0.2);
+	}
+}

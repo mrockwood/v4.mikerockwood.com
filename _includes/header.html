@@ -1,10 +1,10 @@
 <!-- Header -->
 <header class="c-header {% if page.hero %}c-header--with-image  l-center-block@medium{% endif %}  l-container  l-container--large" role="banner">
 
-	<div class="{% if page.hero %}l-center-block__content@medium  u-color--white@medium{% endif %}  u-center">
+	<div class="l-container  l-container--large  {% if page.hero %}l-center-block__content@medium  u-color--white@medium{% endif %}  u-center">
 
 		{% if page.title %}
-			<h1 class="c-header__title  u-margin--none">{{ page.title }}</h1>
+			<h1 class="c-header__title  {% if page.hero %}u-color--white@medium{% endif %}">{{ page.title }}</h1>
 		{% endif %}
 
 		{% if page.sub-title %}

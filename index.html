@@ -2,9 +2,7 @@
 layout: default
 ---
 
-<div class="l-container  l-container--medium  u-padding-horizontal--none  u-padding-vertical--medium">
-	<p class="c-paragraph--lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet rhoncus orci. Morbi at risus nec metus vestibulum rhoncus. Vestibulum quis rhoncus dolor, ut mollis est.</p>
-</div>
+{% include lead.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet rhoncus orci. Morbi at risus nec metus vestibulum rhoncus. Vestibulum quis rhoncus dolor, ut mollis est." %}
 
 <div class="posts">
 {% for post in site.posts %}
