@@ -115,18 +115,13 @@ layout: compress
 					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/about/">About</a></li>
 				</ul>
 				<ul class="c-navbar__list">
-					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/">Blog</a></li>
+					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/notes/">Notes</a></li>
 					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/contact/">Contact</a></li>
 				</ul>
 			</div>
 		</nav>
 
-		{% include header.html %}
-
-		<!-- Main -->
-		<main class="l-container  l-container--large  c-sticky-footer__main" id="main" role="main">
-			{{ content }}
-		</main>
+		{{ content }}
 
 		<!-- Footer -->
 		<footer class="c-footer  c-sticky-footer__footer  u-background--grey-lighter  u-padding-vertical--large" id="footer" role="contentinfo">

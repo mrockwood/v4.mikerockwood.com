@@ -1,6 +1,6 @@
 {% if site.footer-links.dribbble %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="https://dribbble.com/{{ site.footer-links.dribbble }}">
+	<a class="c-footer__social-link  c-footer__social-link--dribbble" href="https://dribbble.com/{{ site.footer-links.dribbble }}">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#dribbble" | prepend: site.baseurl }}"></use>
 		</svg>
@@ -9,7 +9,7 @@
 {% endif %}
 {% if site.footer-links.email %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="mailto:{{ site.footer-links.email }}">
+	<a class="c-footer__social-link  c-footer__social-link--email" href="mailto:{{ site.footer-links.email }}">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#mail" | prepend: site.baseurl }}"></use>
 		</svg>
@@ -18,7 +18,7 @@
 {% endif %}
 {% if site.footer-links.facebook %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="https://www.facebook.com/{{ site.footer-links.facebook }}">
+	<a class="c-footer__social-link  c-footer__social-link--facebook" href="https://www.facebook.com/{{ site.footer-links.facebook }}">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#facebook" | prepend: site.baseurl }}"></use>
 		</svg>
@@ -27,7 +27,7 @@
 {% endif %}
 {% if site.footer-links.flickr %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="https://www.flickr.com/{{ site.footer-links.flickr }}">
+	<a class="c-footer__social-link  c-footer__social-link--flickr" href="https://www.flickr.com/{{ site.footer-links.flickr }}">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#flickr" | prepend: site.baseurl }}"></use>
 		</svg>
@@ -36,7 +36,7 @@
 {% endif %}
 {% if site.footer-links.github %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="https://github.com/{{ site.footer-links.github }}">
+	<a class="c-footer__social-link  c-footer__social-link--github" href="https://github.com/{{ site.footer-links.github }}">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#github" | prepend: site.baseurl }}"></use>
 		</svg>
@@ -45,7 +45,7 @@
 {% endif %}
 {% if site.footer-links.instagram %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="https://instagram.com/{{ site.footer-links.instagram }}">
+	<a class="c-footer__social-link  c-footer__social-link--instagram" href="https://instagram.com/{{ site.footer-links.instagram }}">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#instagram" | prepend: site.baseurl }}"></use>
 		</svg>
@@ -54,7 +54,7 @@
 {% endif %}
 {% if site.footer-links.linkedin %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}">
+	<a class="c-footer__social-link  c-footer__social-link--linkedin" href="https://www.linkedin.com/in/{{ site.footer-links.linkedin }}">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#linkedin" | prepend: site.baseurl }}"></use>
 		</svg>
@@ -63,7 +63,7 @@
 {% endif %}
 {% if site.footer-links.pinterest %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="https://www.pinterest.com/{{ site.footer-links.pinterest }}">
+	<a class="c-footer__social-link  c-footer__social-link--pinterest" href="https://www.pinterest.com/{{ site.footer-links.pinterest }}">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#pinterest" | prepend: site.baseurl }}"></use>
 		</svg>
@@ -72,7 +72,7 @@
 {% endif %}
 {% if site.footer-links.rss %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="{{ site.baseurl }}/feed.xml">
+	<a class="c-footer__social-link  c-footer__social-link--rss" href="{{ site.baseurl }}/feed.xml">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#rss" | prepend: site.baseurl }}"></use>
 		</svg>
@@ -81,7 +81,7 @@
 {% endif %}
 {% if site.footer-links.twitter %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="https://www.twitter.com/{{ site.footer-links.twitter }}">
+	<a class="c-footer__social-link  c-footer__social-link--twitter" href="https://www.twitter.com/{{ site.footer-links.twitter }}">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#twitter" | prepend: site.baseurl }}"></use>
 		</svg>
@@ -90,7 +90,7 @@
 {% endif %}
 {% if site.footer-links.stackoverflow %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="http://stackoverflow.com/{{ site.footer-links.stackoverflow }}">
+	<a class="c-footer__social-link  c-footer__social-link--stackoverflow" href="http://stackoverflow.com/{{ site.footer-links.stackoverflow }}">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#stackoverflow" | prepend: site.baseurl }}"></use>
 		</svg>
@@ -99,7 +99,7 @@
 {% endif %}
 {% if site.footer-links.youtube %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="https://youtube.com/{{ site.footer-links.youtube }}">
+	<a class="c-footer__social-link  c-footer__social-link--youtube" href="https://youtube.com/{{ site.footer-links.youtube }}">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#youtube" | prepend: site.baseurl }}"></use>
 		</svg>
@@ -108,7 +108,7 @@
 {% endif %}
 {% if site.footer-links.googleplus %}
 <li class="c-list__item  u-padding--none">
-	<a class="c-footer__social-link" href="https://plus.google.com/{{ site.footer-links.googleplus }}">
+	<a class="c-footer__social-link  c-footer__social-link--google-plus" href="https://plus.google.com/{{ site.footer-links.googleplus }}">
 		<svg class="c-icon  c-icon--xlarge  c-footer__social-icon">
 			<use xlink:href="{{ "/assets/icons/sprite.svg#google-plus" | prepend: site.baseurl }}"></use>
 		</svg>

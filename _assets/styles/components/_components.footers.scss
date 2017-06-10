@@ -6,3 +6,17 @@
 	font-family: map-get($global-font-families, sans-serif);
 	text-align: center;
 }
+
+.c-footer__social-link {
+	color: map-get($colors, grey);
+	transition: color map-get($global-speeds, fast);
+}
+
+// social media colors
+@each $name, $value in $social-colors {
+
+	.c-footer__social-link--#{$name}:hover {
+		color: $value;
+	}
+
+}

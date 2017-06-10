@@ -59,7 +59,7 @@
 .c-navbar__link {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), .75em, .875em);
 
-	color: map-get($colors, grey-dark);
+	color: map-get($colors, grey);
 	font-family: map-get($global-font-families, sans-serif);
 	font-size: map-get($global-font-sizes, small);
 	font-weight: map-get($global-font-weights, light);
