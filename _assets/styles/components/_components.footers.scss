@@ -20,3 +20,17 @@
 	}
 
 }
+
+.c-footer__copyright {
+	color: map-get($colors, grey-dark);
+	transition: color map-get($global-speeds, fast);
+}
+
+.c-footer__copyright-link {
+	color: inherit;
+	text-decoration-skip: ink;
+}
+
+.c-footer__copyright-link:hover {
+	color: map-get($colors, grey-darker);
+}

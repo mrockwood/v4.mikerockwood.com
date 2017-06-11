@@ -1,0 +1,23 @@
+/* ==========================================================================
+   #META
+   ========================================================================== */
+
+.c-meta {
+	//border-bottom: $global-border-width $global-border-style $global-border-color;
+	color: map-get($colors, grey);
+	font-family: map-get($global-font-families, sans-serif);
+	font-weight: map-get($global-font-weights, light);
+	letter-spacing: map-get($global-letter-spacing, large);
+	text-transform: uppercase;
+}
+
+.c-meta__item {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), .75em, .825em);
+
+	margin: map-get($global-spacing, small) 0;
+	text-align: center;
+}
+
+.c-meta__icon {
+	color: map-get($colors, blue);
+}

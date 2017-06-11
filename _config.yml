@@ -52,7 +52,7 @@ baseurl: ""
 # Content types
 collections:
   work:
-    permalink: /work/:title/
+    permalink: /:collection/:title/
     output: true
 
 #

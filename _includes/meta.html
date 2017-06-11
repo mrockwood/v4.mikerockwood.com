@@ -1,0 +1,29 @@
+{% if page.date or page.tags %}
+<div class="c-meta  l-container  l-container--large  u-padding-vertical--xsmall">
+	<div class="l-grid  l-grid--center">
+
+		{% if page.date %}
+			<p class="l-grid__item  l-width--shrink@medium  c-meta__item  c-meta__item--date">
+				<span class="c-meta__tooltip" data-balloon="Date Completed" data-balloon-pos="up">
+					<svg class="c-icon  c-icon--medium  c-meta__icon" title="Date Completed">
+						<use xlink:href="{{ '/assets/icons/sprite.svg#calendar' | prepend: site.baseurl }}"></use>
+					</svg>
+				</span>
+				<time date="{{ page.date | date: "%Y-%m-%d" }}" pubdate>{{ page.date | date: "%Y" }}</time>
+			</p>
+		{% endif %}
+
+		{% if page.tags %}
+			<p class="l-grid__item  l-width--shrink@medium  c-meta__item  c-meta__item--tags">
+				<span class="c-meta__tooltip" data-balloon="Responsibilities" data-balloon-pos="up">
+					<svg class="c-icon  c-icon--medium  c-meta__icon" title="Responsibilities">
+						<use xlink:href="{{ '/assets/icons/sprite.svg#tag' | prepend: site.baseurl }}"></use>
+					</svg>
+				</span>
+				{{ page.tags|array_to_sentence_string }}
+			</p>
+		{% endif %}
+
+	</div>
+</div>
+{% endif %}

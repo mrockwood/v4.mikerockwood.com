@@ -1,0 +1,47 @@
+
+
+{% if page.collection %}
+
+	{% capture the_collection %}{{page.collection}}{% endcapture %}
+
+	{% assign document = site[the_collection] | sort: "name" | reversed %}
+
+	{% for links in document %}
+		{% if links.date == page.date %}
+
+			{% unless forloop.first %}
+				{% assign prevurl = prev.url %}
+				{% assign prevtitle = prev.title %}
+			{% endunless %}
+
+			{% unless forloop.last %}
+				{% assign next = document[forloop.index] %}
+
+				{% assign nexturl = next.url %}
+
+				{% assign nexttitle = next.title %}
+			{% endunless %}
+		{% endif %}
+
+		{% assign prev = links %}
+	{% endfor %}
+
+{% endif %}
+
+<!-- Pagination -->
+{% if prevurl or nexturl %}
+	<div class="c-pagination  l-container  l-container--large  u-padding-vertical--medium">
+		<ul class="l-grid  l-grid--between">
+			<li class=""><a href="{{ site.baseurl }}/work/">All Projects</a></li>
+			{% if prevurl %}<li class="l-order--first@medium"><a href="{{prevurl}}" class="c-pagination__link  c-pagination__link--prev">Previous Project</a></li>{% endif %}
+			{% if nexturl %}<li class=""><a href="{{nexturl}}" class="c-pagination__link  c-pagination__link--next">Next Project</a></li>{% endif %}
+		</ul>
+	</div>
+
+	<script>
+	document.body.onkeyup = function(e){
+		if (e.keyCode == '37') { window.location = '{{prevurl}}'; }
+		if (e.keyCode == '39') { window.location = '{{nexturl}}'; }
+	};
+	</script>
+{% endif %}

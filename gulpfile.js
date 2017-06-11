@@ -177,7 +177,8 @@ gulp.task('icons', () => {
 				dimension: {
 					maxWidth: 24,
 					maxHeight: 24
-				}
+				},
+				transform: []
 			},
 			mode: {
 				symbol: true,

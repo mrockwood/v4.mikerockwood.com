@@ -2,19 +2,22 @@
 layout: default
 ---
 
-{% include lead.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet rhoncus orci. Morbi at risus nec metus vestibulum rhoncus. Vestibulum quis rhoncus dolor, ut mollis est." %}
+<!-- Main -->
+<main class="c-sticky-footer__main" id="main" role="main">
+	{% include lead.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet rhoncus orci. Morbi at risus nec metus vestibulum rhoncus. Vestibulum quis rhoncus dolor, ut mollis est." %}
 
-<div class="posts">
-{% for post in site.posts %}
-	<article class="post">
+	<div class="posts">
+	{% for post in site.posts %}
+		<article class="post">
 
-		<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+			<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
-		<div class="entry">
-			{{ post.excerpt }}
-		</div>
+			<div class="entry">
+				{{ post.excerpt }}
+			</div>
 
-		<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-	</article>
-{% endfor %}
-</div>
+			<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+		</article>
+	{% endfor %}
+	</div>
+</main>
