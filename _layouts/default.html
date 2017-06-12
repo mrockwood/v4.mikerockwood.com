@@ -94,6 +94,9 @@ layout: compress
 		<!-- Feeds -->
 		<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
+		<!-- Canonical -->
+		<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+
 		<!--[if lt IE 9]>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<![endif]-->
