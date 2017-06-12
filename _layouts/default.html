@@ -21,6 +21,63 @@ layout: compress
 		<meta name="author" content="{{ site.name }}" />
 		{% if page.excerpt %}<meta name="description" content="{{ page.excerpt| strip_html }}" />{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
 
+
+
+		<!-- Robots & Indexing -->
+		<meta name="robots" content="index,follow">
+		<meta name="revisit-after" content="1 days">
+
+		<!-- Open Graph -->
+		{% if page.title %}<meta property="og:title" content="{{ page.title }}" />{% endif %}
+		{% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt| strip_html }}" />{% else %}<meta property="og:description" content="{{ site.description }}" />{% endif %}
+
+		<!-- Twitter Card -->
+		{% if page.title %}<meta property="twitter:title" content="{{ page.title }}" />{% endif %}
+		{% if page.excerpt %}<meta property="twitter:description" content="{{ page.excerpt| strip_html }}" />{% else %}<meta property="twitter:description" content="{{ site.description }}" />{% endif %}
+
+		<!-- Feeds -->
+		<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body class="c-sticky-footer__body">
+
+		<!-- Navigation -->
+		<nav class="c-navbar  l-container  l-container--large  u-padding-vertical--small  u-padding-vertical--medium@medium" id="navigation" role="navigation">
+			<div class="l-grid  l-grid--middle">
+				<a class="c-navbar__logo  u-padding-vertical--xsmall" href="{{ site.baseurl }}/">
+					<!--<span class="c-logo__icon"><svg><use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#code"></use></svg></span>-->
+					<span class="c-logo__name">{{ site.name }}</span>
+					<!--<span class="c-logo__title">{{ site.description }}</span>-->
+				</a>
+				<ul class="c-navbar__list  l-order--first@medium">
+					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/work/">Work</a></li>
+					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/about/">About</a></li>
+				</ul>
+				<ul class="c-navbar__list">
+					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/notes/">Notes</a></li>
+					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/contact/">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		{{ content }}
+
+		<!-- Footer -->
+		<footer class="c-footer  c-sticky-footer__footer  u-background--grey-lighter  u-padding-vertical--xlarge" id="footer" role="contentinfo">
+			<div class="l-container  l-container--large">
+				<ul class="c-list  c-list--unstyled  c-list--inline  u-margin-bottom--xlarge">
+					{% include social.html %}
+				</ul>
+				<p class="c-footer__copyright  u-small  u-margin--none"><strong>©&nbsp;2008-{{ site.time | date: '%Y' }}.</strong> Powered by <a class="c-footer__copyright-link" href="http://jekyllrb.com/">Jekyll</a> and <a class="c-footer__copyright-link" href="https://pages.github.com/">Github Pages</a>. <a class="c-footer__copyright-link" href="https://github.com/mrockwood/mrockwood.github.io">Check out the source</a>.</p>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
 		<script>
 			/**
 			 * loadCSS: load a CSS file asynchronously.
@@ -79,61 +136,6 @@ layout: compress
 			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,400">
 		</noscript>
 
-		<!-- Robots & Indexing -->
-		<meta name="robots" content="index,follow">
-		<meta name="revisit-after" content="1 days">
-
-		<!-- Open Graph -->
-		{% if page.title %}<meta property="og:title" content="{{ page.title }}" />{% endif %}
-		{% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt| strip_html }}" />{% else %}<meta property="og:description" content="{{ site.description }}" />{% endif %}
-
-		<!-- Twitter Card -->
-		{% if page.title %}<meta property="twitter:title" content="{{ page.title }}" />{% endif %}
-		{% if page.excerpt %}<meta property="twitter:description" content="{{ page.excerpt| strip_html }}" />{% else %}<meta property="twitter:description" content="{{ site.description }}" />{% endif %}
-
-		<!-- Feeds -->
-		<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-
-		<!--[if lt IE 9]>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<![endif]-->
-
-	</head>
-
-	<body class="c-sticky-footer__body">
-
-		<!-- Navigation -->
-		<nav class="c-navbar  l-container  l-container--large  u-padding-vertical--small  u-padding-vertical--medium@medium" id="navigation" role="navigation">
-			<div class="l-grid  l-grid--middle">
-				<a class="c-navbar__logo  u-padding-vertical--xsmall" href="{{ site.baseurl }}/">
-					<!--<span class="c-logo__icon"><svg><use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#code"></use></svg></span>-->
-					<span class="c-logo__name">{{ site.name }}</span>
-					<!--<span class="c-logo__title">{{ site.description }}</span>-->
-				</a>
-				<ul class="c-navbar__list  l-order--first@medium">
-					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/work/">Work</a></li>
-					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/about/">About</a></li>
-				</ul>
-				<ul class="c-navbar__list">
-					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/notes/">Notes</a></li>
-					<li class="c-navbar__list-item"><a class="c-navbar__link" href="{{ site.baseurl }}/contact/">Contact</a></li>
-				</ul>
-			</div>
-		</nav>
-
-		{{ content }}
-
-		<!-- Footer -->
-		<footer class="c-footer  c-sticky-footer__footer  u-background--grey-lighter  u-padding-vertical--xlarge" id="footer" role="contentinfo">
-			<div class="l-container  l-container--large">
-				<ul class="c-list  c-list--unstyled  c-list--inline  u-margin-bottom--xlarge">
-					{% include social.html %}
-				</ul>
-				<p class="c-footer__copyright  u-small  u-margin--none"><strong>©&nbsp;2008-{{ site.time | date: '%Y' }}.</strong> Powered by <a class="c-footer__copyright-link" href="http://jekyllrb.com/">Jekyll</a> and <a class="c-footer__copyright-link" href="https://pages.github.com/">Github Pages</a>. <a class="c-footer__copyright-link" href="https://github.com/mrockwood/mrockwood.github.io">Check out the source</a>.</p>
-			</div>
-		</footer>
-
-		<!-- Scripts -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" async></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.8/svg4everybody.min.js" async></script>
 		<script src="{{ site.baseurl }}/assets/scripts/main.min.js" async></script>
