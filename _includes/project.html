@@ -23,7 +23,7 @@
   <div class="project__excerpt">
     <!--<p class="project__time">2016</p>-->
     <h2 class="project__title"><a class="project__link" href="{{ project.url }}">{{ project.title }}{% if project.sub-title %}, {{ project.sub-title }}{% endif %}</a></h2>
-    <p class="project__summary">{{ project.excerpt | remove: '<p class="lead">' | remove: '</p>' }}</p>
+    <p class="project__summary">{{ project.excerpt | strip_html }}</p>
     <a class="project__button" href="{{ project.url }}">View Project</a>
   </div>
 
