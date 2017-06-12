@@ -7,7 +7,7 @@
 .c-header__title {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 4.5em);
 
-	font-weight: map-get($global-font-weights, light);
+	font-weight: map-get($global-font-weights, regular);
 	line-height: map-get($global-line-heights, xsmall);
 	margin: map-get($global-spacing, small) 0;
 

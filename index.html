@@ -9,16 +9,34 @@ layout: default
 
 	<div class="l-container  l-container--large  u-margin-bottom--super">
 		<div class="l-grid">
+			<div class="l-grid__item  l-width--expand@medium">
+				<h2>Latest Notes</h2>
+			</div>
+			<div class="l-grid__item  l-width--shrink@medium">
+				<a href="{{ site.baseurl }}/work/">
+					View More Notes
+					<svg class="c-icon  c-icon--small">
+						<use xlink:href="{{ '/assets/icons/sprite.svg#arrow-right' | prepend: site.baseurl }}"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class="l-grid">
 		{% for post in site.posts %}
 			<article class="l-grid__item  l-width--1/2@small  l-width--1/3@large">
 
-				<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+				<h3 class="c-h3"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
 
 				<div class="entry">
 					{{ post.excerpt }}
 				</div>
 
-				<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+				<a class="u-font--sans-serif  u-semibold  u-tracking--slight  u-small  u-uppercase" href="{{ site.baseurl }}{{ post.url }}">
+					Read More
+					<svg class="c-icon  c-icon--small">
+						<use xlink:href="{{ '/assets/icons/sprite.svg#arrow-right' | prepend: site.baseurl }}"></use>
+					</svg>
+				</a>
 			</article>
 		{% endfor %}
 		</div>

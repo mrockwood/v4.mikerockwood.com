@@ -64,5 +64,31 @@
 	font-size: map-get($global-font-sizes, small);
 	font-weight: map-get($global-font-weights, light);
 	letter-spacing: map-get($global-letter-spacing, xlarge);
+	padding: map-get($global-spacing, small) 0;
+	position: relative;
 	text-decoration: none;
+	transition: map-get($global-speeds, fast);
+}
+
+.c-navbar__link:hover {
+	color: map-get($colors, grey-dark);
+}
+
+@include media('>medium') {
+	.c-navbar__link:before {
+		background: map-get($colors, grey-light);
+		content: '';
+		height: 1px;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 100%;
+		transform: scaleX(0);
+		transition: inherit;
+	}
+
+	.c-navbar__link:active:before,
+	.c-navbar__link:hover:before {
+		transform: scaleX(1);
+	}
 }

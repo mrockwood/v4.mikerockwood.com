@@ -2,6 +2,19 @@
    #TYPOGRAPHY
    ========================================================================== */
 
+.c-h1,
+.c-h2,
+.c-h3,
+.c-h4,
+.c-h5,
+.c-h6 {
+	font-family: map-get($global-font-families, sans-serif);
+}
+
+.c-h4 {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.25em);
+}
+
 .c-paragraph--lead {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.5em);
 
