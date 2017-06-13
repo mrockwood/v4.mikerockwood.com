@@ -1,0 +1,168 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+
+
+
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+
+.c-button {
+	border-radius: $global-border-radius;
+	cursor: pointer; /* [5] */
+	display: inline-block; /* [1] */
+	//font: inherit; /* [3] */
+	font-family: map-get($global-font-families, sans-serif);
+	letter-spacing: map-get($global-letter-spacing, large);
+	margin: 0; /* [4] */
+	padding: map-get($global-spacing, small) map-get($global-spacing, large);
+	text-align: center; /* [4] */
+	text-transform: uppercase;
+	transition: $global-speed-default;
+	vertical-align: middle; /* [2] */
+}
+
+
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-button--primary {
+	background-color: map-get($colors, blue);
+
+	&,
+	&:hover,
+	&:active,
+	&:focus {
+		color: #fff;
+		text-decoration: none; /* [4] */
+	}
+
+	&:hover,
+	&:focus {
+		background-color: map-get($colors, blue-darker);
+	}
+
+}
+
+.c-button--secondary {
+	background-color: #2f4054;
+
+	&,
+	&:hover,
+	&:active,
+	&:focus {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: #1d2733;
+	}
+
+}
+
+.c-button--tertiary {
+	background-color: #fff;
+	color: #4a8ec2;
+
+	&,
+	&:hover,
+	&:active,
+	&:focus {
+		color: #4a8ec2;
+		text-decoration: none;
+	}
+
+	&:hover,
+	&:focus {
+		color: #3774a2;
+	}
+
+}
+
+
+
+
+/* Size variants
+   ========================================================================== */
+
+.c-button--small {
+	padding: map-get($global-spacing, tiny) map-get($global-spacing, small);
+}
+
+.c-button--large {
+	padding: map-get($global-spacing, medium) map-get($global-spacing, xlarge);
+}
+
+
+
+
+/* Ghost buttons
+   ========================================================================== */
+
+/**
+ * Ghost buttons have see-through backgrounds and are bordered.
+ */
+
+$button-ghost-border-width: .125em;
+
+.c-button--ghost {
+	border: $button-ghost-border-width solid currentColor;
+	padding: (map-get($global-spacing, small) - $button-ghost-border-width) (map-get($global-spacing, large) - $button-ghost-border-width);
+
+	&,
+	&:hover,
+	&:active,
+	&:focus {
+		background: none;
+	}
+
+	&.c-button--small {
+		padding: (map-get($global-spacing, tiny) - $button-ghost-border-width) (map-get($global-spacing, small) - $button-ghost-border-width);
+	}
+
+	&.c-button--large {
+		padding: ($global-spacing-default - $button-ghost-border-width) ($global-spacing-default - $button-ghost-border-width);
+	}
+
+	&.c-button--primary {
+		color: #4a8ec2;
+
+		&:hover,
+		&:focus {
+			color: #3774a2;
+		}
+
+	}
+
+	&.c-button--secondary {
+		color: #2f4054;
+
+		&:hover,
+		&:focus {
+			color: #1d2733;
+		}
+
+	}
+
+	&.c-button--tertiary {
+		color: #fff;
+
+		&:hover,
+		&:focus {
+			color: #fff;
+		}
+
+	}
+
+}
