@@ -11,9 +11,28 @@
 	font-family: map-get($global-font-families, sans-serif);
 }
 
+.c-h1 {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 2.5em);
+}
+
+.c-h2 {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.5em, 2em);
+}
+
+.c-h3 {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.25em, 1.5em);
+}
+
 .c-h4 {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.25em);
 }
+
+
+
+
+//
+// Lead
+//
 
 .c-paragraph--lead {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.5em);

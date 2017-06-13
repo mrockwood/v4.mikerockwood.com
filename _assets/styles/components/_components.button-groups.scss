@@ -1,0 +1,15 @@
+/* ==========================================================================
+   #BUTTON-GROUP
+   ========================================================================== */
+
+/**
+ * 1. Using `flex` instead of `inline-block` to prevent whitespace betweent child elements
+ * 2. Create position context
+ * 3. Behave like button
+ */
+
+.c-button-group {
+	display: inline-flex; /* 1 */
+	position: relative; /* 2 */
+	vertical-align: middle; /* 3 */
+}
