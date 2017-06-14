@@ -3039,6 +3039,7 @@ img {
   letter-spacing: 0.1em;
   margin: 0;
   /* [4] */
+  max-width: 100%;
   padding: 0.5em 1.5em;
   text-align: center;
   /* [4] */
@@ -3046,6 +3047,8 @@ img {
   transition: 300ms;
   vertical-align: middle;
   /* [2] */ }
+  .c-button:disabled {
+    cursor: not-allowed; }
 
 /* Style variants
    ========================================================================== */
@@ -3057,6 +3060,8 @@ img {
     /* [4] */ }
   .c-button--primary:hover, .c-button--primary:focus {
     background-color: #1862ab; }
+  .c-button--primary:disabled {
+    background-color: #329af0; }
 
 .c-button--secondary {
   background-color: #2f4054; }

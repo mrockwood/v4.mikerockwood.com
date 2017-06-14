@@ -15,6 +15,7 @@
  */
 
 .c-button {
+	//border-width: 0;
 	border-radius: $global-border-radius;
 	cursor: pointer; /* [5] */
 	display: inline-block; /* [1] */
@@ -23,11 +24,16 @@
 	font-size: map-get($global-font-sizes, small);
 	letter-spacing: map-get($global-letter-spacing, large);
 	margin: 0; /* [4] */
+	max-width: 100%;
 	padding: map-get($global-spacing, small) map-get($global-spacing, large);
 	text-align: center; /* [4] */
 	text-transform: uppercase;
 	transition: $global-speed-default;
 	vertical-align: middle; /* [2] */
+
+	&:disabled {
+		cursor: not-allowed;
+	}
 }
 
 
@@ -50,6 +56,10 @@
 	&:hover,
 	&:focus {
 		background-color: map-get($colors, blue-darker);
+	}
+
+	&:disabled {
+		background-color: map-get($colors, blue-lighter);
 	}
 
 }

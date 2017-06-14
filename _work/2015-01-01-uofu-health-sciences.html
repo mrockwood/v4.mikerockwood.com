@@ -3,7 +3,7 @@ layout: page
 title: University of Utah
 sub-title: Health Sciences
 hero: /assets/images/hero-uuhsc.jpg
-classes: project--uuhsc
+classes: t-work--uuhsc
 tags:
   - front-end development
   - back-end development
@@ -11,23 +11,31 @@ tags:
 
 {% include lead.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in mauris vel elit porta porta non vel tellus. Phasellus varius pretium lectus, ac scelerisque eros viverra sit amet." %}
 
-<div class="button-group">
-	<a class="button button-project--primary" href="http://medicine.utah.edu">
-		Visit Website
-		<svg class="c-icon">
-			<use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#external-link"></use>
-		</svg>
-	</a>
-	<a href="http://github.com" class="button button-project--secondary">
-		View Code Sample
-		<svg class="c-icon">
-			<use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#external-link"></use>
-		</svg>
-	</a>
+<div class="l-container  l-container--medium  u-margin-bottom--medium  u-margin-bottom--xlarge@medium">
+	<div class="l-grid  l-grid--center">
+		<div class="l-grid__item  l-width--shrink@medium">
+			<a class="c-button  c-button--large  c-button--primary  u-block  u-margin-bottom--medium" href="http://healthsciences.utah.edu">
+				Visit Website
+				<svg class="c-icon  c-icon--small">
+					<use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#external-link"></use>
+				</svg>
+			</a>
+		</div>
+		<div class="l-grid__item  l-width--shrink@medium">
+			<a class="c-button  c-button--large  c-button--ghost  c-button--secondary  u-block  u-margin-bottom--medium" href="http://github.com">
+				View Code Sample
+				<svg class="c-icon  c-icon--small">
+					<use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#external-link"></use>
+				</svg>
+			</a>
+		</div>
+	</div>
 </div>
 
-<p>This is a special project because it is the first full-stack site I built.</p>
+<section class="l-container  l-container--medium">
+	<p>This is a special project because it is the first full-stack site I built.</p>
+</section>
 
-<figure class="zoom">
-	<img src="{{ site.baseurl }}/assets/images/work__uuhsc--home.jpg" alt="University of Utah Health Sciences website" />
+<figure class="l-container  l-container--large">
+	<img class="c-zoom" src="{{ site.baseurl }}/assets/images/work__uuhsc--home.jpg" alt="University of Utah Health Sciences website" />
 </figure>
