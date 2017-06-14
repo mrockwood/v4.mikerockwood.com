@@ -3,20 +3,24 @@
 
 	<div class="l-container  l-container--large  {% if page.hero %}l-center-block__content@medium  u-color--white@medium{% endif %}  u-center">
 
-		{% if page.title %}
-			<h1 class="c-header__title  {% if page.hero %}u-color--white@medium{% endif %}">{{ page.title }}</h1>
-		{% endif %}
+		<h1 class="c-header__text  {% if page.hero %}u-color--white@medium{% endif %}">
 
-		{% if page.sub-title %}
-			<h2 class="c-header__subtitle">{{ page.sub-title }}</h2>
-		{% endif %}
+			{% if page.title %}
+				<span class="c-header__title">{{ page.title }}</span>
+			{% endif %}
+
+			{% if page.sub-title %}
+				<small class="c-header__subtitle">{{ page.sub-title }}</small>
+			{% endif %}
+
+		</h1>
 
 	</div>
 
 	{% if page.hero %}
-	<div class="c-header__image-wrapper">
-		<img src="{{ site.baseurl }}{{ page.hero }}" alt="" class="c-header__image" />
-	</div>
+		<div class="c-header__image-wrapper">
+			<img class="c-header__image" src="{{ site.baseurl }}{{ page.hero }}" alt="" />
+		</div>
 	{% endif %}
 
 </header>

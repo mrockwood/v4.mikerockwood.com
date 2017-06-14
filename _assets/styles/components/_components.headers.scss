@@ -4,14 +4,36 @@
 
 .c-header {}
 
+.c-header__text {
+	display: flex;
+	flex-direction: column;
+	font-size: inherit;
+	margin: map-get($global-spacing, medium) 0;
+}
+
 .c-header__title {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 4.5em);
 
 	font-weight: map-get($global-font-weights, regular);
 	line-height: map-get($global-line-heights, xsmall);
-	margin: map-get($global-spacing, small) 0;
+	margin: map-get($global-spacing, tiny) 0;
 
 	@include media('>medium') {
 		text-shadow: 0 0 15px rgba(0,0,0,0.2);
+	}
+}
+
+.c-header__subtitle {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.25em, 1.75em);
+
+	color: map-get($colors, grey);
+	font-family: map-get($global-font-families, sans-serif);
+	font-weight: map-get($global-font-weights, light);
+	letter-spacing: map-get($global-letter-spacing, xlarge);
+	margin: map-get($global-spacing, tiny) 0;
+	text-transform: uppercase;
+
+	@include media('>medium') {
+		color: inherit;
 	}
 }

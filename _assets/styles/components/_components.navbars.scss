@@ -64,10 +64,16 @@
 	font-size: map-get($global-font-sizes, small);
 	font-weight: map-get($global-font-weights, light);
 	letter-spacing: map-get($global-letter-spacing, xlarge);
-	padding: map-get($global-spacing, small) 0;
+	padding: map-get($global-spacing, xsmall) map-get($global-spacing, small);
 	position: relative;
 	text-decoration: none;
 	transition: map-get($global-speeds, fast);
+
+	@include media('<=medium') {
+		background-color: map-get($colors, grey-lighter);
+		border-radius: $global-border-radius;
+		color: map-get($colors, grey-dark);
+	}
 }
 
 .c-navbar__link:hover {

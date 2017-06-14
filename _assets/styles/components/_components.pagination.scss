@@ -5,7 +5,9 @@
 .c-pagination {
 	font-family: map-get($global-font-families, sans-serif);
 	text-transform: uppercase;
+}
 
+.c-pagination__list {
 	@include media('>medium') {
 		border-top: $global-border-width $global-border-style $global-border-color;
 	}
@@ -27,6 +29,8 @@
 
 	.c-pagination__link--all {
 		align-items: center;
+		border-left: $global-border-width $global-border-style $global-border-color;
+		border-right: $global-border-width $global-border-style $global-border-color;
 		display: flex;
 		flex-direction: column;
 	}
@@ -43,6 +47,7 @@
 
 	.c-pagination__link--prev {
 		justify-content: flex-start;
+		order: map-get($global-ordering, first);
 	}
 
 	.c-pagination__icon--next {

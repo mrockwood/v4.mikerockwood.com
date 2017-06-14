@@ -5,6 +5,7 @@
 	{% assign document = site[the_collection] | sort: "name" | reversed %}
 
 	{% for links in document %}
+
 		{% if links.date == page.date %}
 
 			{% unless forloop.first %}
@@ -14,14 +15,14 @@
 
 			{% unless forloop.last %}
 				{% assign next = document[forloop.index] %}
-
 				{% assign nexturl = next.url %}
-
 				{% assign nexttitle = next.title %}
 			{% endunless %}
+
 		{% endif %}
 
 		{% assign prev = links %}
+
 	{% endfor %}
 
 {% endif %}
@@ -30,7 +31,7 @@
 	<!-- Pagination -->
 	<div class="c-pagination">
 		<nav class="l-container  l-container--large">
-			<ul class="l-grid  u-margin-horizontal--none">
+			<ul class="l-grid  c-pagination__list  u-margin-horizontal--none">
 				<a class="c-pagination__link  c-pagination__link--all  l-grid__item  l-width--1/5@medium  {% if prevurl == nil %}l-push--2/5@medium{% endif %}  u-padding-horizontal--none" href="{{ site.baseurl }}/work/">
 					<svg class="c-icon  c-pagination__icon  c-pagination__icon--all">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#grid' | prepend: site.baseurl }}"></use>
@@ -38,7 +39,7 @@
 					<span class="u-small">All Projects</span>
 				</a>
 				{% if prevurl %}
-				<a class="c-pagination__link  c-pagination__link--prev  l-grid__item  l-width--2/5@medium  l-order--first@medium  u-padding-horizontal--none" href="{{prevurl}}">
+				<a class="c-pagination__link  c-pagination__link--prev  l-grid__item  l-width--2/5@medium  u-padding-horizontal--none" href="{{prevurl}}">
 					<svg class="c-icon  c-pagination__icon  c-pagination__icon--prev">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#chevron-left' | prepend: site.baseurl }}"></use>
 					</svg>

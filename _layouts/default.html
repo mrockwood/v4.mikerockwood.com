@@ -9,7 +9,7 @@ layout: compress
 	<head>
 
 		<!-- Title -->
-		<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+		<title>{% if page.title %}{{ page.title }}{% if page.sub-title %}, {{ page.sub-title }}{% endif %} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
 		<!-- Global Metadata-->
 		<meta charset="utf-8">
