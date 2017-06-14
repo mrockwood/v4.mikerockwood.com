@@ -3207,10 +3207,10 @@ img {
   margin: 0.125em 0;
   text-transform: uppercase; }
   .c-header__subtitle {
-    font-size: 1.25em; }
+    font-size: 1.125em; }
     @media screen and (min-width: 30em) {
       .c-header__subtitle {
-        font-size: calc(1.25em + 0.5 * ((100vw - 30em) / 48)); } }
+        font-size: calc(1.125em + 0.625 * ((100vw - 30em) / 48)); } }
     @media screen and (min-width: 78em) {
       .c-header__subtitle {
         font-size: 1.75em; } }
@@ -3343,6 +3343,23 @@ img {
   letter-spacing: 0.1em;
   text-transform: uppercase; }
 
+.c-meta__list {
+  -ms-flex-align: center;
+      align-items: center;
+  border-bottom: 1px solid #dee2e6;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding-bottom: 0.25em;
+  padding-top: 0.25em; }
+  @media (min-width: 48.01em) {
+    .c-meta__list {
+      -ms-flex-direction: row;
+          flex-direction: row; } }
+
 .c-meta__item {
   margin: 0.5em 0;
   text-align: center; }
@@ -3354,6 +3371,10 @@ img {
     @media screen and (min-width: 78em) {
       .c-meta__item {
         font-size: 0.825em; } }
+  @media (min-width: 48.01em) {
+    .c-meta__item {
+      padding-left: 1.5em;
+      padding-right: 1.5em; } }
 
 .c-meta__icon {
   color: #1c7cd6; }
@@ -3463,6 +3484,9 @@ img {
     border-top: 1px solid #dee2e6; } }
 
 .c-pagination__link {
+  color: #868e96;
+  font-size: 0.925em;
+  letter-spacing: 0.05em;
   padding-bottom: 1em;
   padding-top: 1em;
   text-decoration: none; }
@@ -3471,6 +3495,12 @@ img {
       border-top: 1px solid #dee2e6;
       padding-left: 0;
       padding-right: 0; } }
+
+.c-pagination__icon {
+  color: #1c7cd6; }
+  @media (max-width: 48em) {
+    .c-pagination__icon {
+      margin-right: 0.25em; } }
 
 @media (min-width: 48.01em) {
   .c-pagination__link--all {
@@ -3496,9 +3526,14 @@ img {
         justify-content: flex-start;
     -ms-flex-order: -1;
         order: -1; }
+  .c-pagination__icon--all {
+    margin-bottom: 0.5em; }
   .c-pagination__icon--next {
+    margin-left: 0.5em;
     -ms-flex-order: 1;
-        order: 1; } }
+        order: 1; }
+  .c-pagination__icon--prev {
+    margin-right: 0.5em; } }
 
 /* ==========================================================================
    #STICKY FOOTER

@@ -1,25 +1,25 @@
 {% if page.date or page.tags %}
-<div class="c-meta  l-container  l-container--large  u-padding-vertical--xsmall">
-	<ul class="c-meta__list  l-grid  l-grid--center">
+<div class="c-meta  l-container  l-container--large">
+	<div class="c-meta__list">
 
 		{% if page.date %}
-			<li class="c-meta__item  c-meta__item--date  l-grid__item  l-width--shrink@medium">
-				<svg class="c-icon  c-icon--medium  c-meta__icon" title="Date Completed">
+			<div class="c-meta__item  c-meta__item--date">
+				<svg class="c-meta__icon  c-icon  c-icon--medium" title="Date Completed">
 					<use xlink:href="{{ '/assets/icons/sprite.svg#calendar' | prepend: site.baseurl }}"></use>
 				</svg>
 				<time date="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%Y" }}</time>
-			</li>
+			</div>
 		{% endif %}
 
 		{% if page.tags %}
-			<li class="c-meta__item  c-meta__item--tags  l-grid__item  l-width--shrink@medium">
-				<svg class="c-icon  c-icon--medium  c-meta__icon" title="Responsibilities">
+			<div class="c-meta__item  c-meta__item--tags">
+				<svg class="c-meta__icon  c-icon  c-icon--medium" title="Responsibilities">
 					<use xlink:href="{{ '/assets/icons/sprite.svg#tag' | prepend: site.baseurl }}"></use>
 				</svg>
 				{{ page.tags|array_to_sentence_string }}
-			</li>
+			</div>
 		{% endif %}
 
-	</ul>
+	</div>
 </div>
 {% endif %}

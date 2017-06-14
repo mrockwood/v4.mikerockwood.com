@@ -2,8 +2,6 @@
    #HEADER
    ========================================================================== */
 
-.c-header {}
-
 .c-header__text {
 	display: flex;
 	flex-direction: column;
@@ -24,7 +22,7 @@
 }
 
 .c-header__subtitle {
-	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.25em, 1.75em);
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.75em);
 
 	color: map-get($colors, grey);
 	font-family: map-get($global-font-families, sans-serif);

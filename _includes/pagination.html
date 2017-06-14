@@ -29,18 +29,18 @@
 
 {% if prevurl or nexturl %}
 	<!-- Pagination -->
-	<div class="c-pagination">
-		<nav class="l-container  l-container--large">
+	<div class="l-container  l-container--large">
+		<nav class="c-pagination">
 			<ul class="l-grid  c-pagination__list  u-margin-horizontal--none">
 				<a class="c-pagination__link  c-pagination__link--all  l-grid__item  l-width--1/5@medium  {% if prevurl == nil %}l-push--2/5@medium{% endif %}  u-padding-horizontal--none" href="{{ site.baseurl }}/work/">
-					<svg class="c-icon  c-pagination__icon  c-pagination__icon--all">
+					<svg class="c-pagination__icon  c-pagination__icon--all  c-icon">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#grid' | prepend: site.baseurl }}"></use>
 					</svg>
-					<span class="u-small">All Projects</span>
+					<span class="u-small">All</span>
 				</a>
 				{% if prevurl %}
 				<a class="c-pagination__link  c-pagination__link--prev  l-grid__item  l-width--2/5@medium  u-padding-horizontal--none" href="{{prevurl}}">
-					<svg class="c-icon  c-pagination__icon  c-pagination__icon--prev">
+					<svg class="c-pagination__icon  c-pagination__icon--prev  c-icon">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#chevron-left' | prepend: site.baseurl }}"></use>
 					</svg>
 					<span class="u-small">Prev</span>
@@ -48,7 +48,7 @@
 				{% endif %}
 				{% if nexturl %}
 				<a class="c-pagination__link  c-pagination__link--next  l-grid__item  l-width--2/5@medium  u-padding-horizontal--none" href="{{nexturl}}">
-					<svg class="c-icon  c-pagination__icon  c-pagination__icon--next">
+					<svg class="c-pagination__icon  c-pagination__icon--next  c-icon">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#chevron-right' | prepend: site.baseurl }}"></use>
 					</svg>
 					<span class="u-small">Next</span>

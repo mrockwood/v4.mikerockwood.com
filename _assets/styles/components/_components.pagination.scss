@@ -14,6 +14,9 @@
 }
 
 .c-pagination__link {
+	color: map-get($colors, grey);
+	font-size: map-get($global-font-sizes, small);
+	letter-spacing: map-get($global-letter-spacing, medium);
 	padding-bottom: map-get($global-spacing, medium);
 	padding-top: map-get($global-spacing, medium);
 	text-decoration: none;
@@ -22,6 +25,14 @@
 		border-top: $global-border-width $global-border-style $global-border-color;
 		padding-left: 0;
 		padding-right: 0;
+	}
+}
+
+.c-pagination__icon {
+	color: map-get($colors, blue);
+
+	@include media('<=medium') {
+		margin-right: map-get($global-spacing, xsmall);
 	}
 }
 
@@ -50,8 +61,17 @@
 		order: map-get($global-ordering, first);
 	}
 
+	.c-pagination__icon--all {
+		margin-bottom: map-get($global-spacing, small);
+	}
+
 	.c-pagination__icon--next {
+		margin-left: map-get($global-spacing, small);
 		order: map-get($global-ordering, last);
+	}
+
+	.c-pagination__icon--prev {
+		margin-right: map-get($global-spacing, small);
 	}
 
 }

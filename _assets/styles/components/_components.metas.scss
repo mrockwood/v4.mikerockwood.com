@@ -3,7 +3,6 @@
    ========================================================================== */
 
 .c-meta {
-	//border-bottom: $global-border-width $global-border-style $global-border-color;
 	color: map-get($colors, grey);
 	font-family: map-get($global-font-families, sans-serif);
 	font-weight: map-get($global-font-weights, light);
@@ -11,11 +10,30 @@
 	text-transform: uppercase;
 }
 
+.c-meta__list {
+	align-items: center;
+	border-bottom: $global-border-width $global-border-style $global-border-color;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-bottom: map-get($global-spacing, xsmall);
+	padding-top: map-get($global-spacing, xsmall);
+
+	@include media('>medium') {
+		flex-direction: row;
+	}
+}
+
 .c-meta__item {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), .75em, .825em);
 
 	margin: map-get($global-spacing, small) 0;
 	text-align: center;
+
+	@include media('>medium') {
+		padding-left: $global-spacing-default;
+		padding-right: $global-spacing-default;
+	}
 }
 
 .c-meta__icon {
