@@ -29,32 +29,32 @@
 {% if prevurl or nexturl %}
 	<!-- Pagination -->
 	<div class="c-pagination">
-		<div class="l-container  l-container--large">
-			<nav class="l-grid  l-grid--middle">
-				<a class="c-pagination__link  c-pagination__link--all  l-grid__item  l-width--1/5@medium" href="{{ site.baseurl }}/work/">
-					<svg class="c-icon">
+		<nav class="l-container  l-container--large">
+			<ul class="l-grid  u-margin-horizontal--none">
+				<a class="c-pagination__link  c-pagination__link--all  l-grid__item  l-width--1/5@medium  {% if prevurl == nil %}l-push--2/5@medium{% endif %}  u-padding-horizontal--none" href="{{ site.baseurl }}/work/">
+					<svg class="c-icon  c-pagination__icon  c-pagination__icon--all">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#grid' | prepend: site.baseurl }}"></use>
 					</svg>
 					<span class="u-small">All Projects</span>
 				</a>
 				{% if prevurl %}
-				<a class="c-pagination__link  c-pagination__link--prev  l-grid__item  l-width--2/5@medium  l-order--first@medium" href="{{prevurl}}">
-					<svg class="c-icon">
+				<a class="c-pagination__link  c-pagination__link--prev  l-grid__item  l-width--2/5@medium  l-order--first@medium  u-padding-horizontal--none" href="{{prevurl}}">
+					<svg class="c-icon  c-pagination__icon  c-pagination__icon--prev">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#chevron-left' | prepend: site.baseurl }}"></use>
 					</svg>
 					<span class="u-small">Prev</span>
 				</a>
 				{% endif %}
 				{% if nexturl %}
-				<a class="c-pagination__link  c-pagination__link--next  l-grid__item  l-width--2/5@medium" href="{{nexturl}}">
-					<svg class="c-icon">
+				<a class="c-pagination__link  c-pagination__link--next  l-grid__item  l-width--2/5@medium  u-padding-horizontal--none" href="{{nexturl}}">
+					<svg class="c-icon  c-pagination__icon  c-pagination__icon--next">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#chevron-right' | prepend: site.baseurl }}"></use>
 					</svg>
 					<span class="u-small">Next</span>
 				</a>
 				{% endif %}
-			</nav>
-		</div>
+			</ul>
+		</nav>
 	</div>
 
 	<script>

@@ -3,18 +3,18 @@
 	<div class="l-grid  l-grid--center">
 
 		{% if page.date %}
-			<p class="l-grid__item  l-width--shrink@medium  c-meta__item  c-meta__item--date">
+			<p class="c-meta__item  c-meta__item--date  l-grid__item  l-width--shrink@medium">
 				<span class="c-meta__tooltip" data-balloon="Date Completed" data-balloon-pos="up">
 					<svg class="c-icon  c-icon--medium  c-meta__icon" title="Date Completed">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#calendar' | prepend: site.baseurl }}"></use>
 					</svg>
 				</span>
-				<time date="{{ page.date | date: "%Y-%m-%d" }}" pubdate>{{ page.date | date: "%Y" }}</time>
+				<time date="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%Y" }}</time>
 			</p>
 		{% endif %}
 
 		{% if page.tags %}
-			<p class="l-grid__item  l-width--shrink@medium  c-meta__item  c-meta__item--tags">
+			<p class="c-meta__item  c-meta__item--tags  l-grid__item  l-width--shrink@medium">
 				<span class="c-meta__tooltip" data-balloon="Responsibilities" data-balloon-pos="up">
 					<svg class="c-icon  c-icon--medium  c-meta__icon" title="Responsibilities">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#tag' | prepend: site.baseurl }}"></use>

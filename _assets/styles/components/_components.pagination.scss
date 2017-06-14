@@ -2,17 +2,12 @@
    #PAGINATION
    ========================================================================== */
 
-
-
-
 .c-pagination {
 	font-family: map-get($global-font-families, sans-serif);
-	margin-top: map-get($global-spacing, medium);
 	text-transform: uppercase;
 
 	@include media('>medium') {
 		border-top: $global-border-width $global-border-style $global-border-color;
-		margin-top: map-get($global-spacing, xlarge);
 	}
 }
 
@@ -23,18 +18,35 @@
 
 	@include media('<=medium') {
 		border-top: $global-border-width $global-border-style $global-border-color;
+		padding-left: 0;
+		padding-right: 0;
 	}
 }
 
 @include media('>medium') {
-	.c-pagination__link--next { text-align: right; }
-	.c-pagination__link--prev { text-align: left; }
-}
 
-.c-pagination__link--all {
-	@include media('>medium') {
+	.c-pagination__link--all {
 		align-items: center;
 		display: flex;
 		flex-direction: column;
 	}
+
+	.c-pagination__link--next,
+	.c-pagination__link--prev {
+		align-items: center;
+		display: flex;
+	}
+
+	.c-pagination__link--next {
+		justify-content: flex-end;
+	}
+
+	.c-pagination__link--prev {
+		justify-content: flex-start;
+	}
+
+	.c-pagination__icon--next {
+		order: map-get($global-ordering, last);
+	}
+
 }

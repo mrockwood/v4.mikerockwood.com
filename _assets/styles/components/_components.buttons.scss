@@ -20,6 +20,7 @@
 	display: inline-block; /* [1] */
 	//font: inherit; /* [3] */
 	font-family: map-get($global-font-families, sans-serif);
+	font-size: map-get($global-font-sizes, small);
 	letter-spacing: map-get($global-letter-spacing, large);
 	margin: 0; /* [4] */
 	padding: map-get($global-spacing, small) map-get($global-spacing, large);
@@ -101,7 +102,7 @@
 }
 
 .c-button--large {
-	padding: map-get($global-spacing, medium) map-get($global-spacing, xlarge);
+	padding: map-get($global-spacing, medium) map-get($global-spacing, super);
 }
 
 
@@ -132,7 +133,7 @@ $button-ghost-border-width: .125em;
 	}
 
 	&.c-button--large {
-		padding: ($global-spacing-default - $button-ghost-border-width) ($global-spacing-default - $button-ghost-border-width);
+		padding: (map-get($global-spacing, medium) - $button-ghost-border-width) (map-get($global-spacing, super) - $button-ghost-border-width);
 	}
 
 	&.c-button--primary {
