@@ -3353,7 +3353,7 @@ img {
       flex-direction: column;
   -ms-flex-pack: center;
       justify-content: center;
-  padding-bottom: 0.25em;
+  padding-bottom: 0.5em;
   padding-top: 0.25em; }
   @media (min-width: 48.01em) {
     .c-meta__list {

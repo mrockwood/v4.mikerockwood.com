@@ -16,7 +16,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding-bottom: map-get($global-spacing, xsmall);
+	padding-bottom: map-get($global-spacing, small);
 	padding-top: map-get($global-spacing, xsmall);
 
 	@include media('>medium') {
