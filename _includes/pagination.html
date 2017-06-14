@@ -30,8 +30,8 @@
 {% if prevurl or nexturl %}
 	<!-- Pagination -->
 	<div class="l-container  l-container--large">
-		<nav class="c-pagination">
-			<ul class="l-grid  c-pagination__list  u-margin-horizontal--none">
+		<div class="c-pagination">
+			<nav class="l-grid  c-pagination__list  u-margin-horizontal--none">
 				<a class="c-pagination__link  c-pagination__link--all  l-grid__item  l-width--1/5@medium  {% if prevurl == nil %}l-push--2/5@medium{% endif %}  u-padding-horizontal--none" href="{{ site.baseurl }}/work/">
 					<svg class="c-pagination__icon  c-pagination__icon--all  c-icon">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#grid' | prepend: site.baseurl }}"></use>
@@ -54,8 +54,8 @@
 					<span class="u-small">Next</span>
 				</a>
 				{% endif %}
-			</ul>
-		</nav>
+			</nav>
+		</div>
 	</div>
 
 	<script>
