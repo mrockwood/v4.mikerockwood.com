@@ -74,6 +74,10 @@
 		border-radius: $global-border-radius;
 		color: map-get($colors, grey-dark);
 	}
+
+	@include media('>medium') {
+		padding: map-get($global-spacing, small) 0;
+	}
 }
 
 .c-navbar__link:hover {

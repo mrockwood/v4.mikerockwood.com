@@ -577,15 +577,18 @@ img {
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%); }
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 .l-center-block__content--vertical {
   left: auto;
-  transform: translateY(-50%); }
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
 
 .l-center-block__content--horizontal {
   top: auto;
-  transform: translateX(-50%); }
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
 
 @media (min-width: 20.01em) {
   .l-center-block\@xsmall {
@@ -594,13 +597,16 @@ img {
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%); }
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
   .l-center-block__content--vertical\@xsmall {
     left: auto;
-    transform: translateY(-50%); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
   .l-center-block__content--horizontal\@xsmall {
     top: auto;
-    transform: translateX(-50%); } }
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); } }
 
 @media (min-width: 30.01em) {
   .l-center-block\@small {
@@ -609,13 +615,16 @@ img {
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%); }
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
   .l-center-block__content--vertical\@small {
     left: auto;
-    transform: translateY(-50%); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
   .l-center-block__content--horizontal\@small {
     top: auto;
-    transform: translateX(-50%); } }
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); } }
 
 @media (min-width: 48.01em) {
   .l-center-block\@medium {
@@ -624,13 +633,16 @@ img {
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%); }
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
   .l-center-block__content--vertical\@medium {
     left: auto;
-    transform: translateY(-50%); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
   .l-center-block__content--horizontal\@medium {
     top: auto;
-    transform: translateX(-50%); } }
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); } }
 
 @media (min-width: 64.01em) {
   .l-center-block\@large {
@@ -639,13 +651,16 @@ img {
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%); }
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
   .l-center-block__content--vertical\@large {
     left: auto;
-    transform: translateY(-50%); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
   .l-center-block__content--horizontal\@large {
     top: auto;
-    transform: translateX(-50%); } }
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); } }
 
 @media (min-width: 78.01em) {
   .l-center-block\@xlarge {
@@ -654,13 +669,16 @@ img {
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%); }
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
   .l-center-block__content--vertical\@xlarge {
     left: auto;
-    transform: translateY(-50%); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
   .l-center-block__content--horizontal\@xlarge {
     top: auto;
-    transform: translateX(-50%); } }
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); } }
 
 @media (min-width: 116.01em) {
   .l-center-block\@super {
@@ -669,167 +687,226 @@ img {
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%); }
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
   .l-center-block__content--vertical\@super {
     left: auto;
-    transform: translateY(-50%); }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
   .l-center-block__content--horizontal\@super {
     top: auto;
-    transform: translateX(-50%); } }
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); } }
 
 /* ==========================================================================
    #COLUMN
    ========================================================================== */
 .l-column {
-  column-gap: 1.5em; }
+  -webkit-column-gap: 1.5em;
+          column-gap: 1.5em; }
 
 .l-column--1 {
-  column-count: 1; }
+  -webkit-column-count: 1;
+          column-count: 1; }
 
 .l-column--2 {
-  column-count: 2; }
+  -webkit-column-count: 2;
+          column-count: 2; }
 
 .l-column--3 {
-  column-count: 3; }
+  -webkit-column-count: 3;
+          column-count: 3; }
 
 .l-column--4 {
-  column-count: 4; }
+  -webkit-column-count: 4;
+          column-count: 4; }
 
 .l-column--divider {
-  column-rule: 1px solid #dee2e6;
-  column-gap: 3em; }
+  -webkit-column-rule: 1px solid #dee2e6;
+          column-rule: 1px solid #dee2e6;
+  -webkit-column-gap: 3em;
+          column-gap: 3em; }
 
 /**
 	 * 1. Column span is not yet supported in Firefox.
 	 */
 .l-column__span {
-  column-span: all;
+  -webkit-column-span: all;
+          column-span: all;
   /* [1] */ }
 
 @media (min-width: 20.01em) {
   .l-column\@xsmall {
-    column-gap: 1.5em; }
+    -webkit-column-gap: 1.5em;
+            column-gap: 1.5em; }
   .l-column--1\@xsmall {
-    column-count: 1; }
+    -webkit-column-count: 1;
+            column-count: 1; }
   .l-column--2\@xsmall {
-    column-count: 2; }
+    -webkit-column-count: 2;
+            column-count: 2; }
   .l-column--3\@xsmall {
-    column-count: 3; }
+    -webkit-column-count: 3;
+            column-count: 3; }
   .l-column--4\@xsmall {
-    column-count: 4; }
+    -webkit-column-count: 4;
+            column-count: 4; }
   .l-column--divider\@xsmall {
-    column-rule: 1px solid #dee2e6;
-    column-gap: 3em; }
+    -webkit-column-rule: 1px solid #dee2e6;
+            column-rule: 1px solid #dee2e6;
+    -webkit-column-gap: 3em;
+            column-gap: 3em; }
   /**
 	 * 1. Column span is not yet supported in Firefox.
 	 */
   .l-column__span\@xsmall {
-    column-span: all;
+    -webkit-column-span: all;
+            column-span: all;
     /* [1] */ } }
 
 @media (min-width: 30.01em) {
   .l-column\@small {
-    column-gap: 1.5em; }
+    -webkit-column-gap: 1.5em;
+            column-gap: 1.5em; }
   .l-column--1\@small {
-    column-count: 1; }
+    -webkit-column-count: 1;
+            column-count: 1; }
   .l-column--2\@small {
-    column-count: 2; }
+    -webkit-column-count: 2;
+            column-count: 2; }
   .l-column--3\@small {
-    column-count: 3; }
+    -webkit-column-count: 3;
+            column-count: 3; }
   .l-column--4\@small {
-    column-count: 4; }
+    -webkit-column-count: 4;
+            column-count: 4; }
   .l-column--divider\@small {
-    column-rule: 1px solid #dee2e6;
-    column-gap: 3em; }
+    -webkit-column-rule: 1px solid #dee2e6;
+            column-rule: 1px solid #dee2e6;
+    -webkit-column-gap: 3em;
+            column-gap: 3em; }
   /**
 	 * 1. Column span is not yet supported in Firefox.
 	 */
   .l-column__span\@small {
-    column-span: all;
+    -webkit-column-span: all;
+            column-span: all;
     /* [1] */ } }
 
 @media (min-width: 48.01em) {
   .l-column\@medium {
-    column-gap: 1.5em; }
+    -webkit-column-gap: 1.5em;
+            column-gap: 1.5em; }
   .l-column--1\@medium {
-    column-count: 1; }
+    -webkit-column-count: 1;
+            column-count: 1; }
   .l-column--2\@medium {
-    column-count: 2; }
+    -webkit-column-count: 2;
+            column-count: 2; }
   .l-column--3\@medium {
-    column-count: 3; }
+    -webkit-column-count: 3;
+            column-count: 3; }
   .l-column--4\@medium {
-    column-count: 4; }
+    -webkit-column-count: 4;
+            column-count: 4; }
   .l-column--divider\@medium {
-    column-rule: 1px solid #dee2e6;
-    column-gap: 3em; }
+    -webkit-column-rule: 1px solid #dee2e6;
+            column-rule: 1px solid #dee2e6;
+    -webkit-column-gap: 3em;
+            column-gap: 3em; }
   /**
 	 * 1. Column span is not yet supported in Firefox.
 	 */
   .l-column__span\@medium {
-    column-span: all;
+    -webkit-column-span: all;
+            column-span: all;
     /* [1] */ } }
 
 @media (min-width: 64.01em) {
   .l-column\@large {
-    column-gap: 1.5em; }
+    -webkit-column-gap: 1.5em;
+            column-gap: 1.5em; }
   .l-column--1\@large {
-    column-count: 1; }
+    -webkit-column-count: 1;
+            column-count: 1; }
   .l-column--2\@large {
-    column-count: 2; }
+    -webkit-column-count: 2;
+            column-count: 2; }
   .l-column--3\@large {
-    column-count: 3; }
+    -webkit-column-count: 3;
+            column-count: 3; }
   .l-column--4\@large {
-    column-count: 4; }
+    -webkit-column-count: 4;
+            column-count: 4; }
   .l-column--divider\@large {
-    column-rule: 1px solid #dee2e6;
-    column-gap: 3em; }
+    -webkit-column-rule: 1px solid #dee2e6;
+            column-rule: 1px solid #dee2e6;
+    -webkit-column-gap: 3em;
+            column-gap: 3em; }
   /**
 	 * 1. Column span is not yet supported in Firefox.
 	 */
   .l-column__span\@large {
-    column-span: all;
+    -webkit-column-span: all;
+            column-span: all;
     /* [1] */ } }
 
 @media (min-width: 78.01em) {
   .l-column\@xlarge {
-    column-gap: 1.5em; }
+    -webkit-column-gap: 1.5em;
+            column-gap: 1.5em; }
   .l-column--1\@xlarge {
-    column-count: 1; }
+    -webkit-column-count: 1;
+            column-count: 1; }
   .l-column--2\@xlarge {
-    column-count: 2; }
+    -webkit-column-count: 2;
+            column-count: 2; }
   .l-column--3\@xlarge {
-    column-count: 3; }
+    -webkit-column-count: 3;
+            column-count: 3; }
   .l-column--4\@xlarge {
-    column-count: 4; }
+    -webkit-column-count: 4;
+            column-count: 4; }
   .l-column--divider\@xlarge {
-    column-rule: 1px solid #dee2e6;
-    column-gap: 3em; }
+    -webkit-column-rule: 1px solid #dee2e6;
+            column-rule: 1px solid #dee2e6;
+    -webkit-column-gap: 3em;
+            column-gap: 3em; }
   /**
 	 * 1. Column span is not yet supported in Firefox.
 	 */
   .l-column__span\@xlarge {
-    column-span: all;
+    -webkit-column-span: all;
+            column-span: all;
     /* [1] */ } }
 
 @media (min-width: 116.01em) {
   .l-column\@super {
-    column-gap: 1.5em; }
+    -webkit-column-gap: 1.5em;
+            column-gap: 1.5em; }
   .l-column--1\@super {
-    column-count: 1; }
+    -webkit-column-count: 1;
+            column-count: 1; }
   .l-column--2\@super {
-    column-count: 2; }
+    -webkit-column-count: 2;
+            column-count: 2; }
   .l-column--3\@super {
-    column-count: 3; }
+    -webkit-column-count: 3;
+            column-count: 3; }
   .l-column--4\@super {
-    column-count: 4; }
+    -webkit-column-count: 4;
+            column-count: 4; }
   .l-column--divider\@super {
-    column-rule: 1px solid #dee2e6;
-    column-gap: 3em; }
+    -webkit-column-rule: 1px solid #dee2e6;
+            column-rule: 1px solid #dee2e6;
+    -webkit-column-gap: 3em;
+            column-gap: 3em; }
   /**
 	 * 1. Column span is not yet supported in Firefox.
 	 */
   .l-column__span\@super {
-    column-span: all;
+    -webkit-column-span: all;
+            column-span: all;
     /* [1] */ } }
 
 /* ==========================================================================
@@ -848,12 +925,15 @@ img {
   padding-right: 1.5em;
   width: 100%; }
 
-@supports (display: flex) {
+@supports ((display: -webkit-box) or (display: flex)) {
   .l-container {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column; } }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
 
 .l-container--xsmall {
   max-width: 20em; }
@@ -886,12 +966,15 @@ img {
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-container\@xsmall {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-direction: column;
-          flex-direction: column; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .l-container--xsmall\@xsmall {
     max-width: 20em; }
   .l-container--small\@xsmall {
@@ -918,12 +1001,15 @@ img {
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-container\@small {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-direction: column;
-          flex-direction: column; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .l-container--xsmall\@small {
     max-width: 20em; }
   .l-container--small\@small {
@@ -950,12 +1036,15 @@ img {
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-container\@medium {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-direction: column;
-          flex-direction: column; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .l-container--xsmall\@medium {
     max-width: 20em; }
   .l-container--small\@medium {
@@ -982,12 +1071,15 @@ img {
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-container\@large {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-direction: column;
-          flex-direction: column; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .l-container--xsmall\@large {
     max-width: 20em; }
   .l-container--small\@large {
@@ -1014,12 +1106,15 @@ img {
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-container\@xlarge {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-direction: column;
-          flex-direction: column; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .l-container--xsmall\@xlarge {
     max-width: 20em; }
   .l-container--small\@xlarge {
@@ -1046,12 +1141,15 @@ img {
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-container\@super {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-direction: column;
-          flex-direction: column; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .l-container--xsmall\@super {
     max-width: 20em; }
   .l-container--small\@super {
@@ -1085,8 +1183,9 @@ img {
   padding: 0;
   /* [2] */ }
 
-@supports (display: flex) {
+@supports ((display: -webkit-box) or (display: flex)) {
   .l-grid {
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -1098,8 +1197,10 @@ img {
 	 * Extends `.l-grid`.
 	 */
 .l-grid--reverse {
-  -ms-flex-direction: row-reverse;
-      flex-direction: row-reverse; }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse; }
 
 /**
 	 * Flush grids have all the properties of regular grids, minus any spacing.
@@ -1117,40 +1218,47 @@ img {
 	 * Extends `.l-grid`.
 	 */
 .l-grid--top {
-  -ms-flex-align: start;
-      align-items: flex-start; }
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 .l-grid--middle {
-  -ms-flex-align: center;
-      align-items: center; }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .l-grid--bottom {
-  -ms-flex-align: end;
-      align-items: flex-end; }
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
 
 /**
 	 * Align grid cells horizontally (`.l-grid--left` or `.l-grid--center` or `.l-grid--right`).
 	 * Extends `.l-grid`.
 	 */
 .l-grid--left {
-  -ms-flex-pack: start;
-      justify-content: flex-start; }
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
 
 .l-grid--center {
-  -ms-flex-pack: center;
-      justify-content: center; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .l-grid--right {
-  -ms-flex-pack: end;
-      justify-content: flex-end; }
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
 
 .l-grid--around {
   -ms-flex-pack: distribute;
       justify-content: space-around; }
 
 .l-grid--between {
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 /**
 	 * Grid items/cells
@@ -1174,7 +1282,7 @@ img {
   /* [3] */
   width: 100%; }
 
-@supports (display: flex) {
+@supports ((display: -webkit-box) or (display: flex)) {
   .l-grid__item {
     float: none; } }
 
@@ -1236,8 +1344,9 @@ img {
     /* [3] */
     padding: 0;
     /* [2] */ }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-grid\@xsmall {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
@@ -1248,8 +1357,10 @@ img {
 	 * Extends `.l-grid`.
 	 */
   .l-grid--reverse\@xsmall {
-    -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
   /**
 	 * Flush grids have all the properties of regular grids, minus any spacing.
 	 * Extends `.l-grid`.
@@ -1265,33 +1376,40 @@ img {
 	 * Extends `.l-grid`.
 	 */
   .l-grid--top\@xsmall {
-    -ms-flex-align: start;
-        align-items: flex-start; }
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
   .l-grid--middle\@xsmall {
-    -ms-flex-align: center;
-        align-items: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .l-grid--bottom\@xsmall {
-    -ms-flex-align: end;
-        align-items: flex-end; }
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
   /**
 	 * Align grid cells horizontally (`.l-grid--left` or `.l-grid--center` or `.l-grid--right`).
 	 * Extends `.l-grid`.
 	 */
   .l-grid--left\@xsmall {
-    -ms-flex-pack: start;
-        justify-content: flex-start; }
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .l-grid--center\@xsmall {
-    -ms-flex-pack: center;
-        justify-content: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .l-grid--right\@xsmall {
-    -ms-flex-pack: end;
-        justify-content: flex-end; }
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .l-grid--around\@xsmall {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
   .l-grid--between\@xsmall {
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   /**
 	 * Grid items/cells
 	 * 1. Required to combine fluid widths and fixed gutters.
@@ -1313,7 +1431,7 @@ img {
     padding-right: 0.75em;
     /* [3] */
     width: 100%; }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-grid__item\@xsmall {
       float: none; } }
   /**
@@ -1368,8 +1486,9 @@ img {
     /* [3] */
     padding: 0;
     /* [2] */ }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-grid\@small {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
@@ -1380,8 +1499,10 @@ img {
 	 * Extends `.l-grid`.
 	 */
   .l-grid--reverse\@small {
-    -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
   /**
 	 * Flush grids have all the properties of regular grids, minus any spacing.
 	 * Extends `.l-grid`.
@@ -1397,33 +1518,40 @@ img {
 	 * Extends `.l-grid`.
 	 */
   .l-grid--top\@small {
-    -ms-flex-align: start;
-        align-items: flex-start; }
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
   .l-grid--middle\@small {
-    -ms-flex-align: center;
-        align-items: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .l-grid--bottom\@small {
-    -ms-flex-align: end;
-        align-items: flex-end; }
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
   /**
 	 * Align grid cells horizontally (`.l-grid--left` or `.l-grid--center` or `.l-grid--right`).
 	 * Extends `.l-grid`.
 	 */
   .l-grid--left\@small {
-    -ms-flex-pack: start;
-        justify-content: flex-start; }
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .l-grid--center\@small {
-    -ms-flex-pack: center;
-        justify-content: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .l-grid--right\@small {
-    -ms-flex-pack: end;
-        justify-content: flex-end; }
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .l-grid--around\@small {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
   .l-grid--between\@small {
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   /**
 	 * Grid items/cells
 	 * 1. Required to combine fluid widths and fixed gutters.
@@ -1445,7 +1573,7 @@ img {
     padding-right: 0.75em;
     /* [3] */
     width: 100%; }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-grid__item\@small {
       float: none; } }
   /**
@@ -1500,8 +1628,9 @@ img {
     /* [3] */
     padding: 0;
     /* [2] */ }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-grid\@medium {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
@@ -1512,8 +1641,10 @@ img {
 	 * Extends `.l-grid`.
 	 */
   .l-grid--reverse\@medium {
-    -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
   /**
 	 * Flush grids have all the properties of regular grids, minus any spacing.
 	 * Extends `.l-grid`.
@@ -1529,33 +1660,40 @@ img {
 	 * Extends `.l-grid`.
 	 */
   .l-grid--top\@medium {
-    -ms-flex-align: start;
-        align-items: flex-start; }
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
   .l-grid--middle\@medium {
-    -ms-flex-align: center;
-        align-items: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .l-grid--bottom\@medium {
-    -ms-flex-align: end;
-        align-items: flex-end; }
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
   /**
 	 * Align grid cells horizontally (`.l-grid--left` or `.l-grid--center` or `.l-grid--right`).
 	 * Extends `.l-grid`.
 	 */
   .l-grid--left\@medium {
-    -ms-flex-pack: start;
-        justify-content: flex-start; }
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .l-grid--center\@medium {
-    -ms-flex-pack: center;
-        justify-content: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .l-grid--right\@medium {
-    -ms-flex-pack: end;
-        justify-content: flex-end; }
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .l-grid--around\@medium {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
   .l-grid--between\@medium {
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   /**
 	 * Grid items/cells
 	 * 1. Required to combine fluid widths and fixed gutters.
@@ -1577,7 +1715,7 @@ img {
     padding-right: 0.75em;
     /* [3] */
     width: 100%; }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-grid__item\@medium {
       float: none; } }
   /**
@@ -1632,8 +1770,9 @@ img {
     /* [3] */
     padding: 0;
     /* [2] */ }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-grid\@large {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
@@ -1644,8 +1783,10 @@ img {
 	 * Extends `.l-grid`.
 	 */
   .l-grid--reverse\@large {
-    -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
   /**
 	 * Flush grids have all the properties of regular grids, minus any spacing.
 	 * Extends `.l-grid`.
@@ -1661,33 +1802,40 @@ img {
 	 * Extends `.l-grid`.
 	 */
   .l-grid--top\@large {
-    -ms-flex-align: start;
-        align-items: flex-start; }
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
   .l-grid--middle\@large {
-    -ms-flex-align: center;
-        align-items: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .l-grid--bottom\@large {
-    -ms-flex-align: end;
-        align-items: flex-end; }
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
   /**
 	 * Align grid cells horizontally (`.l-grid--left` or `.l-grid--center` or `.l-grid--right`).
 	 * Extends `.l-grid`.
 	 */
   .l-grid--left\@large {
-    -ms-flex-pack: start;
-        justify-content: flex-start; }
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .l-grid--center\@large {
-    -ms-flex-pack: center;
-        justify-content: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .l-grid--right\@large {
-    -ms-flex-pack: end;
-        justify-content: flex-end; }
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .l-grid--around\@large {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
   .l-grid--between\@large {
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   /**
 	 * Grid items/cells
 	 * 1. Required to combine fluid widths and fixed gutters.
@@ -1709,7 +1857,7 @@ img {
     padding-right: 0.75em;
     /* [3] */
     width: 100%; }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-grid__item\@large {
       float: none; } }
   /**
@@ -1764,8 +1912,9 @@ img {
     /* [3] */
     padding: 0;
     /* [2] */ }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-grid\@xlarge {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
@@ -1776,8 +1925,10 @@ img {
 	 * Extends `.l-grid`.
 	 */
   .l-grid--reverse\@xlarge {
-    -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
   /**
 	 * Flush grids have all the properties of regular grids, minus any spacing.
 	 * Extends `.l-grid`.
@@ -1793,33 +1944,40 @@ img {
 	 * Extends `.l-grid`.
 	 */
   .l-grid--top\@xlarge {
-    -ms-flex-align: start;
-        align-items: flex-start; }
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
   .l-grid--middle\@xlarge {
-    -ms-flex-align: center;
-        align-items: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .l-grid--bottom\@xlarge {
-    -ms-flex-align: end;
-        align-items: flex-end; }
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
   /**
 	 * Align grid cells horizontally (`.l-grid--left` or `.l-grid--center` or `.l-grid--right`).
 	 * Extends `.l-grid`.
 	 */
   .l-grid--left\@xlarge {
-    -ms-flex-pack: start;
-        justify-content: flex-start; }
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .l-grid--center\@xlarge {
-    -ms-flex-pack: center;
-        justify-content: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .l-grid--right\@xlarge {
-    -ms-flex-pack: end;
-        justify-content: flex-end; }
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .l-grid--around\@xlarge {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
   .l-grid--between\@xlarge {
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   /**
 	 * Grid items/cells
 	 * 1. Required to combine fluid widths and fixed gutters.
@@ -1841,7 +1999,7 @@ img {
     padding-right: 0.75em;
     /* [3] */
     width: 100%; }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-grid__item\@xlarge {
       float: none; } }
   /**
@@ -1896,8 +2054,9 @@ img {
     /* [3] */
     padding: 0;
     /* [2] */ }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-grid\@super {
+      display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-wrap: wrap;
@@ -1908,8 +2067,10 @@ img {
 	 * Extends `.l-grid`.
 	 */
   .l-grid--reverse\@super {
-    -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse; }
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
   /**
 	 * Flush grids have all the properties of regular grids, minus any spacing.
 	 * Extends `.l-grid`.
@@ -1925,33 +2086,40 @@ img {
 	 * Extends `.l-grid`.
 	 */
   .l-grid--top\@super {
-    -ms-flex-align: start;
-        align-items: flex-start; }
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
   .l-grid--middle\@super {
-    -ms-flex-align: center;
-        align-items: center; }
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .l-grid--bottom\@super {
-    -ms-flex-align: end;
-        align-items: flex-end; }
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
   /**
 	 * Align grid cells horizontally (`.l-grid--left` or `.l-grid--center` or `.l-grid--right`).
 	 * Extends `.l-grid`.
 	 */
   .l-grid--left\@super {
-    -ms-flex-pack: start;
-        justify-content: flex-start; }
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
   .l-grid--center\@super {
-    -ms-flex-pack: center;
-        justify-content: center; }
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .l-grid--right\@super {
-    -ms-flex-pack: end;
-        justify-content: flex-end; }
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .l-grid--around\@super {
     -ms-flex-pack: distribute;
         justify-content: space-around; }
   .l-grid--between\@super {
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   /**
 	 * Grid items/cells
 	 * 1. Required to combine fluid widths and fixed gutters.
@@ -1973,7 +2141,7 @@ img {
     padding-right: 0.75em;
     /* [3] */
     width: 100%; }
-  @supports (display: flex) {
+  @supports ((display: -webkit-box) or (display: flex)) {
     .l-grid__item\@super {
       float: none; } }
   /**
@@ -2210,82 +2378,103 @@ img {
    #ORDER
    ========================================================================== */
 .l-order--first {
-  -ms-flex-order: -1;
-      order: -1; }
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1; }
 
 .l-order--unordered {
-  -ms-flex-order: 0;
-      order: 0; }
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0; }
 
 .l-order--last {
-  -ms-flex-order: 1;
-      order: 1; }
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1; }
 
 @media (min-width: 20.01em) {
   .l-order--first\@xsmall {
-    -ms-flex-order: -1;
-        order: -1; }
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
   .l-order--unordered\@xsmall {
-    -ms-flex-order: 0;
-        order: 0; }
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; }
   .l-order--last\@xsmall {
-    -ms-flex-order: 1;
-        order: 1; } }
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; } }
 
 @media (min-width: 30.01em) {
   .l-order--first\@small {
-    -ms-flex-order: -1;
-        order: -1; }
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
   .l-order--unordered\@small {
-    -ms-flex-order: 0;
-        order: 0; }
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; }
   .l-order--last\@small {
-    -ms-flex-order: 1;
-        order: 1; } }
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; } }
 
 @media (min-width: 48.01em) {
   .l-order--first\@medium {
-    -ms-flex-order: -1;
-        order: -1; }
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
   .l-order--unordered\@medium {
-    -ms-flex-order: 0;
-        order: 0; }
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; }
   .l-order--last\@medium {
-    -ms-flex-order: 1;
-        order: 1; } }
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; } }
 
 @media (min-width: 64.01em) {
   .l-order--first\@large {
-    -ms-flex-order: -1;
-        order: -1; }
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
   .l-order--unordered\@large {
-    -ms-flex-order: 0;
-        order: 0; }
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; }
   .l-order--last\@large {
-    -ms-flex-order: 1;
-        order: 1; } }
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; } }
 
 @media (min-width: 78.01em) {
   .l-order--first\@xlarge {
-    -ms-flex-order: -1;
-        order: -1; }
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
   .l-order--unordered\@xlarge {
-    -ms-flex-order: 0;
-        order: 0; }
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; }
   .l-order--last\@xlarge {
-    -ms-flex-order: 1;
-        order: 1; } }
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; } }
 
 @media (min-width: 116.01em) {
   .l-order--first\@super {
-    -ms-flex-order: -1;
-        order: -1; }
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
   .l-order--unordered\@super {
-    -ms-flex-order: 0;
-        order: 0; }
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; }
   .l-order--last\@super {
-    -ms-flex-order: 1;
-        order: 1; } }
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; } }
 
 /* ==========================================================================
    #PULL
@@ -2703,43 +2892,53 @@ img {
    #ROTATE
    ========================================================================== */
 .l-rotate--0 {
-  transform: rotate(0deg); }
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg); }
 
 .l-rotate--45 {
-  transform: rotate(45deg); }
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
 
 .l-rotate--90 {
-  transform: rotate(90deg); }
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); }
 
 .l-rotate--135 {
-  transform: rotate(135deg); }
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg); }
 
 .l-rotate--180 {
-  transform: rotate(180deg); }
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
 
 .l-rotate--225 {
-  transform: rotate(225deg); }
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg); }
 
 .l-rotate--270 {
-  transform: rotate(270deg); }
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg); }
 
 .l-rotate--315 {
-  transform: rotate(315deg); }
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg); }
 
 /* ==========================================================================
    #WIDTH
    ========================================================================== */
 .l-width--expand {
-  -ms-flex: 1;
-      flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   min-width: 0;
   -ms-flex-preferred-size: 1px;
       flex-basis: 1px;
   width: auto; }
 
 .l-width--shrink {
-  -ms-flex: 0 1 auto;
-      flex: 0 1 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
   width: auto; }
 
 .l-width--1\/1 {
@@ -2780,15 +2979,17 @@ img {
 
 @media (min-width: 20.01em) {
   .l-width--expand\@xsmall {
-    -ms-flex: 1;
-        flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     min-width: 0;
     -ms-flex-preferred-size: 1px;
         flex-basis: 1px;
     width: auto; }
   .l-width--shrink\@xsmall {
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     width: auto; }
   .l-width--1\/1\@xsmall {
     width: 100%; }
@@ -2817,15 +3018,17 @@ img {
 
 @media (min-width: 30.01em) {
   .l-width--expand\@small {
-    -ms-flex: 1;
-        flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     min-width: 0;
     -ms-flex-preferred-size: 1px;
         flex-basis: 1px;
     width: auto; }
   .l-width--shrink\@small {
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     width: auto; }
   .l-width--1\/1\@small {
     width: 100%; }
@@ -2854,15 +3057,17 @@ img {
 
 @media (min-width: 48.01em) {
   .l-width--expand\@medium {
-    -ms-flex: 1;
-        flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     min-width: 0;
     -ms-flex-preferred-size: 1px;
         flex-basis: 1px;
     width: auto; }
   .l-width--shrink\@medium {
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     width: auto; }
   .l-width--1\/1\@medium {
     width: 100%; }
@@ -2891,15 +3096,17 @@ img {
 
 @media (min-width: 64.01em) {
   .l-width--expand\@large {
-    -ms-flex: 1;
-        flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     min-width: 0;
     -ms-flex-preferred-size: 1px;
         flex-basis: 1px;
     width: auto; }
   .l-width--shrink\@large {
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     width: auto; }
   .l-width--1\/1\@large {
     width: 100%; }
@@ -2928,15 +3135,17 @@ img {
 
 @media (min-width: 78.01em) {
   .l-width--expand\@xlarge {
-    -ms-flex: 1;
-        flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     min-width: 0;
     -ms-flex-preferred-size: 1px;
         flex-basis: 1px;
     width: auto; }
   .l-width--shrink\@xlarge {
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     width: auto; }
   .l-width--1\/1\@xlarge {
     width: 100%; }
@@ -2965,15 +3174,17 @@ img {
 
 @media (min-width: 116.01em) {
   .l-width--expand\@super {
-    -ms-flex: 1;
-        flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     min-width: 0;
     -ms-flex-preferred-size: 1px;
         flex-basis: 1px;
     width: auto; }
   .l-width--shrink\@super {
-    -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
     width: auto; }
   .l-width--1\/1\@super {
     width: 100%; }
@@ -3009,6 +3220,7 @@ img {
  * 3. Behave like button
  */
 .c-button-group {
+  display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   /* 1 */
@@ -3181,10 +3393,13 @@ img {
    #HEADER
    ========================================================================== */
 .c-header__text {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: inherit;
   margin: 1em 0; }
 
@@ -3349,21 +3564,28 @@ img {
   text-transform: uppercase; }
 
 .c-meta__list {
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid #dee2e6;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-bottom: 0.5em;
   padding-top: 0.25em; }
   @media (min-width: 48.01em) {
     .c-meta__list {
-      -ms-flex-direction: row;
-          flex-direction: row; } }
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
 
 .c-meta__item {
   margin: 0.5em 0;
@@ -3421,12 +3643,15 @@ img {
       width: auto; } }
 
 .c-navbar__list {
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex: 1;
-      flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   list-style: none;
@@ -3458,6 +3683,9 @@ img {
       background-color: #f1f3f5;
       border-radius: 0.25em;
       color: #495057; } }
+  @media (min-width: 48.01em) {
+    .c-navbar__link {
+      padding: 0.5em 0; } }
 
 .c-navbar__link:hover {
   color: #495057; }
@@ -3471,11 +3699,13 @@ img {
     position: absolute;
     right: 0;
     top: 100%;
-    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
     transition: inherit; }
   .c-navbar__link:active:before,
   .c-navbar__link:hover:before {
-    transform: scaleX(1); } }
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1); } }
 
 /* ==========================================================================
    #PAGINATION
@@ -3509,34 +3739,44 @@ img {
 
 @media (min-width: 48.01em) {
   .c-pagination__link--all {
-    -ms-flex-align: center;
-        align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-left: 1px solid #dee2e6;
     border-right: 1px solid #dee2e6;
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column; }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
   .c-pagination__link--next,
   .c-pagination__link--prev {
-    -ms-flex-align: center;
-        align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
   .c-pagination__link--next {
-    -ms-flex-pack: end;
-        justify-content: flex-end; }
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
   .c-pagination__link--prev {
-    -ms-flex-pack: start;
-        justify-content: flex-start;
-    -ms-flex-order: -1;
-        order: -1; }
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1; }
   .c-pagination__icon--all {
     margin-bottom: 0.5em; }
   .c-pagination__icon--next {
     margin-left: 0.5em;
-    -ms-flex-order: 1;
-        order: 1; }
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
   .c-pagination__icon--prev {
     margin-right: 0.5em; } }
 
@@ -3549,18 +3789,22 @@ img {
  * 3. Setting the min-height to 100% of the viewport height.
  */
 .c-sticky-footer__body {
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   /* [1] */
-  -ms-flex-direction: column;
-      flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   /* [2] */
   min-height: 100vh;
   /* [3] */ }
 
 .c-sticky-footer__main {
-  -ms-flex: 1 0 auto;
-      flex: 1 0 auto; }
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
 
 /* ==========================================================================
    #TYPOGRAPHY
@@ -5380,10 +5624,12 @@ img {
   display: table-cell !important; }
 
 .u-flex {
+  display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important; }
 
 .u-inline-flex {
+  display: -webkit-inline-box !important;
   display: -ms-inline-flexbox !important;
   display: inline-flex !important; }
 
@@ -5401,9 +5647,11 @@ img {
   .u-table-cell\@xsmall {
     display: table-cell !important; }
   .u-flex\@xsmall {
+    display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important; }
   .u-inline-flex\@xsmall {
+    display: -webkit-inline-box !important;
     display: -ms-inline-flexbox !important;
     display: inline-flex !important; } }
 
@@ -5421,9 +5669,11 @@ img {
   .u-table-cell\@small {
     display: table-cell !important; }
   .u-flex\@small {
+    display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important; }
   .u-inline-flex\@small {
+    display: -webkit-inline-box !important;
     display: -ms-inline-flexbox !important;
     display: inline-flex !important; } }
 
@@ -5441,9 +5691,11 @@ img {
   .u-table-cell\@medium {
     display: table-cell !important; }
   .u-flex\@medium {
+    display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important; }
   .u-inline-flex\@medium {
+    display: -webkit-inline-box !important;
     display: -ms-inline-flexbox !important;
     display: inline-flex !important; } }
 
@@ -5461,9 +5713,11 @@ img {
   .u-table-cell\@large {
     display: table-cell !important; }
   .u-flex\@large {
+    display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important; }
   .u-inline-flex\@large {
+    display: -webkit-inline-box !important;
     display: -ms-inline-flexbox !important;
     display: inline-flex !important; } }
 
@@ -5481,9 +5735,11 @@ img {
   .u-table-cell\@xlarge {
     display: table-cell !important; }
   .u-flex\@xlarge {
+    display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important; }
   .u-inline-flex\@xlarge {
+    display: -webkit-inline-box !important;
     display: -ms-inline-flexbox !important;
     display: inline-flex !important; } }
 
@@ -5501,9 +5757,11 @@ img {
   .u-table-cell\@super {
     display: table-cell !important; }
   .u-flex\@super {
+    display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important; }
   .u-inline-flex\@super {
+    display: -webkit-inline-box !important;
     display: -ms-inline-flexbox !important;
     display: inline-flex !important; } }
 
@@ -5521,9 +5779,11 @@ img {
   .u-table-cell\@print {
     display: table-cell !important; }
   .u-flex\@print {
+    display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important; }
   .u-inline-flex\@print {
+    display: -webkit-inline-box !important;
     display: -ms-inline-flexbox !important;
     display: inline-flex !important; } }
 

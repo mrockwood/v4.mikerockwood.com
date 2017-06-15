@@ -36,7 +36,7 @@ const cp = require('child_process');
 const config = {
 	dev: gutil.env.dev,
 	styles: {
-		browsers: 'last 2 versions',
+		browsers: ['> 1%', 'last 2 versions', 'IE 10', 'IE 11'],
 		src: '_assets/styles/*.scss',
 		dest: 'assets/styles',
 		site: '_site/assets/styles',
