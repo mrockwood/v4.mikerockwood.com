@@ -2,9 +2,11 @@
 layout: default
 ---
 
-<article class="c-post  c-sticky-footer__main  u-margin-bottom--xlarge  u-margin-bottom--super@medium">
+{% include header.html %}
 
-	<h1>{{ page.title }}</h1>
+{% include meta.html %}
+
+<article class="c-post  c-sticky-footer__main  u-margin-bottom--xlarge  u-margin-bottom--super@medium">
 
 	<div class="entry">
 		{{ content }}
@@ -14,6 +16,6 @@ layout: default
 		Written on {{ page.date | date: "%B %e, %Y" }}
 	</div>
 
-	{% include disqus.html %}
-
 </article>
+
+{% include disqus.html %}

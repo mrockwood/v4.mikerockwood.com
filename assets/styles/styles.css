@@ -3331,6 +3331,7 @@ img {
    #FOOTER
    ========================================================================== */
 .c-footer {
+  background-color: #f1f3f5;
   font-family: Merriweather Sans, Arial, sans-serif;
   text-align: center; }
 
@@ -3385,9 +3386,8 @@ img {
   color: inherit;
   -webkit-text-decoration-skip: ink;
           text-decoration-skip: ink; }
-
-.c-footer__copyright-link:hover {
-  color: #212529; }
+  .c-footer__copyright-link:hover {
+    color: #212529; }
 
 /* ==========================================================================
    #HEADER

@@ -3,6 +3,7 @@
    ========================================================================== */
 
 .c-footer {
+	background-color: map-get($colors, grey-lighter);
 	font-family: map-get($global-font-families, sans-serif);
 	text-align: center;
 }
@@ -12,7 +13,7 @@
 	transition: color map-get($global-speeds, fast);
 }
 
-// social media colors
+// social media icon hover styles
 @each $name, $value in $social-colors {
 
 	.c-footer__social-link--#{$name}:hover {
@@ -29,8 +30,8 @@
 .c-footer__copyright-link {
 	color: inherit;
 	text-decoration-skip: ink;
-}
 
-.c-footer__copyright-link:hover {
-	color: map-get($colors, grey-darker);
+	&:hover {
+		color: map-get($colors, grey-darker);
+	}
 }
