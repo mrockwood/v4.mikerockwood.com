@@ -7,11 +7,18 @@
 				<svg class="c-meta__icon  c-icon  c-icon--medium">
 					<use xlink:href="{{ '/assets/icons/sprite.svg#calendar' | prepend: site.baseurl }}"></use>
 				</svg>
-				<time date="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: "%Y" }}</time>
+				<time date="{{ page.date | date: '%Y-%m-%d' }}" pubdate>
+					{% if page.layout == 'page' %}
+						{{ page.date | date: "%Y" }}
+					{% endif %}
+					{% if page.layout == 'post' %}
+						{{ page.date | date: "%B %e, %Y" }}
+					{% endif %}
+				</time>
 			</div>
 		{% endif %}
 
-		{% if page.tags %}
+		{% if page.layout == 'page' and page.tags %}
 			<div class="c-meta__item  c-meta__item--tags">
 				<svg class="c-meta__icon  c-icon  c-icon--medium">
 					<use xlink:href="{{ '/assets/icons/sprite.svg#tag' | prepend: site.baseurl }}"></use>
