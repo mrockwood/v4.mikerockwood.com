@@ -29,6 +29,7 @@ $(document).ready(function() {
 
 /**
  * Load Disqus comments on button click
+ * https://gist.github.com/nternetinspired/7482445
  */
 
 $(document).ready(function() {
