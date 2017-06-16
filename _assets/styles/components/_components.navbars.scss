@@ -43,19 +43,6 @@
 
 }
 
-.c-navbar__list {
-	align-items: center;
-	display: flex;
-	flex: 1;
-	justify-content: space-around;
-	list-style: none;
-	margin: 0;
-
-	@include media('>medium') {
-		padding: 0 $global-spacing-default;
-	}
-}
-
 .c-navbar__link {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), .75em, .875em);
 
@@ -67,7 +54,7 @@
 	padding: map-get($global-spacing, xsmall) map-get($global-spacing, small);
 	position: relative;
 	text-decoration: none;
-	transition: map-get($global-speeds, fast);
+	transition: color map-get($global-speeds, fast), transform map-get($global-speeds, fast);
 
 	@include media('<=medium') {
 		background-color: map-get($colors, grey-lighter);

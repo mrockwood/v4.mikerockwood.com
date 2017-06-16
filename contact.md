@@ -8,11 +8,38 @@ classes: contact
 
 {% include lead.html content="I'm currently employed full-time, but am available for freelance work if the right project comes along." %}
 
-<form action="https://formspree.io/rockwood@gmail.com" method="POST">
-	<input type="text" name="name">
-	<input type="email" name="_replyto">
-	<input type="hidden" name="_subject" value="Contact from your website" />
-	<textarea name="message" placeholder="Your message"></textarea>
-	<input type="text" name="_gotcha" style="display:none" />
-	<input type="submit" value="Send">
+<form class="l-container  l-container--medium" action="https://formspree.io/rockwood@gmail.com" method="POST">
+	<div class="l-grid">
+
+		<div class="c-form-element  l-grid__item  l-width--1/2@medium">
+			<label class="c-label" for="name">Name:</label>
+			<input class="c-field" id="name" type="text">
+		</div>
+
+		<div class="c-form-element  l-grid__item  l-width--1/2@medium">
+			<label class="c-label" for="email">Email:</label>
+			<input class="c-field" name="_replyto" id="email" type="email">
+		</div>
+
+		<div class="c-form-element  l-grid__item">
+			<label class="c-label" for="email">How can I help you?</label>
+			<select class="c-field" name="_subject">
+				<option value="">---</option>
+				<option value="Let's work together">Let's work together</option>
+				<option value="Just saying hi">Just saying hi</option>
+			</select>
+		</div>
+
+		<div class="c-form-element  l-grid__item">
+			<label class="c-label" for="message">Message:</label>
+			<textarea class="c-field" name="_replyto" id="message" type="email"></textarea>
+		</div>
+
+		<input type="text" name="_gotcha" style="display:none" />
+
+		<div class="c-form-element  l-grid__item">
+			<input class="c-button  c-button--default  l-grid__item--center" type="submit" value="Send">
+		</div>
+
+	</div>
 </form>

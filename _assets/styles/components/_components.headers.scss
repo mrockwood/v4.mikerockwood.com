@@ -10,19 +10,15 @@
 }
 
 .c-header__title {
-	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 4.5em);
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 3.5em);
 
 	font-weight: map-get($global-font-weights, regular);
 	line-height: map-get($global-line-heights, xsmall);
-	margin: map-get($global-spacing, tiny) 0;
-
-	@include media('>medium') {
-		text-shadow: 0 0 15px rgba(0,0,0,0.2);
-	}
+	margin: 0;
 }
 
 .c-header__subtitle {
-	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.75em);
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.5em);
 
 	color: map-get($colors, grey);
 	font-family: map-get($global-font-families, sans-serif);
@@ -34,4 +30,11 @@
 	@include media('>medium') {
 		color: inherit;
 	}
+}
+
+.c-header__image-wrapper {
+	line-height: 0;
+	overflow: hidden;
+	position: relative;
+	z-index: -1;
 }
