@@ -70,7 +70,7 @@ $content-namespace: $global-namespace-components + 'content' !default;
 		margin-top: map-get($global-spacing, medium);
 	}
 
-	a {
+	a:not('.c-button') {
 		color: map-get($colors, lime);
 		text-decoration-skip: ink;
 		transition: map-get($global-speeds, fast);
