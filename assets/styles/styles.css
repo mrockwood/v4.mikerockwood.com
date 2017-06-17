@@ -3877,6 +3877,118 @@ img {
               filter: grayscale(50%) blur(2px); } }
 
 /* ==========================================================================
+   #TURNS-THEME
+   ========================================================================== */
+.t-work--turns .c-header__image-wrapper:after {
+  background: #15aabf;
+  bottom: 0;
+  content: '';
+  left: 0;
+  opacity: 0.25;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+  @media (min-width: 48.01em) {
+    .t-work--turns .c-header__image-wrapper:after {
+      opacity: 0.5; } }
+
+.t-work--turns .c-header__image {
+  -webkit-filter: grayscale(25%);
+          filter: grayscale(25%); }
+
+.t-work--turns .c-meta .c-icon,
+.t-work--turns .c-pagination .c-icon {
+  color: #f76707; }
+
+/* ==========================================================================
+   #UOFU-COLLEGE-OF-HEALTH-THEME
+   ========================================================================== */
+.t-work--uucoh .c-header__image-wrapper:after {
+  background: #e03131;
+  bottom: 0;
+  content: '';
+  left: 0;
+  opacity: 0.25;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+  @media (min-width: 48.01em) {
+    .t-work--uucoh .c-header__image-wrapper:after {
+      opacity: 0.5; } }
+
+.t-work--uucoh .c-header__image {
+  -webkit-filter: grayscale(50%);
+          filter: grayscale(50%); }
+  @media (min-width: 48.01em) {
+    .t-work--uucoh .c-header__image {
+      -webkit-filter: grayscale(50%) blur(2px);
+              filter: grayscale(50%) blur(2px); } }
+
+.t-work--uucoh .c-meta .c-icon,
+.t-work--uucoh .c-pagination .c-icon {
+  color: #e03131; }
+
+/* ==========================================================================
+   #UOFU-HEALTH-SCIENCES-THEME
+   ========================================================================== */
+.t-work--uuhsc .c-header__image-wrapper:after {
+  background: #f03e3e;
+  bottom: 0;
+  content: '';
+  left: 0;
+  opacity: 0.25;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+  @media (min-width: 48.01em) {
+    .t-work--uuhsc .c-header__image-wrapper:after {
+      opacity: 0.5; } }
+
+.t-work--uuhsc .c-header__image {
+  -webkit-filter: grayscale(25%);
+          filter: grayscale(25%); }
+  @media (min-width: 48.01em) {
+    .t-work--uuhsc .c-header__image {
+      -webkit-filter: grayscale(50%) blur(2px);
+              filter: grayscale(50%) blur(2px); } }
+
+.t-work--uuhsc .c-meta .c-icon,
+.t-work--uuhsc .c-pagination .c-icon {
+  color: #74b816; }
+
+/* ==========================================================================
+   #UOFU-SCHOOL-OF-MEDICINE-THEME
+   ========================================================================== */
+.t-work--uusom .c-header__image-wrapper:after {
+  background: #f03e3e;
+  bottom: 0;
+  content: '';
+  left: 0;
+  opacity: 0.25;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+  @media (min-width: 48.01em) {
+    .t-work--uusom .c-header__image-wrapper:after {
+      opacity: 0.5; } }
+
+.t-work--uusom .c-header__image {
+  -webkit-filter: grayscale(60%) brightness(0.8);
+          filter: grayscale(60%) brightness(0.8); }
+  @media (min-width: 48.01em) {
+    .t-work--uusom .c-header__image {
+      -webkit-filter: grayscale(60%) brightness(0.6) blur(1px);
+              filter: grayscale(60%) brightness(0.6) blur(1px); } }
+
+.t-work--uusom .c-meta .c-icon,
+.t-work--uusom .c-pagination .c-icon {
+  color: #74b816; }
+
+/* ==========================================================================
    #BACKGROUND-COLOR
    ========================================================================== */
 .u-background--transparent {

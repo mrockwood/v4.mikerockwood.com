@@ -1,0 +1,36 @@
+/* ==========================================================================
+   #UOFU-COLLEGE-OF-HEALTH-THEME
+   ========================================================================== */
+
+.t-work--uucoh {
+
+	.c-header__image-wrapper:after {
+		background: map-get($colors, red-dark);
+		bottom: 0;
+		content: '';
+		left: 0;
+		opacity: 0.25;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+
+		@include media('>medium') {
+			opacity: 0.5;
+		}
+	}
+
+	.c-header__image {
+		filter: grayscale(50%);
+
+		@include media('>medium') {
+			filter: grayscale(50%) blur(2px);
+		}
+	}
+
+	.c-meta .c-icon,
+	.c-pagination .c-icon {
+		color: map-get($colors, red-dark);
+	}
+
+}

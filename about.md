@@ -8,12 +8,12 @@ classes: about
 
 {% include lead.html content="I&rsquo;m a front-end developer and designer living in Salt Lake City, Utah." %}
 
-Some information about you!
+<div class="l-container  l-container--medium">
 
-### More Information
+<p>Some information about you!</p>
 
-A place to include any other types of information that you'd like to include about yourself.
+<h2>More Information</h2>
 
-### Contact me
+<p>A place to include any other types of information that you'd like to include about yourself.</p>
 
-[email@domain.com](mailto:email@domain.com)
+</div>
