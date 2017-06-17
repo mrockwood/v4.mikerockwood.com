@@ -1,0 +1,83 @@
+/* ==========================================================================
+   #CONTENT
+   ========================================================================== */
+
+
+
+
+//
+// Options
+//
+
+$content-namespace: $global-namespace-components + 'content' !default;
+
+
+
+
+//
+// Classes
+//
+
+.#{$content-namespace} {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: map-get($colors, blue-dark);
+		font-family: map-get($global-font-families, sans-serif);
+		font-weight: map-get($global-font-weights, semibold);
+	}
+
+	h1 {
+		@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.5em, 1.75em);
+
+		margin-top: map-get($global-spacing, medium);
+	}
+
+	h2 {
+		@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.25em, 1.5em);
+
+		margin-bottom: map-get($global-spacing, xsmall);
+		margin-top: map-get($global-spacing, small);
+	}
+
+	h3 {
+		@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.25em);
+
+		margin-bottom: map-get($global-spacing, xsmall);
+		margin-top: map-get($global-spacing, small);
+	}
+
+	h4 {
+		@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.25em);
+
+		margin-bottom: map-get($global-spacing, xsmall);
+		margin-top: map-get($global-spacing, small);
+	}
+
+	h5 {
+		font-size: 1em;
+		margin-bottom: map-get($global-spacing, xsmall);
+		margin-top: map-get($global-spacing, small);
+	}
+
+	h6 {
+		font-size: 1em;
+		margin-bottom: map-get($global-spacing, small);
+		margin-top: map-get($global-spacing, medium);
+	}
+
+	a {
+		color: map-get($colors, lime);
+		text-decoration-skip: ink;
+		transition: map-get($global-speeds, fast);
+
+		&:hover {
+			color: map-get($colors, lime-darker);
+		}
+	}
+
+}

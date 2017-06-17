@@ -14,7 +14,7 @@
 
 	font-weight: map-get($global-font-weights, regular);
 	line-height: map-get($global-line-heights, xsmall);
-	margin: 0;
+	margin: map-get($global-spacing, tiny) 0;
 }
 
 .c-header__subtitle {

@@ -9,11 +9,27 @@ classes: about
 {% include lead.html content="I&rsquo;m a front-end developer and designer living in Salt Lake City, Utah." %}
 
 <div class="l-container  l-container--medium">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quis cursus nulla. Vivamus lobortis, lacus vitae commodo venenatis, magna libero pulvinar nisi, at suscipit ex arcu sit amet est. Proin dignissim, erat id interdum laoreet, neque velit facilisis nisi, ac ultrices est nulla a nibh. Quisque lobortis metus nec ante maximus malesuada.</p>
+</div>
 
-<p>Some information about you!</p>
-
-<h2>More Information</h2>
-
-<p>A place to include any other types of information that you'd like to include about yourself.</p>
-
+<div class="l-container  l-container--large">
+	<div class="l-grid">
+		<section class="l-grid__item  l-width--expand@medium">
+			<h2>Education</h2>
+			<p>Vivamus non metus congue, congue erat id, accumsan sapien. Sed blandit suscipit eros id laoreet. Maecenas vehicula nisl sit amet lacus malesuada, sed aliquam nunc volutpat. Duis sit amet ante at lacus fermentum laoreet vel ac massa.</p>
+		</section>
+		<section class="l-grid__item  l-width--expand@medium">
+			<h2>Something</h2>
+			<p>Proin ac neque gravida, vulputate dui non, ultricies metus. Nam posuere vehicula gravida. Suspendisse porta neque vitae eros sagittis tempus. Curabitur feugiat, libero et tempus luctus, neque lacus faucibus sapien, id rutrum lectus orci eu justo.</p>
+		</section>
+		<section class="l-grid__item  l-width--expand@medium">
+			<h2>Something Else</h2>
+			<ul>
+				<li>asdlkjsf</li>
+				<li>weoriewr</li>
+				<li>wonapodpnqwef</li>
+				<li>v,ncz,mnv</li>
+			</ul>
+		</section>
+	</div>
 </div>
