@@ -3852,6 +3852,64 @@ img {
         font-size: 1.5em; } }
 
 /* ==========================================================================
+   #ZOOM
+   ========================================================================== */
+/**
+* Force large images into viewport
+*
+* 1. change cursor to zoom-in on hover so users know it will expand
+* 2. make sure image isn't taller than viewport until clicked
+* 3. nifty transition displays when class changes
+*/
+.c-zoom {
+  background: #fff;
+  border: 3px solid #868e96;
+  border-radius: 3px;
+  cursor: zoom-in;
+  max-height: 60vh;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.8s cubic-bezier(0.25, -0.08, 0.75, 0.25); }
+  @media (min-width: 48.01em) {
+    .c-zoom {
+      margin-left: auto;
+      margin-right: auto;
+      width: calc(48em - (1.5em * 2)); } }
+
+.c-zoom__image {
+  display: block; }
+
+/**
+* Add text to indicate element can expand
+*/
+@media (max-width: 48em) {
+  .c-zoom:after {
+    background: #495057;
+    color: white;
+    content: 'tap to expand';
+    font-family: Merriweather Sans, Arial, sans-serif;
+    font-size: 12px;
+    padding: 4px 8px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    top: 0; }
+  .c-zoom\?full-size:after {
+    content: 'tap to shrink'; } }
+
+/**
+* Javascript toggles .c-zoom--full-size when container clicked
+*
+* 1. change cursor to zoom-out on hover so users know it will shrink
+* 2. setting this to auto breaks animation, so have to use large number
+* 3. expand to container size
+*/
+.c-zoom\?full-size {
+  cursor: zoom-out;
+  max-height: 8000px;
+  width: 100%; }
+
+/* ==========================================================================
    #HUNTSMAN-THEME
    ========================================================================== */
 .t-work--hci .c-header__image-wrapper:after {

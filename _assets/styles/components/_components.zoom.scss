@@ -1,0 +1,75 @@
+/* ==========================================================================
+   #ZOOM
+   ========================================================================== */
+
+/**
+* Force large images into viewport
+*
+* 1. change cursor to zoom-in on hover so users know it will expand
+* 2. make sure image isn't taller than viewport until clicked
+* 3. nifty transition displays when class changes
+*/
+
+.c-zoom {
+	background: #fff;
+	border: 3px solid map-get($colors, grey);
+	border-radius: 3px;
+	cursor: zoom-in; // 1
+	//margin: 15px auto;
+	max-height: 60vh; // 2
+	overflow: hidden;
+	position: relative;
+	transition: all .8s cubic-bezier(.25, -.08, .75, .25); // 3
+	//width: 100%;
+
+	@include media('>medium') {
+		//margin: 30px auto;
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(#{map-get($global-breakpoints, medium)} - (#{$global-spacing-default} * 2));
+	}
+	@include media('>large') {
+		//width: 60%;
+	}
+}
+
+.c-zoom__image {
+	display: block;
+}
+
+/**
+* Add text to indicate element can expand
+*/
+
+@include media('<=medium') {
+	.c-zoom:after {
+		background: map-get($colors, grey-dark);
+		color: white;
+		content: 'tap to expand';
+		font-family: map-get($global-font-families, sans-serif);
+		font-size: 12px;
+		padding: 4px 8px;
+		position: absolute;
+		right: 0;
+		text-transform: uppercase;
+		top: 0;
+	}
+
+	.c-zoom#{$global-separator-state}full-size:after {
+		content: 'tap to shrink';
+	}
+}
+
+/**
+* Javascript toggles .c-zoom--full-size when container clicked
+*
+* 1. change cursor to zoom-out on hover so users know it will shrink
+* 2. setting this to auto breaks animation, so have to use large number
+* 3. expand to container size
+*/
+
+.c-zoom#{$global-separator-state}full-size {
+	cursor: zoom-out; // 1
+	max-height: 8000px; // 2
+	width: 100%; // 3
+}
