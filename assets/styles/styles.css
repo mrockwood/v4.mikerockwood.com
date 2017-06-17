@@ -3397,12 +3397,12 @@ img {
   margin-bottom: 0.5em;
   margin-top: 1em; }
 
-.c-content a:not('.c-button') {
+.c-content a:not(.c-button) {
   color: #74b816;
   -webkit-text-decoration-skip: ink;
           text-decoration-skip: ink;
   transition: 200ms; }
-  .c-content a:not('.c-button'):hover {
+  .c-content a:not(.c-button):hover {
     color: #5c940d; }
 
 /* ==========================================================================
