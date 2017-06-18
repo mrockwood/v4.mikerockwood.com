@@ -1,0 +1,159 @@
+/* ==========================================================================
+   #CARDS
+   ========================================================================== */
+
+
+
+
+//
+// Options
+//
+
+$card-namespace: $global-namespace-components + 'card' !default;
+
+$card-margin: map-get($global-spacing, small) 0 0 0 !default;
+$card-width: 100% !default;
+$card-max-height: 280px !default;
+$card-background-color: map-get($colors, white) !default;
+$card-z-index: map-get($global-z-indexes, 100) !default;
+$card-box-shadow: map-get($global-box-shadows, high) !default;
+$card-border-radius: $global-border-radius !default;
+$card-border-width: $global-border-width !default;
+$card-border-style: $global-border-style !default;
+$card-border-color: $global-border-color !default;
+$card-border: $card-border-width $card-border-style $card-border-color !default;
+
+$card-image-padding: map-get($global-spacing, medium) 0 0 !default;
+$card-header-padding: map-get($global-spacing, medium) map-get($global-spacing, medium) 0 !default;
+$card-body-padding: map-get($global-spacing, medium) !default;
+$card-footer-padding: map-get($global-spacing, medium) !default;
+$card-footer-block-padding: 0 !default;
+
+$card-item-padding: map-get($global-spacing, small) !default;
+$card-item-border-width: $global-border-width !default;
+$card-item-border-style: $global-border-style !default;
+$card-item-border-color: rgba(map-get($colors, grey-light), .5) !default;
+$card-item-border-bottom: $card-item-border-width $card-item-border-style $card-item-border-color !default;
+
+$card-item-hover-background-color: map-get($colors, grey-lighter) !default;
+$card-item-hover-color: map-get($colors, grey-lighter) !default;
+
+$card-item-active-background-color: $card-item-border-color !default;
+$card-item-active-font-weight: map-get($global-font-families, semibold) !default;
+
+$card-item-disabled-opacity: .6 !default;
+
+$card-item-divider-background-color: map-get($colors, grey-dark) !default;
+$card-item-divider-color: map-get($colors, white) !default;
+$card-item-divider-font-weight: map-get($global-font-families, semibold) !default;
+
+
+
+
+//
+// Classes
+//
+
+.c-card {
+	display: block;
+	border: $card-border;
+	border-radius: $card-border-radius;
+	background-color: $card-background-color;
+	//box-shadow: $card-box-shadow;
+	font-size: map-get($global-font-sizes, small);
+	list-style: $list-unstyled-list-style;
+	overflow: hidden;
+	padding: $list-unstyled-padding;
+
+	> .o-image:not(:first-child) {
+		padding: map-get($global-spacing, medium) 0 0;
+	}
+}
+
+.c-card + .c-card {
+	margin: $card-margin;
+}
+
+.c-card__header {
+	padding: map-get($global-spacing, small) map-get($global-spacing, medium) 0;
+
+	.c-heading {
+		padding: 0;
+	}
+}
+
+.c-card__item,
+.c-card__body,
+.c-card__footer {
+	padding: map-get($global-spacing, medium);
+}
+
+.c-card__item + .c-card__footer--block {
+	padding: 0;
+}
+
+.c-card__footer--block {
+	padding: map-get($global-spacing, small) 0 0;
+
+	.c-input-group .c-button:first-child {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+
+	.c-input-group .c-button:last-child {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+}
+
+.c-card__item:not(:last-child) {
+	border-bottom: $card-item-border-bottom;
+}
+
+.c-card--menu {
+	display: block;
+	width: $card-width;
+	max-height: $card-max-height;
+	margin: $card-margin;
+	z-index: $card-z-index;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+}
+
+.c-card--grouped {
+	.c-card__item {
+		&:not(:last-child) {
+			border-bottom: 0;
+		}
+	}
+}
+
+.c-card__divider {
+	height: $card-item-border-width;
+	background-color: $card-item-divider-background-color;
+	overflow: hidden;
+}
+
+.c-card__item--divider {
+	background-color: $card-item-divider-background-color;
+	color: $card-item-divider-color;
+	font-weight: $card-item-divider-font-weight;
+}
+
+.c-card__item--disabled {
+	cursor: not-allowed;
+	opacity: $card-item-disabled-opacity;
+}
+
+.c-card--menu .c-card__item:not(.c-card__item--disabled):not(.c-card__item--divider):hover,
+.c-card--accordion label.c-card__item:not(.c-card__item--disabled):not(.c-card__item--divider):hover {
+	background-color: $card-item-hover-background-color;
+	cursor: pointer;
+}
+
+.c-card__item--active,
+.c-card--accordion > input:checked + .c-card__item {
+	background-color: $card-item-active-background-color;
+	font-weight: $card-item-active-font-weight;
+}

@@ -3329,6 +3329,83 @@ img {
       color: #fff; }
 
 /* ==========================================================================
+   #CARDS
+   ========================================================================== */
+.c-card {
+  display: block;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25em;
+  background-color: #FFF;
+  font-size: 0.925em;
+  list-style: none;
+  overflow: hidden;
+  padding: 0; }
+  .c-card > .o-image:not(:first-child) {
+    padding: 1em 0 0; }
+
+.c-card + .c-card {
+  margin: 0.5em 0 0 0; }
+
+.c-card__header {
+  padding: 0.5em 1em 0; }
+  .c-card__header .c-heading {
+    padding: 0; }
+
+.c-card__item,
+.c-card__body,
+.c-card__footer {
+  padding: 1em; }
+
+.c-card__item + .c-card__footer--block {
+  padding: 0; }
+
+.c-card__footer--block {
+  padding: 0.5em 0 0; }
+  .c-card__footer--block .c-input-group .c-button:first-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+  .c-card__footer--block .c-input-group .c-button:last-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
+
+.c-card__item:not(:last-child) {
+  border-bottom: 1px solid rgba(222, 226, 230, 0.5); }
+
+.c-card--menu {
+  display: block;
+  width: 100%;
+  max-height: 280px;
+  margin: 0.5em 0 0 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; }
+
+.c-card--grouped .c-card__item:not(:last-child) {
+  border-bottom: 0; }
+
+.c-card__divider {
+  height: 1px;
+  background-color: #495057;
+  overflow: hidden; }
+
+.c-card__item--divider {
+  background-color: #495057;
+  color: #FFF; }
+
+.c-card__item--disabled {
+  cursor: not-allowed;
+  opacity: 0.6; }
+
+.c-card--menu .c-card__item:not(.c-card__item--disabled):not(.c-card__item--divider):hover,
+.c-card--accordion label.c-card__item:not(.c-card__item--disabled):not(.c-card__item--divider):hover {
+  background-color: #f1f3f5;
+  cursor: pointer; }
+
+.c-card__item--active,
+.c-card--accordion > input:checked + .c-card__item {
+  background-color: rgba(222, 226, 230, 0.5); }
+
+/* ==========================================================================
    #CONTENT
    ========================================================================== */
 .c-content h1,
@@ -4069,14 +4146,14 @@ select.c-field:not([multiple]) {
   border: 2px solid #868e96;
   border-radius: 3px;
   cursor: zoom-in;
+  margin-left: auto;
+  margin-right: auto;
   max-height: 60vh;
   overflow: hidden;
   position: relative;
   transition: all 0.8s cubic-bezier(0.25, -0.08, 0.75, 0.25); }
   @media (min-width: 48.01em) {
     .c-zoom {
-      margin-left: auto;
-      margin-right: auto;
       width: calc(48em - (1.5em * 2)); } }
 
 .c-zoom__image {
