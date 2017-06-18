@@ -15,7 +15,7 @@
  */
 
 .c-button {
-	//border-width: 0;
+	border: none;
 	border-radius: $global-border-radius;
 	cursor: pointer; /* [5] */
 	display: inline-block; /* [1] */

@@ -390,7 +390,7 @@ $global-border-radius: map-get($global-radii, radius) !default;
 //
 // Focus styles
 //
-$border-color-focus: map-get($colors, blue) !default;
+$border-color-focus: map-get($colors, blue-lighter) !default;
 $box-shadow-focus: inset 0 0 0 2px $border-color-focus !default;
 
 //

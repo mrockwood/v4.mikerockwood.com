@@ -1,0 +1,219 @@
+/* ==========================================================================
+   #ICONS
+   ========================================================================== */
+
+
+
+
+//
+// Options
+//
+
+$label-padding: map-get($global-spacing, xsmall) 0 !default;
+$label-color: map-get($colors, grey) !default;
+$label-font-family: map-get($global-font-families, sans-serif) !default;
+$label-font-size: map-get($global-font-sizes, small) !default;
+$label-weight: map-get($global-font-weights, regular) !default;
+$label-field-margin: map-get($global-spacing, small) 0 0 0 !default;
+$field-padding: map-get($global-spacing, small) !default;
+$field-margin: 0 0 map-get($global-spacing, medium) !default;
+$field-color: inherit !default;
+$field-background-color: map-get($colors, white) !default;
+$field-font-size: map-get($global-font-sizes, medium) !default;
+$field-font-weight: map-get($global-font-weights, regular) !default;
+$field-border-width: $global-border-width !default;
+$field-border-style: $global-border-style !default;
+$field-border-color: $global-border-color !default;
+$field-border: $field-border-width $field-border-style $field-border-color !default;
+$field-border-radius: $global-border-radius !default;
+$field-focus-border-color: $border-color-focus !default;
+$field-focus-box-shadow: $box-shadow-focus !default;
+$field-disabled-background-color: map-get($colors, grey-lighter) !default;
+$field-disabled-border-color: $global-border-color !default;
+$field-disabled-color: map-get($colors, disabled) !default;
+$field-error-border-color: map-get($colors, red) !default;
+$field-error-color: map-get($colors, red) !default;
+$field-success-border-color: map-get($colors, green) !default;
+$field-success-color: $field-color !default;
+$checkbox-margin: map-get($global-spacing, tiny) !default;
+$checkbox-font-size: map-get($global-font-sizes, medium) !default;
+$checkbox-background-color: transparent !default;
+$checkbox-border: 0 !default;
+$fieldset-padding: 0 !default;
+$fieldset-margin: map-get($global-spacing, small) 0 !default;
+$fieldset-width: 100% !default;
+$fieldset-border: 0 !default;
+$legend-padding: map-get($global-spacing, xsmall) 0 !default;
+$form-element-padding: map-get($global-spacing, medium) 0 !default;
+$form-element-label-padding: 0 0 map-get($global-spacing, small) 0 !default;
+
+
+
+
+//
+// Classes
+//
+
+.c-field {
+	position: relative;
+
+	.c-field--success ~ .c-icon {
+		color: $field-success-border-color;
+	}
+
+	.c-field--error ~ .c-icon {
+		color: $field-error-border-color;
+	}
+
+	.c-field:disabled ~ .c-icon {
+		color: $field-disabled-border-color;
+	}
+
+	.c-icon {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		color: $field-border-color;
+	}
+}
+
+.c-field--icon-right {
+	.c-field + .c-icon {
+		right: $field-padding;
+	}
+
+	.c-field {
+		padding-right: $field-padding * 4;
+	}
+}
+
+.c-field--icon-left {
+	.c-icon:first-child {
+		left: $field-padding;
+	}
+
+	.c-field {
+		padding-left: $field-padding * 4;
+	}
+}
+
+.c-fieldset,
+.c-fieldset.c-list {
+	display: block;
+	width: $fieldset-width;
+	margin: $fieldset-margin;
+	padding: $fieldset-padding;
+	border: $fieldset-border;
+}
+
+.c-fieldset__legend {
+	cursor: pointer;
+	display: block;
+	padding: $legend-padding;
+	width: 100%;
+}
+
+// LABELS
+.c-label {
+	color: $label-color;
+	cursor: pointer;
+	display: block;
+	font-family: $label-font-family;
+	font-size: $label-font-size;
+	font-weight: $label-weight;
+	padding: $label-padding;
+	width: 100%;
+}
+
+// TEXT FIELDS
+.c-field {
+	display: block;
+	width: 100%;
+	margin: $field-margin;
+	padding: $field-padding;
+	border: $field-border;
+	border-radius: $field-border-radius;
+	outline: 0;
+	background-color: $field-background-color;
+	font-family: inherit;
+	font-size: $field-font-size;
+	font-weight: $field-font-weight;
+	resize: vertical;
+	appearance: none;
+
+	&:focus {
+		border-color: $field-focus-border-color;
+		box-shadow: $field-focus-box-shadow;
+	}
+}
+
+// TEXTAREAS
+textarea.c-field {
+	min-height: 10em;
+}
+
+// SELECTS, CHECKBOXES AND RADIOS
+select.c-field {
+	cursor: pointer;
+}
+
+// SELECTS
+select.c-field:not([multiple]) {
+	padding-right: 1em;
+	background: url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 99% 50%;
+}
+
+// CHECKBOXES and RADIOs
+.c-field input {
+	margin-right: $checkbox-margin;
+	outline: 0;
+	font-size: $checkbox-font-size;
+}
+
+.c-field--label {
+	margin: $label-field-margin;
+}
+
+.c-field--error {
+	border-color: $field-error-border-color;
+	color: $field-error-color;
+}
+
+.c-field--success {
+	border-color: $field-success-border-color;
+	color: $field-success-color;
+}
+
+.c-field--choice {
+	border: $checkbox-border;
+	border-radius: 0;
+	background-color: $checkbox-background-color;
+}
+
+.c-fieldset--disabled .c-field,
+.c-fieldset:disabled .c-field,
+.c-field--disabled,
+.c-field:disabled {
+	background-color: $field-disabled-background-color;
+	border-color: $field-disabled-border-color;
+	color: $field-disabled-color;
+	cursor: not-allowed;
+
+	&.c-field--choice {
+		background-color: $checkbox-background-color;
+	}
+}
+
+.c-field input:disabled {
+	color: $field-disabled-color;
+	cursor: not-allowed;
+}
+
+.c-form-element {
+	//padding: $form-element-padding;
+	position: relative;
+
+	.c-label:first-child {
+		//padding: $form-element-label-padding;
+	}
+}
