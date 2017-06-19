@@ -45,18 +45,13 @@ $grid-breakpoints: $global-breakpoints !default;
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
 	 */
 	.#{$grid-namespace}#{$breakpoint-alias} {
+		display: flex;
+		flex-wrap: wrap;
 		list-style: none; /* [1] */
 		margin: 0; /* [2] */
 		margin-left: ( $grid-gutter / -2 ); /* [3] */
 		margin-right: ( $grid-gutter / -2 ); /* [3] */
 		padding: 0; /* [2] */
-	}
-
-	@supports (display: flex) {
-		.#{$grid-namespace}#{$breakpoint-alias} {
-			display: flex;
-			flex-wrap: wrap;
-		}
 	}
 
 	/**
@@ -131,19 +126,13 @@ $grid-breakpoints: $global-breakpoints !default;
 	 */
 	.#{$grid-namespace}#{$grid-element}#{$grid-item-name}#{$breakpoint-alias} {
 		box-sizing: border-box; /* [1] */
-		float: left;
+		//float: left;
 		max-width: 100%;
 		min-width: 0; /* [2] */
 		min-height: 0; /* [2] */
 		padding-left: ( $grid-gutter / 2 ); /* [3] */
 		padding-right: ( $grid-gutter / 2 ); /* [3] */
 		width: 100%;
-	}
-
-	@supports (display: flex) {
-		.#{$grid-namespace}#{$grid-element}#{$grid-item-name}#{$breakpoint-alias} {
-			float: none;
-		}
 	}
 
 	/**

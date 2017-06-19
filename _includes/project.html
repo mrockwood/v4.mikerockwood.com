@@ -1,30 +1,32 @@
-<article class="project project--{{ project.title|slugify }}">
+<article class="l-grid  {% if project.classes %}{{ project.classes }}{% endif %}">
 
-  <a class="project__thumb" href="{{ project.url }}">
-    <picture>
-      <!--[if IE 9]><audio><![endif]-->
-      <source
-        srcset="http://placehold.it/600x400/11e87f/fff"
-        media="(max-width: 600px)" />
-      <source
-        srcset="http://placehold.it/900x600"
-        media="(max-width: 900px)" />
-      <source
-        srcset="http://placehold.it/1200x800/e8117f/fff"
-        media="(max-width: 1200px)" />
-      <!--[if IE 9]></audio><![endif]-->
-      <img
-        src="http://placehold.it/600x400/117fe8/fff"
-        srcset="http://placehold.it/1200x800/e8117f/fff"
-        alt="screencapture of project" />
-    </picture>
-  </a>
+	<a class="l-grid__item  l-width--1/2@small  l-width--1/3@large  l-order--last@small" href="{{ project.url }}">
+		<picture>
+			<!--[if IE 9]><audio><![endif]-->
+			<source
+			srcset="http://placehold.it/600x400/11e87f/fff"
+			media="(max-width: 600px)" />
+			<source
+			srcset="http://placehold.it/900x600"
+			media="(max-width: 900px)" />
+			<source
+			srcset="http://placehold.it/1200x800/e8117f/fff"
+			media="(max-width: 1200px)" />
+			<!--[if IE 9]></audio><![endif]-->
+			<img
+			src="http://placehold.it/600x400/117fe8/fff"
+			srcset="http://placehold.it/1200x800/e8117f/fff"
+			alt="screencapture of project" />
+		</picture>
+	</a>
 
-  <div class="project__excerpt">
-    <!--<p class="project__time">2016</p>-->
-    <h2 class="project__title"><a class="project__link" href="{{ project.url }}">{{ project.title }}{% if project.sub-title %}, {{ project.sub-title }}{% endif %}</a></h2>
-    <p class="project__summary">{{ project.excerpt | strip_html }}</p>
-    <a class="project__button" href="{{ project.url }}">View Project</a>
-  </div>
+	<div class="l-grid__item  l-width--1/2@small  l-width--2/3@large">
+		<!--<p class="project__time">2016</p>-->
+		<h2 class="project__title">
+			<a class="project__link" href="{{ project.url }}">{{ project.title }}{% if project.subtitle %}, {{ project.subtitle }}{% endif %}</a>
+		</h2>
+		<p class="project__summary">{{ project.excerpt | strip_html }}</p>
+		<a class="project__button" href="{{ project.url }}">View Project</a>
+	</div>
 
 </article>

@@ -917,6 +917,13 @@ img {
 	 * 2. Center
 	 */
 .l-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-left: auto;
   /* [2] */
   margin-right: auto;
@@ -924,16 +931,6 @@ img {
   padding-left: 1.5em;
   padding-right: 1.5em;
   width: 100%; }
-
-@supports ((display: -webkit-box) or (display: flex)) {
-  .l-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; } }
 
 .l-container--xsmall {
   max-width: 20em; }
@@ -959,6 +956,13 @@ img {
 	 * 2. Center
 	 */
   .l-container\@xsmall {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: auto;
     /* [2] */
     margin-right: auto;
@@ -966,15 +970,6 @@ img {
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-container\@xsmall {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
   .l-container--xsmall\@xsmall {
     max-width: 20em; }
   .l-container--small\@xsmall {
@@ -994,6 +989,13 @@ img {
 	 * 2. Center
 	 */
   .l-container\@small {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: auto;
     /* [2] */
     margin-right: auto;
@@ -1001,15 +1003,6 @@ img {
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-container\@small {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
   .l-container--xsmall\@small {
     max-width: 20em; }
   .l-container--small\@small {
@@ -1029,6 +1022,13 @@ img {
 	 * 2. Center
 	 */
   .l-container\@medium {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: auto;
     /* [2] */
     margin-right: auto;
@@ -1036,15 +1036,6 @@ img {
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-container\@medium {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
   .l-container--xsmall\@medium {
     max-width: 20em; }
   .l-container--small\@medium {
@@ -1064,6 +1055,13 @@ img {
 	 * 2. Center
 	 */
   .l-container\@large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: auto;
     /* [2] */
     margin-right: auto;
@@ -1071,15 +1069,6 @@ img {
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-container\@large {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
   .l-container--xsmall\@large {
     max-width: 20em; }
   .l-container--small\@large {
@@ -1099,6 +1088,13 @@ img {
 	 * 2. Center
 	 */
   .l-container\@xlarge {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: auto;
     /* [2] */
     margin-right: auto;
@@ -1106,15 +1102,6 @@ img {
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-container\@xlarge {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
   .l-container--xsmall\@xlarge {
     max-width: 20em; }
   .l-container--small\@xlarge {
@@ -1134,6 +1121,13 @@ img {
 	 * 2. Center
 	 */
   .l-container\@super {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: auto;
     /* [2] */
     margin-right: auto;
@@ -1141,15 +1135,6 @@ img {
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-container\@super {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column; } }
   .l-container--xsmall\@super {
     max-width: 20em; }
   .l-container--small\@super {
@@ -1172,6 +1157,11 @@ img {
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
 	 */
 .l-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
   /* [1] */
   margin: 0;
@@ -1182,14 +1172,6 @@ img {
   /* [3] */
   padding: 0;
   /* [2] */ }
-
-@supports ((display: -webkit-box) or (display: flex)) {
-  .l-grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; } }
 
 /**
 	 * Reversed grids allow you to structure your source in the opposite order to
@@ -1270,7 +1252,6 @@ img {
 .l-grid__item {
   box-sizing: border-box;
   /* [1] */
-  float: left;
   max-width: 100%;
   min-width: 0;
   /* [2] */
@@ -1281,10 +1262,6 @@ img {
   padding-right: 0.75em;
   /* [3] */
   width: 100%; }
-
-@supports ((display: -webkit-box) or (display: flex)) {
-  .l-grid__item {
-    float: none; } }
 
 /**
 	 * Flush grid itmes have all the properties of regular grid items, minus any spacing.
@@ -1334,6 +1311,11 @@ img {
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
 	 */
   .l-grid\@xsmall {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     list-style: none;
     /* [1] */
     margin: 0;
@@ -1344,13 +1326,6 @@ img {
     /* [3] */
     padding: 0;
     /* [2] */ }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-grid\@xsmall {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
   /**
 	 * Reversed grids allow you to structure your source in the opposite order to
 	 * how your rendered layout will appear.
@@ -1420,7 +1395,6 @@ img {
   .l-grid__item\@xsmall {
     box-sizing: border-box;
     /* [1] */
-    float: left;
     max-width: 100%;
     min-width: 0;
     /* [2] */
@@ -1431,9 +1405,6 @@ img {
     padding-right: 0.75em;
     /* [3] */
     width: 100%; }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-grid__item\@xsmall {
-      float: none; } }
   /**
 	 * Flush grid itmes have all the properties of regular grid items, minus any spacing.
 	 * Extends `.l-grid__item`.
@@ -1476,6 +1447,11 @@ img {
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
 	 */
   .l-grid\@small {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     list-style: none;
     /* [1] */
     margin: 0;
@@ -1486,13 +1462,6 @@ img {
     /* [3] */
     padding: 0;
     /* [2] */ }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-grid\@small {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
   /**
 	 * Reversed grids allow you to structure your source in the opposite order to
 	 * how your rendered layout will appear.
@@ -1562,7 +1531,6 @@ img {
   .l-grid__item\@small {
     box-sizing: border-box;
     /* [1] */
-    float: left;
     max-width: 100%;
     min-width: 0;
     /* [2] */
@@ -1573,9 +1541,6 @@ img {
     padding-right: 0.75em;
     /* [3] */
     width: 100%; }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-grid__item\@small {
-      float: none; } }
   /**
 	 * Flush grid itmes have all the properties of regular grid items, minus any spacing.
 	 * Extends `.l-grid__item`.
@@ -1618,6 +1583,11 @@ img {
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
 	 */
   .l-grid\@medium {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     list-style: none;
     /* [1] */
     margin: 0;
@@ -1628,13 +1598,6 @@ img {
     /* [3] */
     padding: 0;
     /* [2] */ }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-grid\@medium {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
   /**
 	 * Reversed grids allow you to structure your source in the opposite order to
 	 * how your rendered layout will appear.
@@ -1704,7 +1667,6 @@ img {
   .l-grid__item\@medium {
     box-sizing: border-box;
     /* [1] */
-    float: left;
     max-width: 100%;
     min-width: 0;
     /* [2] */
@@ -1715,9 +1677,6 @@ img {
     padding-right: 0.75em;
     /* [3] */
     width: 100%; }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-grid__item\@medium {
-      float: none; } }
   /**
 	 * Flush grid itmes have all the properties of regular grid items, minus any spacing.
 	 * Extends `.l-grid__item`.
@@ -1760,6 +1719,11 @@ img {
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
 	 */
   .l-grid\@large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     list-style: none;
     /* [1] */
     margin: 0;
@@ -1770,13 +1734,6 @@ img {
     /* [3] */
     padding: 0;
     /* [2] */ }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-grid\@large {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
   /**
 	 * Reversed grids allow you to structure your source in the opposite order to
 	 * how your rendered layout will appear.
@@ -1846,7 +1803,6 @@ img {
   .l-grid__item\@large {
     box-sizing: border-box;
     /* [1] */
-    float: left;
     max-width: 100%;
     min-width: 0;
     /* [2] */
@@ -1857,9 +1813,6 @@ img {
     padding-right: 0.75em;
     /* [3] */
     width: 100%; }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-grid__item\@large {
-      float: none; } }
   /**
 	 * Flush grid itmes have all the properties of regular grid items, minus any spacing.
 	 * Extends `.l-grid__item`.
@@ -1902,6 +1855,11 @@ img {
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
 	 */
   .l-grid\@xlarge {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     list-style: none;
     /* [1] */
     margin: 0;
@@ -1912,13 +1870,6 @@ img {
     /* [3] */
     padding: 0;
     /* [2] */ }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-grid\@xlarge {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
   /**
 	 * Reversed grids allow you to structure your source in the opposite order to
 	 * how your rendered layout will appear.
@@ -1988,7 +1939,6 @@ img {
   .l-grid__item\@xlarge {
     box-sizing: border-box;
     /* [1] */
-    float: left;
     max-width: 100%;
     min-width: 0;
     /* [2] */
@@ -1999,9 +1949,6 @@ img {
     padding-right: 0.75em;
     /* [3] */
     width: 100%; }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-grid__item\@xlarge {
-      float: none; } }
   /**
 	 * Flush grid itmes have all the properties of regular grid items, minus any spacing.
 	 * Extends `.l-grid__item`.
@@ -2044,6 +1991,11 @@ img {
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
 	 */
   .l-grid\@super {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     list-style: none;
     /* [1] */
     margin: 0;
@@ -2054,13 +2006,6 @@ img {
     /* [3] */
     padding: 0;
     /* [2] */ }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-grid\@super {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; } }
   /**
 	 * Reversed grids allow you to structure your source in the opposite order to
 	 * how your rendered layout will appear.
@@ -2130,7 +2075,6 @@ img {
   .l-grid__item\@super {
     box-sizing: border-box;
     /* [1] */
-    float: left;
     max-width: 100%;
     min-width: 0;
     /* [2] */
@@ -2141,9 +2085,6 @@ img {
     padding-right: 0.75em;
     /* [3] */
     width: 100%; }
-  @supports ((display: -webkit-box) or (display: flex)) {
-    .l-grid__item\@super {
-      float: none; } }
   /**
 	 * Flush grid itmes have all the properties of regular grid items, minus any spacing.
 	 * Extends `.l-grid__item`.
