@@ -18,14 +18,10 @@
 	margin-left: auto;
 	margin-right: auto;
 	max-height: 60vh; // 2
-	max-width: 100%;
+	max-width: calc(#{map-get($global-breakpoints, medium)} - (#{$global-spacing-default} * 2));
 	overflow: hidden;
 	position: relative;
 	transition: all .8s cubic-bezier(.25, -.08, .75, .25); // 3
-
-	@include media('>medium') {
-		width: calc(#{map-get($global-breakpoints, medium)} - (#{$global-spacing-default} * 2));
-	}
 }
 
 .c-zoom__image {
@@ -66,5 +62,5 @@
 .c-zoom#{$global-separator-state}full-size {
 	cursor: zoom-out; // 1
 	max-height: 8000px; // 2
-	width: 100%; // 3
+	max-width: 100%; // 3
 }
