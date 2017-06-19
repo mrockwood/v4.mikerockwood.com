@@ -4144,11 +4144,12 @@ select.c-field:not([multiple]) {
 .c-zoom {
   background: #fff;
   border: 2px solid #868e96;
-  border-radius: 3px;
+  border-radius: 0.25em;
   cursor: zoom-in;
   margin-left: auto;
   margin-right: auto;
   max-height: 60vh;
+  max-width: 100%;
   overflow: hidden;
   position: relative;
   transition: all 0.8s cubic-bezier(0.25, -0.08, 0.75, 0.25); }
