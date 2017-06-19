@@ -3597,6 +3597,19 @@ img {
   position: relative;
   z-index: -1; }
 
+.c-header__image-wrapper:after {
+  bottom: 0;
+  content: '';
+  left: 0;
+  opacity: 0.25;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+  @media (min-width: 48.01em) {
+    .c-header__image-wrapper:after {
+      opacity: 0.5; } }
+
 /* ==========================================================================
    #ICONS
    ========================================================================== */
@@ -4191,18 +4204,7 @@ select.c-field:not([multiple]) {
    #HUNTSMAN-THEME
    ========================================================================== */
 .t-work--hci .c-header__image-wrapper:after {
-  background: #1c7cd6;
-  bottom: 0;
-  content: '';
-  left: 0;
-  opacity: 0.25;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1; }
-  @media (min-width: 48.01em) {
-    .t-work--hci .c-header__image-wrapper:after {
-      opacity: 0.5; } }
+  background-color: #1c7cd6; }
 
 .t-work--hci .c-header__image {
   -webkit-filter: grayscale(50%);
@@ -4216,18 +4218,7 @@ select.c-field:not([multiple]) {
    #TURNS-THEME
    ========================================================================== */
 .t-work--turns .c-header__image-wrapper:after {
-  background: #15aabf;
-  bottom: 0;
-  content: '';
-  left: 0;
-  opacity: 0.25;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1; }
-  @media (min-width: 48.01em) {
-    .t-work--turns .c-header__image-wrapper:after {
-      opacity: 0.5; } }
+  background-color: #15aabf; }
 
 .t-work--turns .c-header__image {
   -webkit-filter: grayscale(25%);
@@ -4241,18 +4232,7 @@ select.c-field:not([multiple]) {
    #UOFU-COLLEGE-OF-HEALTH-THEME
    ========================================================================== */
 .t-work--uucoh .c-header__image-wrapper:after {
-  background: #e03131;
-  bottom: 0;
-  content: '';
-  left: 0;
-  opacity: 0.25;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1; }
-  @media (min-width: 48.01em) {
-    .t-work--uucoh .c-header__image-wrapper:after {
-      opacity: 0.5; } }
+  background-color: #e03131; }
 
 .t-work--uucoh .c-header__image {
   -webkit-filter: grayscale(50%);
@@ -4270,18 +4250,7 @@ select.c-field:not([multiple]) {
    #UOFU-HEALTH-SCIENCES-THEME
    ========================================================================== */
 .t-work--uuhsc .c-header__image-wrapper:after {
-  background: #f03e3e;
-  bottom: 0;
-  content: '';
-  left: 0;
-  opacity: 0.25;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1; }
-  @media (min-width: 48.01em) {
-    .t-work--uuhsc .c-header__image-wrapper:after {
-      opacity: 0.5; } }
+  background-color: #f03e3e; }
 
 .t-work--uuhsc .c-header__image {
   -webkit-filter: grayscale(25%);
@@ -4299,18 +4268,7 @@ select.c-field:not([multiple]) {
    #UOFU-SCHOOL-OF-MEDICINE-THEME
    ========================================================================== */
 .t-work--uusom .c-header__image-wrapper:after {
-  background: #f03e3e;
-  bottom: 0;
-  content: '';
-  left: 0;
-  opacity: 0.25;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1; }
-  @media (min-width: 48.01em) {
-    .t-work--uusom .c-header__image-wrapper:after {
-      opacity: 0.5; } }
+  background-color: #f03e3e; }
 
 .t-work--uusom .c-header__image {
   -webkit-filter: grayscale(60%) brightness(0.8);
