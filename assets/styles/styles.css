@@ -914,7 +914,8 @@ img {
    ========================================================================== */
 /**
 	 * 1. Set box sizing to `content-box` so the max-width is unaffected by padding.
-	 * 2. Center
+	 * 2. Center on the page
+	 * 3. Fix IE10-11 horizontal scrollbars
 	 */
 .l-container {
   display: -webkit-box;
@@ -928,6 +929,7 @@ img {
   /* [2] */
   margin-right: auto;
   /* [2] */
+  overflow-x: hidden;
   padding-left: 1.5em;
   padding-right: 1.5em;
   width: 100%; }
@@ -953,7 +955,8 @@ img {
 @media (min-width: 20.01em) {
   /**
 	 * 1. Set box sizing to `content-box` so the max-width is unaffected by padding.
-	 * 2. Center
+	 * 2. Center on the page
+	 * 3. Fix IE10-11 horizontal scrollbars
 	 */
   .l-container\@xsmall {
     display: -webkit-box;
@@ -967,6 +970,7 @@ img {
     /* [2] */
     margin-right: auto;
     /* [2] */
+    overflow-x: hidden;
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
@@ -986,7 +990,8 @@ img {
 @media (min-width: 30.01em) {
   /**
 	 * 1. Set box sizing to `content-box` so the max-width is unaffected by padding.
-	 * 2. Center
+	 * 2. Center on the page
+	 * 3. Fix IE10-11 horizontal scrollbars
 	 */
   .l-container\@small {
     display: -webkit-box;
@@ -1000,6 +1005,7 @@ img {
     /* [2] */
     margin-right: auto;
     /* [2] */
+    overflow-x: hidden;
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
@@ -1019,7 +1025,8 @@ img {
 @media (min-width: 48.01em) {
   /**
 	 * 1. Set box sizing to `content-box` so the max-width is unaffected by padding.
-	 * 2. Center
+	 * 2. Center on the page
+	 * 3. Fix IE10-11 horizontal scrollbars
 	 */
   .l-container\@medium {
     display: -webkit-box;
@@ -1033,6 +1040,7 @@ img {
     /* [2] */
     margin-right: auto;
     /* [2] */
+    overflow-x: hidden;
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
@@ -1052,7 +1060,8 @@ img {
 @media (min-width: 64.01em) {
   /**
 	 * 1. Set box sizing to `content-box` so the max-width is unaffected by padding.
-	 * 2. Center
+	 * 2. Center on the page
+	 * 3. Fix IE10-11 horizontal scrollbars
 	 */
   .l-container\@large {
     display: -webkit-box;
@@ -1066,6 +1075,7 @@ img {
     /* [2] */
     margin-right: auto;
     /* [2] */
+    overflow-x: hidden;
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
@@ -1085,7 +1095,8 @@ img {
 @media (min-width: 78.01em) {
   /**
 	 * 1. Set box sizing to `content-box` so the max-width is unaffected by padding.
-	 * 2. Center
+	 * 2. Center on the page
+	 * 3. Fix IE10-11 horizontal scrollbars
 	 */
   .l-container\@xlarge {
     display: -webkit-box;
@@ -1099,6 +1110,7 @@ img {
     /* [2] */
     margin-right: auto;
     /* [2] */
+    overflow-x: hidden;
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
@@ -1118,7 +1130,8 @@ img {
 @media (min-width: 116.01em) {
   /**
 	 * 1. Set box sizing to `content-box` so the max-width is unaffected by padding.
-	 * 2. Center
+	 * 2. Center on the page
+	 * 3. Fix IE10-11 horizontal scrollbars
 	 */
   .l-container\@super {
     display: -webkit-box;
@@ -1132,6 +1145,7 @@ img {
     /* [2] */
     margin-right: auto;
     /* [2] */
+    overflow-x: hidden;
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
@@ -2816,6 +2830,9 @@ img {
 	 *   <div class="l-ratio  l-ratio--16:9">
 	 *
 	 */
+.l-ratio--3\:1:before {
+  padding-bottom: 33.33333%; }
+
 .l-ratio--2\:1:before {
   padding-bottom: 50%; }
 
@@ -3543,6 +3560,9 @@ img {
   position: relative;
   z-index: -1; }
 
+/**
+ * This code does nothing until a background-color is applied via themes
+ */
 .c-header__image-wrapper:after {
   bottom: 0;
   content: '';
@@ -3561,10 +3581,12 @@ img {
    ========================================================================== */
 .c-icon {
   display: inline-block;
+  fill: none;
   margin: .2em;
   font-size: 1em;
   height: 1.5em;
   width: 1.5em;
+  stroke: currentColor;
   stroke-width: inherit;
   stroke-linecap: inherit;
   stroke-linejoin: inherit;
@@ -4130,13 +4152,17 @@ select.c-field:not([multiple]) {
    #ZOOM
    ========================================================================== */
 /**
-* Force large images into viewport
-*
-* 1. change cursor to zoom-in on hover so users know it will expand
-* 2. make sure image isn't taller than viewport until clicked
-* 3. nifty transition displays when class changes
-*/
+ * Force large images into viewport
+ *
+ * 1. change cursor to zoom-in on hover so users know it will expand
+ * 2. make sure image isn't taller than viewport until clicked
+ * 3. nifty transition displays when class changes
+ * 4. fix ie10-11 not centering images
+ */
 .c-zoom {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background: #fff;
   border: 2px solid #868e96;
   border-radius: 0.25em;

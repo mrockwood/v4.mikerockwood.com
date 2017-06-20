@@ -28,7 +28,8 @@ $container-breakpoints: $global-breakpoints !default;
 
 	/**
 	 * 1. Set box sizing to `content-box` so the max-width is unaffected by padding.
-	 * 2. Center
+	 * 2. Center on the page
+	 * 3. Fix IE10-11 horizontal scrollbars
 	 */
 	.#{$container-namespace}#{$breakpoint-alias} {
 		//box-sizing: content-box; /* [1] */
@@ -36,6 +37,7 @@ $container-breakpoints: $global-breakpoints !default;
 		flex-direction: column;
 		margin-left: auto; /* [2] */
 		margin-right: auto; /* [2] */
+		overflow-x: hidden;
 		padding-left: $global-spacing-default;
 		padding-right: $global-spacing-default;
 		width: 100%;

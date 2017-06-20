@@ -60,12 +60,12 @@ $icon-breakpoints: $global-breakpoints !default;
 
 	.#{$icon-namespace}#{$breakpoint-alias} {
 		display: inline-block;
-		//fill: none;
+		fill: none;
 		margin: .2em;
 		font-size: 1em;
 		height: 1.5em;
 		width: 1.5em;
-		//stroke: currentColor;
+		stroke: currentColor;
 		stroke-width: inherit;
 		stroke-linecap: inherit;
 		stroke-linejoin: inherit;

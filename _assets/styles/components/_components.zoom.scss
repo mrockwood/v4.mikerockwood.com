@@ -3,14 +3,16 @@
    ========================================================================== */
 
 /**
-* Force large images into viewport
-*
-* 1. change cursor to zoom-in on hover so users know it will expand
-* 2. make sure image isn't taller than viewport until clicked
-* 3. nifty transition displays when class changes
-*/
+ * Force large images into viewport
+ *
+ * 1. change cursor to zoom-in on hover so users know it will expand
+ * 2. make sure image isn't taller than viewport until clicked
+ * 3. nifty transition displays when class changes
+ * 4. fix ie10-11 not centering images
+ */
 
 .c-zoom {
+	align-self: center; // 4
 	background: #fff;
 	border: 2px solid map-get($colors, grey);
 	border-radius: $global-border-radius;

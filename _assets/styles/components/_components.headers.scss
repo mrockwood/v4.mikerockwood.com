@@ -49,6 +49,10 @@
 	z-index: -1;
 }
 
+/**
+ * This code does nothing until a background-color is applied via themes
+ */
+
 .c-header__image-wrapper:after {
 	bottom: 0;
 	content: '';
