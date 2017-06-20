@@ -1,0 +1,33 @@
+/* ==========================================================================
+   #PROJECTS
+   ========================================================================== */
+
+.c-project {
+
+}
+
+.c-project__excerpt {
+	background-color: map-get($colors, white);
+	//box-shadow: map-get($global-box-shadows, high);
+	margin-left: auto;
+	margin-right: auto;
+	max-width: map-get($global-breakpoints, medium);
+	padding: $global-spacing-default / 2;
+	text-align: center;
+
+	@include media('<=medium') {
+		border: $global-border-width $global-border-style $global-border-color;
+		border-top: none;
+	}
+
+	@include media('>medium') {
+		margin-top: -2.75em;
+	}
+}
+
+.c-project__link {
+	color: map-get($colors, grey-dark);
+	font-family: map-get($global-font-families, serif);
+	font-weight: map-get($global-font-weights, regular);
+	text-decoration: none;
+}

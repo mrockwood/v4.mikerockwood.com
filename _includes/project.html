@@ -1,32 +1,47 @@
-<article class="l-grid  {% if project.classes %}{{ project.classes }}{% endif %}">
+<article class="c-project  {% if project.classes %}{{ project.classes }}{% endif %}  u-margin-bottom--xlarge">
 
-	<a class="l-grid__item  l-width--1/2@small  l-width--1/3@large  l-order--last@small" href="{{ project.url }}">
-		<picture>
-			<!--[if IE 9]><audio><![endif]-->
-			<source
-			srcset="http://placehold.it/600x400/11e87f/fff"
-			media="(max-width: 600px)" />
-			<source
-			srcset="http://placehold.it/900x600"
-			media="(max-width: 900px)" />
-			<source
-			srcset="http://placehold.it/1200x800/e8117f/fff"
-			media="(max-width: 1200px)" />
-			<!--[if IE 9]></audio><![endif]-->
-			<img
-			src="http://placehold.it/600x400/117fe8/fff"
-			srcset="http://placehold.it/1200x800/e8117f/fff"
-			alt="screencapture of project" />
-		</picture>
+	{% if project.hero %}
+	<a href="{{ project.url }}">
+		<div class="c-header__image-wrapper">
+			<img class="c-header__image" src="{{ site.baseurl }}{{ project.hero }}" alt="" />
+		</div>
 	</a>
+	{% endif %}
 
-	<div class="l-grid__item  l-width--1/2@small  l-width--2/3@large">
+	<div class="c-project__excerpt">
 		<!--<p class="project__time">2016</p>-->
-		<h2 class="project__title">
-			<a class="project__link" href="{{ project.url }}">{{ project.title }}{% if project.subtitle %}, {{ project.subtitle }}{% endif %}</a>
+		<h2 class="c-project__title">
+			<a class="c-project__link" href="{{ project.url }}">{{ project.title }}{% if project.subtitle %}, {{ project.subtitle }}{% endif %}</a>
 		</h2>
-		<p class="project__summary">{{ project.excerpt | strip_html }}</p>
-		<a class="project__button" href="{{ project.url }}">View Project</a>
+
+		{% if project.date or project.tags %}
+		<div class="c-meta">
+			<div class="c-meta__list">
+
+				{% if project.date %}
+					<div class="c-meta__item  c-meta__item--date">
+						<svg class="c-meta__icon  c-icon  c-icon--medium">
+							<use xlink:href="{{ '/assets/icons/sprite.svg#calendar' | prepend: site.baseurl }}"></use>
+						</svg>
+						<time date="{{ project.date | date: '%Y-%m-%d' }}" pubdate>
+							{{ project.date | date: "%Y" }}
+						</time>
+					</div>
+				{% endif %}
+
+				{% if project.tags %}
+					<div class="c-meta__item  c-meta__item--tags">
+						<svg class="c-meta__icon  c-icon  c-icon--medium">
+							<use xlink:href="{{ '/assets/icons/sprite.svg#tag' | prepend: site.baseurl }}"></use>
+						</svg>
+						{{ project.tags | array_to_sentence_string }}
+					</div>
+				{% endif %}
+
+			</div>
+		</div>
+		{% endif %}
+
 	</div>
 
 </article>
