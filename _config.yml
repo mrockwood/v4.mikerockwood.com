@@ -101,6 +101,7 @@ exclude:
   - README.md
   - CNAME
   - node_modules
+  - npm-debug.log
   - gulpfile.js
   - package.json
   - webpack.config.js
