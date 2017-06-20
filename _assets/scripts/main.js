@@ -6,6 +6,15 @@
 
 
 /**
+ * JS has loaded
+ */
+
+console.log('main.js loaded!');
+
+
+
+
+/**
  * Load svg4everybody
  */
 
