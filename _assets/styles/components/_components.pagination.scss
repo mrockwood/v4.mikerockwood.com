@@ -15,6 +15,7 @@
 
 .c-pagination__link {
 	color: map-get($colors, grey);
+	display: block;
 	font-size: map-get($global-font-sizes, small);
 	letter-spacing: map-get($global-letter-spacing, medium);
 	padding-bottom: map-get($global-spacing, medium);

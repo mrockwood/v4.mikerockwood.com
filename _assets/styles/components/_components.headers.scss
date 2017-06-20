@@ -7,11 +7,17 @@
 	flex-direction: column;
 	font-size: inherit;
 	margin: map-get($global-spacing, medium) 0;
+	text-align: center;
 }
+
+/**
+ * 1. IE10 not wrapping title and subtitle text
+ */
 
 .c-header__title {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 3.5em);
 
+	display: block; /* [1] */
 	font-weight: map-get($global-font-weights, regular);
 	line-height: map-get($global-line-heights, xsmall);
 	margin: map-get($global-spacing, tiny) 0;
@@ -21,6 +27,7 @@
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.5em);
 
 	color: map-get($colors, grey);
+	display: block; /* [1] */
 	font-family: map-get($global-font-families, sans-serif);
 	font-weight: map-get($global-font-weights, light);
 	letter-spacing: map-get($global-letter-spacing, xlarge);

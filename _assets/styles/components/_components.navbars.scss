@@ -47,6 +47,7 @@
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), .75em, .875em);
 
 	color: map-get($colors, grey);
+	display: block;
 	font-family: map-get($global-font-families, sans-serif);
 	font-size: map-get($global-font-sizes, small);
 	font-weight: map-get($global-font-weights, light);

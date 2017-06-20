@@ -3511,9 +3511,15 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: inherit;
-  margin: 1em 0; }
+  margin: 1em 0;
+  text-align: center; }
 
+/**
+ * 1. IE10 not wrapping title and subtitle text
+ */
 .c-header__title {
+  display: block;
+  /* [1] */
   font-weight: 400;
   line-height: 1.125;
   margin: 0.125em 0; }
@@ -3528,6 +3534,8 @@ img {
 
 .c-header__subtitle {
   color: #868e96;
+  display: block;
+  /* [1] */
   font-family: Merriweather Sans, Arial, sans-serif;
   font-weight: 300;
   letter-spacing: 0.15em;
@@ -3734,6 +3742,12 @@ select.c-field:not([multiple]) {
   padding-right: 1em;
   background: url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 99% 50%; }
 
+/**
+ * Remove arrow on IE10
+ */
+select::-ms-expand {
+  display: none; }
+
 .c-field input {
   margin-right: 0.125em;
   outline: 0;
@@ -3907,6 +3921,7 @@ select.c-field:not([multiple]) {
 
 .c-navbar__link {
   color: #868e96;
+  display: block;
   font-family: Merriweather Sans, Arial, sans-serif;
   font-size: 0.925em;
   font-weight: 300;
@@ -3967,6 +3982,7 @@ select.c-field:not([multiple]) {
 
 .c-pagination__link {
   color: #868e96;
+  display: block;
   font-size: 0.925em;
   letter-spacing: 0.05em;
   padding-bottom: 1em;
@@ -4030,18 +4046,6 @@ select.c-field:not([multiple]) {
 /* ==========================================================================
    #PROJECTS
    ========================================================================== */
-.c-project {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-
 .c-project__excerpt {
   background-color: #FFF;
   padding: 0.75em;
@@ -4053,7 +4057,7 @@ select.c-field:not([multiple]) {
       width: 100%; } }
   @media (min-width: 48.01em) {
     .c-project__excerpt {
-      margin: -2.75em 1.5em 0;
+      margin: -2.75em auto 0;
       max-width: calc(48em - (1.5em * 2));
       width: calc(100% - (1.5em * 2)); } }
 

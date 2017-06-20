@@ -2,12 +2,6 @@
    #PROJECTS
    ========================================================================== */
 
-.c-project {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
 .c-project__excerpt {
 	background-color: map-get($colors, white);
 	padding: $global-spacing-default / 2;
@@ -20,7 +14,7 @@
 	}
 
 	@include media('>medium') {
-		margin: -2.75em $global-spacing-default 0;
+		margin: -2.75em auto 0;
 		max-width: calc(#{map-get($global-breakpoints, medium)} - (#{$global-spacing-default} * 2));
 		width: calc(100% - (#{$global-spacing-default} * 2));
 	}

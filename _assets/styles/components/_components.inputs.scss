@@ -163,6 +163,14 @@ select.c-field:not([multiple]) {
 	background: url("data:image/png;base64,R0lGODlhDwAUAIABAAAAAP///yH5BAEAAAEALAAAAAAPABQAAAIXjI+py+0Po5wH2HsXzmw//lHiSJZmUAAAOw==") no-repeat 99% 50%;
 }
 
+/**
+ * Remove arrow on IE10
+ */
+
+select::-ms-expand {
+	display: none;
+}
+
 // CHECKBOXES and RADIOs
 .c-field input {
 	margin-right: $checkbox-margin;
