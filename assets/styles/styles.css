@@ -3528,8 +3528,17 @@ img {
     .c-header__subtitle {
       color: inherit; } }
 
+/**
+ * Flexbug IE10-11 images + aspect ratio (workaround)
+ * Expected behavior: Flex item height reflects resized image
+ * Actual behavior: Flex item height reflects image height before resizing
+ *
+ * 1. Add min-height: 1px to the flex item.
+ */
 .c-header__image-wrapper {
   line-height: 0;
+  min-height: 1px;
+  /* 1 */
   overflow: hidden;
   position: relative;
   z-index: -1; }
