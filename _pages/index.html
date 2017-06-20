@@ -8,7 +8,29 @@ permalink: /
 
 	{% include lead.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet rhoncus orci. Morbi at risus nec metus vestibulum rhoncus. Vestibulum quis rhoncus dolor, ut mollis est." %}
 
-	<div class="l-container  l-container--large">
+	<section class="l-container  l-container--large">
+		<div class="l-grid">
+			<div class="l-grid__item  l-width--expand@medium">
+				<h2>Latest Work</h2>
+			</div>
+			<div class="l-grid__item  l-width--shrink@medium">
+				<a href="{{ site.baseurl }}/work/">
+					View More Work
+					<svg class="c-icon  c-icon--small">
+						<use xlink:href="{{ '/assets/icons/sprite.svg#arrow-right' | prepend: site.baseurl }}"></use>
+					</svg>
+				</a>
+			</div>
+		</div>
+		{% assign sorted = (site.work | sort: 'date') | reverse %}
+		{% for project in sorted limit:1 %}
+			{% unless project.preview %}
+				{% include project.html project=project %}
+			{% endunless %}
+		{% endfor %}
+	</section>
+
+	<section class="l-container  l-container--large">
 		<div class="l-grid">
 			<div class="l-grid__item  l-width--expand@medium">
 				<h2>Latest Notes</h2>
@@ -45,7 +67,7 @@ permalink: /
 			</div>
 		{% endfor %}
 		</div>
-	</div>
+	</section>
 </main>
 
 {% include get-in-touch.html %}
