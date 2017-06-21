@@ -19,6 +19,7 @@
 	cursor: zoom-in; // 1
 	margin-left: auto;
 	margin-right: auto;
+	min-height: 1px;
 	max-height: 60vh; // 2
 	max-width: calc(#{map-get($global-breakpoints, medium)} - (#{$global-spacing-default} * 2));
 	overflow: hidden;
