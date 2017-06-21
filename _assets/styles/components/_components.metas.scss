@@ -28,6 +28,7 @@
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), .75em, .825em);
 
 	margin: map-get($global-spacing, small) 0;
+	max-width: 100%;
 	text-align: center;
 
 	@include media('>medium') {
