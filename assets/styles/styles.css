@@ -3311,32 +3311,51 @@ img {
    #CARDS
    ========================================================================== */
 .c-card {
-  display: block;
-  border: 1px solid #dee2e6;
-  border-radius: 0.25em;
   background-color: #FFF;
+  display: block;
   font-size: 0.925em;
   list-style: none;
   overflow: hidden;
   padding: 0; }
-  .c-card > .o-image:not(:first-child) {
+  .c-card > .c-image:not(:first-child) {
     padding: 1em 0 0; }
 
 .c-card + .c-card {
-  margin: 0.5em 0 0 0; }
+  margin: -1px; }
+
+.c-card__hero + .c-card__excerpt {
+  border-top: none; }
+
+.c-card__excerpt {
+  border: 1px solid #dee2e6; }
 
 .c-card__header {
-  padding: 0.5em 1em 0; }
+  padding: 0.5em 1em 0;
+  text-align: center; }
   .c-card__header .c-heading {
     padding: 0; }
+
+.c-card__header-link {
+  color: #495057;
+  font-family: Merriweather, Georgia, Cambria, Times New Roman, Times, serif;
+  font-weight: 400;
+  text-decoration: none; }
 
 .c-card__item,
 .c-card__body,
 .c-card__footer {
   padding: 1em; }
 
+.c-card__body {
+  color: #495057;
+  font-family: Merriweather Sans, Arial, sans-serif;
+  font-size: 0.925em; }
+
 .c-card__item + .c-card__footer--block {
   padding: 0; }
+
+.c-card__footer {
+  background-color: #f1f3f5; }
 
 .c-card__footer--block {
   padding: 0.5em 0 0; }
@@ -3856,11 +3875,8 @@ select::-ms-expand {
    #META
    ========================================================================== */
 .c-meta {
-  color: #868e96;
-  font-family: Merriweather Sans, Arial, sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-  text-transform: uppercase; }
+  padding-bottom: 0.5em;
+  padding-top: 0.25em; }
 
 .c-meta__list {
   -webkit-box-align: center;
@@ -3875,9 +3891,7 @@ select::-ms-expand {
           flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 0.5em;
-  padding-top: 0.25em; }
+          justify-content: center; }
   @media (min-width: 48.01em) {
     .c-meta__list {
       -webkit-box-orient: horizontal;
@@ -3886,9 +3900,14 @@ select::-ms-expand {
               flex-direction: row; } }
 
 .c-meta__item {
+  color: #868e96;
+  font-family: Merriweather Sans, Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.1em;
   margin: 0.5em 0;
   max-width: 100%;
-  text-align: center; }
+  text-align: center;
+  text-transform: uppercase; }
   .c-meta__item {
     font-size: 0.75em; }
     @media screen and (min-width: 30em) {

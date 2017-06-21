@@ -17,7 +17,7 @@ $card-max-height: 280px !default;
 $card-background-color: map-get($colors, white) !default;
 $card-z-index: map-get($global-z-indexes, 100) !default;
 $card-box-shadow: map-get($global-box-shadows, high) !default;
-$card-border-radius: $global-border-radius !default;
+$card-border-radius: 0 !default;
 $card-border-width: $global-border-width !default;
 $card-border-style: $global-border-style !default;
 $card-border-color: $global-border-color !default;
@@ -55,31 +55,47 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 //
 
 .c-card {
-	display: block;
-	border: $card-border;
-	border-radius: $card-border-radius;
-	background-color: $card-background-color;
+	//border: $card-border;
+	//border-radius: $card-border-radius;
 	//box-shadow: $card-box-shadow;
+	background-color: $card-background-color;
+	display: block;
 	font-size: map-get($global-font-sizes, small);
 	list-style: $list-unstyled-list-style;
 	overflow: hidden;
 	padding: $list-unstyled-padding;
 
-	> .o-image:not(:first-child) {
+	> .c-image:not(:first-child) {
 		padding: map-get($global-spacing, medium) 0 0;
 	}
 }
 
 .c-card + .c-card {
-	margin: $card-margin;
+	margin: -$card-item-border-width;
+}
+
+.c-card__hero + .c-card__excerpt {
+	border-top: none;
+}
+
+.c-card__excerpt {
+	border: $card-border;
 }
 
 .c-card__header {
 	padding: map-get($global-spacing, small) map-get($global-spacing, medium) 0;
+	text-align: center;
 
 	.c-heading {
 		padding: 0;
 	}
+}
+
+.c-card__header-link {
+	color: map-get($colors, grey-dark);
+	font-family: map-get($global-font-families, serif);
+	font-weight: map-get($global-font-weights, regular);
+	text-decoration: none;
 }
 
 .c-card__item,
@@ -88,8 +104,18 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 	padding: map-get($global-spacing, medium);
 }
 
+.c-card__body {
+	color: map-get($colors, grey-dark);
+	font-family: map-get($global-font-families, sans-serif);
+	font-size: map-get($global-font-sizes, small);
+}
+
 .c-card__item + .c-card__footer--block {
 	padding: 0;
+}
+
+.c-card__footer {
+	background-color: map-get($colors, grey-lighter);
 }
 
 .c-card__footer--block {
