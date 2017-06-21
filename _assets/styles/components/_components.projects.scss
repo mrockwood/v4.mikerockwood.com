@@ -2,6 +2,14 @@
    #PROJECTS
    ========================================================================== */
 
+/**
+ * Fix IE10-11 not respecting aspect ratio
+ */
+
+.c-project {
+	min-height: 1px; /* [1] */
+}
+
 .c-project__excerpt {
 	background-color: map-get($colors, white);
 	padding: $global-spacing-default / 2;

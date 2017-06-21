@@ -4046,6 +4046,13 @@ select::-ms-expand {
 /* ==========================================================================
    #PROJECTS
    ========================================================================== */
+/**
+ * Fix IE10-11 not respecting aspect ratio
+ */
+.c-project {
+  min-height: 1px;
+  /* [1] */ }
+
 .c-project__excerpt {
   background-color: #FFF;
   padding: 0.75em;
