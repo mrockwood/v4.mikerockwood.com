@@ -4082,6 +4082,7 @@ select::-ms-expand {
  * 1. Making the <body> element behave like a flexbox container.
  * 2. Making flex children line up vertically (horizontal is default)
  * 3. Setting the min-height to 100% of the viewport height.
+ * 4. Dumb hack for IE10-11 sizing issues
  */
 .c-sticky-footer__body {
   display: -webkit-box;
@@ -4099,7 +4100,9 @@ select::-ms-expand {
 .c-sticky-footer__main {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
-          flex: 1 0 auto; }
+          flex: 1 0 auto;
+  min-height: 1px;
+  /* [4] */ }
 
 /* ==========================================================================
    #TYPOGRAPHY
