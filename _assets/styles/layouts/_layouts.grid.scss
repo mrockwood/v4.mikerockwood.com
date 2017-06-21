@@ -43,6 +43,7 @@ $grid-breakpoints: $global-breakpoints !default;
 	 * 1. Allow the grid system to be used on lists.
 	 * 2. Remove any margins and paddings that might affect the grid system.
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
+	 * 4. Dumb IE hack
 	 */
 	.#{$grid-namespace}#{$breakpoint-alias} {
 		display: flex;
@@ -51,6 +52,7 @@ $grid-breakpoints: $global-breakpoints !default;
 		margin: 0; /* [2] */
 		margin-left: ( $grid-gutter / -2 ); /* [3] */
 		margin-right: ( $grid-gutter / -2 ); /* [3] */
+		overflow-x: hidden; /* [4] */
 		padding: 0; /* [2] */
 	}
 

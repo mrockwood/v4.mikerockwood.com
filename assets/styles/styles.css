@@ -1169,6 +1169,7 @@ img {
 	 * 1. Allow the grid system to be used on lists.
 	 * 2. Remove any margins and paddings that might affect the grid system.
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
+	 * 4. Dumb IE hack
 	 */
 .l-grid {
   display: -webkit-box;
@@ -1184,6 +1185,8 @@ img {
   /* [3] */
   margin-right: -0.75em;
   /* [3] */
+  overflow-x: hidden;
+  /* [4] */
   padding: 0;
   /* [2] */ }
 
@@ -1323,6 +1326,7 @@ img {
 	 * 1. Allow the grid system to be used on lists.
 	 * 2. Remove any margins and paddings that might affect the grid system.
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
+	 * 4. Dumb IE hack
 	 */
   .l-grid\@xsmall {
     display: -webkit-box;
@@ -1338,6 +1342,8 @@ img {
     /* [3] */
     margin-right: -0.75em;
     /* [3] */
+    overflow-x: hidden;
+    /* [4] */
     padding: 0;
     /* [2] */ }
   /**
@@ -1459,6 +1465,7 @@ img {
 	 * 1. Allow the grid system to be used on lists.
 	 * 2. Remove any margins and paddings that might affect the grid system.
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
+	 * 4. Dumb IE hack
 	 */
   .l-grid\@small {
     display: -webkit-box;
@@ -1474,6 +1481,8 @@ img {
     /* [3] */
     margin-right: -0.75em;
     /* [3] */
+    overflow-x: hidden;
+    /* [4] */
     padding: 0;
     /* [2] */ }
   /**
@@ -1595,6 +1604,7 @@ img {
 	 * 1. Allow the grid system to be used on lists.
 	 * 2. Remove any margins and paddings that might affect the grid system.
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
+	 * 4. Dumb IE hack
 	 */
   .l-grid\@medium {
     display: -webkit-box;
@@ -1610,6 +1620,8 @@ img {
     /* [3] */
     margin-right: -0.75em;
     /* [3] */
+    overflow-x: hidden;
+    /* [4] */
     padding: 0;
     /* [2] */ }
   /**
@@ -1731,6 +1743,7 @@ img {
 	 * 1. Allow the grid system to be used on lists.
 	 * 2. Remove any margins and paddings that might affect the grid system.
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
+	 * 4. Dumb IE hack
 	 */
   .l-grid\@large {
     display: -webkit-box;
@@ -1746,6 +1759,8 @@ img {
     /* [3] */
     margin-right: -0.75em;
     /* [3] */
+    overflow-x: hidden;
+    /* [4] */
     padding: 0;
     /* [2] */ }
   /**
@@ -1867,6 +1882,7 @@ img {
 	 * 1. Allow the grid system to be used on lists.
 	 * 2. Remove any margins and paddings that might affect the grid system.
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
+	 * 4. Dumb IE hack
 	 */
   .l-grid\@xlarge {
     display: -webkit-box;
@@ -1882,6 +1898,8 @@ img {
     /* [3] */
     margin-right: -0.75em;
     /* [3] */
+    overflow-x: hidden;
+    /* [4] */
     padding: 0;
     /* [2] */ }
   /**
@@ -2003,6 +2021,7 @@ img {
 	 * 1. Allow the grid system to be used on lists.
 	 * 2. Remove any margins and paddings that might affect the grid system.
 	 * 3. Add negative margins to compensate for `.grid__item` padding.
+	 * 4. Dumb IE hack
 	 */
   .l-grid\@super {
     display: -webkit-box;
@@ -2018,6 +2037,8 @@ img {
     /* [3] */
     margin-right: -0.75em;
     /* [3] */
+    overflow-x: hidden;
+    /* [4] */
     padding: 0;
     /* [2] */ }
   /**
