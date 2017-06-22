@@ -23,6 +23,27 @@
 }
 
 //
+//
+//
+
+@include media('<=medium') {
+	.c-navbar__item--logo {
+		width: 100%;
+	}
+}
+
+@include media('>medium') {
+	.c-navbar__item {
+		text-align: center;
+		width: 15%;
+	}
+	.c-navbar__item--logo {
+		width: 40%;
+	}
+}
+
+
+//
 // Logo
 //
 
@@ -32,22 +53,16 @@
 	color: map-get($colors, grey-darker);
 	display: block;
 	font-family: 'norwesterregular', impact, sans-serif;
-	letter-spacing: 1px;
+	letter-spacing: map-get($global-letter-spacing, small);
 	text-align: center;
 	text-decoration: none;
-	width: 100%;
-
-	@include media('>medium') {
-		width: auto;
-	}
-
 }
 
 .c-navbar__link {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), .75em, .875em);
 
 	color: map-get($colors, grey);
-	display: block;
+	display: inline-block;
 	font-family: map-get($global-font-families, sans-serif);
 	font-size: map-get($global-font-sizes, small);
 	font-weight: map-get($global-font-weights, light);

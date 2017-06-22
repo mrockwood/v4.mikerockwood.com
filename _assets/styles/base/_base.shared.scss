@@ -12,6 +12,7 @@
 html {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1em, 1.25em);
 
+	color: map-get($colors, grey-dark);
 	font-family: map-get($global-font-families, serif);
 	font-weight: map-get($global-font-weights, regular);
 	line-height: map-get($global-line-heights, large);

@@ -108,15 +108,23 @@ layout: compress
 		<!-- Navigation -->
 		<nav class="l-page__section  c-navbar  l-container  l-container--large  u-padding-vertical--small  u-padding-vertical--medium@medium" id="navigation" role="navigation">
 			<div class="l-grid  l-grid--middle  l-grid--around  u-margin-horizontal--none">
-				<a class="c-navbar__logo  u-padding-vertical--xsmall" href="{{ site.baseurl }}/">
-					<!--<span class="c-logo__icon"><svg><use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#code"></use></svg></span>-->
-					<span class="c-logo__name">{{ site.name }}</span>
-					<!--<span class="c-logo__title">{{ site.description }}</span>-->
-				</a>
-				<a class="c-navbar__link  l-order--first@medium" href="{{ site.baseurl }}/work/">Work</a>
-				<a class="c-navbar__link  l-order--first@medium" href="{{ site.baseurl }}/about/">About</a>
-				<a class="c-navbar__link" href="{{ site.baseurl }}/notes/">Notes</a>
-				<a class="c-navbar__link" href="{{ site.baseurl }}/contact/">Contact</a>
+				<li class="c-navbar__item  c-navbar__item--logo">
+					<a class="c-navbar__logo  u-padding-vertical--xsmall" href="{{ site.baseurl }}/">
+						<span class="c-logo__name">{{ site.name }}</span>
+					</a>
+				</li>
+				<li class="c-navbar__item  l-order--first@medium">
+					<a class="c-navbar__link  l-order--first@medium" href="{{ site.baseurl }}/work/">Work</a>
+				</li>
+				<li class="c-navbar__item  l-order--first@medium">
+					<a class="c-navbar__link  l-order--first@medium" href="{{ site.baseurl }}/about/">About</a>
+				</li>
+				<li class="c-navbar__item">
+					<a class="c-navbar__link" href="{{ site.baseurl }}/notes/">Notes</a>
+				</li>
+				<li class="c-navbar__item">
+					<a class="c-navbar__link" href="{{ site.baseurl }}/contact/">Contact</a>
+				</li>
 			</div>
 		</nav>
 

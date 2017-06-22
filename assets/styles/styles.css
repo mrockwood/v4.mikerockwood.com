@@ -524,6 +524,7 @@ fieldset {
  * Shared declarations for certain elements.
  */
 html {
+  color: #495057;
   font-family: Merriweather, Georgia, Cambria, Times New Roman, Times, serif;
   font-weight: 400;
   line-height: 1.625;
@@ -3810,6 +3811,7 @@ dd, ol, ul {
   .c-content h4,
   .c-content h5,
   .c-content h6 {
+    color: #212529;
     font-family: Merriweather Sans, Arial, sans-serif;
     font-weight: 600; }
   .c-content h1 {
@@ -4335,14 +4337,24 @@ select::-ms-expand {
 .c-navbar {
   text-transform: uppercase; }
 
+@media (max-width: 48em) {
+  .c-navbar__item--logo {
+    width: 100%; } }
+
+@media (min-width: 48.01em) {
+  .c-navbar__item {
+    text-align: center;
+    width: 15%; }
+  .c-navbar__item--logo {
+    width: 40%; } }
+
 .c-navbar__logo {
   color: #212529;
   display: block;
   font-family: 'norwesterregular', impact, sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0.025em;
   text-align: center;
-  text-decoration: none;
-  width: 100%; }
+  text-decoration: none; }
   .c-navbar__logo {
     font-size: 2em; }
     @media screen and (min-width: 30em) {
@@ -4351,13 +4363,10 @@ select::-ms-expand {
     @media screen and (min-width: 78em) {
       .c-navbar__logo {
         font-size: 2.5em; } }
-  @media (min-width: 48.01em) {
-    .c-navbar__logo {
-      width: auto; } }
 
 .c-navbar__link {
   color: #868e96;
-  display: block;
+  display: inline-block;
   font-family: Merriweather Sans, Arial, sans-serif;
   font-size: 0.925em;
   font-weight: 300;
@@ -4558,16 +4567,19 @@ select::-ms-expand {
       font-size: 1.25em; } }
 
 .c-paragraph--lead {
-  color: #495057;
-  font-weight: 300; }
+  color: #212529; }
   .c-paragraph--lead {
     font-size: 1.125em; }
     @media screen and (min-width: 30em) {
       .c-paragraph--lead {
-        font-size: calc(1.125em + 0.375 * ((100vw - 30em) / 48)); } }
+        font-size: calc(1.125em + 0.625 * ((100vw - 30em) / 48)); } }
     @media screen and (min-width: 78em) {
       .c-paragraph--lead {
-        font-size: 1.5em; } }
+        font-size: 1.75em; } }
+  @media (min-width: 48.01em) {
+    .c-paragraph--lead {
+      color: #495057;
+      font-weight: 300; } }
 
 /* ==========================================================================
    #ZOOM
