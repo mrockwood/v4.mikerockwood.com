@@ -1,0 +1,65 @@
+/* ==========================================================================
+   #LINK
+   ========================================================================== */
+
+
+
+
+//
+// Options
+//
+
+$link-namespace: $global-namespace-components + 'link' !default;
+$link-modifier: $global-separator-modifier !default;
+
+$link-color: map-get($colors, lime) !default;
+
+$link-text-decoration: none !default;
+$link-hover-text-decoration: underline !default;
+
+
+
+
+//
+// Mixins
+//
+
+@mixin link--color($color: $link-color) {
+	background-color: transparent;
+	color: $color;
+
+	&:not(:disabled) {
+		&:visited {
+			color: darken($color, $color-tint);
+		}
+
+		&:hover {
+			background-color: transparent;
+			color: lighten($color, $color-tint);
+		}
+
+		&:active {
+			background-color: transparent;
+			color: lighten($color, $color-tint);
+		}
+	}
+}
+
+
+
+
+//
+// Classes
+//
+
+.#{$link-namespace} {
+	@include link--color;
+
+	cursor: pointer;
+	text-decoration: $link-text-decoration;
+	text-decoration-skip: ink;
+
+	&:hover {
+		text-decoration: $link-hover-text-decoration;
+	}
+}
