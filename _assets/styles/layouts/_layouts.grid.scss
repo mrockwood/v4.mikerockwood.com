@@ -52,7 +52,8 @@ $grid-breakpoints: $global-breakpoints !default;
 		margin: 0; /* [2] */
 		margin-left: ( $grid-gutter / -2 ); /* [3] */
 		margin-right: ( $grid-gutter / -2 ); /* [3] */
-		overflow-x: hidden; /* [4] */
+		min-height: 1px; /* [4] */
+		//overflow-x: hidden; /* [4] */
 		padding: 0; /* [2] */
 	}
 

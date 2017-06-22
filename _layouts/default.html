@@ -103,10 +103,10 @@ layout: compress
 
 	</head>
 
-	<body class="c-sticky-footer__body  {% if page.classes %}{{ page.classes }}{% endif %}">
+	<body class="l-page  {% if page.classes %}{{ page.classes }}{% endif %}">
 
 		<!-- Navigation -->
-		<nav class="c-navbar  l-container  l-container--large  u-padding-vertical--small  u-padding-vertical--medium@medium" id="navigation" role="navigation">
+		<nav class="l-page__section  c-navbar  l-container  l-container--large  u-padding-vertical--small  u-padding-vertical--medium@medium" id="navigation" role="navigation">
 			<div class="l-grid  l-grid--middle  l-grid--around  u-margin-horizontal--none">
 				<a class="c-navbar__logo  u-padding-vertical--xsmall" href="{{ site.baseurl }}/">
 					<!--<span class="c-logo__icon"><svg><use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#code"></use></svg></span>-->
@@ -123,7 +123,7 @@ layout: compress
 		{{ content }}
 
 		<!-- Footer -->
-		<footer class="c-footer  c-sticky-footer__footer  u-padding-vertical--xlarge" id="footer" role="contentinfo">
+		<footer class="l-page__section  c-footer  u-padding-vertical--xlarge" id="footer" role="contentinfo">
 			<div class="l-container  l-container--large">
 				<ul class="c-list  c-list--unstyled  c-list--inline  u-margin-bottom--xlarge">
 					{% include social.html %}

@@ -1,5 +1,5 @@
 <!-- Header -->
-<header class="c-header {% if page.hero %}c-header--with-image  l-center-block@medium{% endif %}  l-container  l-container--large" role="banner">
+<header class="l-page__section  c-header {% if page.hero %}c-header--with-image  l-center-block@medium{% endif %}  l-container  l-container--large" role="banner">
 
 	<div class="{% if page.hero %}l-center-block__content@medium  u-color--white@medium{% endif %}  l-width--1/1  u-center">
 
@@ -19,7 +19,7 @@
 
 	{% if page.hero %}
 		<div class="c-header__image-wrapper">
-			<img class="c-header__image" src="{{ site.baseurl }}{{ page.hero }}" alt="" />
+			<img class="c-image  c-header__image" src="{{ site.baseurl }}{{ page.hero }}" alt="" />
 		</div>
 	{% endif %}
 

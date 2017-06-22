@@ -37,7 +37,8 @@ $container-breakpoints: $global-breakpoints !default;
 		flex-direction: column;
 		margin-left: auto; /* [2] */
 		margin-right: auto; /* [2] */
-		overflow-x: hidden;
+		min-height: 1px; /* [3] */
+		//overflow-x: hidden; /* [3] */
 		padding-left: $global-spacing-default;
 		padding-right: $global-spacing-default;
 		width: 100%;

@@ -563,10 +563,6 @@ dd, ol, ul {
   margin-left: 1.5em; }
 
 /* stylelint-enable selector-list-comma-newline-after */
-img {
-  height: auto;
-  width: 100%; }
-
 /* ==========================================================================
    #ALIGNMENT
    ========================================================================== */
@@ -929,7 +925,8 @@ img {
   /* [2] */
   margin-right: auto;
   /* [2] */
-  overflow-x: hidden;
+  min-height: 1px;
+  /* [3] */
   padding-left: 1.5em;
   padding-right: 1.5em;
   width: 100%; }
@@ -970,7 +967,8 @@ img {
     /* [2] */
     margin-right: auto;
     /* [2] */
-    overflow-x: hidden;
+    min-height: 1px;
+    /* [3] */
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
@@ -1005,7 +1003,8 @@ img {
     /* [2] */
     margin-right: auto;
     /* [2] */
-    overflow-x: hidden;
+    min-height: 1px;
+    /* [3] */
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
@@ -1040,7 +1039,8 @@ img {
     /* [2] */
     margin-right: auto;
     /* [2] */
-    overflow-x: hidden;
+    min-height: 1px;
+    /* [3] */
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
@@ -1075,7 +1075,8 @@ img {
     /* [2] */
     margin-right: auto;
     /* [2] */
-    overflow-x: hidden;
+    min-height: 1px;
+    /* [3] */
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
@@ -1110,7 +1111,8 @@ img {
     /* [2] */
     margin-right: auto;
     /* [2] */
-    overflow-x: hidden;
+    min-height: 1px;
+    /* [3] */
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
@@ -1145,7 +1147,8 @@ img {
     /* [2] */
     margin-right: auto;
     /* [2] */
-    overflow-x: hidden;
+    min-height: 1px;
+    /* [3] */
     padding-left: 1.5em;
     padding-right: 1.5em;
     width: 100%; }
@@ -1185,7 +1188,7 @@ img {
   /* [3] */
   margin-right: -0.75em;
   /* [3] */
-  overflow-x: hidden;
+  min-height: 1px;
   /* [4] */
   padding: 0;
   /* [2] */ }
@@ -1342,7 +1345,7 @@ img {
     /* [3] */
     margin-right: -0.75em;
     /* [3] */
-    overflow-x: hidden;
+    min-height: 1px;
     /* [4] */
     padding: 0;
     /* [2] */ }
@@ -1481,7 +1484,7 @@ img {
     /* [3] */
     margin-right: -0.75em;
     /* [3] */
-    overflow-x: hidden;
+    min-height: 1px;
     /* [4] */
     padding: 0;
     /* [2] */ }
@@ -1620,7 +1623,7 @@ img {
     /* [3] */
     margin-right: -0.75em;
     /* [3] */
-    overflow-x: hidden;
+    min-height: 1px;
     /* [4] */
     padding: 0;
     /* [2] */ }
@@ -1759,7 +1762,7 @@ img {
     /* [3] */
     margin-right: -0.75em;
     /* [3] */
-    overflow-x: hidden;
+    min-height: 1px;
     /* [4] */
     padding: 0;
     /* [2] */ }
@@ -1898,7 +1901,7 @@ img {
     /* [3] */
     margin-right: -0.75em;
     /* [3] */
-    overflow-x: hidden;
+    min-height: 1px;
     /* [4] */
     padding: 0;
     /* [2] */ }
@@ -2037,7 +2040,7 @@ img {
     /* [3] */
     margin-right: -0.75em;
     /* [3] */
-    overflow-x: hidden;
+    min-height: 1px;
     /* [4] */
     padding: 0;
     /* [2] */ }
@@ -2451,6 +2454,391 @@ img {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1; } }
+
+/* ==========================================================================
+   #CONTAINER
+   ========================================================================== */
+/**
+	 * 1. Making the <body> element behave like a flexbox container.
+	 * 2. Making flex children line up vertically (horizontal is default)
+	 * 3. Setting the min-height to 100% of the viewport height.
+	 * 4. Dumb hack for IE10-11 sizing issues
+	 */
+.l-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* [1] */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* [2] */
+  min-height: 100vh;
+  /* [3] */ }
+
+/**
+	 * Align page horizontally (`.l-page--left` or `.l-page--center` or `.l-page--right`).
+	 * Extends `.l-page`.
+	 */
+.l-page--left {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.l-page--center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.l-page--right {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+
+/**
+	 * Page section
+	 *
+	 *  1. Dumb hack for IE10-11 image sizing issues
+	 */
+.l-page__section {
+  min-height: 1px;
+  /* [1] */ }
+
+/**
+	 * Expand section vertically.
+	 * When added to main content area, this will make footers 'sticky'.
+	 *
+	 * Extends `.l-page__section`.
+	 */
+.l-page__section--expand {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
+
+@media (min-width: 20.01em) {
+  /**
+	 * 1. Making the <body> element behave like a flexbox container.
+	 * 2. Making flex children line up vertically (horizontal is default)
+	 * 3. Setting the min-height to 100% of the viewport height.
+	 * 4. Dumb hack for IE10-11 sizing issues
+	 */
+  .l-page\@xsmall {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* [1] */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* [2] */
+    min-height: 100vh;
+    /* [3] */ }
+  /**
+	 * Align page horizontally (`.l-page--left` or `.l-page--center` or `.l-page--right`).
+	 * Extends `.l-page`.
+	 */
+  .l-page--left\@xsmall {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .l-page--center\@xsmall {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .l-page--right\@xsmall {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  /**
+	 * Page section
+	 *
+	 *  1. Dumb hack for IE10-11 image sizing issues
+	 */
+  .l-page__section\@xsmall {
+    min-height: 1px;
+    /* [1] */ }
+  /**
+	 * Expand section vertically.
+	 * When added to main content area, this will make footers 'sticky'.
+	 *
+	 * Extends `.l-page__section`.
+	 */
+  .l-page__section--expand\@xsmall {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; } }
+
+@media (min-width: 30.01em) {
+  /**
+	 * 1. Making the <body> element behave like a flexbox container.
+	 * 2. Making flex children line up vertically (horizontal is default)
+	 * 3. Setting the min-height to 100% of the viewport height.
+	 * 4. Dumb hack for IE10-11 sizing issues
+	 */
+  .l-page\@small {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* [1] */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* [2] */
+    min-height: 100vh;
+    /* [3] */ }
+  /**
+	 * Align page horizontally (`.l-page--left` or `.l-page--center` or `.l-page--right`).
+	 * Extends `.l-page`.
+	 */
+  .l-page--left\@small {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .l-page--center\@small {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .l-page--right\@small {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  /**
+	 * Page section
+	 *
+	 *  1. Dumb hack for IE10-11 image sizing issues
+	 */
+  .l-page__section\@small {
+    min-height: 1px;
+    /* [1] */ }
+  /**
+	 * Expand section vertically.
+	 * When added to main content area, this will make footers 'sticky'.
+	 *
+	 * Extends `.l-page__section`.
+	 */
+  .l-page__section--expand\@small {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; } }
+
+@media (min-width: 48.01em) {
+  /**
+	 * 1. Making the <body> element behave like a flexbox container.
+	 * 2. Making flex children line up vertically (horizontal is default)
+	 * 3. Setting the min-height to 100% of the viewport height.
+	 * 4. Dumb hack for IE10-11 sizing issues
+	 */
+  .l-page\@medium {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* [1] */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* [2] */
+    min-height: 100vh;
+    /* [3] */ }
+  /**
+	 * Align page horizontally (`.l-page--left` or `.l-page--center` or `.l-page--right`).
+	 * Extends `.l-page`.
+	 */
+  .l-page--left\@medium {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .l-page--center\@medium {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .l-page--right\@medium {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  /**
+	 * Page section
+	 *
+	 *  1. Dumb hack for IE10-11 image sizing issues
+	 */
+  .l-page__section\@medium {
+    min-height: 1px;
+    /* [1] */ }
+  /**
+	 * Expand section vertically.
+	 * When added to main content area, this will make footers 'sticky'.
+	 *
+	 * Extends `.l-page__section`.
+	 */
+  .l-page__section--expand\@medium {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; } }
+
+@media (min-width: 64.01em) {
+  /**
+	 * 1. Making the <body> element behave like a flexbox container.
+	 * 2. Making flex children line up vertically (horizontal is default)
+	 * 3. Setting the min-height to 100% of the viewport height.
+	 * 4. Dumb hack for IE10-11 sizing issues
+	 */
+  .l-page\@large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* [1] */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* [2] */
+    min-height: 100vh;
+    /* [3] */ }
+  /**
+	 * Align page horizontally (`.l-page--left` or `.l-page--center` or `.l-page--right`).
+	 * Extends `.l-page`.
+	 */
+  .l-page--left\@large {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .l-page--center\@large {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .l-page--right\@large {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  /**
+	 * Page section
+	 *
+	 *  1. Dumb hack for IE10-11 image sizing issues
+	 */
+  .l-page__section\@large {
+    min-height: 1px;
+    /* [1] */ }
+  /**
+	 * Expand section vertically.
+	 * When added to main content area, this will make footers 'sticky'.
+	 *
+	 * Extends `.l-page__section`.
+	 */
+  .l-page__section--expand\@large {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; } }
+
+@media (min-width: 78.01em) {
+  /**
+	 * 1. Making the <body> element behave like a flexbox container.
+	 * 2. Making flex children line up vertically (horizontal is default)
+	 * 3. Setting the min-height to 100% of the viewport height.
+	 * 4. Dumb hack for IE10-11 sizing issues
+	 */
+  .l-page\@xlarge {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* [1] */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* [2] */
+    min-height: 100vh;
+    /* [3] */ }
+  /**
+	 * Align page horizontally (`.l-page--left` or `.l-page--center` or `.l-page--right`).
+	 * Extends `.l-page`.
+	 */
+  .l-page--left\@xlarge {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .l-page--center\@xlarge {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .l-page--right\@xlarge {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  /**
+	 * Page section
+	 *
+	 *  1. Dumb hack for IE10-11 image sizing issues
+	 */
+  .l-page__section\@xlarge {
+    min-height: 1px;
+    /* [1] */ }
+  /**
+	 * Expand section vertically.
+	 * When added to main content area, this will make footers 'sticky'.
+	 *
+	 * Extends `.l-page__section`.
+	 */
+  .l-page__section--expand\@xlarge {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; } }
+
+@media (min-width: 116.01em) {
+  /**
+	 * 1. Making the <body> element behave like a flexbox container.
+	 * 2. Making flex children line up vertically (horizontal is default)
+	 * 3. Setting the min-height to 100% of the viewport height.
+	 * 4. Dumb hack for IE10-11 sizing issues
+	 */
+  .l-page\@super {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* [1] */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* [2] */
+    min-height: 100vh;
+    /* [3] */ }
+  /**
+	 * Align page horizontally (`.l-page--left` or `.l-page--center` or `.l-page--right`).
+	 * Extends `.l-page`.
+	 */
+  .l-page--left\@super {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .l-page--center\@super {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .l-page--right\@super {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  /**
+	 * Page section
+	 *
+	 *  1. Dumb hack for IE10-11 image sizing issues
+	 */
+  .l-page__section\@super {
+    min-height: 1px;
+    /* [1] */ }
+  /**
+	 * Expand section vertically.
+	 * When added to main content area, this will make footers 'sticky'.
+	 *
+	 * Extends `.l-page__section`.
+	 */
+  .l-page__section--expand\@super {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto; } }
 
 /* ==========================================================================
    #PULL
@@ -3422,7 +3810,6 @@ img {
   .c-content h4,
   .c-content h5,
   .c-content h6 {
-    color: #1b6ec2;
     font-family: Merriweather Sans, Arial, sans-serif;
     font-weight: 600; }
   .c-content h1 {
@@ -3697,6 +4084,14 @@ img {
 .c-icon--round {
   stroke-linecap: round;
   stroke-linejoin: round; }
+
+/* ==========================================================================
+   #IMAGES
+   ========================================================================== */
+.c-image {
+  display: block;
+  max-width: 100%;
+  height: auto; }
 
 /* ==========================================================================
    #ICONS
@@ -4114,35 +4509,6 @@ select::-ms-expand {
   font-family: Merriweather, Georgia, Cambria, Times New Roman, Times, serif;
   font-weight: 400;
   text-decoration: none; }
-
-/* ==========================================================================
-   #STICKY FOOTER
-   ========================================================================== */
-/**
- * 1. Making the <body> element behave like a flexbox container.
- * 2. Making flex children line up vertically (horizontal is default)
- * 3. Setting the min-height to 100% of the viewport height.
- * 4. Dumb hack for IE10-11 sizing issues
- */
-.c-sticky-footer__body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  /* [1] */
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  /* [2] */
-  min-height: 100vh;
-  /* [3] */ }
-
-.c-sticky-footer__main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  min-height: 1px;
-  /* [4] */ }
 
 /* ==========================================================================
    #TYPOGRAPHY

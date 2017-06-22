@@ -44,6 +44,7 @@
 @import "layouts/layouts.grid";
 @import "layouts/layouts.height";
 @import "layouts/layouts.order";
+@import "layouts/layouts.page";
 @import "layouts/layouts.pull";
 @import "layouts/layouts.push";
 @import "layouts/layouts.ratio";
@@ -64,13 +65,14 @@
 @import "components/components.footers";
 @import "components/components.headers";
 @import "components/components.icons";
+@import "components/components.images";
 @import "components/components.inputs";
 @import "components/components.lists";
 @import "components/components.metas";
 @import "components/components.navbars";
 @import "components/components.pagination";
 @import "components/components.projects";
-@import "components/components.sticky-footers";
+//@import "components/components.sticky-footers";
 @import "components/components.typography";
 @import "components/components.zoom";
 
