@@ -35,10 +35,10 @@
 @include media('>medium') {
 	.c-navbar__item {
 		text-align: center;
-		width: 15%;
+		width: 16%;
 	}
 	.c-navbar__item--logo {
-		width: 40%;
+		width: 36%;
 	}
 }
 
@@ -54,8 +54,10 @@
 	display: block;
 	font-family: 'norwesterregular', impact, sans-serif;
 	letter-spacing: map-get($global-letter-spacing, small);
+	line-height: map-get($global-line-heights, xsmall);
 	text-align: center;
 	text-decoration: none;
+	word-wrap: nowrap;
 }
 
 .c-navbar__link {

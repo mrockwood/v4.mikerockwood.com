@@ -4344,17 +4344,19 @@ select::-ms-expand {
 @media (min-width: 48.01em) {
   .c-navbar__item {
     text-align: center;
-    width: 15%; }
+    width: 16%; }
   .c-navbar__item--logo {
-    width: 40%; } }
+    width: 36%; } }
 
 .c-navbar__logo {
   color: #212529;
   display: block;
   font-family: 'norwesterregular', impact, sans-serif;
   letter-spacing: 0.025em;
+  line-height: 1.125;
   text-align: center;
-  text-decoration: none; }
+  text-decoration: none;
+  word-wrap: nowrap; }
   .c-navbar__logo {
     font-size: 2em; }
     @media screen and (min-width: 30em) {
