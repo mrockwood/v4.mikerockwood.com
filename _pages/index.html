@@ -9,9 +9,9 @@ permalink: /
 	{% include lead.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet rhoncus orci. Morbi at risus nec metus vestibulum rhoncus. Vestibulum quis rhoncus dolor, ut mollis est." %}
 
 	<section class="l-container  l-container--large">
-		<div class="l-grid">
+		<div class="l-grid  l-grid--middle  u-padding-vertical--small">
 			<div class="l-grid__item  l-width--expand@small">
-				<h2>Latest Work</h2>
+				<h2 class="u-margin--none">Latest Work</h2>
 			</div>
 			<div class="l-grid__item  l-width--shrink@small  u-hide  u-block@small">
 				<a href="{{ site.baseurl }}/work/">
@@ -31,9 +31,9 @@ permalink: /
 	</section>
 
 	<section class="l-container  l-container--large">
-		<div class="l-grid">
+		<div class="l-grid  l-grid--middle  u-padding-vertical--small">
 			<div class="l-grid__item  l-width--expand@small">
-				<h2>Latest Notes</h2>
+				<h2 class="u-margin--none">Latest Notes</h2>
 			</div>
 			<div class="l-grid__item  l-width--shrink@small  u-hide  u-block@small">
 				<a href="{{ site.baseurl }}/work/">
@@ -46,7 +46,7 @@ permalink: /
 		</div>
 		<div class="l-grid">
 			{% assign posts = (site.posts | sort: 'date') | reverse %}
-			{% for post in posts limit:3 %}
+			{% for post in posts limit:2 %}
 				{% unless post.preview %}
 					{% include post.html %}
 				{% endunless %}
