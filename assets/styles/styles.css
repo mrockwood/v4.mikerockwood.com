@@ -4390,6 +4390,7 @@ select::-ms-expand {
   font-size: 0.925em;
   font-weight: 300;
   letter-spacing: 0.15em;
+  margin: 0.25em;
   padding: 0.25em 0.5em;
   position: relative;
   text-decoration: none;

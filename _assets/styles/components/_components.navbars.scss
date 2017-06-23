@@ -69,6 +69,7 @@
 	font-size: map-get($global-font-sizes, small);
 	font-weight: map-get($global-font-weights, light);
 	letter-spacing: map-get($global-letter-spacing, xlarge);
+	margin: map-get($global-spacing, xsmall);
 	padding: map-get($global-spacing, xsmall) map-get($global-spacing, small);
 	position: relative;
 	text-decoration: none;
