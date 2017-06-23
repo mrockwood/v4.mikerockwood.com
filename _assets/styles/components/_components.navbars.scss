@@ -57,7 +57,10 @@
 	line-height: map-get($global-line-heights, xsmall);
 	text-align: center;
 	text-decoration: none;
-	white-space: nowrap;
+
+	@include media('>medium') {
+		white-space: nowrap;
+	}
 }
 
 .c-navbar__link {
