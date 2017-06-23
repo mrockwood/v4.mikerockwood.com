@@ -10,10 +10,16 @@
 	min-height: 1px; /* [1] */
 }
 
+.c-project__image-link {
+	position: relative;
+	z-index: 0;
+}
+
 .c-project__excerpt {
 	background-color: map-get($colors, white);
 	padding: $global-spacing-default / 2;
 	text-align: center;
+	position: relative;
 
 	@include media('<=medium') {
 		border: $global-border-width $global-border-style $global-border-color;

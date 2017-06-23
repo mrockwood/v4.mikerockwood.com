@@ -1,7 +1,7 @@
 <article class="c-project  {% if project.classes %}{{ project.classes }}{% endif %}  u-margin-bottom--xlarge">
 
 	{% if project.hero %}
-	<a href="{{ project.url }}">
+	<a class="c-project__image-link" href="{{ project.url }}">
 		<div class="c-header__image-wrapper">
 			<img class="c-image  c-header__image" src="{{ site.baseurl }}{{ project.hero }}" alt="" />
 		</div>
