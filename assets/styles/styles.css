@@ -4370,7 +4370,7 @@ select::-ms-expand {
   line-height: 1.125;
   text-align: center;
   text-decoration: none;
-  word-wrap: nowrap; }
+  white-space: nowrap; }
   .c-navbar__logo {
     font-size: 2em; }
     @media screen and (min-width: 30em) {
