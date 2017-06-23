@@ -13,10 +13,6 @@
 	transition: color map-get($global-speeds, fast);
 }
 
-.c-footer__social-icon {
-	display: block;
-}
-
 // social media icon hover styles
 @each $name, $value in $social-colors {
 
