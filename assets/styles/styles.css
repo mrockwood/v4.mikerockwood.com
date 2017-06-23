@@ -2504,6 +2504,8 @@ dd, ol, ul {
 	 */
 .l-page__section {
   min-height: 1px;
+  /* [1] */
+  overflow-x: hidden;
   /* [1] */ }
 
 /**
@@ -2559,6 +2561,8 @@ dd, ol, ul {
 	 */
   .l-page__section\@xsmall {
     min-height: 1px;
+    /* [1] */
+    overflow-x: hidden;
     /* [1] */ }
   /**
 	 * Expand section vertically.
@@ -2613,6 +2617,8 @@ dd, ol, ul {
 	 */
   .l-page__section\@small {
     min-height: 1px;
+    /* [1] */
+    overflow-x: hidden;
     /* [1] */ }
   /**
 	 * Expand section vertically.
@@ -2667,6 +2673,8 @@ dd, ol, ul {
 	 */
   .l-page__section\@medium {
     min-height: 1px;
+    /* [1] */
+    overflow-x: hidden;
     /* [1] */ }
   /**
 	 * Expand section vertically.
@@ -2721,6 +2729,8 @@ dd, ol, ul {
 	 */
   .l-page__section\@large {
     min-height: 1px;
+    /* [1] */
+    overflow-x: hidden;
     /* [1] */ }
   /**
 	 * Expand section vertically.
@@ -2775,6 +2785,8 @@ dd, ol, ul {
 	 */
   .l-page__section\@xlarge {
     min-height: 1px;
+    /* [1] */
+    overflow-x: hidden;
     /* [1] */ }
   /**
 	 * Expand section vertically.
@@ -2829,6 +2841,8 @@ dd, ol, ul {
 	 */
   .l-page__section\@super {
     min-height: 1px;
+    /* [1] */
+    overflow-x: hidden;
     /* [1] */ }
   /**
 	 * Expand section vertically.

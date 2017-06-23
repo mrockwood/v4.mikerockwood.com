@@ -67,7 +67,7 @@ $page-breakpoints: $global-breakpoints !default;
 	 */
 	.#{$page-namespace}#{$page-element}#{$page-section-name}#{$breakpoint-alias} {
 		min-height: 1px; /* [1] */
-		//overflow-x: hidden; /* [1] */
+		overflow-x: hidden; /* [1] */
 	}
 
 	/**
