@@ -15,12 +15,17 @@
  */
 
 .c-header__title {
-	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 3.5em);
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 3.25em);
+
 
 	display: block; /* [1] */
 	font-weight: map-get($global-font-weights, regular);
 	line-height: map-get($global-line-heights, xsmall);
 	margin: map-get($global-spacing, tiny) 0;
+
+	@include media('<=medium') {
+		color: map-get($colors, grey-darker);
+	}
 }
 
 .c-header__subtitle {

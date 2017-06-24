@@ -48,7 +48,7 @@
 //
 
 .c-navbar__logo {
-	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 2.5em);
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.75em, 2.25em);
 
 	color: map-get($colors, grey-darker);
 	display: block;
