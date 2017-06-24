@@ -4,11 +4,13 @@
 
 .t-work--turns {
 
-	.c-header__image-wrapper:after {
+	.c-header__image-wrapper:after,
+	.c-project__image-wrapper:after {
 		background-color: map-get($colors, cyan-light);
 	}
 
-	.c-header__image {
+	.c-header__image,
+	.c-project__image {
 		filter: grayscale(25%);
 	}
 

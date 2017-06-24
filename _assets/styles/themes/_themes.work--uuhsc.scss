@@ -4,11 +4,13 @@
 
 .t-work--uuhsc {
 
-	.c-header__image-wrapper:after {
+	.c-header__image-wrapper:after,
+	.c-project__image-wrapper:after {
 		background-color: map-get($colors, red);
 	}
 
-	.c-header__image {
+	.c-header__image,
+	.c-project__image {
 		filter: grayscale(25%);
 
 		@include media('>medium') {

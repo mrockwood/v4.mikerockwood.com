@@ -2504,8 +2504,6 @@ dd, ol, ul {
 	 */
 .l-page__section {
   min-height: 1px;
-  /* [1] */
-  overflow-x: hidden;
   /* [1] */ }
 
 /**
@@ -2561,8 +2559,6 @@ dd, ol, ul {
 	 */
   .l-page__section\@xsmall {
     min-height: 1px;
-    /* [1] */
-    overflow-x: hidden;
     /* [1] */ }
   /**
 	 * Expand section vertically.
@@ -2617,8 +2613,6 @@ dd, ol, ul {
 	 */
   .l-page__section\@small {
     min-height: 1px;
-    /* [1] */
-    overflow-x: hidden;
     /* [1] */ }
   /**
 	 * Expand section vertically.
@@ -2673,8 +2667,6 @@ dd, ol, ul {
 	 */
   .l-page__section\@medium {
     min-height: 1px;
-    /* [1] */
-    overflow-x: hidden;
     /* [1] */ }
   /**
 	 * Expand section vertically.
@@ -2729,8 +2721,6 @@ dd, ol, ul {
 	 */
   .l-page__section\@large {
     min-height: 1px;
-    /* [1] */
-    overflow-x: hidden;
     /* [1] */ }
   /**
 	 * Expand section vertically.
@@ -2785,8 +2775,6 @@ dd, ol, ul {
 	 */
   .l-page__section\@xlarge {
     min-height: 1px;
-    /* [1] */
-    overflow-x: hidden;
     /* [1] */ }
   /**
 	 * Expand section vertically.
@@ -2841,8 +2829,6 @@ dd, ol, ul {
 	 */
   .l-page__section\@super {
     min-height: 1px;
-    /* [1] */
-    overflow-x: hidden;
     /* [1] */ }
   /**
 	 * Expand section vertically.
@@ -4775,7 +4761,37 @@ select::-ms-expand {
 
 .c-project__image-link {
   position: relative;
+  transition: 300ms;
   z-index: 0; }
+
+.c-project__image-wrapper {
+  line-height: 0;
+  min-height: 1px;
+  /* 1 */
+  overflow: hidden;
+  position: relative;
+  z-index: -1; }
+
+.c-project__image-wrapper:after {
+  bottom: 0;
+  content: '';
+  left: 0;
+  opacity: 0.25;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1; }
+  @media (min-width: 48.01em) {
+    .c-project__image-wrapper:after {
+      opacity: 0.5; } }
+
+.c-project__image {
+  transition: 300ms;
+  width: 100%; }
+
+.c-project__image-link:hover .c-project__image {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05); }
 
 .c-project__excerpt {
   background-color: #FFF;
@@ -4926,24 +4942,29 @@ select::-ms-expand {
 /* ==========================================================================
    #HUNTSMAN-THEME
    ========================================================================== */
-.t-work--hci .c-header__image-wrapper:after {
+.t-work--hci .c-header__image-wrapper:after,
+.t-work--hci .c-project__image-wrapper:after {
   background-color: #1c7cd6; }
 
-.t-work--hci .c-header__image {
+.t-work--hci .c-header__image,
+.t-work--hci .c-project__image {
   -webkit-filter: grayscale(50%);
           filter: grayscale(50%); }
   @media (min-width: 48.01em) {
-    .t-work--hci .c-header__image {
+    .t-work--hci .c-header__image,
+    .t-work--hci .c-project__image {
       -webkit-filter: grayscale(50%) blur(2px);
               filter: grayscale(50%) blur(2px); } }
 
 /* ==========================================================================
    #TURNS-THEME
    ========================================================================== */
-.t-work--turns .c-header__image-wrapper:after {
+.t-work--turns .c-header__image-wrapper:after,
+.t-work--turns .c-project__image-wrapper:after {
   background-color: #15aabf; }
 
-.t-work--turns .c-header__image {
+.t-work--turns .c-header__image,
+.t-work--turns .c-project__image {
   -webkit-filter: grayscale(25%);
           filter: grayscale(25%); }
 
@@ -4954,14 +4975,17 @@ select::-ms-expand {
 /* ==========================================================================
    #UOFU-COLLEGE-OF-HEALTH-THEME
    ========================================================================== */
-.t-work--uucoh .c-header__image-wrapper:after {
+.t-work--uucoh .c-header__image-wrapper:after,
+.t-work--uucoh .c-project__image-wrapper:after {
   background-color: #e03131; }
 
-.t-work--uucoh .c-header__image {
+.t-work--uucoh .c-header__image,
+.t-work--uucoh .c-project__image {
   -webkit-filter: grayscale(50%);
           filter: grayscale(50%); }
   @media (min-width: 48.01em) {
-    .t-work--uucoh .c-header__image {
+    .t-work--uucoh .c-header__image,
+    .t-work--uucoh .c-project__image {
       -webkit-filter: grayscale(50%) blur(2px);
               filter: grayscale(50%) blur(2px); } }
 
@@ -4972,14 +4996,17 @@ select::-ms-expand {
 /* ==========================================================================
    #UOFU-HEALTH-SCIENCES-THEME
    ========================================================================== */
-.t-work--uuhsc .c-header__image-wrapper:after {
+.t-work--uuhsc .c-header__image-wrapper:after,
+.t-work--uuhsc .c-project__image-wrapper:after {
   background-color: #f03e3e; }
 
-.t-work--uuhsc .c-header__image {
+.t-work--uuhsc .c-header__image,
+.t-work--uuhsc .c-project__image {
   -webkit-filter: grayscale(25%);
           filter: grayscale(25%); }
   @media (min-width: 48.01em) {
-    .t-work--uuhsc .c-header__image {
+    .t-work--uuhsc .c-header__image,
+    .t-work--uuhsc .c-project__image {
       -webkit-filter: grayscale(50%) blur(2px);
               filter: grayscale(50%) blur(2px); } }
 
@@ -4990,14 +5017,17 @@ select::-ms-expand {
 /* ==========================================================================
    #UOFU-SCHOOL-OF-MEDICINE-THEME
    ========================================================================== */
-.t-work--uusom .c-header__image-wrapper:after {
+.t-work--uusom .c-header__image-wrapper:after,
+.t-work--uusom .c-project__image-wrapper:after {
   background-color: #f03e3e; }
 
-.t-work--uusom .c-header__image {
+.t-work--uusom .c-header__image,
+.t-work--uusom .c-project__image {
   -webkit-filter: grayscale(60%) brightness(0.8);
           filter: grayscale(60%) brightness(0.8); }
   @media (min-width: 48.01em) {
-    .t-work--uusom .c-header__image {
+    .t-work--uusom .c-header__image,
+    .t-work--uusom .c-project__image {
       -webkit-filter: grayscale(60%) brightness(0.6) blur(1px);
               filter: grayscale(60%) brightness(0.6) blur(1px); } }
 
