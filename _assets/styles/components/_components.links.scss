@@ -14,6 +14,74 @@ $link-modifier: $global-separator-modifier !default;
 
 $link-color: map-get($colors, lime) !default;
 
+$link-color-map: (
+	'grey': (
+		color: map-get($colors, grey),
+		light: map-get($colors, grey-light),
+		dark: map-get($colors, grey-dark)
+	),
+	'red': (
+		color: map-get($colors, red),
+		light: map-get($colors, red-light),
+		dark: map-get($colors, red-dark)
+	),
+	'pink': (
+		color: map-get($colors, pink),
+		light: map-get($colors, pink-light),
+		dark: map-get($colors, pink-dark)
+	),
+	'grape': (
+		color: map-get($colors, grape),
+		light: map-get($colors, grape-light),
+		dark: map-get($colors, grape-dark)
+	),
+	'violet': (
+		color: map-get($colors, violet),
+		light: map-get($colors, violet-light),
+		dark: map-get($colors, violet-dark)
+	),
+	'indigo': (
+		color: map-get($colors, indigo),
+		light: map-get($colors, indigo-light),
+		dark: map-get($colors, indigo-dark)
+	),
+	'blue': (
+		color: map-get($colors, blue),
+		light: map-get($colors, blue-light),
+		dark: map-get($colors, blue-dark)
+	),
+	'cyan': (
+		color: map-get($colors, cyan),
+		light: map-get($colors, cyan-light),
+		dark: map-get($colors, cyan-dark)
+	),
+	'teal': (
+		color: map-get($colors, teal),
+		light: map-get($colors, teal-light),
+		dark: map-get($colors, teal-dark)
+	),
+	'green': (
+		color: map-get($colors, green),
+		light: map-get($colors, green-light),
+		dark: map-get($colors, green-dark)
+	),
+	'lime': (
+		color: map-get($colors, lime-dark),
+		light: map-get($colors, lime),
+		dark: map-get($colors, lime-darker)
+	),
+	'yellow': (
+		color: map-get($colors, yellow),
+		light: map-get($colors, yellow-light),
+		dark: map-get($colors, yellow-dark)
+	),
+	'orange': (
+		color: map-get($colors, orange),
+		light: map-get($colors, orange-light),
+		dark: map-get($colors, orange-dark)
+	)
+) !default;
+
 $link-text-decoration: none !default;
 $link-hover-text-decoration: underline !default;
 
@@ -24,23 +92,23 @@ $link-hover-text-decoration: underline !default;
 // Mixins
 //
 
-@mixin link--color($color: $link-color) {
+@mixin link--color($color, $light, $dark) {
 	background-color: transparent;
 	color: $color;
 
 	&:not(:disabled) {
 		&:visited {
-			color: darken($color, $color-tint);
+			color: $light;
 		}
 
 		&:hover {
 			background-color: transparent;
-			color: lighten($color, $color-tint);
+			color: $dark;
 		}
 
 		&:active {
 			background-color: transparent;
-			color: lighten($color, $color-tint);
+			color: $dark;
 		}
 	}
 }
@@ -52,14 +120,27 @@ $link-hover-text-decoration: underline !default;
 // Classes
 //
 
-.#{$link-namespace} {
-	@include link--color;
+@each $name, $value in $link-color-map {
 
-	cursor: pointer;
-	text-decoration: $link-text-decoration;
-	text-decoration-skip: ink;
+	.#{$link-namespace}#{$link-modifier}#{$name} {
+		@include link--color(map-get($value, color), map-get($value, light), map-get($value, dark));
 
-	&:hover {
-		text-decoration: $link-hover-text-decoration;
+		cursor: pointer;
+		text-decoration: $link-text-decoration;
+		text-decoration-skip: ink;
+
+		&:hover {
+			text-decoration: $link-hover-text-decoration;
+		}
 	}
+
+}
+
+.#{$link-namespace}#{$link-modifier}small {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), .75em, .825em);
+
+	font-family: map-get($global-font-families, sans-serif);
+	//font-weight: map-get($global-font-weights, light);
+	letter-spacing: map-get($global-letter-spacing, large);
+	text-transform: uppercase;
 }
