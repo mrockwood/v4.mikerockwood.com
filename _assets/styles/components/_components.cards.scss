@@ -55,11 +55,13 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 //
 
 .c-card {
-	//border: $card-border;
+	border: $card-border;
 	//border-radius: $card-border-radius;
 	//box-shadow: $card-box-shadow;
 	background-color: $card-background-color;
-	display: block;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
 	font-size: map-get($global-font-sizes, small);
 	list-style: $list-unstyled-list-style;
 	overflow: hidden;
@@ -74,12 +76,12 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 	margin: -$card-item-border-width;
 }
 
-.c-card__hero + .c-card__excerpt {
-	border-top: none;
+.c-card__image-wrapper {
+
 }
 
-.c-card__excerpt {
-	border: $card-border;
+.c-card__image {
+	width: 100%;
 }
 
 .c-card__header {
@@ -106,7 +108,7 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 
 .c-card__body {
 	color: map-get($colors, grey-dark);
-	font-family: map-get($global-font-families, sans-serif);
+	font-family: map-get($global-font-families, serif);
 	font-size: map-get($global-font-sizes, small);
 }
 
@@ -115,11 +117,13 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 }
 
 .c-card__footer {
-	background-color: map-get($colors, grey-lighter);
+	//background-color: map-get($colors, grey-lighter);
+	border-top: $card-border;
+	margin-top: auto;
 }
 
 .c-card__footer--block {
-	padding: map-get($global-spacing, small) 0 0;
+	padding: 0;
 
 	.c-input-group .c-button:first-child {
 		border-top-left-radius: 0;
@@ -130,6 +134,10 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 		border-top-right-radius: 0;
 		border-bottom-right-radius: 0;
 	}
+}
+
+.c-card__button {
+	padding: map-get($global-spacing, medium) map-get($global-spacing, small);
 }
 
 .c-card__item:not(:last-child) {

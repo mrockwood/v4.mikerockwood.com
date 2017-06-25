@@ -3700,8 +3700,18 @@ dd, ol, ul {
    #CARDS
    ========================================================================== */
 .c-card {
+  border: 1px solid #dee2e6;
   background-color: #FFF;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 0.925em;
   list-style: none;
   overflow: hidden;
@@ -3712,11 +3722,8 @@ dd, ol, ul {
 .c-card + .c-card {
   margin: -1px; }
 
-.c-card__hero + .c-card__excerpt {
-  border-top: none; }
-
-.c-card__excerpt {
-  border: 1px solid #dee2e6; }
+.c-card__image {
+  width: 100%; }
 
 .c-card__header {
   padding: 0.5em 1em 0;
@@ -3737,23 +3744,27 @@ dd, ol, ul {
 
 .c-card__body {
   color: #495057;
-  font-family: Merriweather Sans, Arial, sans-serif;
+  font-family: Merriweather, Georgia, Cambria, Times New Roman, Times, serif;
   font-size: 0.925em; }
 
 .c-card__item + .c-card__footer--block {
   padding: 0; }
 
 .c-card__footer {
-  background-color: #f1f3f5; }
+  border-top: 1px solid #dee2e6;
+  margin-top: auto; }
 
 .c-card__footer--block {
-  padding: 0.5em 0 0; }
+  padding: 0; }
   .c-card__footer--block .c-input-group .c-button:first-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0; }
   .c-card__footer--block .c-input-group .c-button:last-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0; }
+
+.c-card__button {
+  padding: 1em 0.5em; }
 
 .c-card__item:not(:last-child) {
   border-bottom: 1px solid rgba(222, 226, 230, 0.5); }
@@ -4234,13 +4245,17 @@ select::-ms-expand {
 /* ==========================================================================
    #LINK
    ========================================================================== */
-.c-link--grey {
-  background-color: transparent;
-  color: #868e96;
+.c-link {
   cursor: pointer;
   text-decoration: none;
   -webkit-text-decoration-skip: ink;
           text-decoration-skip: ink; }
+  .c-link:hover {
+    text-decoration: underline; }
+
+.c-link--grey {
+  background-color: transparent;
+  color: #868e96; }
   .c-link--grey:not(:disabled):visited {
     color: #dee2e6; }
   .c-link--grey:not(:disabled):hover {
@@ -4249,16 +4264,10 @@ select::-ms-expand {
   .c-link--grey:not(:disabled):active {
     background-color: transparent;
     color: #495057; }
-  .c-link--grey:hover {
-    text-decoration: underline; }
 
 .c-link--red {
   background-color: transparent;
-  color: #f03e3e;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink; }
+  color: #f03e3e; }
   .c-link--red:not(:disabled):visited {
     color: #fa5252; }
   .c-link--red:not(:disabled):hover {
@@ -4267,16 +4276,10 @@ select::-ms-expand {
   .c-link--red:not(:disabled):active {
     background-color: transparent;
     color: #e03131; }
-  .c-link--red:hover {
-    text-decoration: underline; }
 
 .c-link--pink {
   background-color: transparent;
-  color: #d6336c;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink; }
+  color: #d6336c; }
   .c-link--pink:not(:disabled):visited {
     color: #e64980; }
   .c-link--pink:not(:disabled):hover {
@@ -4285,16 +4288,10 @@ select::-ms-expand {
   .c-link--pink:not(:disabled):active {
     background-color: transparent;
     color: #c2255c; }
-  .c-link--pink:hover {
-    text-decoration: underline; }
 
 .c-link--grape {
   background-color: transparent;
-  color: #ae3ec9;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink; }
+  color: #ae3ec9; }
   .c-link--grape:not(:disabled):visited {
     color: #be4bdb; }
   .c-link--grape:not(:disabled):hover {
@@ -4303,16 +4300,10 @@ select::-ms-expand {
   .c-link--grape:not(:disabled):active {
     background-color: transparent;
     color: #9c36b5; }
-  .c-link--grape:hover {
-    text-decoration: underline; }
 
 .c-link--violet {
   background-color: transparent;
-  color: #7048e8;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink; }
+  color: #7048e8; }
   .c-link--violet:not(:disabled):visited {
     color: #7950f2; }
   .c-link--violet:not(:disabled):hover {
@@ -4321,16 +4312,10 @@ select::-ms-expand {
   .c-link--violet:not(:disabled):active {
     background-color: transparent;
     color: #6741d9; }
-  .c-link--violet:hover {
-    text-decoration: underline; }
 
 .c-link--indigo {
   background-color: transparent;
-  color: #4263eb;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink; }
+  color: #4263eb; }
   .c-link--indigo:not(:disabled):visited {
     color: #4c6ef5; }
   .c-link--indigo:not(:disabled):hover {
@@ -4339,16 +4324,10 @@ select::-ms-expand {
   .c-link--indigo:not(:disabled):active {
     background-color: transparent;
     color: #3b5bdb; }
-  .c-link--indigo:hover {
-    text-decoration: underline; }
 
 .c-link--blue {
   background-color: transparent;
-  color: #1c7cd6;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink; }
+  color: #1c7cd6; }
   .c-link--blue:not(:disabled):visited {
     color: #228ae6; }
   .c-link--blue:not(:disabled):hover {
@@ -4357,16 +4336,10 @@ select::-ms-expand {
   .c-link--blue:not(:disabled):active {
     background-color: transparent;
     color: #1b6ec2; }
-  .c-link--blue:hover {
-    text-decoration: underline; }
 
 .c-link--cyan {
   background-color: transparent;
-  color: #1098ad;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink; }
+  color: #1098ad; }
   .c-link--cyan:not(:disabled):visited {
     color: #15aabf; }
   .c-link--cyan:not(:disabled):hover {
@@ -4375,16 +4348,10 @@ select::-ms-expand {
   .c-link--cyan:not(:disabled):active {
     background-color: transparent;
     color: #0c8599; }
-  .c-link--cyan:hover {
-    text-decoration: underline; }
 
 .c-link--teal {
   background-color: transparent;
-  color: #0ca678;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink; }
+  color: #0ca678; }
   .c-link--teal:not(:disabled):visited {
     color: #12b886; }
   .c-link--teal:not(:disabled):hover {
@@ -4393,16 +4360,10 @@ select::-ms-expand {
   .c-link--teal:not(:disabled):active {
     background-color: transparent;
     color: #099268; }
-  .c-link--teal:hover {
-    text-decoration: underline; }
 
 .c-link--green {
   background-color: transparent;
-  color: #37b24d;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink; }
+  color: #37b24d; }
   .c-link--green:not(:disabled):visited {
     color: #40c057; }
   .c-link--green:not(:disabled):hover {
@@ -4411,16 +4372,10 @@ select::-ms-expand {
   .c-link--green:not(:disabled):active {
     background-color: transparent;
     color: #2f9e44; }
-  .c-link--green:hover {
-    text-decoration: underline; }
 
 .c-link--lime {
   background-color: transparent;
-  color: #66a80f;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink; }
+  color: #66a80f; }
   .c-link--lime:not(:disabled):visited {
     color: #74b816; }
   .c-link--lime:not(:disabled):hover {
@@ -4429,16 +4384,10 @@ select::-ms-expand {
   .c-link--lime:not(:disabled):active {
     background-color: transparent;
     color: #5c940d; }
-  .c-link--lime:hover {
-    text-decoration: underline; }
 
 .c-link--yellow {
   background-color: transparent;
-  color: #f59f00;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink; }
+  color: #f59f00; }
   .c-link--yellow:not(:disabled):visited {
     color: #fab005; }
   .c-link--yellow:not(:disabled):hover {
@@ -4447,16 +4396,10 @@ select::-ms-expand {
   .c-link--yellow:not(:disabled):active {
     background-color: transparent;
     color: #f08c00; }
-  .c-link--yellow:hover {
-    text-decoration: underline; }
 
 .c-link--orange {
   background-color: transparent;
-  color: #f76707;
-  cursor: pointer;
-  text-decoration: none;
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink; }
+  color: #f76707; }
   .c-link--orange:not(:disabled):visited {
     color: #fd7e14; }
   .c-link--orange:not(:disabled):hover {
@@ -4465,12 +4408,11 @@ select::-ms-expand {
   .c-link--orange:not(:disabled):active {
     background-color: transparent;
     color: #e8590c; }
-  .c-link--orange:hover {
-    text-decoration: underline; }
 
 .c-link--small {
   font-family: Merriweather Sans, Arial, sans-serif;
   letter-spacing: 0.1em;
+  text-decoration: none;
   text-transform: uppercase; }
   .c-link--small {
     font-size: 0.75em; }
@@ -4480,6 +4422,8 @@ select::-ms-expand {
     @media screen and (min-width: 78em) {
       .c-link--small {
         font-size: 0.825em; } }
+  .c-link--small:hover {
+    text-decoration: none; }
 
 /* ==========================================================================
    #LISTS

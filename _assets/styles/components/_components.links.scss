@@ -120,18 +120,20 @@ $link-hover-text-decoration: underline !default;
 // Classes
 //
 
+.#{$link-namespace} {
+	cursor: pointer;
+	text-decoration: $link-text-decoration;
+	text-decoration-skip: ink;
+
+	&:hover {
+		text-decoration: $link-hover-text-decoration;
+	}
+}
+
 @each $name, $value in $link-color-map {
 
 	.#{$link-namespace}#{$link-modifier}#{$name} {
 		@include link--color(map-get($value, color), map-get($value, light), map-get($value, dark));
-
-		cursor: pointer;
-		text-decoration: $link-text-decoration;
-		text-decoration-skip: ink;
-
-		&:hover {
-			text-decoration: $link-hover-text-decoration;
-		}
 	}
 
 }
@@ -140,7 +142,11 @@ $link-hover-text-decoration: underline !default;
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), .75em, .825em);
 
 	font-family: map-get($global-font-families, sans-serif);
-	//font-weight: map-get($global-font-weights, light);
 	letter-spacing: map-get($global-letter-spacing, large);
+	text-decoration: none;
 	text-transform: uppercase;
+
+	&:hover {
+		text-decoration: none;
+	}
 }

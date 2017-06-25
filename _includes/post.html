@@ -1,48 +1,46 @@
-<div class="l-grid__item  l-width--1/2@medium">
+<div class="l-grid__item  l-width--1/2@medium  u-flex  u-margin-bottom--xlarge">
 
 	<article class="c-card">
 
-		<a class="c-card__hero" href="{{ site.baseurl }}{{ post.url }}">
-			<img class="c-image  u-block" src="https://unsplash.it/1024/500?random">
+		<a class="c-card__image-wrapper" href="{{ site.baseurl }}{{ post.url }}">
+			<img class="c-card__image  c-image  u-block" src="https://unsplash.it/1024/500?random">
 		</a>
 
-		<div class="c-card__excerpt">
+		<header class="c-card__header">
 
-			<header class="c-card__header">
+			<h2 class="u-margin-bottom--none"><a class="c-card__header-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | smartify }}</a></h2>
 
-				<h3 class="c-h3  u-margin-bottom--none"><a class="c-card__header-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+			<div class="c-meta__list">
 
-				<div class="c-meta__list">
+				{% if post.date %}
+					<div class="c-meta__item  c-meta__item--date">
+						<svg class="c-meta__icon  c-icon  c-icon--medium">
+							<use xlink:href="{{ '/assets/icons/sprite.svg#calendar' | prepend: site.baseurl }}"></use>
+						</svg>
+						<time date="{{ page.date | date: '%Y-%m-%d' }}" pubdate>
+							{{ post.date | date: "%B %e, %Y" }}
+						</time>
+					</div>
+				{% endif %}
 
-					{% if post.date %}
-						<div class="c-meta__item  c-meta__item--date">
-							<svg class="c-meta__icon  c-icon  c-icon--medium">
-								<use xlink:href="{{ '/assets/icons/sprite.svg#calendar' | prepend: site.baseurl }}"></use>
-							</svg>
-							<time date="{{ page.date | date: '%Y-%m-%d' }}" pubdate>
-								{{ post.date | date: "%B %e, %Y" }}
-							</time>
-						</div>
-					{% endif %}
-
-				</div>
-
-			</header>
-
-			<div class="c-card__body">
-				{{ post.excerpt }}
 			</div>
 
-			<footer class="c-card__footer  c-card__footer--block">
-				<a class="u-font--sans-serif  u-semibold  u-tracking--slight  u-small  u-uppercase" href="{{ site.baseurl }}{{ post.url }}">
-					Read More
-					<svg class="c-icon  c-icon--small">
+		</header>
+
+		<div class="c-card__body">
+			{{ post.excerpt }}
+		</div>
+
+		<footer class="c-card__footer  c-card__footer--block">
+			<a class="c-card__button  l-grid  l-grid--around  l-grid--middle  c-link  c-link--small  c-link--lime  u-margin-horizontal--none" href="{{ site.baseurl }}{{ post.url }}">
+				<span class="l-grid__item  l-width--expand">Read More</span>
+				<span class="l-grid__item  l-width--shrink">
+					<svg class="c-icon  c-icon--medium">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#arrow-right' | prepend: site.baseurl }}"></use>
 					</svg>
-				</a>
-			</footer>
-
-		</div>
+				</span>
+			</a>
+		</footer>
 
 	</article>
 
