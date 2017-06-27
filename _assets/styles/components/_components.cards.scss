@@ -78,10 +78,16 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 */
 .c-card__image-wrapper {
 	margin: -$card-item-border-width;
+	overflow: hidden;
 }
 
 .c-card__image {
+	transition: map-get($global-speeds, fast);
 	width: 100%;
+}
+
+.c-card__image-wrapper:hover .c-card__image {
+	transform: scale(1.05);
 }
 
 .c-card__header {

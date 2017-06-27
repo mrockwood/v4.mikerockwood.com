@@ -3724,10 +3724,16 @@ dd, ol, ul {
 }
 */
 .c-card__image-wrapper {
-  margin: -1px; }
+  margin: -1px;
+  overflow: hidden; }
 
 .c-card__image {
+  transition: 200ms;
   width: 100%; }
+
+.c-card__image-wrapper:hover .c-card__image {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05); }
 
 .c-card__header {
   padding: 0.5em 1em 0;
@@ -4734,7 +4740,7 @@ select::-ms-expand {
       opacity: 0.5; } }
 
 .c-project__image {
-  transition: 300ms;
+  transition: 200ms;
   width: 100%; }
 
 .c-project__image-link:hover .c-project__image {
