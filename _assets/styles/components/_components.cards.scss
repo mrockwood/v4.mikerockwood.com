@@ -64,20 +64,20 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 	flex-direction: column;
 	font-size: map-get($global-font-sizes, small);
 	list-style: $list-unstyled-list-style;
-	overflow: hidden;
+	//overflow: hidden;
 	padding: $list-unstyled-padding;
 
 	> .c-image:not(:first-child) {
 		padding: map-get($global-spacing, medium) 0 0;
 	}
 }
-
+/*
 .c-card + .c-card {
 	margin: -$card-item-border-width;
 }
-
+*/
 .c-card__image-wrapper {
-
+	margin: -$card-item-border-width;
 }
 
 .c-card__image {

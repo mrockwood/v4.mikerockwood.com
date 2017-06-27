@@ -3714,12 +3714,16 @@ dd, ol, ul {
           flex-direction: column;
   font-size: 0.925em;
   list-style: none;
-  overflow: hidden;
   padding: 0; }
   .c-card > .c-image:not(:first-child) {
     padding: 1em 0 0; }
 
+/*
 .c-card + .c-card {
+	margin: -$card-item-border-width;
+}
+*/
+.c-card__image-wrapper {
   margin: -1px; }
 
 .c-card__image {
