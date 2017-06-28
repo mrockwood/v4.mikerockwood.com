@@ -104,4 +104,5 @@ exclude:
   - npm-debug.log
   - gulpfile.js
   - package.json
+  - package-lock.json
   - webpack.config.js
