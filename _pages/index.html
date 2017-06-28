@@ -22,7 +22,7 @@ permalink: /
 				</a>
 			</div>
 		</div>
-		{% assign sorted = (site.work | sort: 'date') | reverse %}
+		{% assign sorted = site.work | sort: 'date' | reverse %}
 		{% for project in sorted limit:1 %}
 			{% unless project.preview %}
 				{% include project.html project=project %}
@@ -45,7 +45,7 @@ permalink: /
 			</div>
 		</div>
 		<div class="l-grid">
-			{% assign posts = (site.posts | sort: 'date') | reverse %}
+			{% assign posts = site.posts | sort: 'date' | reverse %}
 			{% for post in posts limit:2 %}
 				{% unless post.preview %}
 					{% include post.html %}

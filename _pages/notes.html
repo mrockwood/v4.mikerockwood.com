@@ -10,7 +10,7 @@ classes: notes
 
 <section class="l-container  l-container--large">
 	<div class="l-grid">
-		{% assign posts = (site.posts | sort: 'date') | reverse %}
+		{% assign posts = site.posts | sort: 'date' | reverse %}
 		{% for post in posts %}
 			{% unless post.preview %}
 				{% include post.html %}
