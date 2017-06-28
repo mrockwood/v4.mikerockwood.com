@@ -4778,43 +4778,65 @@ select::-ms-expand {
 .c-h4,
 .c-h5,
 .c-h6 {
-  font-family: Merriweather Sans, Arial, sans-serif; }
+  font-family: Merriweather Sans, Arial, sans-serif;
+  font-weight: 600; }
 
 .c-h1 {
-  font-size: 2em; }
-  @media screen and (min-width: 30em) {
-    .c-h1 {
-      font-size: calc(2em + 0.5 * ((100vw - 30em) / 48)); } }
-  @media screen and (min-width: 78em) {
-    .c-h1 {
-      font-size: 2.5em; } }
+  margin-top: 1em; }
+  .c-h1 {
+    font-size: 1.5em; }
+    @media screen and (min-width: 30em) {
+      .c-h1 {
+        font-size: calc(1.5em + 0.25 * ((100vw - 30em) / 48)); } }
+    @media screen and (min-width: 78em) {
+      .c-h1 {
+        font-size: 1.75em; } }
 
 .c-h2 {
-  font-size: 1.5em; }
-  @media screen and (min-width: 30em) {
-    .c-h2 {
-      font-size: calc(1.5em + 0.5 * ((100vw - 30em) / 48)); } }
-  @media screen and (min-width: 78em) {
-    .c-h2 {
-      font-size: 2em; } }
+  margin-bottom: 0.25em;
+  margin-top: 0.5em; }
+  .c-h2 {
+    font-size: 1.25em; }
+    @media screen and (min-width: 30em) {
+      .c-h2 {
+        font-size: calc(1.25em + 0.25 * ((100vw - 30em) / 48)); } }
+    @media screen and (min-width: 78em) {
+      .c-h2 {
+        font-size: 1.5em; } }
 
 .c-h3 {
-  font-size: 1.25em; }
-  @media screen and (min-width: 30em) {
-    .c-h3 {
-      font-size: calc(1.25em + 0.25 * ((100vw - 30em) / 48)); } }
-  @media screen and (min-width: 78em) {
-    .c-h3 {
-      font-size: 1.5em; } }
+  margin-bottom: 0.25em;
+  margin-top: 0.5em; }
+  .c-h3 {
+    font-size: 1.125em; }
+    @media screen and (min-width: 30em) {
+      .c-h3 {
+        font-size: calc(1.125em + 0.125 * ((100vw - 30em) / 48)); } }
+    @media screen and (min-width: 78em) {
+      .c-h3 {
+        font-size: 1.25em; } }
 
 .c-h4 {
-  font-size: 1.125em; }
-  @media screen and (min-width: 30em) {
-    .c-h4 {
-      font-size: calc(1.125em + 0.125 * ((100vw - 30em) / 48)); } }
-  @media screen and (min-width: 78em) {
-    .c-h4 {
-      font-size: 1.25em; } }
+  margin-bottom: 0.25em;
+  margin-top: 0.5em; }
+  .c-h4 {
+    font-size: 1.125em; }
+    @media screen and (min-width: 30em) {
+      .c-h4 {
+        font-size: calc(1.125em + 0.125 * ((100vw - 30em) / 48)); } }
+    @media screen and (min-width: 78em) {
+      .c-h4 {
+        font-size: 1.25em; } }
+
+.c-h5 {
+  font-size: 1em;
+  margin-bottom: 0.25em;
+  margin-top: 0.5em; }
+
+.c-h6 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  margin-top: 1em; }
 
 .c-paragraph--lead {
   color: #495057; }

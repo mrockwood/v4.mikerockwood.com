@@ -8,23 +8,48 @@
 .c-h4,
 .c-h5,
 .c-h6 {
+	//color: map-get($colors, grey-darker);
 	font-family: map-get($global-font-families, sans-serif);
+	font-weight: map-get($global-font-weights, semibold);
 }
 
 .c-h1 {
-	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 2.5em);
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.5em, 1.75em);
+
+	margin-top: map-get($global-spacing, medium);
 }
 
 .c-h2 {
-	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.5em, 2em);
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.25em, 1.5em);
+
+	margin-bottom: map-get($global-spacing, xsmall);
+	margin-top: map-get($global-spacing, small);
 }
 
 .c-h3 {
-	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.25em, 1.5em);
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.25em);
+
+	margin-bottom: map-get($global-spacing, xsmall);
+	margin-top: map-get($global-spacing, small);
 }
 
 .c-h4 {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.25em);
+
+	margin-bottom: map-get($global-spacing, xsmall);
+	margin-top: map-get($global-spacing, small);
+}
+
+.c-h5 {
+	font-size: 1em;
+	margin-bottom: map-get($global-spacing, xsmall);
+	margin-top: map-get($global-spacing, small);
+}
+
+.c-h6 {
+	font-size: 1em;
+	margin-bottom: map-get($global-spacing, small);
+	margin-top: map-get($global-spacing, medium);
 }
 
 
