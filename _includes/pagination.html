@@ -2,7 +2,7 @@
 
 	{% capture the_collection %}{{page.collection}}{% endcapture %}
 
-	{% assign document = site[the_collection] | sort: "name" | reversed %}
+	{% assign document = site[the_collection] | sort: "date" | reversed %}
 
 	{% for links in document %}
 
@@ -25,6 +25,12 @@
 
 	{% endfor %}
 
+	{% if page.layout == 'post' %}
+		{% assign allurl = '/notes/' %}
+	{% else %}
+		{% assign allurl = '/work/' %}
+	{% endif %}
+
 {% endif %}
 
 {% if prevurl or nexturl %}
@@ -32,7 +38,7 @@
 	<div class="l-container  l-container--large">
 		<div class="c-pagination">
 			<nav class="l-grid  c-pagination__list  u-margin-horizontal--none">
-				<a class="c-pagination__link  c-pagination__link--all  l-grid__item  l-width--1/5@medium  {% if prevurl == nil %}l-push--2/5@medium{% endif %}  u-padding-horizontal--none" href="{{ site.baseurl }}/work/">
+				<a class="c-pagination__link  c-pagination__link--all  l-grid__item  l-width--1/5@medium  {% if prevurl == nil %}l-push--2/5@medium{% endif %}  u-padding-horizontal--none" href="{{ site.baseurl }}{{ allurl }}">
 					<svg class="c-pagination__icon  c-pagination__icon--all  c-icon">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#grid' | prepend: site.baseurl }}"></use>
 					</svg>
