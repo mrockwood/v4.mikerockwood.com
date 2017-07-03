@@ -19,7 +19,7 @@
 
 
 	display: block; /* [1] */
-	font-weight: map-get($global-font-weights, regular);
+	font-weight: map-get($global-font-weights, light);
 	line-height: map-get($global-line-heights, xsmall);
 	margin: map-get($global-spacing, tiny) 0;
 

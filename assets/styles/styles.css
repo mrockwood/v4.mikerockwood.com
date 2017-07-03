@@ -3609,65 +3609,145 @@ dd, ol, ul {
  * 5. Force all button-styled elements to appear clickable.
  */
 .c-button {
-  border: none;
+  border: 2px solid transparent;
+  background-color: #1c7cd6;
+  color: #FFF;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   border-radius: 0.25em;
   cursor: pointer;
-  /* [5] */
-  display: inline-block;
-  /* [1] */
+  display: inline;
   font-family: Merriweather Sans, Arial, sans-serif;
-  font-size: 0.925em;
+  font-size: 1em;
   letter-spacing: 0.1em;
+  line-height: normal;
   margin: 0;
-  /* [4] */
   max-width: 100%;
+  outline: 0;
+  overflow: hidden;
   padding: 0.5em 1.5em;
   text-align: center;
-  /* [4] */
+  text-decoration: none;
   text-transform: uppercase;
-  transition: 300ms;
+  text-overflow: ellipsis;
+  transition: background-color 200ms;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   vertical-align: middle;
-  /* [2] */ }
+  white-space: nowrap; }
+  .c-button.c-button--active {
+    background-color: #3f95e6; }
+  .c-button:not(:disabled):hover {
+    background-color: #1662a9; }
+  .c-button:not(:disabled):focus {
+    border-color: #329af0;
+    box-shadow: inset 0 0 0 2px #329af0; }
+  .c-button:not(:disabled):active {
+    background-color: #3f95e6; }
   .c-button:disabled {
-    cursor: not-allowed; }
+    cursor: not-allowed;
+    opacity: 0.75; }
 
-/* Style variants
+/* Color variants
    ========================================================================== */
 .c-button--primary {
-  background-color: #1c7cd6; }
-  .c-button--primary, .c-button--primary:hover, .c-button--primary:active, .c-button--primary:focus {
-    color: #fff;
-    text-decoration: none;
-    /* [4] */ }
-  .c-button--primary:hover, .c-button--primary:focus {
-    background-color: #1862ab; }
-  .c-button--primary:disabled {
-    background-color: #329af0; }
+  border: 2px solid transparent;
+  background-color: #1c7cd6;
+  color: #FFF; }
+  .c-button--primary.c-button--active {
+    background-color: #3f95e6; }
+  .c-button--primary:not(:disabled):hover {
+    background-color: #1662a9; }
+  .c-button--primary:not(:disabled):focus {
+    border-color: #329af0;
+    box-shadow: inset 0 0 0 2px #329af0; }
+  .c-button--primary:not(:disabled):active {
+    background-color: #3f95e6; }
 
 .c-button--secondary {
-  background-color: #2f4054; }
-  .c-button--secondary, .c-button--secondary:hover, .c-button--secondary:active, .c-button--secondary:focus {
-    color: #fff;
-    text-decoration: none; }
-  .c-button--secondary:hover, .c-button--secondary:focus {
-    background-color: #1d2733; }
+  border: 2px solid transparent;
+  background-color: #66a80f;
+  color: #FFF; }
+  .c-button--secondary.c-button--active {
+    background-color: #82d713; }
+  .c-button--secondary:not(:disabled):hover {
+    background-color: #4a790b; }
+  .c-button--secondary:not(:disabled):focus {
+    border-color: #329af0;
+    box-shadow: inset 0 0 0 2px #329af0; }
+  .c-button--secondary:not(:disabled):active {
+    background-color: #82d713; }
 
 .c-button--tertiary {
-  background-color: #fff;
-  color: #4a8ec2; }
-  .c-button--tertiary, .c-button--tertiary:hover, .c-button--tertiary:active, .c-button--tertiary:focus {
-    color: #4a8ec2;
-    text-decoration: none; }
-  .c-button--tertiary:hover, .c-button--tertiary:focus {
-    color: #3774a2; }
+  border: 2px solid transparent;
+  background-color: #f76707;
+  color: #FFF; }
+  .c-button--tertiary.c-button--active {
+    background-color: #f98538; }
+  .c-button--tertiary:not(:disabled):hover {
+    background-color: #c55206; }
+  .c-button--tertiary:not(:disabled):focus {
+    border-color: #329af0;
+    box-shadow: inset 0 0 0 2px #329af0; }
+  .c-button--tertiary:not(:disabled):active {
+    background-color: #f98538; }
+
+/* Expand button
+   ========================================================================== */
+.c-button--expand {
+  display: inline-block;
+  width: 100%; }
 
 /* Size variants
    ========================================================================== */
-.c-button--small {
-  padding: 0.125em 0.5em; }
+.c-button--super {
+  font-size: 2em;
+  padding: 2em 3em; }
+
+.c-button--xlarge {
+  font-size: 1.5em;
+  padding: 1.5em 3em; }
 
 .c-button--large {
-  padding: 1em 3em; }
+  font-size: 1.17em;
+  padding: 1em 2em; }
+
+.c-button--medium {
+  font-size: 1em;
+  padding: 0.5em 1.5em; }
+
+.c-button--small {
+  font-size: 0.925em;
+  padding: 0.125em 0.5em; }
+
+.c-button--xsmall {
+  font-size: 0.75em;
+  padding: 0.125em 0.125em; }
+
+/* Button icons
+   ========================================================================== */
+.c-button__icon-left {
+  padding-right: 0.5em; }
+
+.c-button__icon-right {
+  padding-left: 0.5em; }
+
+/* Button corners
+   ========================================================================== */
+.c-button--square {
+  border-radius: 0; }
+
+.c-button--radius {
+  border-radius: 0.25em; }
+
+.c-button--round {
+  border-radius: 30em; }
+
+.c-button--circle {
+  border-radius: 100%; }
 
 /* Ghost buttons
    ========================================================================== */
@@ -3675,26 +3755,21 @@ dd, ol, ul {
  * Ghost buttons have see-through backgrounds and are bordered.
  */
 .c-button--ghost {
-  border: 0.125em solid currentColor;
-  padding: 0.375em 1.375em; }
-  .c-button--ghost, .c-button--ghost:hover, .c-button--ghost:active, .c-button--ghost:focus {
-    background: none; }
-  .c-button--ghost.c-button--small {
-    padding: 0em 0.375em; }
-  .c-button--ghost.c-button--large {
-    padding: 0.875em 2.875em; }
-  .c-button--ghost.c-button--primary {
-    color: #4a8ec2; }
-    .c-button--ghost.c-button--primary:hover, .c-button--ghost.c-button--primary:focus {
-      color: #3774a2; }
-  .c-button--ghost.c-button--secondary {
-    color: #2f4054; }
-    .c-button--ghost.c-button--secondary:hover, .c-button--ghost.c-button--secondary:focus {
-      color: #1d2733; }
-  .c-button--ghost.c-button--tertiary {
-    color: #fff; }
-    .c-button--ghost.c-button--tertiary:hover, .c-button--ghost.c-button--tertiary:focus {
-      color: #fff; }
+  border: 2px solid #dee2e6;
+  background-color: transparent;
+  color: #495057; }
+  .c-button--ghost.c-button--active {
+    border-color: #c1c9d0;
+    background-color: #c1c9d0; }
+  .c-button--ghost:not(:disabled):hover {
+    background-color: #dee2e6;
+    color: #495057; }
+  .c-button--ghost:not(:disabled):focus {
+    border-color: #329af0;
+    box-shadow: inset 0 0 0 2px #329af0; }
+  .c-button--ghost:not(:disabled):active {
+    border-color: #c1c9d0;
+    background-color: #c1c9d0; }
 
 /* ==========================================================================
    #CARDS
@@ -3974,7 +4049,7 @@ dd, ol, ul {
 .c-header__title {
   display: block;
   /* [1] */
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.125;
   margin: 0.125em 0; }
   .c-header__title {
@@ -4883,7 +4958,7 @@ select::-ms-expand {
       -ms-grid-row-align: center;
       align-self: center;
   background: #fff;
-  border: 2px solid #868e96;
+  border: 2px solid #dee2e6;
   border-radius: 0.25em;
   cursor: zoom-in;
   margin-left: auto;
@@ -4947,6 +5022,20 @@ select::-ms-expand {
       -webkit-filter: grayscale(50%) blur(2px);
               filter: grayscale(50%) blur(2px); } }
 
+.t-work--hci .c-button--primary {
+  border: 2px solid transparent;
+  background-color: #1c7cd6;
+  color: #FFF; }
+  .t-work--hci .c-button--primary.c-button--active {
+    background-color: #3f95e6; }
+  .t-work--hci .c-button--primary:not(:disabled):hover {
+    background-color: #1662a9; }
+  .t-work--hci .c-button--primary:not(:disabled):focus {
+    border-color: #329af0;
+    box-shadow: inset 0 0 0 2px #329af0; }
+  .t-work--hci .c-button--primary:not(:disabled):active {
+    background-color: #3f95e6; }
+
 /* ==========================================================================
    #TURNS-THEME
    ========================================================================== */
@@ -4962,6 +5051,20 @@ select::-ms-expand {
 .t-work--turns .c-meta .c-icon,
 .t-work--turns .c-pagination .c-icon {
   color: #f76707; }
+
+.t-work--turns .c-button--primary {
+  border: 2px solid transparent;
+  background-color: #f76707;
+  color: #FFF; }
+  .t-work--turns .c-button--primary.c-button--active {
+    background-color: #f98538; }
+  .t-work--turns .c-button--primary:not(:disabled):hover {
+    background-color: #c55206; }
+  .t-work--turns .c-button--primary:not(:disabled):focus {
+    border-color: #329af0;
+    box-shadow: inset 0 0 0 2px #329af0; }
+  .t-work--turns .c-button--primary:not(:disabled):active {
+    background-color: #f98538; }
 
 /* ==========================================================================
    #UOFU-COLLEGE-OF-HEALTH-THEME
@@ -4984,6 +5087,20 @@ select::-ms-expand {
 .t-work--uucoh .c-pagination .c-icon {
   color: #e03131; }
 
+.t-work--uucoh .c-button--primary {
+  border: 2px solid transparent;
+  background-color: #f03e3e;
+  color: #FFF; }
+  .t-work--uucoh .c-button--primary.c-button--active {
+    background-color: #f46d6d; }
+  .t-work--uucoh .c-button--primary:not(:disabled):hover {
+    background-color: #e91212; }
+  .t-work--uucoh .c-button--primary:not(:disabled):focus {
+    border-color: #329af0;
+    box-shadow: inset 0 0 0 2px #329af0; }
+  .t-work--uucoh .c-button--primary:not(:disabled):active {
+    background-color: #f46d6d; }
+
 /* ==========================================================================
    #UOFU-HEALTH-SCIENCES-THEME
    ========================================================================== */
@@ -5005,6 +5122,20 @@ select::-ms-expand {
 .t-work--uuhsc .c-pagination .c-icon {
   color: #74b816; }
 
+.t-work--uuhsc .c-button--primary {
+  border: 2px solid transparent;
+  background-color: #74b816;
+  color: #FFF; }
+  .t-work--uuhsc .c-button--primary.c-button--active {
+    background-color: #90e41d; }
+  .t-work--uuhsc .c-button--primary:not(:disabled):hover {
+    background-color: #578a11; }
+  .t-work--uuhsc .c-button--primary:not(:disabled):focus {
+    border-color: #329af0;
+    box-shadow: inset 0 0 0 2px #329af0; }
+  .t-work--uuhsc .c-button--primary:not(:disabled):active {
+    background-color: #90e41d; }
+
 /* ==========================================================================
    #UOFU-SCHOOL-OF-MEDICINE-THEME
    ========================================================================== */
@@ -5025,6 +5156,20 @@ select::-ms-expand {
 .t-work--uusom .c-meta .c-icon,
 .t-work--uusom .c-pagination .c-icon {
   color: #74b816; }
+
+.t-work--uusom .c-button--primary {
+  border: 2px solid transparent;
+  background-color: #74b816;
+  color: #FFF; }
+  .t-work--uusom .c-button--primary.c-button--active {
+    background-color: #90e41d; }
+  .t-work--uusom .c-button--primary:not(:disabled):hover {
+    background-color: #578a11; }
+  .t-work--uusom .c-button--primary:not(:disabled):focus {
+    border-color: #329af0;
+    box-shadow: inset 0 0 0 2px #329af0; }
+  .t-work--uusom .c-button--primary:not(:disabled):active {
+    background-color: #90e41d; }
 
 /* ==========================================================================
    #BACKGROUND-COLOR
@@ -5484,7 +5629,7 @@ select::-ms-expand {
 /* ==========================================================================
    #BORDER-RADIUS
    ========================================================================== */
-.u-border--none {
+.u-border--square {
   border-radius: 0 !important; }
 
 .u-border--radius {

@@ -14,7 +14,7 @@
 .c-zoom {
 	align-self: center; // 4
 	background: #fff;
-	border: 2px solid map-get($colors, grey);
+	border: 2px solid map-get($colors, grey-light);
 	border-radius: $global-border-radius;
 	cursor: zoom-in; // 1
 	margin-left: auto;

@@ -18,4 +18,8 @@
 		}
 	}
 
+	.c-button--primary {
+		@include button-color(map-get($colors, blue), map-get($colors, white));
+	}
+
 }

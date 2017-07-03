@@ -5,6 +5,112 @@
 
 
 
+//
+// Options
+//
+
+$button-padding: map-get($global-spacing, small) map-get($global-spacing, large) !default;
+$button-margin: 0 !default;
+$button-color: map-get($colors, white) !default;
+$button-background-color: map-get($colors, blue) !default;
+$button-tint: 10% !default;
+$button-disabled-opacity: .75 !default;
+$button-font-family: map-get($global-font-families, sans-serif) !default;
+$button-font-size: 1em !default;
+$button-letter-spacing: map-get($global-letter-spacing, large) !default;
+$button-line-height: normal !default;
+$button-text-align: center !default;
+$button-text-transform: uppercase !default;
+$button-white-space: nowrap !default;
+$button-border-width: 2px !default;
+$button-border-style: $global-border-style !default;
+$button-border-color: transparent !default;
+$button-border: $button-border-width $button-border-style $button-border-color !default;
+$button-border-radius: $global-border-radius !default;
+$button-focus-border-color: $border-color-focus !default;
+$button-focus-box-shadow: $box-shadow-focus !default;
+$button-ghost-color: map-get($colors, grey-light) !default;
+$button-ghost-hover-color: map-get($colors, grek-dark) !default;
+$button-ghost-border-width: $button-border-width !default;
+$button-ghost-border-style: $button-border-style !default;
+$button-rounded-border-radius: $global-border-radius !default;
+$button-icon-left-padding: map-get($global-spacing, small) !default;
+$button-icon-right-padding: map-get($global-spacing, small) !default;
+$button-super-font-size: map-get($global-font-sizes, super) !default;
+$button-xlarge-font-size: map-get($global-font-sizes, xlarge) !default;
+$button-large-font-size: map-get($global-font-sizes, large) !default;
+$button-medium-font-size: map-get($global-font-sizes, medium) !default;
+$button-small-font-size: map-get($global-font-sizes, small) !default;
+$button-xsmall-font-size: map-get($global-font-sizes, xsmall) !default;
+
+
+
+//
+// Mixins
+//
+
+@mixin button-color($background-color: $button-background-color, $color: $button-color) {
+	border: $button-border;
+	background-color: $background-color;
+	color: $color;
+
+	&.c-button--active {
+		background-color: lighten($background-color, $button-tint);
+	}
+
+	&:not(:disabled) {
+		&:hover {
+			background-color: darken($background-color, $button-tint);
+		}
+
+		&:focus {
+			border-color: $button-focus-border-color;
+			box-shadow: $button-focus-box-shadow;
+		}
+
+		&:active {
+			background-color: lighten($background-color, $button-tint);
+		}
+	}
+}
+
+@mixin button-ghost($color: $button-ghost-color, $color-hover: $button-ghost-hover-color) {
+	border: $button-ghost-border-width $button-ghost-border-style $color;
+	background-color: transparent;
+	color: map-get($colors, grey-dark);
+
+	&.c-button--active {
+		border-color: darken($color, $button-tint);
+		background-color: darken($color, $button-tint);
+		color: $color-hover;
+	}
+
+	&:not(:disabled) {
+		&:hover {
+			background-color: $color;
+			color: map-get($colors, grey-dark);
+		}
+
+		&:focus {
+			border-color: $button-focus-border-color;
+			box-shadow: $button-focus-box-shadow;
+		}
+
+		&:active {
+			border-color: darken($color, $button-tint);
+			background-color: darken($color, $button-tint);
+			color: $color-hover;
+		}
+	}
+}
+
+
+
+
+//
+// Classes
+//
+
 /**
  * 1. Allow us to style box model properties.
  * 2. Line different sized buttons up a little nicer.
@@ -15,90 +121,63 @@
  */
 
 .c-button {
-	border: none;
-	border-radius: $global-border-radius;
-	cursor: pointer; /* [5] */
-	display: inline-block; /* [1] */
-	//font: inherit; /* [3] */
-	font-family: map-get($global-font-families, sans-serif);
-	font-size: map-get($global-font-sizes, small);
-	letter-spacing: map-get($global-letter-spacing, large);
-	margin: 0; /* [4] */
+	@include button-color;
+
+	appearance: none;
+	border-radius: $button-border-radius;
+	cursor: pointer;
+	display: inline;
+	font-family: $button-font-family;
+	font-size: $button-font-size;
+	letter-spacing: $button-letter-spacing;
+	line-height: $button-line-height;
+	margin: $button-margin;
 	max-width: 100%;
-	padding: map-get($global-spacing, small) map-get($global-spacing, large);
-	text-align: center; /* [4] */
-	text-transform: uppercase;
-	transition: $global-speed-default;
-	vertical-align: middle; /* [2] */
+	outline: 0;
+	overflow: hidden;
+	padding: $button-padding;
+	text-align: $button-text-align;
+	text-decoration: none;
+	text-transform: $button-text-transform;
+	text-overflow: ellipsis;
+	transition: background-color map-get($global-speeds, fast);
+	user-select: none;
+	vertical-align: middle;
+	white-space: $button-white-space;
 
 	&:disabled {
 		cursor: not-allowed;
+		opacity: $button-disabled-opacity;
 	}
 }
 
 
 
 
-/* Style variants
+/* Color variants
    ========================================================================== */
 
 .c-button--primary {
-	background-color: map-get($colors, blue);
-
-	&,
-	&:hover,
-	&:active,
-	&:focus {
-		color: #fff;
-		text-decoration: none; /* [4] */
-	}
-
-	&:hover,
-	&:focus {
-		background-color: map-get($colors, blue-darker);
-	}
-
-	&:disabled {
-		background-color: map-get($colors, blue-lighter);
-	}
-
+	@include button-color(map-get($colors, blue), map-get($colors, white));
 }
 
 .c-button--secondary {
-	background-color: #2f4054;
-
-	&,
-	&:hover,
-	&:active,
-	&:focus {
-		color: #fff;
-		text-decoration: none;
-	}
-
-	&:hover,
-	&:focus {
-		background-color: #1d2733;
-	}
-
+	@include button-color(map-get($colors, lime-dark), map-get($colors, white));
 }
 
 .c-button--tertiary {
-	background-color: #fff;
-	color: #4a8ec2;
+	@include button-color(map-get($colors, orange), map-get($colors, white));
+}
 
-	&,
-	&:hover,
-	&:active,
-	&:focus {
-		color: #4a8ec2;
-		text-decoration: none;
-	}
 
-	&:hover,
-	&:focus {
-		color: #3774a2;
-	}
 
+
+/* Expand button
+   ========================================================================== */
+
+.c-button--expand {
+	display: inline-block;
+	width: 100%;
 }
 
 
@@ -107,12 +186,62 @@
 /* Size variants
    ========================================================================== */
 
-.c-button--small {
-	padding: map-get($global-spacing, tiny) map-get($global-spacing, small);
+.c-button--super {
+	font-size: $button-super-font-size;
+	padding: map-get($global-spacing, xlarge) map-get($global-spacing, super);
+}
+
+.c-button--xlarge {
+	font-size: $button-xlarge-font-size;
+	padding: map-get($global-spacing, large) map-get($global-spacing, super);
 }
 
 .c-button--large {
-	padding: map-get($global-spacing, medium) map-get($global-spacing, super);
+	font-size: $button-large-font-size;
+	padding: map-get($global-spacing, medium) map-get($global-spacing, xlarge);
+}
+
+.c-button--medium {
+	font-size: $button-medium-font-size;
+	padding: map-get($global-spacing, small) map-get($global-spacing, large);
+}
+
+.c-button--small {
+	font-size: $button-small-font-size;
+	padding: map-get($global-spacing, tiny) map-get($global-spacing, small);
+}
+
+.c-button--xsmall {
+	font-size: $button-xsmall-font-size;
+	padding: map-get($global-spacing, tiny) map-get($global-spacing, tiny);
+}
+
+
+
+
+/* Button icons
+   ========================================================================== */
+
+.c-button__icon-left {
+	padding-right: $button-icon-left-padding;
+}
+
+.c-button__icon-right {
+	padding-left: $button-icon-right-padding;
+}
+
+
+
+
+/* Button corners
+   ========================================================================== */
+
+@each $name, $value in $global-radii {
+
+	.c-button--#{$name} {
+		border-radius: $value;
+	}
+
 }
 
 
@@ -125,55 +254,6 @@
  * Ghost buttons have see-through backgrounds and are bordered.
  */
 
-$button-ghost-border-width: .125em;
-
 .c-button--ghost {
-	border: $button-ghost-border-width solid currentColor;
-	padding: (map-get($global-spacing, small) - $button-ghost-border-width) (map-get($global-spacing, large) - $button-ghost-border-width);
-
-	&,
-	&:hover,
-	&:active,
-	&:focus {
-		background: none;
-	}
-
-	&.c-button--small {
-		padding: (map-get($global-spacing, tiny) - $button-ghost-border-width) (map-get($global-spacing, small) - $button-ghost-border-width);
-	}
-
-	&.c-button--large {
-		padding: (map-get($global-spacing, medium) - $button-ghost-border-width) (map-get($global-spacing, super) - $button-ghost-border-width);
-	}
-
-	&.c-button--primary {
-		color: #4a8ec2;
-
-		&:hover,
-		&:focus {
-			color: #3774a2;
-		}
-
-	}
-
-	&.c-button--secondary {
-		color: #2f4054;
-
-		&:hover,
-		&:focus {
-			color: #1d2733;
-		}
-
-	}
-
-	&.c-button--tertiary {
-		color: #fff;
-
-		&:hover,
-		&:focus {
-			color: #fff;
-		}
-
-	}
-
+	@include button-ghost;
 }

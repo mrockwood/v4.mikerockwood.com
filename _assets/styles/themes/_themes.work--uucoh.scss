@@ -23,4 +23,8 @@
 		color: map-get($colors, red-dark);
 	}
 
+	.c-button--primary {
+		@include button-color(map-get($colors, red), map-get($colors, white));
+	}
+
 }
