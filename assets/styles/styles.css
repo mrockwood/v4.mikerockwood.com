@@ -4856,6 +4856,17 @@ select::-ms-expand {
     .c-paragraph--lead {
       font-weight: 300; } }
 
+.c-hr {
+  border: none;
+  margin-bottom: 1.75em;
+  position: relative; }
+  .c-hr:after {
+    background-color: #1c7cd6;
+    content: '';
+    display: block;
+    height: 4px;
+    width: 100px; }
+
 /* ==========================================================================
    #ZOOM
    ========================================================================== */

@@ -67,3 +67,24 @@
 		font-weight: map-get($global-font-weights, light);
 	}
 }
+
+
+
+
+//
+// Horizontal Rule
+//
+
+.c-hr {
+	border: none;
+	margin-bottom: 1.75em;
+	position: relative;
+
+	&:after {
+		background-color: map-get($colors, blue);
+		content: '';
+		display: block;
+		height: 4px;
+		width: 100px;
+	}
+}
