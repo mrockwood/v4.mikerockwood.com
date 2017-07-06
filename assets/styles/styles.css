@@ -4918,7 +4918,8 @@ select::-ms-expand {
   margin-top: 1em; }
 
 .c-paragraph--lead {
-  color: #495057; }
+  color: #495057;
+  font-weight: 300; }
   .c-paragraph--lead {
     font-size: 1.125em; }
     @media screen and (min-width: 30em) {
@@ -4927,9 +4928,6 @@ select::-ms-expand {
     @media screen and (min-width: 78em) {
       .c-paragraph--lead {
         font-size: 1.75em; } }
-  @media (min-width: 48.01em) {
-    .c-paragraph--lead {
-      font-weight: 300; } }
 
 .c-hr {
   border: none;

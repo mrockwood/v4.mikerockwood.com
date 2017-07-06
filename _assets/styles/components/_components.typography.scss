@@ -62,10 +62,7 @@
 .c-paragraph--lead {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.75em);
 	color: map-get($colors, grey-dark);
-
-	@include media('>medium') {
-		font-weight: map-get($global-font-weights, light);
-	}
+	font-weight: map-get($global-font-weights, light);
 }
 
 
