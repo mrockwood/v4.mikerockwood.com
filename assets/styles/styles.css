@@ -3704,23 +3704,23 @@ dd, ol, ul {
 /* Size variants
    ========================================================================== */
 .c-button--super {
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 2em 3em; }
 
 .c-button--xlarge {
-  font-size: 1.5em;
+  font-size: 1.17em;
   padding: 1.5em 3em; }
 
 .c-button--large {
-  font-size: 1.17em;
+  font-size: 1em;
   padding: 1em 2em; }
 
 .c-button--medium {
-  font-size: 1em;
+  font-size: 0.925em;
   padding: 0.5em 1.5em; }
 
 .c-button--small {
-  font-size: 0.925em;
+  font-size: 0.75em;
   padding: 0.125em 0.5em; }
 
 .c-button--xsmall {

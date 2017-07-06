@@ -36,11 +36,11 @@ $button-ghost-border-style: $button-border-style !default;
 $button-rounded-border-radius: $global-border-radius !default;
 $button-icon-left-padding: map-get($global-spacing, small) !default;
 $button-icon-right-padding: map-get($global-spacing, small) !default;
-$button-super-font-size: map-get($global-font-sizes, super) !default;
-$button-xlarge-font-size: map-get($global-font-sizes, xlarge) !default;
-$button-large-font-size: map-get($global-font-sizes, large) !default;
-$button-medium-font-size: map-get($global-font-sizes, medium) !default;
-$button-small-font-size: map-get($global-font-sizes, small) !default;
+$button-super-font-size: map-get($global-font-sizes, xlarge) !default;
+$button-xlarge-font-size: map-get($global-font-sizes, large) !default;
+$button-large-font-size: map-get($global-font-sizes, medium) !default;
+$button-medium-font-size: map-get($global-font-sizes, small) !default;
+$button-small-font-size: map-get($global-font-sizes, xsmall) !default;
 $button-xsmall-font-size: map-get($global-font-sizes, xsmall) !default;
 
 
