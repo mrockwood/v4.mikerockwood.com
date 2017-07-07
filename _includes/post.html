@@ -13,14 +13,8 @@
 			<div class="c-meta__list">
 
 				{% if post.date %}
-					<div class="c-meta__item  c-meta__item--date">
-						<svg class="c-meta__icon  c-icon  c-icon--medium">
-							<use xlink:href="{{ '/assets/icons/sprite.svg#calendar' | prepend: site.baseurl }}"></use>
-						</svg>
-						<time date="{{ page.date | date: '%Y-%m-%d' }}" pubdate>
-							{{ post.date | date: "%B %e, %Y" }}
-						</time>
-					</div>
+					{% assign page = post %}
+					{% include meta.html %}
 				{% endif %}
 
 			</div>

@@ -15,31 +15,8 @@
 		</h2>
 
 		{% if project.date or project.tags %}
-		<div class="c-meta">
-			<div class="c-meta__list">
-
-				{% if project.date %}
-					<div class="c-meta__item  c-meta__item--date">
-						<svg class="c-meta__icon  c-icon  c-icon--medium">
-							<use xlink:href="{{ '/assets/icons/sprite.svg#calendar' | prepend: site.baseurl }}"></use>
-						</svg>
-						<time date="{{ project.date | date: '%Y-%m-%d' }}" pubdate>
-							{{ project.date | date: "%Y" }}
-						</time>
-					</div>
-				{% endif %}
-
-				{% if project.tags %}
-					<div class="c-meta__item  c-meta__item--tags">
-						<svg class="c-meta__icon  c-icon  c-icon--medium">
-							<use xlink:href="{{ '/assets/icons/sprite.svg#wrench' | prepend: site.baseurl }}"></use>
-						</svg>
-						{{ project.tags | array_to_sentence_string }}
-					</div>
-				{% endif %}
-
-			</div>
-		</div>
+			{% assign page = project %}
+			{% include meta.html %}
 		{% endif %}
 
 	</div>

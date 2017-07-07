@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Scalable CSS
+tags:
+  - test
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet rhoncus orci.
