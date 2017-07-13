@@ -33,7 +33,7 @@ html {
 
 /* stylelint-disable selector-list-comma-newline-after */
 
-* + * {
+body * + * {
 	margin-top: $global-spacing-default;
 }
 

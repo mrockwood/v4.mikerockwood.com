@@ -6,7 +6,8 @@
 	display: flex;
 	flex-direction: column;
 	font-size: inherit;
-	margin: map-get($global-spacing, medium) 0;
+	margin: 0;
+	padding: map-get($global-spacing, medium) 0;
 	text-align: center;
 }
 
@@ -21,7 +22,8 @@
 	display: block; /* [1] */
 	font-weight: map-get($global-font-weights, light);
 	line-height: map-get($global-line-heights, xsmall);
-	margin: map-get($global-spacing, tiny) 0;
+	margin: 0;
+	padding: map-get($global-spacing, tiny) 0;
 
 	@include media('<=medium') {
 		color: map-get($colors, grey-darker);

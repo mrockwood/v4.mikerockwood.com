@@ -62,9 +62,9 @@
 		order: map-get($global-ordering, first);
 	}
 
-	.c-pagination__icon--all {
+	/*.c-pagination__icon--all {
 		margin-bottom: map-get($global-spacing, small);
-	}
+	}*/
 
 	.c-pagination__icon--next {
 		margin-left: map-get($global-spacing, small);

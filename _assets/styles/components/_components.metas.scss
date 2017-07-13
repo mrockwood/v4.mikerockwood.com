@@ -26,7 +26,7 @@
 	font-family: map-get($global-font-families, sans-serif);
 	font-weight: map-get($global-font-weights, light);
 	letter-spacing: map-get($global-letter-spacing, large);
-	margin: map-get($global-spacing, small) 0;
+	//margin: map-get($global-spacing, small) 0;
 	max-width: 100%;
 	text-align: center;
 	text-transform: uppercase;

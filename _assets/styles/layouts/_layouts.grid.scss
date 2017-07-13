@@ -55,6 +55,10 @@ $grid-breakpoints: $global-breakpoints !default;
 		min-height: 1px; /* [4] */
 		//overflow-x: hidden; /* [4] */
 		padding: 0; /* [2] */
+
+		> * {
+			margin-top: 0;
+		}
 	}
 
 	/**
