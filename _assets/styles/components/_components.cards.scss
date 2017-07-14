@@ -109,6 +109,7 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 .c-card__item,
 .c-card__body,
 .c-card__footer {
+	margin: 0;
 	padding: map-get($global-spacing, medium);
 }
 

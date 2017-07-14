@@ -3844,6 +3844,7 @@ li {
 .c-card__item,
 .c-card__body,
 .c-card__footer {
+  margin: 0;
   padding: 1em; }
 
 .c-card__body {
