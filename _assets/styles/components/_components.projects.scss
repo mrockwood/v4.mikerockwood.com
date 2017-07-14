@@ -51,6 +51,7 @@
 
 .c-project__excerpt {
 	background-color: map-get($colors, white);
+	margin-top: 0;
 	padding: $global-spacing-default / 2;
 	text-align: center;
 	position: relative;
