@@ -4,6 +4,7 @@
 
 .c-pagination {
 	font-family: map-get($global-font-families, sans-serif);
+	margin-top: map-get($global-spacing, super);
 	text-transform: uppercase;
 }
 

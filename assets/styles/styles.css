@@ -3830,7 +3830,8 @@ li {
           transform: scale(1.05); }
 
 .c-card__header {
-  padding: 0.5em 1em 0;
+  margin: 0;
+  padding: 1em 1em 0;
   text-align: center; }
   .c-card__header .c-heading {
     padding: 0; }
@@ -3844,13 +3845,13 @@ li {
 .c-card__item,
 .c-card__body,
 .c-card__footer {
-  margin: 0;
-  padding: 1em; }
+  margin: 0; }
 
 .c-card__body {
   color: #495057;
   font-family: Merriweather, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 0.925em; }
+  font-size: 0.925em;
+  padding: 1em 1em 1.5em; }
 
 .c-card__item + .c-card__footer--block {
   padding: 0; }
@@ -4735,6 +4736,7 @@ select::-ms-expand {
    ========================================================================== */
 .c-pagination {
   font-family: Merriweather Sans, Arial, sans-serif;
+  margin-top: 3em;
   text-transform: uppercase; }
 
 @media (min-width: 48.01em) {
