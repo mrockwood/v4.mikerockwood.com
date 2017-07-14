@@ -558,6 +558,9 @@ body * + * {
 dd, ol, ul {
   margin-left: 1.5em; }
 
+li {
+  margin-top: 0; }
+
 /* stylelint-enable selector-list-comma-newline-after */
 /* ==========================================================================
    #ALIGNMENT
@@ -2512,6 +2515,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
 .l-page__section {
+  margin-top: 0;
   min-height: 1px;
   /* [1] */ }
 
@@ -2567,6 +2571,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
   .l-page__section\@xsmall {
+    margin-top: 0;
     min-height: 1px;
     /* [1] */ }
   /**
@@ -2621,6 +2626,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
   .l-page__section\@small {
+    margin-top: 0;
     min-height: 1px;
     /* [1] */ }
   /**
@@ -2675,6 +2681,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
   .l-page__section\@medium {
+    margin-top: 0;
     min-height: 1px;
     /* [1] */ }
   /**
@@ -2729,6 +2736,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
   .l-page__section\@large {
+    margin-top: 0;
     min-height: 1px;
     /* [1] */ }
   /**
@@ -2783,6 +2791,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
   .l-page__section\@xlarge {
+    margin-top: 0;
     min-height: 1px;
     /* [1] */ }
   /**
@@ -2837,6 +2846,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
   .l-page__section\@super {
+    margin-top: 0;
     min-height: 1px;
     /* [1] */ }
   /**
@@ -3976,6 +3986,7 @@ dd, ol, ul {
 .c-footer {
   background-color: #f1f3f5;
   font-family: Merriweather Sans, Arial, sans-serif;
+  margin-top: 2em;
   text-align: center; }
 
 .c-footer__social-link {
@@ -4100,6 +4111,7 @@ dd, ol, ul {
  */
 .c-header__image-wrapper {
   line-height: 0;
+  margin-top: 0;
   min-height: 1px;
   /* 1 */
   overflow: hidden;
@@ -4568,7 +4580,7 @@ select::-ms-expand {
    ========================================================================== */
 .c-meta {
   padding-bottom: 0.5em;
-  padding-top: 0.25em; }
+  padding-top: 0.5em; }
 
 .c-meta__list {
   -webkit-box-align: center;
@@ -4596,6 +4608,7 @@ select::-ms-expand {
   font-family: Merriweather Sans, Arial, sans-serif;
   font-weight: 300;
   letter-spacing: 0.1em;
+  margin: 0;
   max-width: 100%;
   text-align: center;
   text-transform: uppercase; }
@@ -4629,6 +4642,7 @@ select::-ms-expand {
   font-style: normal; }
 
 .c-navbar {
+  margin-top: 0;
   text-transform: uppercase; }
 
 @media (max-width: 48em) {
@@ -4794,6 +4808,7 @@ select::-ms-expand {
  * Fix IE10-11 not respecting aspect ratio
  */
 .c-project {
+  margin-top: 0;
   min-height: 1px;
   /* [1] */ }
 

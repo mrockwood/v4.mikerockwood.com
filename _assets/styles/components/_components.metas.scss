@@ -4,7 +4,7 @@
 
 .c-meta {
 	padding-bottom: map-get($global-spacing, small);
-	padding-top: map-get($global-spacing, xsmall);
+	padding-top: map-get($global-spacing, small);
 }
 
 .c-meta__list {
@@ -26,7 +26,7 @@
 	font-family: map-get($global-font-families, sans-serif);
 	font-weight: map-get($global-font-weights, light);
 	letter-spacing: map-get($global-letter-spacing, large);
-	//margin: map-get($global-spacing, small) 0;
+	margin: 0;
 	max-width: 100%;
 	text-align: center;
 	text-transform: uppercase;
