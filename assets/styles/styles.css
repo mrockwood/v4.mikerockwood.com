@@ -3990,6 +3990,9 @@ li {
   margin-top: 2em;
   text-align: center; }
 
+.c-pagination + .c-footer {
+  margin-top: 0; }
+
 .c-footer__social-link {
   color: #868e96;
   transition: color 200ms; }

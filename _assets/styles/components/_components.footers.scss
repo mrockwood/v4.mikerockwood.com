@@ -9,6 +9,10 @@
 	text-align: center;
 }
 
+.c-pagination + .c-footer {
+	margin-top: 0;
+}
+
 .c-footer__social-link {
 	color: map-get($colors, grey);
 	transition: color map-get($global-speeds, fast);
