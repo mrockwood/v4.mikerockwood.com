@@ -4814,7 +4814,6 @@ select::-ms-expand {
  * Fix IE10-11 not respecting aspect ratio
  */
 .c-project {
-  margin-top: 0;
   min-height: 1px;
   /* [1] */ }
 
