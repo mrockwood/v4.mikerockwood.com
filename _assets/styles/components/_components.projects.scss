@@ -10,10 +10,9 @@
 	min-height: 1px; /* [1] */
 }
 
-@include media('>medium') {
-	.c-project + .c-project {
-		margin-top: map-get($global-spacing, xlarge);
-	}
+
+.c-project:first-of-type {
+	margin-top: 0;
 }
 
 .c-project__image-link {

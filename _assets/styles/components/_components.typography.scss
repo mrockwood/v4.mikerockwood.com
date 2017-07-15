@@ -47,7 +47,11 @@
 	margin-top: map-get($global-spacing, medium);
 }
 
-
+.c-h2 + *,
+.c-h3 + *,
+.c-h4 + * {
+	margin-top: 0;
+}
 
 
 //
@@ -56,6 +60,7 @@
 
 .c-paragraph--lead {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.75em);
+
 	color: map-get($colors, grey-dark);
 	font-weight: map-get($global-font-weights, light);
 }

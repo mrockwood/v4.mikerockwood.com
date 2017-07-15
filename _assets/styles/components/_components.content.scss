@@ -66,6 +66,12 @@ $content-namespace: $global-namespace-components + 'content' !default;
 		margin-top: map-get($global-spacing, medium);
 	}
 
+	h2 + *,
+	h3 + *,
+	h4 + * {
+		margin-top: map-get($global-spacing, small);
+	}
+
 	a:not(.c-button) {
 		color: map-get($colors, lime);
 		text-decoration-skip: ink;
