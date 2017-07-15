@@ -9,7 +9,7 @@ permalink: /
 	{% include lead.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet rhoncus orci. Morbi at risus nec metus vestibulum rhoncus. Vestibulum quis rhoncus dolor, ut mollis est." %}
 
 	<section class="l-container  l-container--large  u-margin-top--large@medium">
-		<div class="l-grid  l-grid--middle  u-padding-bottom--small">
+		<div class="l-grid  l-grid--middle">
 			<div class="l-grid__item  l-width--expand@small">
 				<h2 class="c-h2  u-color--grey-darker  u-margin-top--none">Latest Work</h2>
 			</div>
@@ -31,7 +31,7 @@ permalink: /
 	</section>
 
 	<section class="l-container  l-container--large  u-margin-top--xlarge">
-		<div class="l-grid  l-grid--middle  u-padding-bottom--small">
+		<div class="l-grid  l-grid--middle">
 			<div class="l-grid__item  l-width--expand@small">
 				<h2 class="c-h2  u-color--grey-darker  u-margin-top--none">Latest Notes</h2>
 			</div>
@@ -44,7 +44,7 @@ permalink: /
 				</a>
 			</div>
 		</div>
-		<div class="l-grid">
+		<div class="l-grid  u-margin-top--medium">
 			{% assign posts = site.posts | sort: 'date' | reverse %}
 			{% for post in posts limit:2 %}
 				{% unless post.preview %}

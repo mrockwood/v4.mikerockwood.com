@@ -4786,6 +4786,10 @@ select::-ms-expand {
   min-height: 1px;
   /* [1] */ }
 
+@media (min-width: 48.01em) {
+  .c-project + .c-project {
+    margin-top: 2em; } }
+
 .c-project__image-link {
   position: relative;
   transition: 300ms;
