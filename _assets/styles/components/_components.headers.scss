@@ -7,7 +7,6 @@
 	flex-direction: column;
 	font-size: inherit;
 	margin: 0;
-	padding: map-get($global-spacing, medium) 0;
 	text-align: center;
 }
 
@@ -20,13 +19,14 @@
 
 
 	display: block; /* [1] */
-	font-weight: map-get($global-font-weights, light);
+	font-weight: map-get($global-font-weights, regular);
 	line-height: map-get($global-line-heights, xsmall);
 	margin: 0;
-	padding: map-get($global-spacing, tiny) 0;
+	//padding: map-get($global-spacing, tiny) 0;
 
 	@include media('<=medium') {
 		color: map-get($colors, grey-darker);
+		margin: map-get($global-spacing, small) 0 0;
 	}
 }
 
@@ -38,7 +38,7 @@
 	font-family: map-get($global-font-families, sans-serif);
 	font-weight: map-get($global-font-weights, light);
 	letter-spacing: map-get($global-letter-spacing, xlarge);
-	margin: map-get($global-spacing, tiny) 0;
+	margin: map-get($global-spacing, tiny) 0 0;
 	text-transform: uppercase;
 
 	@include media('>medium') {
@@ -57,11 +57,15 @@
 
 .c-header__image-wrapper {
 	line-height: 0;
-	margin-top: 0;
+	margin: $global-spacing-default 0 0;
 	min-height: 1px; /* 1 */
 	overflow: hidden;
 	position: relative;
 	z-index: -1;
+
+	@include media('>medium') {
+		margin: 0;
+	}
 }
 
 /**

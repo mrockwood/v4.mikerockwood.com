@@ -20,7 +20,14 @@
 
 .c-navbar {
 	margin-top: 0;
+	padding-bottom: map-get($global-spacing, medium);
+	padding-top: map-get($global-spacing, medium);
 	text-transform: uppercase;
+
+	@include media('>medium') {
+		padding-bottom: map-get($global-spacing, large);
+		padding-top: map-get($global-spacing, large);
+	}
 }
 
 //
@@ -30,6 +37,10 @@
 @include media('<=medium') {
 	.c-navbar__item--logo {
 		width: 100%;
+	}
+
+	.c-navbar__item:not(.c-navbar__item--logo) {
+		margin: 0;
 	}
 }
 

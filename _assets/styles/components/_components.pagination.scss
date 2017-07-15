@@ -19,6 +19,7 @@
 	display: block;
 	font-size: map-get($global-font-sizes, small);
 	letter-spacing: map-get($global-letter-spacing, medium);
+	margin-top: 0;
 	padding-bottom: map-get($global-spacing, medium);
 	padding-top: map-get($global-spacing, medium);
 	text-decoration: none;
