@@ -1181,7 +1181,7 @@ li {
       flex-wrap: wrap;
   list-style: none;
   /* [1] */
-  margin: -0.75em;
+  margin: -1.5em 0 0 -1.5em;
   /* [3] */
   min-height: 1px;
   /* [4] */
@@ -1274,7 +1274,7 @@ li {
   /* [2] */
   min-height: 0;
   /* [2] */
-  padding: 0.75em;
+  padding: 1.5em 0 0 1.5em;
   /* [3] */
   width: 100%; }
 
@@ -1334,7 +1334,7 @@ li {
         flex-wrap: wrap;
     list-style: none;
     /* [1] */
-    margin: -0.75em;
+    margin: -1.5em 0 0 -1.5em;
     /* [3] */
     min-height: 1px;
     /* [4] */
@@ -1416,7 +1416,7 @@ li {
     /* [2] */
     min-height: 0;
     /* [2] */
-    padding: 0.75em;
+    padding: 1.5em 0 0 1.5em;
     /* [3] */
     width: 100%; }
   /**
@@ -1469,7 +1469,7 @@ li {
         flex-wrap: wrap;
     list-style: none;
     /* [1] */
-    margin: -0.75em;
+    margin: -1.5em 0 0 -1.5em;
     /* [3] */
     min-height: 1px;
     /* [4] */
@@ -1551,7 +1551,7 @@ li {
     /* [2] */
     min-height: 0;
     /* [2] */
-    padding: 0.75em;
+    padding: 1.5em 0 0 1.5em;
     /* [3] */
     width: 100%; }
   /**
@@ -1604,7 +1604,7 @@ li {
         flex-wrap: wrap;
     list-style: none;
     /* [1] */
-    margin: -0.75em;
+    margin: -1.5em 0 0 -1.5em;
     /* [3] */
     min-height: 1px;
     /* [4] */
@@ -1686,7 +1686,7 @@ li {
     /* [2] */
     min-height: 0;
     /* [2] */
-    padding: 0.75em;
+    padding: 1.5em 0 0 1.5em;
     /* [3] */
     width: 100%; }
   /**
@@ -1739,7 +1739,7 @@ li {
         flex-wrap: wrap;
     list-style: none;
     /* [1] */
-    margin: -0.75em;
+    margin: -1.5em 0 0 -1.5em;
     /* [3] */
     min-height: 1px;
     /* [4] */
@@ -1821,7 +1821,7 @@ li {
     /* [2] */
     min-height: 0;
     /* [2] */
-    padding: 0.75em;
+    padding: 1.5em 0 0 1.5em;
     /* [3] */
     width: 100%; }
   /**
@@ -1874,7 +1874,7 @@ li {
         flex-wrap: wrap;
     list-style: none;
     /* [1] */
-    margin: -0.75em;
+    margin: -1.5em 0 0 -1.5em;
     /* [3] */
     min-height: 1px;
     /* [4] */
@@ -1956,7 +1956,7 @@ li {
     /* [2] */
     min-height: 0;
     /* [2] */
-    padding: 0.75em;
+    padding: 1.5em 0 0 1.5em;
     /* [3] */
     width: 100%; }
   /**
@@ -2009,7 +2009,7 @@ li {
         flex-wrap: wrap;
     list-style: none;
     /* [1] */
-    margin: -0.75em;
+    margin: -1.5em 0 0 -1.5em;
     /* [3] */
     min-height: 1px;
     /* [4] */
@@ -2091,7 +2091,7 @@ li {
     /* [2] */
     min-height: 0;
     /* [2] */
-    padding: 0.75em;
+    padding: 1.5em 0 0 1.5em;
     /* [3] */
     width: 100%; }
   /**
