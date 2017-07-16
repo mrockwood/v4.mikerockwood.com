@@ -4317,7 +4317,12 @@ select::-ms-expand {
   cursor: not-allowed; }
 
 .c-form-element {
-  position: relative; }
+  padding-bottom: 0;
+  padding-top: 0;
+  position: relative;
+  /*.c-label:first-child {
+		padding: $form-element-label-padding;
+	}*/ }
 
 /* ==========================================================================
    #LINK
