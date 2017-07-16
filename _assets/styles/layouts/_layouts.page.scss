@@ -66,6 +66,7 @@ $page-breakpoints: $global-breakpoints !default;
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
 	.#{$page-namespace}#{$page-element}#{$page-section-name}#{$breakpoint-alias} {
+		margin-top: 0;
 		min-height: 1px; /* [1] */
 		//overflow-x: hidden; /* [1] */
 	}

@@ -4,6 +4,7 @@
 
 .c-pagination {
 	font-family: map-get($global-font-families, sans-serif);
+	margin-top: map-get($global-spacing, super);
 	text-transform: uppercase;
 }
 
@@ -18,6 +19,7 @@
 	display: block;
 	font-size: map-get($global-font-sizes, small);
 	letter-spacing: map-get($global-letter-spacing, medium);
+	margin-top: 0;
 	padding-bottom: map-get($global-spacing, medium);
 	padding-top: map-get($global-spacing, medium);
 	text-decoration: none;
@@ -62,9 +64,9 @@
 		order: map-get($global-ordering, first);
 	}
 
-	.c-pagination__icon--all {
+	/*.c-pagination__icon--all {
 		margin-bottom: map-get($global-spacing, small);
-	}
+	}*/
 
 	.c-pagination__icon--next {
 		margin-left: map-get($global-spacing, small);

@@ -22,37 +22,36 @@
 .c-h2 {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.25em, 1.5em);
 
-	margin-bottom: map-get($global-spacing, xsmall);
 	margin-top: map-get($global-spacing, small);
 }
 
 .c-h3 {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.25em);
 
-	margin-bottom: map-get($global-spacing, xsmall);
 	margin-top: map-get($global-spacing, small);
 }
 
 .c-h4 {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.25em);
 
-	margin-bottom: map-get($global-spacing, xsmall);
 	margin-top: map-get($global-spacing, small);
 }
 
 .c-h5 {
 	font-size: 1em;
-	margin-bottom: map-get($global-spacing, xsmall);
 	margin-top: map-get($global-spacing, small);
 }
 
 .c-h6 {
 	font-size: 1em;
-	margin-bottom: map-get($global-spacing, small);
 	margin-top: map-get($global-spacing, medium);
 }
 
-
+.c-h2 + *,
+.c-h3 + *,
+.c-h4 + * {
+	margin-top: 0;
+}
 
 
 //
@@ -61,6 +60,7 @@
 
 .c-paragraph--lead {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.75em);
+
 	color: map-get($colors, grey-dark);
 	font-weight: map-get($global-font-weights, light);
 }
@@ -74,7 +74,6 @@
 
 .c-hr {
 	border: none;
-	margin-bottom: 1.75em;
 	position: relative;
 
 	&:after {

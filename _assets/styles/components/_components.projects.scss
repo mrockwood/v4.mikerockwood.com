@@ -10,6 +10,11 @@
 	min-height: 1px; /* [1] */
 }
 
+
+.c-project:first-of-type {
+	margin-top: 0;
+}
+
 .c-project__image-link {
 	position: relative;
 	transition: map-get($global-speeds, medium);
@@ -50,6 +55,7 @@
 
 .c-project__excerpt {
 	background-color: map-get($colors, white);
+	margin-top: 0;
 	padding: $global-spacing-default / 2;
 	text-align: center;
 	position: relative;

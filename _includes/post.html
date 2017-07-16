@@ -1,4 +1,4 @@
-<div class="l-grid__item  l-width--1/2@medium  u-flex  u-margin-bottom--xlarge">
+<div class="l-grid__item  l-width--1/2@medium  u-flex">
 
 	<article class="c-card">
 
@@ -8,16 +8,12 @@
 
 		<header class="c-card__header">
 
-			<h2 class="c-h2  u-margin-bottom--none"><a class="c-card__header-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | smartify }}</a></h2>
+			<h2 class="c-h2"><a class="c-card__header-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | smartify }}</a></h2>
 
-			<div class="c-meta__list">
-
-				{% if post.date %}
-					{% assign page = post %}
-					{% include meta.html %}
-				{% endif %}
-
-			</div>
+			{% if post.date %}
+				{% assign page = post %}
+				{% include meta.html %}
+			{% endif %}
 
 		</header>
 

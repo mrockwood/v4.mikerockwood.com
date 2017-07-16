@@ -25,7 +25,7 @@ $card-border: $card-border-width $card-border-style $card-border-color !default;
 
 $card-image-padding: map-get($global-spacing, medium) 0 0 !default;
 $card-header-padding: map-get($global-spacing, medium) map-get($global-spacing, medium) 0 !default;
-$card-body-padding: map-get($global-spacing, medium) !default;
+$card-body-padding: map-get($global-spacing, medium) map-get($global-spacing, medium) map-get($global-spacing, xlarge) !default;
 $card-footer-padding: map-get($global-spacing, medium) !default;
 $card-footer-block-padding: 0 !default;
 
@@ -91,7 +91,8 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 }
 
 .c-card__header {
-	padding: map-get($global-spacing, small) map-get($global-spacing, medium) 0;
+	margin: 0;
+	padding: $card-header-padding;
 	text-align: center;
 
 	.c-heading {
@@ -109,13 +110,14 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 .c-card__item,
 .c-card__body,
 .c-card__footer {
-	padding: map-get($global-spacing, medium);
+	margin: 0;
 }
 
 .c-card__body {
 	color: map-get($colors, grey-dark);
 	font-family: map-get($global-font-families, serif);
 	font-size: map-get($global-font-sizes, small);
+	padding: $card-body-padding;
 }
 
 .c-card__item + .c-card__footer--block {

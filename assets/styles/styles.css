@@ -545,23 +545,21 @@ html {
 /**
  * Always declare margins in the same direction:
  * csswizardry.com/2012/06/single-direction-margin-declarations
+ * Lobotomized owl technique
+ * alistapart.com/article/axiomatic-css-and-lobotomized-owls
  */
 /* stylelint-disable selector-list-comma-newline-after */
-address,
-h1, h2, h3, h4, h5, h6,
-blockquote, p, pre,
-dl, ol, ul,
-figure,
-hr,
-table,
-fieldset {
-  margin-bottom: 1.5em; }
+body * + * {
+  margin-top: 1.5em; }
 
 /**
  * Consistent indentation for lists.
  */
 dd, ol, ul {
   margin-left: 1.5em; }
+
+li {
+  margin-top: 0; }
 
 /* stylelint-enable selector-list-comma-newline-after */
 /* ==========================================================================
@@ -1183,16 +1181,14 @@ dd, ol, ul {
       flex-wrap: wrap;
   list-style: none;
   /* [1] */
-  margin: 0;
-  /* [2] */
-  margin-left: -0.75em;
-  /* [3] */
-  margin-right: -0.75em;
+  margin: -1.5em 0 0 -1.5em;
   /* [3] */
   min-height: 1px;
   /* [4] */
   padding: 0;
   /* [2] */ }
+  .l-grid > * {
+    margin-top: 0; }
 
 /**
 	 * Reversed grids allow you to structure your source in the opposite order to
@@ -1278,9 +1274,7 @@ dd, ol, ul {
   /* [2] */
   min-height: 0;
   /* [2] */
-  padding-left: 0.75em;
-  /* [3] */
-  padding-right: 0.75em;
+  padding: 1.5em 0 0 1.5em;
   /* [3] */
   width: 100%; }
 
@@ -1340,16 +1334,14 @@ dd, ol, ul {
         flex-wrap: wrap;
     list-style: none;
     /* [1] */
-    margin: 0;
-    /* [2] */
-    margin-left: -0.75em;
-    /* [3] */
-    margin-right: -0.75em;
+    margin: -1.5em 0 0 -1.5em;
     /* [3] */
     min-height: 1px;
     /* [4] */
     padding: 0;
     /* [2] */ }
+    .l-grid\@xsmall > * {
+      margin-top: 0; }
   /**
 	 * Reversed grids allow you to structure your source in the opposite order to
 	 * how your rendered layout will appear.
@@ -1424,9 +1416,7 @@ dd, ol, ul {
     /* [2] */
     min-height: 0;
     /* [2] */
-    padding-left: 0.75em;
-    /* [3] */
-    padding-right: 0.75em;
+    padding: 1.5em 0 0 1.5em;
     /* [3] */
     width: 100%; }
   /**
@@ -1479,16 +1469,14 @@ dd, ol, ul {
         flex-wrap: wrap;
     list-style: none;
     /* [1] */
-    margin: 0;
-    /* [2] */
-    margin-left: -0.75em;
-    /* [3] */
-    margin-right: -0.75em;
+    margin: -1.5em 0 0 -1.5em;
     /* [3] */
     min-height: 1px;
     /* [4] */
     padding: 0;
     /* [2] */ }
+    .l-grid\@small > * {
+      margin-top: 0; }
   /**
 	 * Reversed grids allow you to structure your source in the opposite order to
 	 * how your rendered layout will appear.
@@ -1563,9 +1551,7 @@ dd, ol, ul {
     /* [2] */
     min-height: 0;
     /* [2] */
-    padding-left: 0.75em;
-    /* [3] */
-    padding-right: 0.75em;
+    padding: 1.5em 0 0 1.5em;
     /* [3] */
     width: 100%; }
   /**
@@ -1618,16 +1604,14 @@ dd, ol, ul {
         flex-wrap: wrap;
     list-style: none;
     /* [1] */
-    margin: 0;
-    /* [2] */
-    margin-left: -0.75em;
-    /* [3] */
-    margin-right: -0.75em;
+    margin: -1.5em 0 0 -1.5em;
     /* [3] */
     min-height: 1px;
     /* [4] */
     padding: 0;
     /* [2] */ }
+    .l-grid\@medium > * {
+      margin-top: 0; }
   /**
 	 * Reversed grids allow you to structure your source in the opposite order to
 	 * how your rendered layout will appear.
@@ -1702,9 +1686,7 @@ dd, ol, ul {
     /* [2] */
     min-height: 0;
     /* [2] */
-    padding-left: 0.75em;
-    /* [3] */
-    padding-right: 0.75em;
+    padding: 1.5em 0 0 1.5em;
     /* [3] */
     width: 100%; }
   /**
@@ -1757,16 +1739,14 @@ dd, ol, ul {
         flex-wrap: wrap;
     list-style: none;
     /* [1] */
-    margin: 0;
-    /* [2] */
-    margin-left: -0.75em;
-    /* [3] */
-    margin-right: -0.75em;
+    margin: -1.5em 0 0 -1.5em;
     /* [3] */
     min-height: 1px;
     /* [4] */
     padding: 0;
     /* [2] */ }
+    .l-grid\@large > * {
+      margin-top: 0; }
   /**
 	 * Reversed grids allow you to structure your source in the opposite order to
 	 * how your rendered layout will appear.
@@ -1841,9 +1821,7 @@ dd, ol, ul {
     /* [2] */
     min-height: 0;
     /* [2] */
-    padding-left: 0.75em;
-    /* [3] */
-    padding-right: 0.75em;
+    padding: 1.5em 0 0 1.5em;
     /* [3] */
     width: 100%; }
   /**
@@ -1896,16 +1874,14 @@ dd, ol, ul {
         flex-wrap: wrap;
     list-style: none;
     /* [1] */
-    margin: 0;
-    /* [2] */
-    margin-left: -0.75em;
-    /* [3] */
-    margin-right: -0.75em;
+    margin: -1.5em 0 0 -1.5em;
     /* [3] */
     min-height: 1px;
     /* [4] */
     padding: 0;
     /* [2] */ }
+    .l-grid\@xlarge > * {
+      margin-top: 0; }
   /**
 	 * Reversed grids allow you to structure your source in the opposite order to
 	 * how your rendered layout will appear.
@@ -1980,9 +1956,7 @@ dd, ol, ul {
     /* [2] */
     min-height: 0;
     /* [2] */
-    padding-left: 0.75em;
-    /* [3] */
-    padding-right: 0.75em;
+    padding: 1.5em 0 0 1.5em;
     /* [3] */
     width: 100%; }
   /**
@@ -2035,16 +2009,14 @@ dd, ol, ul {
         flex-wrap: wrap;
     list-style: none;
     /* [1] */
-    margin: 0;
-    /* [2] */
-    margin-left: -0.75em;
-    /* [3] */
-    margin-right: -0.75em;
+    margin: -1.5em 0 0 -1.5em;
     /* [3] */
     min-height: 1px;
     /* [4] */
     padding: 0;
     /* [2] */ }
+    .l-grid\@super > * {
+      margin-top: 0; }
   /**
 	 * Reversed grids allow you to structure your source in the opposite order to
 	 * how your rendered layout will appear.
@@ -2119,9 +2091,7 @@ dd, ol, ul {
     /* [2] */
     min-height: 0;
     /* [2] */
-    padding-left: 0.75em;
-    /* [3] */
-    padding-right: 0.75em;
+    padding: 1.5em 0 0 1.5em;
     /* [3] */
     width: 100%; }
   /**
@@ -2503,6 +2473,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
 .l-page__section {
+  margin-top: 0;
   min-height: 1px;
   /* [1] */ }
 
@@ -2558,6 +2529,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
   .l-page__section\@xsmall {
+    margin-top: 0;
     min-height: 1px;
     /* [1] */ }
   /**
@@ -2612,6 +2584,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
   .l-page__section\@small {
+    margin-top: 0;
     min-height: 1px;
     /* [1] */ }
   /**
@@ -2666,6 +2639,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
   .l-page__section\@medium {
+    margin-top: 0;
     min-height: 1px;
     /* [1] */ }
   /**
@@ -2720,6 +2694,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
   .l-page__section\@large {
+    margin-top: 0;
     min-height: 1px;
     /* [1] */ }
   /**
@@ -2774,6 +2749,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
   .l-page__section\@xlarge {
+    margin-top: 0;
     min-height: 1px;
     /* [1] */ }
   /**
@@ -2828,6 +2804,7 @@ dd, ol, ul {
 	 *  1. Dumb hack for IE10-11 image sizing issues
 	 */
   .l-page__section\@super {
+    margin-top: 0;
     min-height: 1px;
     /* [1] */ }
   /**
@@ -3811,7 +3788,8 @@ dd, ol, ul {
           transform: scale(1.05); }
 
 .c-card__header {
-  padding: 0.5em 1em 0;
+  margin: 0;
+  padding: 1em 1em 0;
   text-align: center; }
   .c-card__header .c-heading {
     padding: 0; }
@@ -3825,12 +3803,13 @@ dd, ol, ul {
 .c-card__item,
 .c-card__body,
 .c-card__footer {
-  padding: 1em; }
+  margin: 0; }
 
 .c-card__body {
   color: #495057;
   font-family: Merriweather, Georgia, Cambria, Times New Roman, Times, serif;
-  font-size: 0.925em; }
+  font-size: 0.925em;
+  padding: 1em 1em 2em; }
 
 .c-card__item + .c-card__footer--block {
   padding: 0; }
@@ -3913,7 +3892,6 @@ dd, ol, ul {
         font-size: 1.75em; } }
 
 .c-content h2 {
-  margin-bottom: 0.25em;
   margin-top: 0.5em; }
   .c-content h2 {
     font-size: 1.25em; }
@@ -3925,7 +3903,6 @@ dd, ol, ul {
         font-size: 1.5em; } }
 
 .c-content h3 {
-  margin-bottom: 0.25em;
   margin-top: 0.5em; }
   .c-content h3 {
     font-size: 1.125em; }
@@ -3937,7 +3914,6 @@ dd, ol, ul {
         font-size: 1.25em; } }
 
 .c-content h4 {
-  margin-bottom: 0.25em;
   margin-top: 0.5em; }
   .c-content h4 {
     font-size: 1.125em; }
@@ -3950,13 +3926,16 @@ dd, ol, ul {
 
 .c-content h5 {
   font-size: 1em;
-  margin-bottom: 0.25em;
   margin-top: 0.5em; }
 
 .c-content h6 {
   font-size: 1em;
-  margin-bottom: 0.5em;
   margin-top: 1em; }
+
+.c-content h2 + *,
+.c-content h3 + *,
+.c-content h4 + * {
+  margin-top: 0.5em; }
 
 .c-content a:not(.c-button) {
   color: #74b816;
@@ -3972,7 +3951,11 @@ dd, ol, ul {
 .c-footer {
   background-color: #f1f3f5;
   font-family: Merriweather Sans, Arial, sans-serif;
+  margin-top: 2em;
   text-align: center; }
+
+.c-pagination + .c-footer {
+  margin-top: 0; }
 
 .c-footer__social-link {
   color: #868e96;
@@ -4040,7 +4023,7 @@ dd, ol, ul {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: inherit;
-  margin: 1em 0;
+  margin: 0;
   text-align: center; }
 
 /**
@@ -4049,9 +4032,9 @@ dd, ol, ul {
 .c-header__title {
   display: block;
   /* [1] */
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.125;
-  margin: 0.125em 0; }
+  margin: 0; }
   .c-header__title {
     font-size: 2em; }
     @media screen and (min-width: 30em) {
@@ -4062,7 +4045,8 @@ dd, ol, ul {
         font-size: 3.25em; } }
   @media (max-width: 48em) {
     .c-header__title {
-      color: #212529; } }
+      color: #212529;
+      margin: 0.5em 0 0; } }
 
 .c-header__subtitle {
   color: #868e96;
@@ -4071,7 +4055,7 @@ dd, ol, ul {
   font-family: Merriweather Sans, Arial, sans-serif;
   font-weight: 300;
   letter-spacing: 0.15em;
-  margin: 0.125em 0;
+  margin: 0.125em 0 0;
   text-transform: uppercase; }
   .c-header__subtitle {
     font-size: 1.125em; }
@@ -4094,11 +4078,15 @@ dd, ol, ul {
  */
 .c-header__image-wrapper {
   line-height: 0;
+  margin: 1.5em 0 0;
   min-height: 1px;
   /* 1 */
   overflow: hidden;
   position: relative;
   z-index: -1; }
+  @media (min-width: 48.01em) {
+    .c-header__image-wrapper {
+      margin: 0; } }
 
 /**
  * This code does nothing until a background-color is applied via themes
@@ -4329,7 +4317,12 @@ select::-ms-expand {
   cursor: not-allowed; }
 
 .c-form-element {
-  position: relative; }
+  padding-bottom: 0;
+  padding-top: 0;
+  position: relative;
+  /*.c-label:first-child {
+		padding: $form-element-label-padding;
+	}*/ }
 
 /* ==========================================================================
    #LINK
@@ -4562,7 +4555,7 @@ select::-ms-expand {
    ========================================================================== */
 .c-meta {
   padding-bottom: 0.5em;
-  padding-top: 0.25em; }
+  padding-top: 0.5em; }
 
 .c-meta__list {
   -webkit-box-align: center;
@@ -4590,7 +4583,7 @@ select::-ms-expand {
   font-family: Merriweather Sans, Arial, sans-serif;
   font-weight: 300;
   letter-spacing: 0.1em;
-  margin: 0.5em 0;
+  margin: 0.5em 0 0;
   max-width: 100%;
   text-align: center;
   text-transform: uppercase; }
@@ -4624,11 +4617,20 @@ select::-ms-expand {
   font-style: normal; }
 
 .c-navbar {
+  margin-top: 0;
+  padding-bottom: 1em;
+  padding-top: 1em;
   text-transform: uppercase; }
+  @media (min-width: 48.01em) {
+    .c-navbar {
+      padding-bottom: 1.5em;
+      padding-top: 1.5em; } }
 
 @media (max-width: 48em) {
   .c-navbar__item--logo {
-    width: 100%; } }
+    width: 100%; }
+  .c-navbar__item:not(.c-navbar__item--logo) {
+    margin: 0; } }
 
 @media (min-width: 48.01em) {
   .c-navbar__item {
@@ -4664,7 +4666,6 @@ select::-ms-expand {
   font-size: 0.925em;
   font-weight: 300;
   letter-spacing: 0.15em;
-  margin: 0.25em;
   padding: 0.25em 0.5em;
   position: relative;
   text-decoration: none;
@@ -4713,6 +4714,7 @@ select::-ms-expand {
    ========================================================================== */
 .c-pagination {
   font-family: Merriweather Sans, Arial, sans-serif;
+  margin-top: 3em;
   text-transform: uppercase; }
 
 @media (min-width: 48.01em) {
@@ -4724,6 +4726,7 @@ select::-ms-expand {
   display: block;
   font-size: 0.925em;
   letter-spacing: 0.05em;
+  margin-top: 0;
   padding-bottom: 1em;
   padding-top: 1em;
   text-decoration: none; }
@@ -4772,8 +4775,9 @@ select::-ms-expand {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1; }
-  .c-pagination__icon--all {
-    margin-bottom: 0.5em; }
+  /*.c-pagination__icon--all {
+		margin-bottom: map-get($global-spacing, small);
+	}*/
   .c-pagination__icon--next {
     margin-left: 0.5em;
     -webkit-box-ordinal-group: 2;
@@ -4791,6 +4795,9 @@ select::-ms-expand {
 .c-project {
   min-height: 1px;
   /* [1] */ }
+
+.c-project:first-of-type {
+  margin-top: 0; }
 
 .c-project__image-link {
   position: relative;
@@ -4828,6 +4835,7 @@ select::-ms-expand {
 
 .c-project__excerpt {
   background-color: #FFF;
+  margin-top: 0;
   padding: 0.75em;
   text-align: center;
   position: relative; }
@@ -4872,7 +4880,6 @@ select::-ms-expand {
         font-size: 1.75em; } }
 
 .c-h2 {
-  margin-bottom: 0.25em;
   margin-top: 0.5em; }
   .c-h2 {
     font-size: 1.25em; }
@@ -4884,7 +4891,6 @@ select::-ms-expand {
         font-size: 1.5em; } }
 
 .c-h3 {
-  margin-bottom: 0.25em;
   margin-top: 0.5em; }
   .c-h3 {
     font-size: 1.125em; }
@@ -4896,7 +4902,6 @@ select::-ms-expand {
         font-size: 1.25em; } }
 
 .c-h4 {
-  margin-bottom: 0.25em;
   margin-top: 0.5em; }
   .c-h4 {
     font-size: 1.125em; }
@@ -4909,13 +4914,16 @@ select::-ms-expand {
 
 .c-h5 {
   font-size: 1em;
-  margin-bottom: 0.25em;
   margin-top: 0.5em; }
 
 .c-h6 {
   font-size: 1em;
-  margin-bottom: 0.5em;
   margin-top: 1em; }
+
+.c-h2 + *,
+.c-h3 + *,
+.c-h4 + * {
+  margin-top: 0; }
 
 .c-paragraph--lead {
   color: #495057;
@@ -4931,7 +4939,6 @@ select::-ms-expand {
 
 .c-hr {
   border: none;
-  margin-bottom: 1.75em;
   position: relative; }
   .c-hr:after {
     background-color: #1c7cd6;

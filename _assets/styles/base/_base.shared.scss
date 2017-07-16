@@ -27,19 +27,14 @@ html {
 /**
  * Always declare margins in the same direction:
  * csswizardry.com/2012/06/single-direction-margin-declarations
+ * Lobotomized owl technique
+ * alistapart.com/article/axiomatic-css-and-lobotomized-owls
  */
 
 /* stylelint-disable selector-list-comma-newline-after */
 
-address,
-h1, h2, h3, h4, h5, h6,
-blockquote, p, pre,
-dl, ol, ul,
-figure,
-hr,
-table,
-fieldset {
-	margin-bottom: $global-spacing-default;
+body * + * {
+	margin-top: $global-spacing-default;
 }
 
 
@@ -49,6 +44,10 @@ fieldset {
 
 dd, ol, ul {
 	margin-left: $global-spacing-default;
+}
+
+li {
+	margin-top: 0;
 }
 
 /* stylelint-enable selector-list-comma-newline-after */

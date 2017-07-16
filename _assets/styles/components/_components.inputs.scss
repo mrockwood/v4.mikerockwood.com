@@ -44,7 +44,7 @@ $fieldset-margin: map-get($global-spacing, small) 0 !default;
 $fieldset-width: 100% !default;
 $fieldset-border: 0 !default;
 $legend-padding: map-get($global-spacing, xsmall) 0 !default;
-$form-element-padding: map-get($global-spacing, medium) 0 !default;
+$form-element-padding: 0 inherit !default;
 $form-element-label-padding: 0 0 map-get($global-spacing, small) 0 !default;
 
 
@@ -219,9 +219,11 @@ select::-ms-expand {
 
 .c-form-element {
 	//padding: $form-element-padding;
+	padding-bottom: 0;
+	padding-top: 0;
 	position: relative;
 
-	.c-label:first-child {
-		//padding: $form-element-label-padding;
-	}
+	/*.c-label:first-child {
+		padding: $form-element-label-padding;
+	}*/
 }
