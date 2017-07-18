@@ -558,7 +558,7 @@ body * + * {
 dd, ol, ul {
   margin-left: 1.5em; }
 
-li {
+dd, li {
   margin-top: 0; }
 
 /* stylelint-enable selector-list-comma-newline-after */
@@ -3275,10 +3275,10 @@ li {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  min-width: 0;
   -ms-flex-preferred-size: 1px;
       flex-basis: 1px;
-  width: auto; }
+  min-width: 0;
+  width: 1px; }
 
 .l-width--shrink {
   -webkit-box-flex: 0;
@@ -3327,10 +3327,10 @@ li {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    min-width: 0;
     -ms-flex-preferred-size: 1px;
         flex-basis: 1px;
-    width: auto; }
+    min-width: 0;
+    width: 1px; }
   .l-width--shrink\@xsmall {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
@@ -3366,10 +3366,10 @@ li {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    min-width: 0;
     -ms-flex-preferred-size: 1px;
         flex-basis: 1px;
-    width: auto; }
+    min-width: 0;
+    width: 1px; }
   .l-width--shrink\@small {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
@@ -3405,10 +3405,10 @@ li {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    min-width: 0;
     -ms-flex-preferred-size: 1px;
         flex-basis: 1px;
-    width: auto; }
+    min-width: 0;
+    width: 1px; }
   .l-width--shrink\@medium {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
@@ -3444,10 +3444,10 @@ li {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    min-width: 0;
     -ms-flex-preferred-size: 1px;
         flex-basis: 1px;
-    width: auto; }
+    min-width: 0;
+    width: 1px; }
   .l-width--shrink\@large {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
@@ -3483,10 +3483,10 @@ li {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    min-width: 0;
     -ms-flex-preferred-size: 1px;
         flex-basis: 1px;
-    width: auto; }
+    min-width: 0;
+    width: 1px; }
   .l-width--shrink\@xlarge {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
@@ -3522,10 +3522,10 @@ li {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    min-width: 0;
     -ms-flex-preferred-size: 1px;
         flex-basis: 1px;
-    width: auto; }
+    min-width: 0;
+    width: 1px; }
   .l-width--shrink\@super {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
@@ -3952,6 +3952,8 @@ li {
   background-color: #f1f3f5;
   font-family: Merriweather Sans, Arial, sans-serif;
   margin-top: 2em;
+  padding-bottom: 2em;
+  padding-top: 1.5em;
   text-align: center; }
 
 .c-pagination + .c-footer {
