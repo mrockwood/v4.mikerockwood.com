@@ -145,7 +145,7 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 }
 
 .c-card__button {
-	padding: map-get($global-spacing, medium) map-get($global-spacing, small);
+	padding: map-get($global-spacing, medium);
 }
 
 .c-card__item:not(:last-child) {

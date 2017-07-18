@@ -3828,7 +3828,7 @@ li {
     border-bottom-right-radius: 0; }
 
 .c-card__button {
-  padding: 1em 0.5em; }
+  padding: 1em; }
 
 .c-card__item:not(:last-child) {
   border-bottom: 1px solid rgba(222, 226, 230, 0.5); }
