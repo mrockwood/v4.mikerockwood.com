@@ -95,14 +95,25 @@ gulp.task('styles', () => {
 			includePaths: './node_modules',
 		}).on('error', sass.logError))
 		.pipe(prefix(config.styles.browsers))
-		.pipe(gulpif(!config.dev, uncss({
-			html: ['_site/**/*.html'],
-			ignore: []
-		})))
-		.pipe(gulpif(!config.dev, csso()))
+		//.pipe(gulpif(!config.dev, uncss({
+		//	html: ['_site/**/*.html'],
+		//	ignore: []
+		//})))
+		//.pipe(gulpif(!config.dev, csso()))
+		.pipe(csso())
 		.pipe(gulp.dest(config.styles.dest))
 		.pipe(gulp.dest(config.styles.site))
 		.pipe(browserSync.reload({stream:true}))
+});
+
+// Remove unused CSS
+gulp.task('uncss', ['jekyll'], function () {
+	return gulp.src('_site/assets/styles/*.css')
+		.pipe(uncss({
+			html: ['_site/**/*.html'],
+			ignore: []
+		}))
+		.pipe(gulp.dest(config.styles.site));
 });
 
 
@@ -210,7 +221,7 @@ gulp.task('serve', () => {
 		notify: false,
 	});
 
-	gulp.task('styles:watch', ['styles']);
+	gulp.task('styles:watch', ['styles', 'uncss']);
 	gulp.watch(config.styles.watch, ['styles:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], browserSync.reload);
@@ -225,7 +236,7 @@ gulp.task('serve', () => {
 	gulp.task('fonts:watch', ['fonts'], browserSync.reload);
 	gulp.watch(config.fonts.watch, ['fonts:watch']);
 
-	gulp.task('jekyll:watch', ['jekyll'], browserSync.reload);
+	gulp.task('jekyll:watch', ['jekyll', 'uncss'], browserSync.reload);
 	gulp.watch(config.jekyll.watch, ['jekyll:watch']);
 
 });
