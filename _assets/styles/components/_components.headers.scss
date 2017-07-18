@@ -6,8 +6,12 @@
 	display: flex;
 	flex-direction: column;
 	font-size: inherit;
-	margin: 0;
+	margin: map-get($global-spacing, large) 0 0;
 	text-align: center;
+
+	@include media('>medium') {
+		margin: 0;
+	}
 }
 
 /**
@@ -17,7 +21,6 @@
 .c-header__title {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 2em, 3.25em);
 
-
 	display: block; /* [1] */
 	font-weight: map-get($global-font-weights, regular);
 	line-height: map-get($global-line-heights, xsmall);
@@ -26,7 +29,6 @@
 
 	@include media('<=medium') {
 		color: map-get($colors, grey-darker);
-		margin: map-get($global-spacing, small) 0 0;
 	}
 }
 

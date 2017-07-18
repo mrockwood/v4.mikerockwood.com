@@ -4023,8 +4023,11 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: inherit;
-  margin: 0;
+  margin: 1.5em 0 0;
   text-align: center; }
+  @media (min-width: 48.01em) {
+    .c-header__text {
+      margin: 0; } }
 
 /**
  * 1. IE10 not wrapping title and subtitle text
@@ -4045,8 +4048,7 @@ li {
         font-size: 3.25em; } }
   @media (max-width: 48em) {
     .c-header__title {
-      color: #212529;
-      margin: 0.5em 0 0; } }
+      color: #212529; } }
 
 .c-header__subtitle {
   color: #868e96;
@@ -4618,7 +4620,6 @@ select::-ms-expand {
 
 .c-navbar {
   margin-top: 0;
-  padding-bottom: 1em;
   padding-top: 1em;
   text-transform: uppercase; }
   @media (min-width: 48.01em) {
