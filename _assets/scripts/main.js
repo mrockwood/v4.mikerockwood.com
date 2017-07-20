@@ -24,6 +24,15 @@ svg4everybody();
 
 
 /**
+ * Load LazyLoad
+ */
+
+var myLazyLoad = new LazyLoad();
+
+
+
+
+/**
  * Zoom image on click
  */
 
