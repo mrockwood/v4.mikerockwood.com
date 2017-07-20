@@ -6,7 +6,8 @@ permalink: /
 <!-- Main -->
 <main class="l-page__section  l-page__section--expand" id="main" role="main">
 
-	{% include lead.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet rhoncus orci. Morbi at risus nec metus vestibulum rhoncus. Vestibulum quis rhoncus dolor, ut mollis est." %}
+	{% capture text %}I'm a front-end developer and designer based in Salt Lake City, Utah. I currently hold the position of Senior Web Developer at <a href="https://healthcare.utah.edu" class="c-link  c-link--lime">University of Utah Health</a>.{% endcapture %}
+	{% include lead.html content=text %}
 
 	<section class="l-container  l-container--large  u-margin-top--small  u-margin-top--large@medium">
 		<div class="l-grid  l-grid--middle  u-padding-bottom--small">
