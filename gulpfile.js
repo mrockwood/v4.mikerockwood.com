@@ -89,32 +89,20 @@ gulp.task('clean', del.bind(null, [config.dest]));
 // Styles
 //
 
-gulp.task('styles', () => {
+gulp.task('styles', ['jekyll'], () => {
 	return gulp.src(config.styles.src)
 		.pipe(sass({
 			includePaths: './node_modules',
 		}).on('error', sass.logError))
 		.pipe(prefix(config.styles.browsers))
-		//.pipe(gulpif(!config.dev, uncss({
-		//	html: ['_site/**/*.html'],
-		//	ignore: []
-		//})))
-		//.pipe(gulpif(!config.dev, csso()))
-		//.pipe(csso())
+		.pipe(gulpif(!config.dev, uncss({
+			html: ['_site/**/*.html'],
+			ignore: []
+		})))
+		.pipe(gulpif(!config.dev, csso()))
 		.pipe(gulp.dest(config.styles.dest))
 		.pipe(gulp.dest(config.styles.site))
 		.pipe(browserSync.reload({stream:true}))
-});
-
-// Remove unused CSS and minify
-gulp.task('uncss', ['jekyll'], function () {
-	return gulp.src('_site/assets/styles/*.css')
-		.pipe(uncss({
-			html: ['_site/**/*.html'],
-			ignore: []
-		}))
-		.pipe(csso())
-		.pipe(gulp.dest(config.styles.site));
 });
 
 
@@ -126,10 +114,7 @@ gulp.task('uncss', ['jekyll'], function () {
 
 gulp.task('scripts', () => {
 	return gulp.src(config.scripts.src)
-		.pipe(uglify())
-		.pipe(rename({
-			suffix: ".min",
-		}))
+		.pipe(gulpif(!config.dev, uglify()))
 		.pipe(gulp.dest(config.scripts.dest))
 		.pipe(gulp.dest(config.scripts.site))
 });
