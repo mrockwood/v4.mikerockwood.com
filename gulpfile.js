@@ -207,7 +207,7 @@ gulp.task('serve', () => {
 		notify: false,
 	});
 
-	gulp.task('styles:watch', ['styles', 'uncss']);
+	gulp.task('styles:watch', ['styles']);
 	gulp.watch(config.styles.watch, ['styles:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], browserSync.reload);
@@ -222,7 +222,7 @@ gulp.task('serve', () => {
 	gulp.task('fonts:watch', ['fonts'], browserSync.reload);
 	gulp.watch(config.fonts.watch, ['fonts:watch']);
 
-	gulp.task('jekyll:watch', ['jekyll', 'uncss'], browserSync.reload);
+	gulp.task('jekyll:watch', ['jekyll', 'styles'], browserSync.reload);
 	gulp.watch(config.jekyll.watch, ['jekyll:watch']);
 
 });
@@ -236,7 +236,7 @@ gulp.task('serve', () => {
 
 gulp.task('default', ['clean'], () => {
 
-	// define build tasks
+	// tasks
 	const tasks = [
 		'jekyll',
 		'styles',
@@ -246,7 +246,7 @@ gulp.task('default', ['clean'], () => {
 		'fonts',
 	];
 
-	// run build
+	// serve
 	runSequence(tasks, () => {
 		if (config.dev) {
 			gulp.start('serve');
