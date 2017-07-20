@@ -41,12 +41,10 @@ $content-namespace: $global-namespace-components + 'content' !default;
 	h2 {
 		@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.25em, 1.5em);
 
-		color: map-get($colors, blue);
 		margin-top: map-get($global-spacing, small);
 	}
 
 	h3 {
-		color: map-get($colors, grey);
 		font-size: map-get($global-font-sizes, medium);
 		letter-spacing: map-get($global-letter-spacing, large);
 		margin-top: map-get($global-spacing, small);

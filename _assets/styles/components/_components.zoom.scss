@@ -38,6 +38,7 @@
 * Add text to indicate element can expand
 */
 
+/*! uncss:ignore */
 @include media('<=medium') {
 	.c-zoom:after {
 		background: map-get($colors, grey-dark);
@@ -65,6 +66,7 @@
 * 3. expand to container size
 */
 
+/*! uncss:ignore */
 .c-zoom#{$global-separator-state}full-size {
 	cursor: zoom-out; // 1
 	max-height: 8000px; // 2

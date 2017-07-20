@@ -100,7 +100,7 @@ gulp.task('styles', () => {
 		//	ignore: []
 		//})))
 		//.pipe(gulpif(!config.dev, csso()))
-		.pipe(csso())
+		//.pipe(csso())
 		.pipe(gulp.dest(config.styles.dest))
 		.pipe(gulp.dest(config.styles.site))
 		.pipe(browserSync.reload({stream:true}))
@@ -113,6 +113,7 @@ gulp.task('uncss', ['jekyll'], function () {
 			html: ['_site/**/*.html'],
 			ignore: []
 		}))
+		.pipe(csso())
 		.pipe(gulp.dest(config.styles.site));
 });
 
@@ -252,12 +253,14 @@ gulp.task('default', ['clean'], () => {
 
 	// define build tasks
 	const tasks = [
+		'jekyll',
 		'styles',
+		'uncss',
 		'scripts',
 		'images',
 		'icons',
 		'fonts',
-		'jekyll',
+
 	];
 
 	// run build
