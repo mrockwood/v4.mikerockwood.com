@@ -106,7 +106,7 @@ gulp.task('styles', () => {
 		.pipe(browserSync.reload({stream:true}))
 });
 
-// Remove unused CSS
+// Remove unused CSS and minify
 gulp.task('uncss', ['jekyll'], function () {
 	return gulp.src('_site/assets/styles/*.css')
 		.pipe(uncss({
@@ -255,12 +255,10 @@ gulp.task('default', ['clean'], () => {
 	const tasks = [
 		'jekyll',
 		'styles',
-		'uncss',
 		'scripts',
 		'images',
 		'icons',
 		'fonts',
-
 	];
 
 	// run build
