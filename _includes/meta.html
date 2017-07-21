@@ -7,7 +7,7 @@
 				<svg class="c-meta__icon  c-icon  c-icon--medium">
 					<use xlink:href="{{ site.baseurl }}{{ '/assets/icons/sprite.svg#calendar' }}"></use>
 				</svg>
-				<time date="{{ page.date | date: '%Y-%m-%d' }}" pubdate>
+				<time>
 					{% if page.layout == 'page' %}
 						{{ page.date | date: "%Y" }}
 					{% endif %}

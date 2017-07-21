@@ -3,7 +3,7 @@
 	{% if project.hero %}
 	<a class="c-project__image-link" href="{{ project.url }}">
 		<div class="c-project__image-wrapper">
-			<img class="c-image  c-project__image" data-original="{{ site.baseurl }}{{ project.hero }}" alt="" />
+			<img class="c-image  c-project__image" data-original="{{ site.baseurl }}{{ project.hero }}" alt="{{ project.title }} thumbnail" />
 		</div>
 	</a>
 	{% endif %}
