@@ -21,63 +21,9 @@ layout: compress
 		<meta name="author" content="{{ site.name }}" />
 		{% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}" />{% else %}<meta name="description" content="{{ site.description }}">{% endif %}
 
-		<script>
-			/**
-			 * loadCSS: load a CSS file asynchronously.
-			 * [c]2014 @scottjehl, Filament Group, Inc.
-			 * Licensed MIT
-			 */
-			function loadCSS( href, before, media, callback ){
-				"use strict";
-
-				var ss = window.document.createElement( "link" );
-				var ref = before || window.document.getElementsByTagName( "script" )[ 0 ];
-				var sheets = window.document.styleSheets;
-				ss.rel = "stylesheet";
-				ss.href = href;
-
-				ss.media = "only x";
-
-				if( callback ) {
-					ss.onload = callback;
-				}
-
-				ref.parentNode.insertBefore( ss, ref );
-
-				ss.onloadcssdefined = function( cb ){
-					var defined;
-					for( var i = 0; i < sheets.length; i++ ){
-						if( sheets[ i ].href && sheets[ i ].href === ss.href ){
-							defined = true;
-						}
-					}
-					if( defined ){
-						cb();
-					} else {
-						setTimeout(function() {
-							ss.onloadcssdefined( cb );
-						});
-					}
-				};
-
-				ss.onloadcssdefined(function() {
-					ss.media = media || "all";
-				});
-
-				return ss;
-			}
-
-			loadCSS('{{ site.baseurl }}/assets/styles/styles.css');
-			loadCSS('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,600');
-			loadCSS('https://fonts.googleapis.com/css?family=Merriweather:300,400');
-		</script>
-
-		<!-- loadCSS fallback in case JavaScript is broken -->
-		<noscript>
-			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/styles/style.css" />
-			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,600">
-			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,400">
-		</noscript>
+		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/styles/style.css" />
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,600">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,400">
 
 		<!-- Robots & Indexing -->
 		<meta name="robots" content="index,follow">
@@ -139,10 +85,10 @@ layout: compress
 		</footer>
 
 		<!-- Scripts -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.8/svg4everybody.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/7.2.0/lazyload.min.js"></script>
-		<script src="{{ site.baseurl }}/assets/scripts/main.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.8/svg4everybody.min.js" defer></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/7.2.0/lazyload.min.js" defer></script>
+		<script src="{{ site.baseurl }}/assets/scripts/main.js" defer></script>
 
 		<!--<script>
 			function deferJS() {
