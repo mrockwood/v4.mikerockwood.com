@@ -1,1 +1,1 @@
-console.log("main.js loaded!"),svg4everybody();var myLazyLoad=new LazyLoad;$(document).ready(function(){$(".js-zoom").click(function(){$(this).toggleClass("c-zoom?full-size")})});
+console.log("main.js loaded!"),WebFontConfig={google:{families:["Merriweather Sans:300,400,600","Merriweather:300,400"]}},svg4everybody();var myLazyLoad=new LazyLoad;$(document).ready(function(){$(".js-zoom").click(function(){$(this).toggleClass("c-zoom?full-size")})});

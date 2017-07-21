@@ -15,6 +15,19 @@ console.log('main.js loaded!');
 
 
 /**
+ * Load Web Fonts
+ */
+
+WebFontConfig = {
+	google: {
+		families: ['Merriweather Sans:300,400,600', 'Merriweather:300,400']
+	}
+};
+
+
+
+
+/**
  * Load svg4everybody
  */
 
