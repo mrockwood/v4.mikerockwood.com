@@ -9,10 +9,14 @@
 				</svg>
 				<time>
 					{% if page.layout == 'page' %}
-						{{ page.date | date: "%Y" }}
+						<time datetime="{{ page.date | date: '%Y' }}">
+							{{ page.date | date: "%Y" }}
+						</time>
 					{% endif %}
 					{% if page.layout == 'post' %}
-						{{ page.date | date: "%B %e, %Y" }}
+						<time datetime="{{ page.date | date: '%Y-%m-%d' }}">
+							{{ page.date | date: "%B %e, %Y" }}
+						</time>
 					{% endif %}
 				</time>
 			</div>
