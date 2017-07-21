@@ -13,7 +13,7 @@ layout: compress
 
 		<!-- Global Metadata-->
 		<meta charset="utf-8">
-		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!--[if IE]><meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1"><![endif]-->
 
 		<!-- Page Metadata -->
@@ -54,7 +54,7 @@ layout: compress
 	<body class="l-page  {% if page.classes %}{{ page.classes }}{% endif %}">
 
 		<!-- Navigation -->
-		<nav class="l-page__section  c-navbar  l-container  l-container--large" id="navigation" role="navigation">
+		<nav class="l-page__section  c-navbar  l-container  l-container--large" id="navigation">
 			<ul class="l-grid  l-grid--middle  l-grid--around  u-margin--none">
 				<li class="c-navbar__item  c-navbar__item--logo">
 					<a class="c-navbar__logo  u-padding-vertical--small" href="{{ site.baseurl }}/">{{ site.name }}</a>
@@ -77,7 +77,7 @@ layout: compress
 		{{ content }}
 
 		<!-- Footer -->
-		<footer class="l-page__section  c-footer" id="footer" role="contentinfo">
+		<footer class="l-page__section  c-footer" id="footer">
 			<div class="l-container  l-container--large">
 				<ul class="c-list  c-list--unstyled  c-list--inline">
 					{% include social.html %}
