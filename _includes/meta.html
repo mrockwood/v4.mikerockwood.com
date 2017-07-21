@@ -7,18 +7,16 @@
 				<svg class="c-meta__icon  c-icon  c-icon--medium">
 					<use xlink:href="{{ site.baseurl }}{{ '/assets/icons/sprite.svg#calendar' }}"></use>
 				</svg>
-				<time>
-					{% if page.layout == 'page' %}
-						<time datetime="{{ page.date | date: '%Y' }}">
-							{{ page.date | date: "%Y" }}
-						</time>
-					{% endif %}
-					{% if page.layout == 'post' %}
-						<time datetime="{{ page.date | date: '%Y-%m-%d' }}">
-							{{ page.date | date: "%B %e, %Y" }}
-						</time>
-					{% endif %}
-				</time>
+				{% if page.layout == 'page' %}
+					<time datetime="{{ page.date | date: '%Y' }}">
+						{{ page.date | date: "%Y" }}
+					</time>
+				{% endif %}
+				{% if page.layout == 'post' %}
+					<time datetime="{{ page.date | date: '%Y-%m-%d' }}">
+						{{ page.date | date: "%B %e, %Y" }}
+					</time>
+				{% endif %}
 			</div>
 		{% endif %}
 
