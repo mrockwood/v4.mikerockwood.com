@@ -95,11 +95,11 @@ gulp.task('styles', ['jekyll'], () => {
 			includePaths: './node_modules',
 		}).on('error', sass.logError))
 		.pipe(prefix(config.styles.browsers))
-		.pipe(gulpif(!config.dev, uncss({
+		.pipe(uncss({
 			html: ['_site/**/*.html'],
 			ignore: []
-		})))
-		.pipe(gulpif(!config.dev, csso()))
+		}))
+		.pipe(csso())
 		.pipe(gulp.dest(config.styles.dest))
 		.pipe(gulp.dest(config.styles.site))
 		.pipe(browserSync.reload({stream:true}))
@@ -114,7 +114,7 @@ gulp.task('styles', ['jekyll'], () => {
 
 gulp.task('scripts', () => {
 	return gulp.src(config.scripts.src)
-		.pipe(gulpif(!config.dev, uglify()))
+		.pipe(uglify())
 		.pipe(gulp.dest(config.scripts.dest))
 		.pipe(gulp.dest(config.scripts.site))
 });
