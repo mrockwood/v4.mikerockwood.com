@@ -49,11 +49,13 @@ var myLazyLoad = new LazyLoad();
  * Zoom image on click
  */
 
-$(document).ready(function() {
-	$('.js-zoom').click(function() {
-		$(this).toggleClass('c-zoom?full-size');
-	});
-});
+var zoomToggle = document.querySelectorAll('.js-zoom');
+
+for (var i = 0; i < zoomToggle.length; i++) {
+	zoomToggle[i].addEventListener('click', function() {
+		this.classList.toggle("c-zoom?full-size");
+	}, false);
+}
 
 
 
