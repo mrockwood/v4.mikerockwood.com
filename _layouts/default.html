@@ -88,10 +88,17 @@ layout: compress
 
 		<!-- Scripts -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" defer></script>
+		<script defer>
+			WebFontConfig = {
+				google: {
+					families: ['Merriweather Sans:300,400,600', 'Merriweather:300,400']
+				}
+			};
+		</script>
 		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.8/svg4everybody.min.js" defer></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/7.2.0/lazyload.min.js" defer></script>
-		<script src="{{ site.baseurl }}/assets/scripts/main.js" defer></script>
+		<script src="{{ site.baseurl }}/assets/scripts/main.js" async></script>
 
 		{% include analytics.html %}
 
