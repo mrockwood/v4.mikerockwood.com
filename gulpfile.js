@@ -16,6 +16,9 @@ const gulp = require('gulp');
 const gutil = require('gulp-util');
 const gulpif = require('gulp-if');
 const imagemin = require('gulp-imagemin');
+const pngquant = require('imagemin-pngquant');
+const jpegtran = require('imagemin-jpegtran');
+const gifsicle = require('imagemin-gifsicle');
 const prefix = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const reload = browserSync.reload;
@@ -130,9 +133,9 @@ gulp.task('images', () => {
 	return gulp.src(config.images.src)
 		.pipe(imagemin({
 			cache: false,
-			interlaced: true,
-			progressive: true,
-			optimizationLevel: 5,
+			progressive: false,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant(), jpegtran(), gifsicle()]
 		}))
 		.pipe(gulp.dest(config.images.dest))
 		.pipe(gulp.dest(config.images.site))
