@@ -27,7 +27,7 @@ svg4everybody();
  * Load LazyLoad
  */
 
-var myLazyLoad = new LazyLoad();
+//var myLazyLoad = new LazyLoad();
 
 
 
