@@ -2,14 +2,14 @@
 
 	{% if project.hero %}
 	<a class="c-project__image-link" href="{{ project.url }}">
-		<div class="c-project__image-wrapper">
-			<img class="c-image  c-project__image" data-original="{{ site.baseurl }}{{ project.hero }}" alt="{{ project.title }} thumbnail" />
+		<div class="l-ratio  l-ratio--3:1  c-project__image-wrapper">
+			<img class="l-ratio__content  c-image  c-project__image" data-original="{{ site.baseurl }}{{ project.hero }}" alt="{{ project.title }} thumbnail" />
 		</div>
 	</a>
 	{% endif %}
 
 	<div class="c-project__excerpt">
-		<!--<p class="project__time">2016</p>-->
+
 		<h2 class="c-h2  c-project__title">
 			<a class="c-project__link" href="{{ project.url }}">{{ project.title | smartify }}{% if project.subtitle %}, {{ project.subtitle }}{% endif %}</a>
 		</h2>
