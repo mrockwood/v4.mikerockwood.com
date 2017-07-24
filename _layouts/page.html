@@ -4,9 +4,11 @@ layout: default
 
 {% include header.html %}
 
-<div class="l-page__section  l-container  l-container--large  u-padding-vertical--small">
-	{% include meta.html %}
-</div>
+{% if page.date or page.tags %}
+	<div class="l-page__section  l-container  l-container--large  u-padding-vertical--small">
+		{% include meta.html %}
+	</div>
+{% endif %}
 
 <!-- Main -->
 <main class="l-page__section  l-page__section--expand" id="main">
