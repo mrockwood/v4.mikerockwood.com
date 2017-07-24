@@ -129,7 +129,10 @@ gulp.task('scripts', () => {
 gulp.task('images', () => {
 	return gulp.src(config.images.src)
 		.pipe(imagemin({
-			cache: false
+			cache: false,
+			interlaced: true,
+			progressive: true,
+			optimizationLevel: 5,
 		}))
 		.pipe(gulp.dest(config.images.dest))
 		.pipe(gulp.dest(config.images.site))
