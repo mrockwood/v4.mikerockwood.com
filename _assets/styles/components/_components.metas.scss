@@ -2,17 +2,18 @@
    #META
    ========================================================================== */
 
-.c-meta {
+/*.c-meta {
 	padding-bottom: map-get($global-spacing, small);
 	padding-top: map-get($global-spacing, small);
-}
+}*/
 
-.c-meta__list {
+.c-meta {
 	align-items: center;
 	//border-bottom: $global-border-width $global-border-style $global-border-color;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin-top: 0;
 
 	@include media('>medium') {
 		flex-direction: row;
