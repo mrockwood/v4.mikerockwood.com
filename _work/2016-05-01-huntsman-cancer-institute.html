@@ -8,7 +8,9 @@ tags:
   - back-end development
 ---
 
-{% include lead.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in mauris vel elit porta porta non vel tellus. Phasellus varius pretium lectus, ac scelerisque eros viverra sit amet." %}
+{% capture text %}Huntsman Cancer Institue is one of the nation's leading cancer hospitals and research facilities.
+My challenge was to update their website with a fresh look on a tight timeline.{% endcapture %}
+{% include lead.html content=text %}
 
 <div class="l-container  l-container--medium  u-margin-top--none">
 	<div class="l-grid  l-grid--center">
@@ -20,19 +22,24 @@ tags:
 				</svg>
 			</a>
 		</div>
-		<div class="l-grid__item  l-width--shrink@medium">
-			<a class="c-button  c-button--large  c-button--ghost  c-button--expand" href="http://github.com">
-				View Code Sample
-				<svg class="c-icon  c-icon--small">
-					<use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#external-link"></use>
-				</svg>
-			</a>
-		</div>
 	</div>
 </div>
 
 <section class="l-container  l-container--medium  u-margin-top--super@medium">
-	<p>test</p>
+	<p>This project was initiated when Vice President Joe Biden scheduled a visit to the Huntsman Cancer Institue (HCI) as part of his &ldquo;moonshot&rdquo; cure for cancer.
+	Expecting a surge in interest, HCI wanted a modern, usable website ready for new visitors.
+	With a hard deadline and many interested parties involved, I was able to transform designer Drew Corkill's work into a clean, friendly, content-driven web experience.</p>
 </section>
 
-{% include zoom.html src="/assets/images/work__hci--home.jpg" alt="Huntsman Cancer Institute website" %}
+{% include zoom.html src="/assets/images/work__hci--home.jpg" alt="Huntsman Cancer Institute homepage" %}
+
+<div class="l-container  l-container--large  u-margin-top--super@medium">
+	<blockquote class="c-blockquote">
+		<div class="c-blockquote__body">
+			This is the first time I've seen a website that looks better than the mockup.
+		</div>
+		<footer class="c-blockquote__footer">
+			<cite>Nathan Tanner, Web Director, University of Utah Health</cite>
+		</footer>
+	</blockquote>
+</div>
