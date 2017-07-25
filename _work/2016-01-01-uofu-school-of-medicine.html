@@ -9,7 +9,8 @@ tags:
   - back-end development
 ---
 
-{% include lead.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in mauris vel elit porta porta non vel tellus. Phasellus varius pretium lectus, ac scelerisque eros viverra sit amet." %}
+{% capture text %}University of Utah School of Medicine is a leader in the fields of genetics, cancer, biomedical informatics, and infectious disease.{% endcapture %}
+{% include lead.html content=text %}
 
 <div class="l-container  l-container--medium  u-margin-top--none">
 	<div class="l-grid  l-grid--center">
@@ -21,19 +22,21 @@ tags:
 				</svg>
 			</a>
 		</div>
-		<div class="l-grid__item  l-width--shrink@medium">
+		<!--<div class="l-grid__item  l-width--shrink@medium">
 			<a class="c-button  c-button--large  c-button--ghost  c-button--expand" href="http://github.com">
 				View Code Sample
 				<svg class="c-icon  c-icon--small">
 					<use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#external-link"></use>
 				</svg>
 			</a>
-		</div>
+		</div>-->
 	</div>
 </div>
 
 <section class="l-container  l-container--medium  u-margin-top--super@medium">
-	<p>This is a special project because it is the first full-stack site I built.</p>
+	<p>Over the years, University of Utah School of Medicine's website had become bloated and difficult to navigate.
+	Our job was to give the site cleaner site capable of meeting the needs of both students and researchers who felt their work was underrepresented.
+	The biggest challenge was coming up with a design system capable of accommodating 23 diverse departments.</p>
 </section>
 
 {% include zoom.html src="/assets/images/work__uusom--home.jpg" alt="University of Utah, School of Medicine website" %}
