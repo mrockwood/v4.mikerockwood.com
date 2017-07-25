@@ -1,0 +1,40 @@
+/* ==========================================================================
+   #BLOCKQUOTE
+   ========================================================================== */
+
+.c-blockquote {
+
+}
+
+.c-blockquote__body {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.25em, 1.5em);
+
+	font-weight: map-get($global-font-weights, light);
+
+	&::before {
+		content: '\201C';
+	}
+
+	&::after {
+		content: '\201D';
+	}
+}
+
+.c-blockquote__footer {
+	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), .75em, .825em);
+
+	color: map-get($colors, grey);
+	font-family: map-get($global-font-families, sans-serif);
+	font-weight: map-get($global-font-weights, light);
+	letter-spacing: map-get($global-letter-spacing, large);
+	margin-top: map-get($global-spacing, small);
+	text-transform: uppercase;
+}
+
+.c-blockquote__author {
+	font-style: normal;
+
+	&::before {
+		content: "\2014 \2009";
+	}
+}
