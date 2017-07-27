@@ -1,1 +1,1 @@
-console.log("main.js loaded!"),svg4everybody();for(var zoomToggle=document.querySelectorAll(".js-zoom"),i=0;i<zoomToggle.length;i++)zoomToggle[i].addEventListener("click",function(){this.classList.toggle("c-zoom?full-size")},!1);
+console.log("main.js loaded!"),svg4everybody();for(var zoomToggle=document.querySelectorAll(".js-zoom"),i=0;i<zoomToggle.length;i++)zoomToggle[i].addEventListener("click",function(){this.classList.toggle("c-zoom?full-size")},!1);InstantClick.init();
