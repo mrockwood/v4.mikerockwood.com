@@ -9,12 +9,13 @@ tags:
   - back-end development
 ---
 
-{% include lead.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in mauris vel elit porta porta non vel tellus. Phasellus varius pretium lectus, ac scelerisque eros viverra sit amet." %}
+{% capture text %}The Trauma and Urologic Reconstructive Network of Surgeons (TURNS) is a group of urologists focused on urologic trauma and reconstructive patient care.{% endcapture %}
+{% include lead.html content=text %}
 
 <div class="l-container  l-container--medium  u-margin-top--none">
 	<div class="l-grid  l-grid--center">
 		<div class="l-grid__item  l-width--shrink@medium">
-			<a class="c-button  c-button--large  c-button--primary  c-button--expand" href="http://medicine.utah.edu">
+			<a class="c-button  c-button--large  c-button--primary  c-button--expand" href="http://turnsresearch.org">
 				Visit Website
 				<svg class="c-icon  c-icon--small">
 					<use xlink:href="{{ site.baseurl }}/assets/icons/sprite.svg#external-link"></use>
