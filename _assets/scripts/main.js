@@ -47,11 +47,6 @@ for (var i = 0; i < zoomToggle.length; i++) {
 
 
 
-
-
-InstantClick.init();
-
-
 /**
  * Load Disqus comments on button click
  * https://gist.github.com/nternetinspired/7482445
