@@ -45,7 +45,7 @@
 					<span class="u-small  u-margin-top--xsmall@medium">All</span>
 				</a>
 				{% if prevurl %}
-				<a class="c-pagination__link  c-pagination__link--prev  l-grid__item  l-width--2/5@medium  u-padding-horizontal--none" href="{{prevurl}}">
+				<a class="c-pagination__link  c-pagination__link--prev  l-grid__item  l-width--2/5@medium  u-padding-horizontal--none" href="{{prevurl}}" rel="prev">
 					<svg class="c-pagination__icon  c-pagination__icon--prev  c-icon">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#chevron-left' | prepend: site.baseurl }}"></use>
 					</svg>
@@ -53,7 +53,7 @@
 				</a>
 				{% endif %}
 				{% if nexturl %}
-				<a class="c-pagination__link  c-pagination__link--next  l-grid__item  l-width--2/5@medium  u-padding-horizontal--none" href="{{nexturl}}">
+				<a class="c-pagination__link  c-pagination__link--next  l-grid__item  l-width--2/5@medium  u-padding-horizontal--none" href="{{nexturl}}" rel="next">
 					<svg class="c-pagination__icon  c-pagination__icon--next  c-icon">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#chevron-right' | prepend: site.baseurl }}"></use>
 					</svg>

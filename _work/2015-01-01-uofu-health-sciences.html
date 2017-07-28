@@ -9,7 +9,8 @@ tags:
   - back-end development
 ---
 
-{% include lead.html content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in mauris vel elit porta porta non vel tellus. Phasellus varius pretium lectus, ac scelerisque eros viverra sit amet." %}
+{% capture text %}University of Utah Health Sciences is the umbrella organization that houses all health-related clinics, schools, and research facilities at the University.{% endcapture %}
+{% include lead.html content=text %}
 
 <div class="l-container  l-container--medium  u-margin-top--none">
 	<div class="l-grid  l-grid--center">
@@ -32,8 +33,11 @@ tags:
 	</div>
 </div>
 
-<section class="l-container  l-container--medium  u-margin-top--super@medium">
-	<p>Test</p>
+<section class="l-container  l-container--medium  c-content  u-margin-top--super@medium">
+	<p>Working on this site was a great learning experience for my team.
+	It featured an early attempt at component-based design, and a primitive style guide&mdash;processes we would refine in later projects.</p>
+	<p>My role was primarily working on the front-end. It was built using <a href="http://foundation.zurb.com/">Foundation</a>, <a href="https://jquery.com/">jQuery</a>, and <a href="http://kenwheeler.github.io/slick/">Slick Slider</a>.</p>
+	<p>One of our biggest challenges was designing and implementing a responsive content slider featuring news aggregated from various content hubs within the organization.</p>
 </section>
 
 {% include zoom.html src="/assets/images/work__uuhsc--home.jpg" alt="University of Utah Health Sciences website" %}
