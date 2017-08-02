@@ -37,16 +37,19 @@ $alignment-breakpoints: $global-breakpoints !default;
 		position: absolute;
 		top: 50%;
 		transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
 	}
 
 	.#{$alignment-namespace}#{$alignment-element}#{$alignment-content-name}#{$alignment-modifier}#{$alignment-vertical-name}#{$breakpoint-alias} {
 		left: auto;
 		transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
 	}
 
 	.#{$alignment-namespace}#{$alignment-element}#{$alignment-content-name}#{$alignment-modifier}#{$alignment-horizontal-name}#{$breakpoint-alias} {
 		top: auto;
 		transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
 	}
 
 }
