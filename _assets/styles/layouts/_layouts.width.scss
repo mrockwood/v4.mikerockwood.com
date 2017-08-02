@@ -30,16 +30,23 @@ $width-breakpoints: $global-breakpoints !default;
 
 @mixin width-classes($widths, $breakpoint-alias: null) {
 
-	.#{$width-namespace}#{$width-modifier}#{$width-expand-name}#{$breakpoint-alias} {
-		flex: 1;
-		flex-basis: 1px;
-		min-width: 0;
-		width: 1px;
+	.#{$width-namespace}#{$width-modifier}#{$width-expand-name}#{$breakpoint-alias},
+	.#{$width-namespace}#{$width-modifier}#{$width-shrink-name}#{$breakpoint-alias} {
+		width: 100%;
 	}
 
-	.#{$width-namespace}#{$width-modifier}#{$width-shrink-name}#{$breakpoint-alias} {
-		flex: 0 1 auto;
-		width: auto;
+	@supports (flex-wrap: wrap) {
+		.#{$width-namespace}#{$width-modifier}#{$width-expand-name}#{$breakpoint-alias} {
+			flex: 1;
+			flex-basis: 1px;
+			min-width: 0;
+			width: 1px;
+		}
+
+		.#{$width-namespace}#{$width-modifier}#{$width-shrink-name}#{$breakpoint-alias} {
+			flex: 0 1 auto;
+			width: auto;
+		}
 	}
 
 	// Initialise an empty utility map that will eventually contain all our classes

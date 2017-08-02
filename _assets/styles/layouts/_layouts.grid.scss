@@ -55,12 +55,24 @@ $grid-breakpoints: $global-breakpoints !default;
 		> * {
 			margin-top: 0;
 		}
+
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
 	}
 
 	@supports (flex-wrap: wrap) {
 		.#{$grid-namespace}#{$breakpoint-alias} {
 			display: flex;
 			flex-wrap: wrap;
+		}
+
+		&:after {
+			content: none;
+			display: inherit;
+			clear: inherit;
 		}
 	}
 
