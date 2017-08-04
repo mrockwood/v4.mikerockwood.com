@@ -67,12 +67,12 @@ $grid-breakpoints: $global-breakpoints !default;
 		.#{$grid-namespace}#{$breakpoint-alias} {
 			display: flex;
 			flex-wrap: wrap;
-		}
 
-		&:after {
-			content: none;
-			display: inherit;
-			clear: inherit;
+			&:after {
+				content: none;
+				display: inherit;
+				clear: inherit;
+			}
 		}
 	}
 
