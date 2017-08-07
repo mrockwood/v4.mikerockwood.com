@@ -73,6 +73,12 @@ $content-namespace: $global-namespace-components + 'content' !default;
 		margin-top: map-get($global-spacing, small);
 	}
 
+	h2 + .#{$grid-namespace},
+	h3 + .#{$grid-namespace},
+	h4 + .#{$grid-namespace} {
+		margin-top: -($grid-gutter - map-get($global-spacing, small));
+	}
+
 	a:not(.c-button) {
 		color: map-get($colors, lime);
 		text-decoration-skip: ink;
