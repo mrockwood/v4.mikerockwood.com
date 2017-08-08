@@ -26,7 +26,6 @@ $content-namespace: $global-namespace-components + 'content' !default;
 	h4,
 	h5,
 	h6 {
-		//color: map-get($colors, blue-dark);
 		color: map-get($colors, grey-darker);
 		font-family: map-get($global-font-families, sans-serif);
 		font-weight: map-get($global-font-weights, semibold);
@@ -34,49 +33,44 @@ $content-namespace: $global-namespace-components + 'content' !default;
 
 	h1 {
 		@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.5em, 1.75em);
-
-		margin-top: map-get($global-spacing, medium);
 	}
 
 	h2 {
 		@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.25em, 1.5em);
-
-		margin-top: map-get($global-spacing, small);
 	}
 
 	h3 {
 		font-size: map-get($global-font-sizes, medium);
 		letter-spacing: map-get($global-letter-spacing, large);
-		margin-top: map-get($global-spacing, small);
 		text-transform: uppercase;
 	}
 
 	h4 {
 		@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.25em);
-
-		margin-top: map-get($global-spacing, small);
 	}
 
 	h5 {
 		font-size: 1em;
-		margin-top: map-get($global-spacing, small);
 	}
 
 	h6 {
 		font-size: 1em;
-		margin-top: map-get($global-spacing, medium);
+	}
+
+	* + h2,
+	* + h3,
+	* + h4,
+	* + h5,
+	* + h6 {
+		margin-top: map-get($global-spacing, small);
 	}
 
 	h2 + *,
 	h3 + *,
-	h4 + * {
+	h4 + *,
+	h5 + *,
+	h6 + * {
 		margin-top: map-get($global-spacing, small);
-	}
-
-	h2 + .#{$grid-namespace},
-	h3 + .#{$grid-namespace},
-	h4 + .#{$grid-namespace} {
-		margin-top: -($grid-gutter - map-get($global-spacing, small));
 	}
 
 	a:not(.c-button) {

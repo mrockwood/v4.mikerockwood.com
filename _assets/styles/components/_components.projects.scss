@@ -73,6 +73,10 @@
 	}
 }
 
+.c-project__title {
+	margin-top: map-get($global-spacing, small);
+}
+
 .c-project__link {
 	color: map-get($colors, grey-dark);
 	font-family: map-get($global-font-families, serif);

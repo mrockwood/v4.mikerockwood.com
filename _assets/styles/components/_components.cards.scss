@@ -24,7 +24,7 @@ $card-border-color: $global-border-color !default;
 $card-border: $card-border-width $card-border-style $card-border-color !default;
 
 $card-image-padding: map-get($global-spacing, medium) 0 0 !default;
-$card-header-padding: map-get($global-spacing, medium) map-get($global-spacing, medium) 0 !default;
+$card-header-padding: map-get($global-spacing, xlarge) map-get($global-spacing, medium) 0 !default;
 $card-body-padding: map-get($global-spacing, medium) map-get($global-spacing, medium) map-get($global-spacing, xlarge) !default;
 $card-footer-padding: map-get($global-spacing, medium) !default;
 $card-footer-block-padding: 0 !default;

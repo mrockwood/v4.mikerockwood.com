@@ -15,41 +15,43 @@
 
 .c-h1 {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.5em, 1.75em);
-
-	margin-top: map-get($global-spacing, medium);
 }
 
 .c-h2 {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.25em, 1.5em);
-
-	margin-top: map-get($global-spacing, small);
 }
 
 .c-h3 {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.25em);
-
-	margin-top: map-get($global-spacing, small);
 }
 
 .c-h4 {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1.125em, 1.25em);
-
-	margin-top: map-get($global-spacing, small);
 }
 
 .c-h5 {
 	font-size: 1em;
-	margin-top: map-get($global-spacing, small);
 }
 
 .c-h6 {
 	font-size: 1em;
-	margin-top: map-get($global-spacing, medium);
 }
 
+* + .c-h1,
+* + .c-h2,
+* + .c-h3,
+* + .c-h4,
+* + .c-h5,
+* + .c-h6 {
+	margin-top: map-get($global-spacing, small);
+}
+
+.c-h1 + *,
 .c-h2 + *,
 .c-h3 + *,
-.c-h4 + * {
+.c-h4 + *,
+.c-h5 + *,
+.c-h6 + * {
 	margin-top: 0;
 }
 
