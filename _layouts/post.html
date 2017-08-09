@@ -5,12 +5,12 @@ layout: default
 {% include header.html %}
 
 {% if page.date or page.tags %}
-	<div class="l-page__section  l-container  l-container--large  u-padding-vertical--small">
+	<div class="l-container  l-container--large  u-padding-vertical--small  u-margin-top--none">
 		{% include meta.html %}
 	</div>
 {% endif %}
 
-<article class="l-page__section  l-page__section--expand  u-margin-top--medium  u-margin-top--xlarge@medium" id="main">
+<article class="u-margin-top--medium  u-margin-top--xlarge@medium" id="main">
 
 	<div class="c-content  l-container  l-container--medium">
 		{{ content }}

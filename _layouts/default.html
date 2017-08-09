@@ -47,10 +47,10 @@ layout: compress
 
 	</head>
 
-	<body class="l-page  {% if page.classes %}{{ page.classes }}{% endif %}">
+	<body class="{% if page.classes %}{{ page.classes }}{% endif %}">
 
 		<!-- Navigation -->
-		<nav class="l-page__section  c-navbar  l-container  l-container--large" id="navigation">
+		<nav class="c-navbar  l-container  l-container--large" id="navigation">
 			<ul class="l-grid  l-grid--middle  l-grid--around  u-margin--none">
 				<li class="c-navbar__item  c-navbar__item--logo">
 					<a class="c-navbar__logo  u-padding-vertical--small" href="{{ site.baseurl }}/">{{ site.name }}</a>
@@ -73,7 +73,7 @@ layout: compress
 		{{ content }}
 
 		<!-- Footer -->
-		<footer class="l-page__section  c-footer" id="footer">
+		<footer class="c-footer" id="footer">
 			<div class="l-container  l-container--large">
 				<ul class="c-list  c-list--unstyled  c-list--inline">
 					{% include social.html %}

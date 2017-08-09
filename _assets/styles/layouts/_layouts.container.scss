@@ -33,15 +33,15 @@ $container-breakpoints: $global-breakpoints !default;
 	 */
 	.#{$container-namespace}#{$breakpoint-alias} {
 		//box-sizing: content-box; /* [1] */
-		display: flex;
-		flex-direction: column;
+		//display: flex;
+		//flex-direction: column;
 		margin-left: auto; /* [2] */
 		margin-right: auto; /* [2] */
-		min-height: 1px; /* [3] */
-		//overflow-x: hidden; /* [3] */
+		//min-height: 1px; /* [3] */
+		overflow: hidden; /* [3] */
 		padding-left: $global-spacing-default;
 		padding-right: $global-spacing-default;
-		width: 100%;
+		//width: 100%;
 	}
 
 	@each $size, $width in $container-map {
