@@ -46,6 +46,8 @@ $grid-breakpoints: $global-breakpoints !default;
 	 * 4. Dumb IE hack
 	 */
 	.#{$grid-namespace}#{$breakpoint-alias} {
+		display: flex;
+		flex-wrap: wrap;
 		list-style: none; /* [1] */
 		margin: 0 -#{$grid-gutter} -#{$grid-gutter} 0; /* [3] */
 		min-height: 1px; /* [4] */
@@ -54,25 +56,6 @@ $grid-breakpoints: $global-breakpoints !default;
 
 		> * {
 			margin-top: 0;
-		}
-
-		&:after {
-			content: "";
-			display: table;
-			clear: both;
-		}
-	}
-
-	@supports (flex-wrap: wrap) {
-		.#{$grid-namespace}#{$breakpoint-alias} {
-			display: flex;
-			flex-wrap: wrap;
-
-			&:after {
-				content: none;
-				display: inherit;
-				clear: inherit;
-			}
 		}
 	}
 
@@ -148,18 +131,11 @@ $grid-breakpoints: $global-breakpoints !default;
 	 */
 	.#{$grid-namespace}#{$grid-element}#{$grid-item-name}#{$breakpoint-alias} {
 		box-sizing: border-box; /* [1] */
-		float: left;
 		max-width: 100%;
 		min-width: 0; /* [2] */
 		min-height: 0; /* [2] */
 		padding: 0 $grid-gutter $grid-gutter 0; /* [3] */
 		width: 100%;
-	}
-
-	@supports (flex-wrap: wrap) {
-		.#{$grid-namespace}#{$grid-element}#{$grid-item-name}#{$breakpoint-alias} {
-			float: none;
-		}
 	}
 
 	/**
