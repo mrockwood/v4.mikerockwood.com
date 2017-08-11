@@ -9,7 +9,7 @@ classes: notes
 {% include lead.html content="I don&rsquo;t write much, but you&rsquo;ll find a collection of interesting bits gathered from around the web." %}
 
 <section class="l-container  l-container--large  u-margin-top--none">
-	<div class="l-grid">
+	<div class="l-flex">
 		{% assign posts = site.posts | sort: 'date' | reverse %}
 		{% for post in posts %}
 			{% unless post.preview %}

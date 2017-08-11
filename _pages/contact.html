@@ -9,19 +9,19 @@ classes: contact
 {% include lead.html content="I'm currently employed full-time, but am available for freelance work if the right project comes along." %}
 
 <form class="l-container  l-container--medium" action="https://formspree.io/rockwood@gmail.com" method="POST">
-	<div class="l-grid  u-padding-bottom--large  u-padding-bottom--super@medium">
+	<div class="l-flex  u-padding-bottom--large  u-padding-bottom--super@medium">
 
-		<div class="c-form-element  l-grid__item  l-width--1/2@medium">
+		<div class="c-form-element  l-flex__item  l-width--1/2@medium">
 			<label class="c-label" for="name">Name:</label>
 			<input class="c-field" id="name" type="text">
 		</div>
 
-		<div class="c-form-element  l-grid__item  l-width--1/2@medium">
+		<div class="c-form-element  l-flex__item  l-width--1/2@medium">
 			<label class="c-label" for="email">Email:</label>
 			<input class="c-field" name="_replyto" id="email" type="email">
 		</div>
 
-		<div class="c-form-element  l-grid__item">
+		<div class="c-form-element  l-flex__item">
 			<label class="c-label" for="subject">How can I help you?</label>
 			<select class="c-field" id="subject" name="_subject">
 				<option value="">---</option>
@@ -30,14 +30,14 @@ classes: contact
 			</select>
 		</div>
 
-		<div class="c-form-element  l-grid__item">
+		<div class="c-form-element  l-flex__item">
 			<label class="c-label" for="message">Message:</label>
 			<textarea class="c-field" name="_replyto" id="message" type="email"></textarea>
 		</div>
 
 		<input type="text" name="_gotcha" style="display:none" />
 
-		<div class="c-form-element  l-grid__item  u-margin-top--small  u-center">
+		<div class="c-form-element  l-flex__item  u-margin-top--small  u-center">
 			<input class="c-button  c-button--primary  c-button--large  l-width--1/1  l-width--shrink@medium" type="submit" value="Send">
 		</div>
 
