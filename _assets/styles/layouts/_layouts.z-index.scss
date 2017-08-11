@@ -9,7 +9,7 @@
 // Options
 //
 
-$z-index-namespace: $global-namespace-utilities + 'z' !default;
+$z-index-namespace: $global-namespace-layouts + 'z' !default;
 $z-index-modifier: $global-separator-modifier !default;
 
 $z-index-map: $global-z-indexes !default;
@@ -29,7 +29,7 @@ $z-index-breakpoints: $global-breakpoints !default;
 	@each $name, $value in $z-index-map {
 
 		.#{$z-index-namespace}#{$z-index-modifier}#{$name}#{$breakpoint-alias} {
-			z-index: $value !important;
+			z-index: $value;
 		}
 
 	}
