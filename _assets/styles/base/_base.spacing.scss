@@ -1,0 +1,50 @@
+/* ==========================================================================
+   #SPACING
+   ========================================================================== */
+
+
+/* stylelint-disable selector-list-comma-newline-after */
+
+/**
+ * A very simple reset that sits on top of Normalize.css.
+ */
+
+body,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+	margin: 0;
+	padding: 0;
+}
+
+
+/**
+ * Always declare margins in the same direction:
+ * csswizardry.com/2012/06/single-direction-margin-declarations
+ *
+ * Lobotomized owl technique:
+ * alistapart.com/article/axiomatic-css-and-lobotomized-owls
+ */
+
+
+body * + * {
+	margin-top: $global-spacing-default;
+}
+
+
+/**
+ * Consistent indentation for lists.
+ */
+
+dd, ol, ul {
+	margin-left: $global-spacing-default;
+}
+
+li, dt, dd, option {
+	margin-top: 0;
+}
+
+/* stylelint-enable selector-list-comma-newline-after */
