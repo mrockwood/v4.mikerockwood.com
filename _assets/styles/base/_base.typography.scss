@@ -21,7 +21,6 @@ html {
 	font-family: map-get($global-font-families, serif); /* [1] */
 	font-weight: map-get($global-font-weights, regular);
 	line-height: map-get($global-line-heights, large); /* [2] */
-	text-rendering: optimizeLegibility;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
