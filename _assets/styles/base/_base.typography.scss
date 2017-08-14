@@ -5,22 +5,13 @@
 
 
 
-/**
- * 1. Change the default font family in all browsers.
- * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
- * 4. Setting @viewport causes scrollbars to overlap content in IE11 and Edge, so
- *    we force a non-overlapping, non-auto-hiding scrollbar to counteract.
- * 5. Change the default tap highlight to be completely transparent in iOS.
- */
-
 html {
 	@include fluid-type(map-get($global-breakpoints, small), map-get($global-breakpoints, xlarge), 1em, 1.25em);
 
 	color: map-get($colors, grey-dark);
-	font-family: map-get($global-font-families, serif); /* [1] */
+	font-family: map-get($global-font-families, serif);
 	font-weight: map-get($global-font-weights, regular);
-	line-height: map-get($global-line-heights, large); /* [2] */
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
+	line-height: map-get($global-line-heights, large);
+	//-moz-osx-font-smoothing: grayscale;
+	//-webkit-font-smoothing: antialiased;
 }
