@@ -24,8 +24,4 @@ html {
 	text-rendering: optimizeLegibility;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: 100%;  /* [3] */
-	-ms-text-size-adjust: 100%; /* [3] */
-	-ms-overflow-style: scrollbar; /* [4] */
-	-webkit-tap-highlight-color: rgba(0,0,0,0); /* [5] */
 }
