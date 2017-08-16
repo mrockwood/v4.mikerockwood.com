@@ -20,15 +20,26 @@
 
 
 /**
-* Always declare margins in the same direction:
-* csswizardry.com/2012/06/single-direction-margin-declarations
-*
-* Lobotomized owl technique:
-* alistapart.com/article/axiomatic-css-and-lobotomized-owls
-*/
+ * Always declare margins in the same direction:
+ * csswizardry.com/2012/06/single-direction-margin-declarations
+ *
+ * Lobotomized owl technique:
+ * alistapart.com/article/axiomatic-css-and-lobotomized-owls
+ */
 
 * + * {
 	margin-top: $global-spacing-default;
+}
+
+
+
+
+/**
+ * Remove top margin on some elements
+ */
+
+li, dt, dd, option {
+	margin-top: 0;
 }
 
 
@@ -40,10 +51,6 @@
 
 dd, ol, ul {
 	margin-left: $global-spacing-default;
-}
-
-li, dt, dd, option {
-	margin-top: 0;
 }
 
 /* stylelint-enable selector-list-comma-newline-after */
