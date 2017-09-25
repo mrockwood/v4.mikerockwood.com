@@ -161,7 +161,7 @@ strong {
 
 b,
 strong {
-	font-weight: bolder;
+	font-weight: map-get($global-font-weights, bold);
 }
 
 /**
