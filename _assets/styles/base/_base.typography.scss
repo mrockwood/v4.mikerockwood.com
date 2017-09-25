@@ -10,7 +10,7 @@ html {
 
 	color: map-get($colors, grey-dark);
 	font-family: map-get($global-font-families, serif);
-	font-weight: map-get($global-font-weights, regular);
+	font-weight: map-get($global-font-weights, light);
 	line-height: map-get($global-line-heights, large);
 	//-moz-osx-font-smoothing: grayscale;
 	//-webkit-font-smoothing: antialiased;
