@@ -108,6 +108,10 @@ $card-item-divider-font-weight: map-get($global-font-families, semibold) !defaul
 	text-decoration: none;
 }
 
+.c-card h2 + .c-meta {
+	margin-top: map-get($global-spacing, small);
+}
+
 .c-card__item,
 .c-card__body,
 .c-card__footer {
