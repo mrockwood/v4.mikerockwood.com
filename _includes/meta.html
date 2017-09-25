@@ -2,7 +2,7 @@
 	<div class="c-meta">
 
 		{% if page.author %}
-			<div class="c-meta__item  c-meta__item--author  u-white-space--nowrap">
+			<div class="c-meta__item  c-meta__item--author  u-white-space--nowrap@medium">
 				<svg class="c-meta__icon  c-icon  c-icon--medium">
 					<use xlink:href="{{ site.baseurl }}{{ '/assets/icons/sprite.svg#user' }}"></use>
 				</svg>
@@ -11,7 +11,7 @@
 		{% endif %}
 
 		{% if page.date %}
-			<div class="c-meta__item  c-meta__item--date  u-white-space--nowrap">
+			<div class="c-meta__item  c-meta__item--date  u-white-space--nowrap@medium">
 				<svg class="c-meta__icon  c-icon  c-icon--medium">
 					<use xlink:href="{{ site.baseurl }}{{ '/assets/icons/sprite.svg#calendar' }}"></use>
 				</svg>
@@ -29,7 +29,7 @@
 		{% endif %}
 
 		{% if page.layout == 'page' and page.tags %}
-			<div class="c-meta__item  c-meta__item--tags  u-white-space--nowrap">
+			<div class="c-meta__item  c-meta__item--tags  u-white-space--nowrap@medium">
 				<svg class="c-meta__icon  c-icon  c-icon--medium">
 					{% if page.layout == 'page' %}
 						<use xlink:href="{{ site.baseurl }}{{ '/assets/icons/sprite.svg#wrench' }}"></use>
