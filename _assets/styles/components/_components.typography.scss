@@ -59,7 +59,7 @@
 .c-h4 + *,
 .c-h5 + *,
 .c-h6 + * {
-	margin-top: 0;
+	margin-top: map-get($global-spacing, small);
 }
 
 

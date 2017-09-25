@@ -2,13 +2,25 @@
 
 	<article class="c-card">
 
-		<a class="l-ratio  l-ratio--2:1  c-card__image-wrapper" href="{{ site.baseurl }}{{ post.url }}">
-			<img class="l-ratio__content  c-card__image  c-image  u-block" src="https://unsplash.it/1000/500?random" alt="{{ post.title }} thumbnail">
+		{% if post.thumbnail %}
+			{% if post.external %}
+			<a class="l-ratio  l-ratio--2:1  c-card__image-wrapper" href="{{ post.external }}">
+			{% else %}
+			<a class="l-ratio  l-ratio--2:1  c-card__image-wrapper" href="{{ site.baseurl }}{{ post.url }}">
+			{% endif %}
+			<img class="l-ratio__content  c-card__image  c-image  u-block" src="{{ site.baseurl }}/assets/images/{{ post.thumbnail }}" alt="{{ post.title }} thumbnail">
 		</a>
+		{% endif %}
 
 		<header class="c-card__header">
 
-			<h2 class="c-h2"><a class="c-card__header-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | smartify }}</a></h2>
+			<h2 class="c-h2  u-line--title">
+				{% if post.external %}
+				<a class="c-card__header-link" href="{{ post.external }}">{{ post.title | smartify }}</a>
+				{% else %}
+				<a class="c-card__header-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title | smartify }}</a>
+				{% endif %}
+			</h2>
 
 			{% if post.date %}
 				{% assign page = post %}
@@ -22,12 +34,18 @@
 		</div>
 
 		<footer class="c-card__footer  c-card__footer--block">
-			<a class="c-card__button  l-flex  l-flex--around  l-flex--middle  c-link  c-link--small  c-link--lime" href="{{ site.baseurl }}{{ post.url }}">
+			<a class="c-card__button  l-flex  l-flex--around  l-flex--middle  c-link  c-link--lime" href="{{ site.baseurl }}{{ post.url }}">
 				<span class="l-flex__item  l-width--expand  u-block">Read More</span>
 				<span class="l-flex__item  l-width--shrink  u-block">
-					<svg class="c-icon  c-icon--medium">
+					{% if post.external %}
+					<svg class="c-icon  c-icon--small">
+						<use xlink:href="{{ '/assets/icons/sprite.svg#external-link' | prepend: site.baseurl }}"></use>
+					</svg>
+					{% else %}
+					<svg class="c-icon  c-icon--small">
 						<use xlink:href="{{ '/assets/icons/sprite.svg#arrow-right' | prepend: site.baseurl }}"></use>
 					</svg>
+					{% endif %}
 				</span>
 			</a>
 		</footer>
