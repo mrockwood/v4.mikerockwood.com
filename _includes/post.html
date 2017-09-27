@@ -34,12 +34,8 @@
 		</div>
 
 		<footer class="c-card__footer  c-card__footer--block">
-			{% if post.external %}
-			<a class="c-card__button  l-flex  l-flex--around  l-flex--middle  c-link  c-link--lime" href="{{ post.external }}">
-			{% else %}
-			<a class="c-card__button  l-flex  l-flex--around  l-flex--middle  c-link  c-link--lime" href="{{ site.baseurl }}{{ post.url }}">
-			{% endif %}
-			<a class="c-card__button  l-flex  l-flex--around  l-flex--middle  c-link  c-link--lime" href="{{ site.baseurl }}{{ post.url }}">
+
+			<a class="c-card__button  l-flex  l-flex--around  l-flex--middle  c-link  c-link--lime" {% if post.external %}href="{{ post.external }}"{% else %}href="{{ site.baseurl }}{{ post.url }}"{% endif %}>
 				<span class="l-flex__item  l-width--expand  u-block">Read More</span>
 				<span class="l-flex__item  l-width--shrink  u-block">
 					{% if post.external %}
