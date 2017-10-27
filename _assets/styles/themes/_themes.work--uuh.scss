@@ -1,0 +1,26 @@
+/* ==========================================================================
+   #UOFU-HEALTH-THEME
+   ========================================================================== */
+
+.t-work--uuh {
+
+	.c-header__image-wrapper:after,
+	.c-project__image-wrapper:after {
+		background-color: map-get($colors, red-dark);
+	}
+
+	.c-header__image,
+	.c-project__image {
+		filter: grayscale(50%);
+	}
+
+	.c-meta .c-icon,
+	.c-pagination .c-icon {
+		color: map-get($colors, red-dark);
+	}
+
+	.c-button--primary {
+		@include button-color(map-get($colors, red-dark), map-get($colors, white));
+	}
+
+}
