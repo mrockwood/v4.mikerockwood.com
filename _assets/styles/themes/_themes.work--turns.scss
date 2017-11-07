@@ -23,4 +23,8 @@
 		@include button-color(map-get($colors, orange), map-get($colors, white));
 	}
 
+	.c-heading--primary {
+		color: map-get($colors, orange);
+	}
+
 }
