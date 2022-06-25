@@ -42,6 +42,24 @@ layout: compress
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 		<![endif]-->
 
+		<!-- Fonts -->
+		<link rel="preload" href="{{ site.baseurl }}/assets/fonts/norwester-webfont.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;600&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:300,400,600&display=swap"
+				rel="stylesheet"
+				type="text/css"
+			/>
+			<link
+				href="https://fonts.googleapis.com/css2?family=Merriweather:300,400&display=swap"
+				rel="stylesheet"
+				type="text/css"
+			/>
+		</noscript>
+
 		<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/styles/styles.css" />
 
@@ -83,18 +101,6 @@ layout: compress
 		</footer>
 
 		<!-- Scripts -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/webfont/1.6.28/webfontloader.js" defer></script>
-		<script defer>
-			WebFontConfig = {
-				google: {
-					families: ['Merriweather Sans:300,400,600', 'Merriweather:300,400']
-				}
-			};
-		</script>
-		<noscript>
-			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,600">
-			<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700">
-		</noscript>
 		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.8/svg4everybody.min.js" defer></script>
 		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/8.0.1/lazyload.min.js" defer></script>-->
